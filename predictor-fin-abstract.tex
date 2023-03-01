@@ -1,0 +1,124 @@
+% !TEX TS-program = pdflatexmk
+ % 20230101 
+
+%In the setting of \citet{GS_Inductive_inference}, we weaken the diversity axiom
+%to allow us to account We provide an axiomatic derivation of prices in the
+%market for Zeros (zero-coupon bonds derived from US Treasuries).
+%
+%A learner (prediction model) is stable if it generalizes from the current
+%sample of past cases to samples that include novel case types without revising
+%the current kernel. 
+%A pricing kernel is stable if neither (i) the arrival of a
+%novel case type, nor (ii) the threat of arbitrage cause a re-evaluation of the
+%empirical weights it assigns to past cases.  A stable learner that forecasts
+%according to the empirical mean also satisfies the statistical learning notion
+%of stability: continuity of the learning map from samples to learners.
+
+
+%A learner is \emph{stable} if it meaningfully generalizes
+%from the current sample of past cases to richer samples (novel case types)
+%without revision of the current kernel.
+%This implies the statistical learning
+%notion of stability: a stable learner's prediction error tends to zero as the
+%sample size grows. In market settings, stable pricing kernels support the
+%efficient markets hypothesis: frequent cases exhibit diminishing proportional
+%returns. Our canonical setting is the market for Zeros (zero-coupon bonds
+%derived from US Treasuries) where the (pricing) kernel is a function of the
+%annual yield.
+%In addition to stability, we require \parthreediv\ (for every
+%three maturity dates, past cases generate at least $3$ total rankings): this
+%holds robustly on (subsamples of) 1961-2023 daily data whereas other similar
+%conditions \citep[for example]{GS_Inductive_inference,GLS-empirical-similarity}
+%do not.
+%  Stable learners are characterised by the following two equivalent
+%  properties: given any sample of past cases, (i) the yield accumulation
+%  process is arbitrage-free (ii) the pricing kernel is the canonical empirical
+%  geometric mean (with subjective yields). There are therefore three routes to
+%  stability: sufficiently rich data; out-of-sample validatation; no-Dutch-books
+%  validation.
+
+
+%\begin{enumerate}[label=\roman*]
+%
+%\item acquire a sufficiently rich set of past cases. For example, the
+%\fourdiv\ axiom of \citet{GS_Inductive_inference}  (for every four maturity
+%dates, past cases generate $4!=24$ rankings of the corresponding annual
+%yields).  
+%
+%\item conditional on any sample of past cases, the pricing kernel is arbitrage
+%free.  (This is reminiscent of De Finetti's Dutch book argument for
+%conditional probabilities.)
+%
+%\item assume \parthreediv\ (every three maturity dates generate $3$ rankings)
+%and assume some form \end{enumerate} Even with 61 years of daily data,
+%\fourdiv\ fails to hold.  The second and third routes to stability require
+%some form of external validation or imagination to compensate for the lack of
+%rich data.  Our \parthreediv\ (every three maturity dates generate $3$
+%rankings) holds after five years.  The third and final 
+%
+%In the absence of sufficiently rich data, 
+%
+%
+%  external validation.  Ensuring the price kernel is arbitrage free
+%
+%We provide axioms for stable learning that extend 
+%
+%Moreover, we extend the axiomatic framework of \citet{GS_Inductive_inference}
+%to account for stable learning when the data These two routes to stable
+%learning are 
+%
+%
+A learner (prediction model) is \emph{stable} if it meaningfully generalizes
+from current samples of past cases to richer one (containing novel case types)
+without revision of the current kernel.
+%(This notion is sufficient for the statistical learning one.)
+On the basis of sentiments (a map from samples to rankings), we establish three
+kinds of stable learner.  The first relies on the richness of past cases (\eg\
+\fourdiv, for every four eventualities, past cases generate at least $4!=24$
+total rankings).  The second relies on prudence (using the imagination or
+out-of-sample validation to explore the impact of novel case types on their
+model) and \parthreediv\ (for every three eventualities, past cases generate at
+least $3$ total rankings). The third arises when, as a market maker, the
+learner bypasses their sentiments to ensure their pricing kernel is
+arbitrage-free.  The stable learner's sentiments are characterised by two
+equivalent properties (i) their kernel is the canonical empirical mean with
+subjective weights (yields in a market setting) and (ii) a groupoid condition
+(no-arbitrage in market settings).  Stable pricing kernels support the
+efficient markets hypothesis since the marginal impact of an additional case is
+decreasing in the relative frequency of its type.  Active strategies rely on
+the ability to predict instability (structural breaks) or rare cases.  For
+zero-coupon treasury bond daily data over 1961-2023, \parthreediv\ holds
+whereas \fourdiv\ does not.
+
+
+%prudent market makers: no-arbitrage equilibrium prices behave as if guided by a
+%prudent learner.  
+%
+%
+%
+%% No-arbitrage pricing ensures implied market yields extend consistently to
+%% novel case types.
+%
+% To such settings, we formally extend \cite{GS_Inductive_inference}.
+
+ %Three learners are asked
+ %to rank investments according to their plausibility, given any finite
+ %resampling of (observable) past cases.
+ %The first and second only consider past cases, but the second also ensures
+ %the
+ %The second uses their imagination to explore (unobservable) novel
+ %cases whenever resampling past cases fails to generate a full
+ %diversity of rankings. The third ensures their A learner is stable if their model generalizes to new
+ %data.
+ % As a market maker for zero-coupon bonds, the prudent learner 
+ %is distinguished by two equivalent properties: conditional on any finite
+ %resampling of past cases, 
+ %(i) she sets prices according to the canonical empirical geometric mean (with
+ %subjective yields) and 
+ %(ii) the associated accumulation process is arbitrage-free.
+ %A novel form of market efficiency emerges even in the absence of prudent
+ %market makers:
+ %no-arbitrage equilibrium prices behave as if guided by a prudent learner.
+%% No-arbitrage pricing ensures implied market yields extend consistently to novel case types.
+
+ %To such settings, we formally extend \cite{GS_Inductive_inference}.

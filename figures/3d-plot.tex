@@ -1,0 +1,37 @@
+\documentclass[border=5pt]{standalone}
+\usepackage{tikz}
+\usepackage{tikz-3dplot}
+\begin{document}
+%\tdplotsetmaincoords{54}{135} %canonical
+\tdplotsetmaincoords{54}{135}
+\begin{tikzpicture}[tdplot_main_coords]
+  \def\laxis{5}
+  \def\ltriangle{5}
+  \def\ltick{.2}
+  %%% axes
+  \draw [->] (-\laxis,0,0) -- (\laxis,0,0) node [below] {$t_1$};
+  \draw [->] (0,-\laxis,0) -- (0,\laxis,0) node [right] {$t_2$};
+  \draw [->] (0,0,-\laxis) -- (0,0,\laxis) node [left] {$t_3$};
+  %%% axes ticks
+  \pgfmathtruncatemacro{\nticks}{floor(\laxis)-1}
+  \begin{scope}[
+    help lines,
+    every node/.style={none sep=1pt,text=black}
+    ]
+    \foreach \coord in {-\nticks,...,\nticks} {
+      \draw (\coord,\ltick,0) -- ++(0,-\ltick,0) -- ++(0,0,\ltick)
+      %node [pos=1,left] {\coord}
+      ;
+      \draw (\ltick,\coord,0) -- ++(-\ltick,0,0) -- ++(0,0,\ltick)
+      %node [pos=1,right] {\coord}
+      ;
+      \draw (\ltick,0,\coord) -- ++(-\ltick,0,0) -- ++(0,\ltick,0)
+      %node [at start,above right] {\coord}
+      ;
+    }
+  \end{scope}
+  %%% figure
+  \filldraw [opacity=.33,red] (\ltriangle,0,0) -- (0,\ltriangle,0)
+  -- (0,0,\ltriangle) -- cycle;
+\end{tikzpicture}
+\end{document}

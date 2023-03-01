@@ -1,0 +1,31 @@
+
+\begin{tikzpicture}[domain=0:1,xscale=6,yscale=6]
+
+%\draw [help lines,step=.1cm] (0,0) grid (1,1);
+
+
+
+\draw[->,smooth, color=black,solid,line width=1pt] (0,0) -- (1.1,0)  ;
+\draw[->,smooth, color=black,solid,line width=1pt] (0,0) -- (0,1.1); 
+
+\node[below left] at  (0,0) {\large $ I _ \emptyset = (0,0)$};
+\node[above right] at  (6.2/10,4.2/10) {\large $ I _ { \current } = (3,2)$};
+%\node [below] at (1.12,0) {$ I _ C = (10,0)$};
+%\node[left] at (0,1) {$I _ { D }=(0,10)$};
+
+\node at  (0,0) {$ \bullet $};
+\node at  (6/10,4/10) {\Large $ \bullet $};
+%\node at  (1,0) {$ \bullet $};
+%\node at  (0,1) {$ \bullet $};
+
+
+\foreach \i  in {0,...,5} {
+\foreach \j in {0,...,5} 
+{
+\node  at (\i/5,\j/5) {\tiny$\bullet$} ;
+}}
+%\draw[smooth,color=black,solid,line width=1pt] (0,0) node {\huge $\bullet$} -- (1,0) node  {\huge $\bullet$} -- (0,1) node {\huge $\bullet$} --(0,0);
+
+%\draw[smooth,color=black,solid,line width=1pt] (0,0)  -- (1,0)  -- (0,1)  --(0,0);
+
+\end{tikzpicture}%

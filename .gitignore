@@ -1,0 +1,16 @@
+# ignore all logs
+**.DS_Store
+**.log
+**.blg
+**.aux
+**.swp
+**.amplbak
+**pratenddefaultcategory*
+**overleaf
+**.tar
+data/RQ1.xlsx
+**.RData
+**.Rhistory
+.Rproj.user
+**.sol
+**.nl

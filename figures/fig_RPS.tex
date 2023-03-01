@@ -1,0 +1,44 @@
+\documentclass{article}
+
+\usepackage{../../preamble_files/paper_preamble_grandparent_directory}
+
+\begin{document}
+
+\begin{tikzpicture}[domain=0:1,xscale=10,yscale=7]
+
+%\draw [help lines,step=.1cm] (0,0) grid (1,1);
+
+\draw[color=blue,solid] (0,0.33333333) node[left] {\color{blue} $N\ac$} --(0.66666666,0.33333333);
+
+\draw[color=patrickcolor1,solid] (0.33333333,0)  -- (0.3333333,0.6666666) ;
+\node at (0.3333333,-0.05)  {\color[rgb]{1,.6,0}$N\ab$} ;
+%(0.373,0.7)
+\draw[color=patrickcolor3,solid] (0,.66666666) node [left] {\color{patrickcolor3} $N\bc$} -- (0.66666666,0);
+
+
+\draw[smooth,color=black,solid,line width=1.5pt] (0,0) node[below] {$(0,0)$} -- (1,0) node [below] {$(1,0)$} -- (0,1) node[above] {$(0,1)$} --(0,0);
+
+%\draw[smooth,color=black,solid,line width=1.5pt] (0,0) node[below] {$t\equiv(0,0)$} -- (1,0) node [below] {$r\equiv(1,0)$} -- (0,1) node[above] {$s\equiv(0,1)$} --(0,0);
+
+
+
+%\node at (0.48,0.04) {\tiny\color{black} $a\succ_xd\succ_x b\succ_x c$};
+
+\node at (0.18,0.65) {\footnotesize\color{black} $a\prec_x b\prec_x c$};
+
+\node at (0.125,0.415) {\footnotesize\color{black} $a\prec_x c\prec_x b$};
+
+\node at (0.17,0.17) {\footnotesize\color{black} $c\prec_x a\prec_x b$};
+
+\node at (0.44,0.1) {\footnotesize\color{black} $c\prec_x b\prec_x a$};
+
+\node at (0.67,0.17) {\footnotesize\color{black} $b\prec_x c\prec_x  a$};
+
+\node at (0.45,0.415) {\footnotesize\color{black} $b\prec_x a\prec_x c$};
+
+%\node at (0.13,0.36) {\footnotesize\color{black} $c\succ_xb\succ_x a\succ_x d$};
+
+
+\end{tikzpicture}
+
+\end{document}
