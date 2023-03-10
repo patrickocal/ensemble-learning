@@ -68,27 +68,56 @@
 %learning are 
 %
 %
-A learner (prediction model) is \emph{stable} if it meaningfully generalizes
-from current samples of past cases to richer one (containing novel case types)
-without revision of the current kernel.
-%(This notion is sufficient for the statistical learning one.)
-On the basis of sentiments (a map from samples to rankings), we establish three
-kinds of stable learner.  The first relies on the richness of past cases (\eg\
-\fourdiv, for every four eventualities, past cases generate at least $4!=24$
-total rankings).  The second relies on prudence (using the imagination or
-out-of-sample validation to explore the impact of novel case types on their
-model) and \parthreediv\ (for every three eventualities, past cases generate at
-least $3$ total rankings). The third arises when, as a market maker, the
-learner bypasses their sentiments to ensure their pricing kernel is
-arbitrage-free.  The stable learner's sentiments are characterised by two
-equivalent properties (i) their kernel is the canonical empirical mean with
-subjective weights (yields in a market setting) and (ii) a groupoid condition
-(no-arbitrage in market settings).  Stable pricing kernels support the
-efficient markets hypothesis since the marginal impact of an additional case is
-decreasing in the relative frequency of its type.  Active strategies rely on
-the ability to predict instability (structural breaks) or rare cases.  For
-zero-coupon treasury bond daily data over 1961-2023, \parthreediv\ holds
-whereas \fourdiv\ does not.
+In this paper, I derive a learning map (from samples to a kernel
+representation) on the basis of sentiments (rankings).  I extend
+\citep{GS_Inductive_inference} to account for a broader class of stable
+learner.  A stable learner is a prediction model that generalises to new
+samples without re-evaluation of the current kernel.  Stable pricing kernels
+preserve information and support the efficient markets hypothesis since the
+marginal impact of an additional case (observation) is decreasing in the
+relative frequency of its type.  The present extension is justified by daily
+US Treasury bond market data for the period 1961-2023: a standard data set
+which is insufficiently rich to support a full diversity of rankings of annual
+yields for different maturities.  I require that, for any three maturity dates,
+the data supports $4$ distinct rankings.  To compensate for this weaker form of
+diversity, stable learners prudently engage in out-of-sample validation: for
+human agents, simulating or imagining the impact of new data types; for
+artificial ones, leave-one-out cross validation. In market settings, the
+pricing kernel of a stable learner is arbitrage-free. For such settings, Dutch
+book arguments thus provide yet another route to stable learning.
+
+%In
+%particular, \threediv\ (for any three maturity dates, all $3! = 6$ rankings
+%arise)  holds for 80\% of the 1961-2023 data for shorter maturities (1-7 years)
+%but fails on the full set (1-30 years). 
+%In contrast, \parthreediv\ (for any
+%three maturity dates, $4$ rankings arise) holds on 91\% of the data for all 30
+%maturities.  
+%   
+%   we show that stable pricing kernels support
+%    market efficiency because the 
+
+
+%A learner (prediction model) is \emph{stable} if it meaningfully generalizes
+%from current samples of past cases to richer ones, that contain novel case
+%types, without revision of the current kernel.
+%%(This notion is sufficient for the statistical learning one.)
+%On the basis of sentiments (a map from samples to rankings of eventualities),
+%we provide minimal conditions for stable learning.
+% prudence (use of the imagination or out-of-sample
+%validation to explore the potential impact of novel case types on their model)
+%and \parthreediv\ (for every three eventualities, past cases generate at least
+%$3$ total rankings); (iii) as a market maker, the learner bypasses their
+%sentiments to directly ensure their pricing kernel is arbitrage-free.  The
+%stable learner's sentiments are characterised by two equivalent properties (i)
+%their kernel is the canonical empirical mean with subjective weights (yields in
+%a market setting) and (ii) a groupoid condition (no-arbitrage in market
+%settings).  Stable pricing kernels support the efficient markets hypothesis
+%since the marginal impact of an additional case is decreasing in the relative
+%frequency of its type. 
+%Active strategies rely on the ability to predict
+%instability (structural breaks) or rare cases.  For zero-coupon treasury bond
+%daily data over 1961-2023, \parthreediv\ holds whereas \fourdiv\ does not.
 
 
 %prudent market makers: no-arbitrage equilibrium prices behave as if guided by a

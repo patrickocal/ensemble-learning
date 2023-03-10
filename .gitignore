@@ -14,3 +14,6 @@ data/RQ1.xlsx
 .Rproj.user
 **.sol
 **.nl
+**.pkl
+**.csv
+**.xlsx
