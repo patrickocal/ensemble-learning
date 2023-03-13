@@ -307,7 +307,7 @@ s = "data/" + str(mat) + "choose" + str(sub)
 #-----------path to SVENY data
 pathtosveny = "data/FED-SVENY-20230224"
 #-----------uncomment to generate rankings and sveny df with ascending dates
-genascendingdfs(s, pathtosveny)
+#genascendingdfs(s, pathtosveny)
 #-----------load the div_pts dict for testing
 if order == "asc":
     with open (s + "rankings-asc.pkl", "rb") as f:
@@ -324,7 +324,7 @@ numdays = len(rankings)
 #-----------path diversity points file
 pathtodivpts = s + "diversity_pts_" + order + ".pkl"
 #-----------uncomment to generate div_pts (may take a while) saves to path
-get_diversity_pts(scomb, rankings, numdays, pathtodivpts)
+#get_diversity_pts(scomb, rankings, numdays, pathtodivpts)
 #-----------load the div_pts dict for testing
 with open (pathtodivpts, "rb") as f:
     div_pts = pickle.load(f)
@@ -347,7 +347,7 @@ pathtoresults = {k: s + order + "-diversity_threshold_" + str(k)
              + "-test_results.pkl" for k in testls}
 #-----------------------------------------------------------------------------#
 #-----------KEY STEP: uncomment on first run to generate the test results
-genresults(div_pts, scomb, numdays, pathtoresults, testls)
+#genresults(div_pts, scomb, numdays, pathtoresults, testls)
 #-----------------------------------------------------------------------------#
 #-----------load the results dict
 resdict = {}
@@ -397,16 +397,45 @@ for test in testls:
     plt.plot(sveny.iloc[:, 0], cumfreq / len(a))
 #    print(numdays - maxdd)
 plt.yticks(np.arange(0, 1.2, 0.2))
-plt.xticks([sveny.iloc[i, 0] for i in np.arange(0, 10000, 1000)],
+plt.xticks([sveny.iloc[i, 0] for i in np.arange(0, len(rankings), 1000)],
            rotation=45, ha='right', rotation_mode='anchor')
 plt.xlim = (0, numdays); plt.ylim = (0, 1.2)
-plt.legend(["partial-3-diversity", "3-diversity"])
 plt.xlabel("Days in sample")
 plt.ylabel("Cumulative frequency")
+
+a4 = np.array(list(combinations(range(1, mat + 1), 4)))
+l = len(a4)
+ak4 = np.zeros(l, dtype=int)
+dd4 = np.zeros(l, dtype=int)
+freq4 = np.zeros(numdays, dtype=int)
+cumfreq4 = np.zeros(numdays, dtype=int)
+l = 4
+for k in range(len(a4)):
+    j = a4[k]
+    print(j)
+    guesscomb = np.array(list(combinations(j, 3)))
+    print(guesscomb)
+    gcomb = [str(i).strip('[]') for i in guesscomb]
+    print(gcomb)
+    gcomb = [gcomb[i].split() for i in range(l)]
+    gcomb = [' '.join(gcomb[i]) for i in range(l)]
+    gcomb = ['[' + gcomb[i] + ']' for i in range(l)]
+    print(gcomb)
+    ak4[k] = np.min([resdict[6]["testdctlsls"][i][2][-1] for i in gcomb])
+    if ak4[k] >= 6:
+        dd4[k] = np.max([resdict[6]["testdctlsls"][i][3][-1] for i in gcomb])
+        freq4[dd4[k]] += 1
+        cumfreq4[dd4[k]:] += 1
+        
+plt.plot(sveny.iloc[:, 0], cumfreq4 / len(a4))
+plt.legend(["partial-3-diversity", "3-diversity", "4-diversity"])
+print(cumfreq4[-1] / len(a4))
+
 plt.show()
 
-#guesscomb = np.array(list(combinations([12, 15, 17, 18], 3)))
-#guesscomb = np.array(list(combinations([1, 12, 23, 24], 3)))
+
+##guesscomb = np.array(list(combinations([12, 15, 17, 18], 3)))
+#guesscomb = np.array(list(combinations([1, 28, 29, 30], 3)))
 #print(guesscomb)
 #lgc = len(guesscomb)
 #gcomb = [str(guesscomb[i]).strip('[]') for i in range(len(guesscomb))]
@@ -418,7 +447,7 @@ plt.show()
 #gunique = [list(set(rankings[gcomb[i]])) for i in range(len(guesscomb))]
 #comb2gcomb = []
 #print(gunique)
-#print(np.array(ak))
+##print(np.array(ak))
 #akdict = {}
 #for i in range(len(guesscomb)):
 #    gunique[i] = [bintorank(strtovec(gunique[i][j]),
@@ -426,6 +455,9 @@ plt.show()
 #    comb2gcomb.append(list(combinations(gunique[i], 2)))
 #    akdict[gcomb[i]] = resdict[6]["testdctlsls"][gcomb[i]][2]
 #print(akdict)
+#
+#print(scomb[0], scomb[1], scomb[28], scomb[29])
+
 ##print(gunique)
 ##gdict = {gcomb[i] : gunique[i] for i in range(len(guesscomb))}
 ##print(gdict)

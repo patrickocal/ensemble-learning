@@ -29,12 +29,6 @@ Dobkin, D.~P. and Reiss, S.~P. (1980).
 \newblock The complexity of linear programming.
 \newblock {\em Theoretical Computer Science}, 11(1):1--18.
 
-\bibitem[Dumav and Stinchcombe, 2013]{DS-Consequences}
-Dumav, M. and Stinchcombe, M. (2013).
-\newblock The von neumann/morgenstern approach to ambiguity.
-\newblock {\em Institute of Mathematical Economics Working Paper},
-  \url{https://pub.uni-bielefeld.de/record/2674101}(480).
-
 \bibitem[Enkavi et~al., 2017]{Enkavi-Hippocampal_dependence}
 Enkavi, A.~Z., Weber, B., Zweyer, I., Wagner, J., Elger, C.~E., Weber, E.~U.,
   and Johnson, E.~J. (2017).
@@ -56,26 +50,6 @@ Gilboa, I. and Schmeidler, D. (2003).
 \newblock Inductive inference: An axiomatic approach.
 \newblock {\em Econometrica}, 71(1):1--26.
 
-\bibitem[Grant et~al., 2015]{GKMQT_Robust_experiments}
-Grant, S., Kline, J., Meneghel, I., Quiggin, J., and Tourky, R. (2015).
-\newblock A theory for robust experiments for choice under uncertainty.
-\newblock {\em Journal of Economic Theory}, pages 124--151.
-
-\bibitem[Grant and Quiggin, 2015]{GQ-Surprises}
-Grant, S. and Quiggin, J. (2015).
-\newblock A preference model for choice subject to surprise.
-\newblock {\em Theory and Decision}, 79(2):167--180.
-
-\bibitem[Halpern and Piermont, 2020]{HP-Dynamic_awareness}
-Halpern, J.~Y. and Piermont, E. (2020).
-\newblock Dynamic awareness.
-\newblock {\em arXiv preprint arXiv:2007.02823}.
-
-\bibitem[Halpern and R{\^e}go, 2009]{HR-Knowledge_of_U}
-Halpern, J.~Y. and R{\^e}go, L.~C. (2009).
-\newblock Reasoning about knowledge of unawareness.
-\newblock {\em Games and Economic Behavior}, 67(2):503--525.
-
 \bibitem[Harvey and Liu, 2015]{HL-Lucky_factors}
 Harvey, C.~R. and Liu, Y. (2015).
 \newblock Lucky factors.
@@ -86,23 +60,6 @@ Hassabis, D., Kumaran, D., Vann, S.~D., and Maguire, E.~A. (2007).
 \newblock Patients with hippocampal amnesia cannot imagine new experiences.
 \newblock {\em Proceedings of the National Academy of Sciences},
   104(5):1726--1731.
-
-\bibitem[Hota et~al., 2018]{Hota_et_al-Cyber_security}
-Hota, A.~R., Clements, A.~A., Bagchi, S., and Sundaram, S. (2018).
-\newblock {\em A Game-Theoretic Framework for Securing Interdependent Assets in
-  Networks}, pages 157--184.
-\newblock Springer International Publishing.
-
-\bibitem[Karni and Vier{\o}, 2013]{KV_Reverse_Bayes}
-Karni, E. and Vier{\o}, M.-L. (2013).
-\newblock Reverse bayesianism: a choice-based theory of growing awareness.
-\newblock {\em The American Economic Review}, 103(7):2790--2810.
-
-\bibitem[Karni and Vier{\o}, 2017]{KV-Awareness_of_U}
-Karni, E. and Vier{\o}, M.-L. (2017).
-\newblock Awareness of unawareness: a theory of decision making in the face of
-  ignorance.
-\newblock {\em Journal of Economic Theory}, 168:301--328.
 
 \bibitem[Lee and Sidford, 2015]{LS_Linear_programming}
 Lee, Y.~T. and Sidford, A. (2015).
@@ -121,11 +78,6 @@ O'Callaghan, P.~H. (2017).
 Orlik, P. and Terao, H. (2013).
 \newblock {\em Arrangements of hyperplanes}, volume 300.
 \newblock Springer Science \& Business Media.
-
-\bibitem[Quine, 1973]{Quine-Roots_of_reference}
-Quine, W.~V. (1973).
-\newblock {\em The roots of reference}.
-\newblock Open Court LaSalle, Ill.
 
 \bibitem[Rangel et~al., 2008]{Rangel-Value-based_neurobiology}
 Rangel, A., Camerer, C., and Montague, P.~R. (2008).
@@ -147,11 +99,6 @@ Schacter, D.~L., Addis, D.~R., and Buckner, R.~L. (2007).
 Stanley, R.~P. (2004).
 \newblock An introduction to hyperplane arrangements.
 \newblock {\em Geometric combinatorics}, 13:389--496.
-
-\bibitem[Vosoughi et~al., 2018]{Vosoughi-Roy-Aral-Veracity}
-Vosoughi, S., Roy, D., and Aral, S. (2018).
-\newblock The spread of true and false news online.
-\newblock {\em Science}, 359(6380):1146--1151.
 
 \bibitem[Weinstein, 1968a]{Weinstein-Intransitivity}
 Weinstein, A.~A. (1968a).
