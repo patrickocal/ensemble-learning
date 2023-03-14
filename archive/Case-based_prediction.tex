@@ -37,8 +37,8 @@
 %\preto{\newpage}{\resetlinenumber}
 
 %\def\pagewiselinenumbers{\linenumbers\setpagewiselinenumbers}
-\linenumbers
-\modulolinenumbers[5]
+%\linenumbers
+%\modulolinenumbers[5]
 \renewcommand\thelinenumber{\color{lightgray}\arabic{linenumber}}
    % \makeatletter \newsavebox{\@linebox}
    % \savebox{\@linebox}[3em][t]{\parbox[t]{3em}{%
@@ -532,9 +532,8 @@ CCM}
 %\includeonly{}
 %\includeonly{./introduction/introduction}
 
-\title{\MakeUppercase{Stable learning and no-arbitrage pricing:\\ on the basis
-of sentiments} \footnote{I thank Itzhak Gilboa for encouraging this project at
-an early stage.
+\title{\MakeUppercase{Prudent prediction, stable learning and market efficiency}
+\footnote{I thank Itzhak Gilboa for encouraging this project at an early stage.
 
     This version has time stamp \currenttime~(AEST), \today. The most recent
     version (as well as past versions) can be found at
@@ -551,74 +550,71 @@ an early stage.
   \begin{document}
 %  \pagenumbering{gobble}
   \maketitle
+
   \pagestyle{fancy}
 \renewcommand{\abstractname}{\vspace{-\baselineskip}} \thispagestyle{plain}
 %\input{frontmatter}
 %\maketitle
 %\renewcommand*{\thefootnote}{\fnsymbol{footnote}}
  % abstract
-%\resetlinenumber 
-\begin{abstract}
-  \input{predictor-fin-abstract.tex}
-\end{abstract}
-  \setlength{\epigraphwidth}{11.5cm} \epigraph{From the past, the
-  present acts prudently, lest it spoil future action.}{\emph{Titian:  Allegory
-  of Prudence} }
-  %     \newpage
-  %\tableofcontents introduction
-  %\renewcommand*{\thefootnote}{\arabic{footnote}}
 
-  \section{Introduction} \label{sec-introduction} \textsc{Prudent prediction
-  requires the imagination} to go beyond the current sample of past cases. To
-  paraphrase \citep[pages 9 and 10]{hume1896treatise} distinction: \emph{the
-  memory is tied down, by original impressions \emph{[past cases]}, without any
-  power of variation; in contrast, the imagination is free to transpose and
-  change its ideas.} Well-established neuroscientific evidence points to an
-  important role for the imagination and the degrees of freedom or flexibility
-  that it provides in improving prediction and thus the chances of survival
-  \citep{Bartlett-remembering,Sudendorf-Corballis-foresight,MM-memory-imagination-prediction}.
-  But what of artificial intelligence and its success in prediction despite the
-  absence of an ``imagination''? In machine learning the practice of splitting
-  the data into a training set and a test set is standard
-  \citet{Hastie-Tibshiriani-Statistical_learning}.  We may interpret the
-  training set as memory and the test set as a form of imagination in the sense
-  that it allows the learner to explore the world beyond past cases.  To
-  account for all kinds of intelligence, we provide an axiomatic framework that
-  allows us to capture the behaviour of learners (prediction models) with the
-  ability to externally (out-of-sample) validate.  The axioms we provide are
-  agnostic in relation to the method of external validation. The goal is
-  instead to allow an observer to determine whether or not the learner is
-  indeed able to generalise to richer samples of past cases in a consistent
-  manner.
-  %In our framework, the prudent learner takes an within-sample perspective
-  %\citep[page 7, experiment 1]{chervonenkis-recollections} and considers the
-  %potential for generalizing to richer samples of past cases. 
+\begin{abstract}%\resetlinenumber
+  \input{predictor-fin-abstract.tex} 
+\end{abstract}
+\setlength{\epigraphwidth}{11.5cm}
+\epigraph{From the past, the present acts prudently, lest it spoil future
+  action.}{\emph{Titian:  Allegory of Prudence}
+}
+%     \newpage
+%\tableofcontents
+%introduction
+% \renewcommand*{\thefootnote}{\arabic{footnote}}
+  \section{Introduction} \label{sec-introduction} 
+\textsc{Prudent prediction requires the imagination} to go beyond the current
+  sample of past input-output pairs (henceforth past cases). To paraphrase
+  \citep[pages 9 and 10]{Hume-Human_nature} distinction: \emph{the memory is
+  tied down, by original impressions \emph{[past cases]}, without any power of
+  variation; in contrast, the imagination is free to transpose and change its
+  ideas.} The flexible nature of the imagination and its role in improving
+  prediction and the chances of survival is well-established in neuroscience
+  \citep{Bartlett-remembering,Sudedendorf-Corballis-foresight,MM-memory-imagination-prediction}.
  
-  External validation enables the learner (prediction model) to generalize from
-  the current sample to new ones. The key to generalization is stability
+
+ But then how are we to explain the success in prediction of artificial
+  intelligence?  To account for all kinds of intelligence, we provide an
+  axiomatic framework that allows us to capture the behaviour of learners
+  (prediction models), human or artificial, with the ability to externally
+  (out-of-sample) validate.  For example to cross-validate by considering
+  various splits of past cases into a training set and a validation set. In our
+  framework the prudent learner takes an within-sample perspective \citep[page
+  7, experiment 1]{Chervonenkis-Recollections} and considers potential
+  generalizations.  The imagination (method of cross-validation) is a black box
+  with the sole objective of helping the learner generalize to novel types of
+  case. 
+  
+ In statistical learning, the key to generalization is stability
   \citep{Busquet-Elisseeff-stability-and-generalization,Poggio-stability-and-predictivity}.
   Loosely speaking, a learner is stable if small changes in the data yield
-  small changes in its predictions.  Whereas in classical learning theory, the
-  goal is to minimize the empirical error as measured on the training set, the
-  present framework allows for more abstract goals. Moreover, to account for
-  agents that are sentient such as humans or mice, we derive the learner's
-  kernel on basis of {sentiments}.  We formalise \emph{sentiments} a mapping
-  from samples of past cases to rankings of underlying objects of interest
-  (henceforth eventualities).
-  
+  small changes in its predictions.
+ % [``A central question for the theory is to determine conditions
+ % under which a learning algorithm will generalize from its finite training
+  % set to novel examples.'']
   Stability is the key axiom in the present derivation of a learner's kernel on
-  the basis of qualitative rankings, given any finite resampling of past
-  cases.\footnote{Here a \emph{kernel} is simply a real-valued weighting
+  the basis of qualitative rankings over eventualities, given any resampling of
+  past cases.\footnote{Here a \emph{kernel} is simply a real-valued weighting
   function of two variables.} The learner's kernel is a subjective assessment
-  of how similar past cases are to the current prediction problem.  Stable
-  learners generalize to novel case types without needing to: re-evaluate past
-  rankings; generate intransitive rankings; or suppress novel (transitive)
-  rankings. In essence, a stable learner's kernel is not only stable in a
-  literal sense, it also allows for meaningful and unbiased generalisations.
- 
-  %What sort of prediction problem might force an unstable learner to modify
-  %its kernel?  generalizes to novel case types without revealing intransitive
-  %rankings.  Informally, a kernel is stable whenever there is no reason to
+  of how similar past cases are to the current prediction problem. the
+  eventualities the learner is trying to predict (as in \citet[henceforth
+  \gsii]{GS_Inductive_inference}).  Stable learners generalize to novel case
+  types without needing to: re-evaluate past rankings; generate intransitive
+  rankings; or suppress novel (transitive) rankings.  In essence, a stable
+  learner's kernel is literally stable and also generalises in a meaningful
+  way.
+  %What sort of prediction problem might force an unstable learner to
+  %modify its kernel?
+  %generalizes to novel case types
+  %without revealing intransitive rankings.
+  %Informally, a kernel is stable whenever there is no reason to
   %modify it.
 
   %More formally, a kernel is stable provided that, as a function of past
@@ -640,18 +636,18 @@ an early stage.
 % %expense.
 
 Stable learners stand in contrast to those that learn by doing. Children are
-encouraged to learn by making mistakes. They are free to modify their beliefs
-and behaviour after the event: the intransitive rankings that novel case types
-may reveal are of little consequence.  But what of a market maker that exposes
+encouraged to learn by making mistakes. They can modify their beliefs and
+behaviour after the event: the intransitive rankings these novel case types may
+reveal are of little consequence.  But what of a market maker that exposes
 their pricing kernel either directly or indirectly (by buying and selling
 securities) on a financial market? We show that a market maker fails to be
 stable if, and only if, the returns on investment that they offer provide a
 free lunch to other agents today (\ie\ before any novel case types arrive and
-before they have a chance to re-evaluate).  This equivalence between stability
-(tomorrow) and no-arbitrage (today) is at the heart of the present paper and it
-has a number of interesting implications.\footnote{In general, the learner is
-stable if, and only if, its kernel forms a groupoid over eventualities. This
-concept corresponds to the Jacobi equations in \gsii.}
+before they have a chance to re-evaluate).  This powerful equivalence between
+stability (tomorrow) and no-arbitrage (today) is at the heart of the present
+paper and it has a number of interesting implications.\footnote{In general, the
+learner is stable if, and only if, its kernel forms a groupoid over
+eventualities. This concept corresponds to the Jacobi equations in \gsii.}
 
 First, at the individual level, unstable learners are unlikely to survive.
 
