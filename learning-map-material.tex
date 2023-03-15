@@ -1,0 +1,46 @@
+
+Under the axioms we adopt, for any $x, x' \in X$, one of the following three
+hold: $x \prec_D x'$, $x' \prec_D x$ or $x \simeq_D x'$. We may therefore
+accurately represent $\preceqb_D \subseteq X^2$ using a function $F_D: X^2
+\rightarrow \{-1, 0, 1\}$. The goal is to exploit information in the structure
+of the family of such functions $\{F_D: D \in \mbbd\}$ to derive a family of
+functions $\{f_D: D \in \mbbd\}$ such that, for each $D$, $f_D: X \rightarrow
+\R$, where $f_D(x) = \sum_{c\, \in \,D} v(x, c)$ for a suitable weighting
+function (kernel) $v$. Outside of specific examples such as
+\cref{eg-zeros,eg-multi-sector}, $v: X \times \mbbc \rightarrow \R$ is as far
+as we go. The method is general enough, therefore, to capture least squares
+regression, polynomials of a fixed order and other examples (see \citet[page
+10]{Cucker-Smale}). Via the ``kernel trick'', it is straightforward to extend
+the scope to nonlinear settings.
+
+In other settings, it is not obvious that we can separate the current data into
+the components $x_k$ that supports $k$ and $x_l$ that supports $l$ as we have
+above. It may be that current research generates a current state-of-the-market
+vector $s \in S$ and we wish to know which security is likely to perform better
+on the basis of $s$. In such settings, our model still applies provided we
+interpret our notation as follows. Since $s$ is fixed, we suppress reference to
+it and identify $X$ with the set of securities. The function $f: X \times \mbbd
+\rightarrow \R$, $x \times D \mapsto f_D(x)$ is then defined as before in terms
+of the generalised kernel $v$. 
+
+In contrast with the statistical learning literature, where the criterion for
+selecting $f_D$ is error minimisation, the focus here is on exploiting
+available information about the relative performance of securities $k$ and $l$
+given any past sample of cases. It is natural to ask for the circumstances
+under which such information becomes available. The classical
+decision-theoretic setting is where humans are observed making choices between
+securities either in the field or in the lab. We may ask agents to simply state
+whether they would rather buy $k$ or $l$ given $D$. The exploitation of
+sentiment data extends to artificial agents via sentiment analysis. Indeed,
+despite the recent progress in large language models, when fed a body of text,
+artificial learners still provide a more accurate binary or ternary (sentiment)
+summary than a verbal summary. The reason is that verbal summaries are
+complicated, high-dimensional objects, so the learner has not only to worry
+about the inputs, but also how to correctly formulate the outputs.  Nonexperts
+such as jurors are better at providing ternary verdicts (guilty, not guilty or
+hung jury) and leaving the quantification of punishment to the judge or legal
+system.  Thus, the present axiomatic framework may be viewed as a method for
+turning sentiments into pricing kernels.
+
+
+
