@@ -1,0 +1,3189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bcf:controlfile version="3.8" bltxversion="3.17" xmlns:bcf="https://sourceforge.net/projects/biblatex">
+  <!-- BIBER OPTIONS -->
+  <bcf:options component="biber" type="global">
+    <bcf:option type="singlevalued">
+      <bcf:key>output_encoding</bcf:key>
+      <bcf:value>utf8</bcf:value>
+    </bcf:option>
+    <bcf:option type="singlevalued">
+      <bcf:key>input_encoding</bcf:key>
+      <bcf:value>utf8</bcf:value>
+    </bcf:option>
+    <bcf:option type="singlevalued">
+      <bcf:key>debug</bcf:key>
+      <bcf:value>0</bcf:value>
+    </bcf:option>
+    <bcf:option type="singlevalued">
+      <bcf:key>mincrossrefs</bcf:key>
+      <bcf:value>999</bcf:value>
+    </bcf:option>
+    <bcf:option type="singlevalued">
+      <bcf:key>minxrefs</bcf:key>
+      <bcf:value>2</bcf:value>
+    </bcf:option>
+    <bcf:option type="singlevalued">
+      <bcf:key>sortcase</bcf:key>
+      <bcf:value>1</bcf:value>
+    </bcf:option>
+    <bcf:option type="singlevalued">
+      <bcf:key>sortupper</bcf:key>
+      <bcf:value>1</bcf:value>
+    </bcf:option>
+  </bcf:options>
+  <!-- BIBLATEX OPTIONS -->
+  <!-- GLOBAL -->
+  <bcf:options component="biblatex" type="global">
+    <bcf:option type="singlevalued">
+      <bcf:key>alphaothers</bcf:key>
+      <bcf:value>+</bcf:value>
+    </bcf:option>
+    <bcf:option type="singlevalued">
+      <bcf:key>labelalpha</bcf:key>
+      <bcf:value>0</bcf:value>
+    </bcf:option>
+    <bcf:option type="multivalued">
+      <bcf:key>labelnamespec</bcf:key>
+      <bcf:value order="1">shortauthor</bcf:value>
+      <bcf:value order="2">author</bcf:value>
+      <bcf:value order="3">shorteditor</bcf:value>
+      <bcf:value order="4">editor</bcf:value>
+    </bcf:option>
+    <bcf:option type="singlevalued">
+      <bcf:key>labeltitle</bcf:key>
+      <bcf:value>0</bcf:value>
+    </bcf:option>
+    <bcf:option type="multivalued">
+      <bcf:key>labeltitlespec</bcf:key>
+      <bcf:value order="1">shorttitle</bcf:value>
+      <bcf:value order="2">title</bcf:value>
+      <bcf:value order="3">maintitle</bcf:value>
+    </bcf:option>
+    <bcf:option type="singlevalued">
+      <bcf:key>labeltitleyear</bcf:key>
+      <bcf:value>0</bcf:value>
+    </bcf:option>
+    <bcf:option type="singlevalued">
+      <bcf:key>labeldateparts</bcf:key>
+      <bcf:value>1</bcf:value>
+    </bcf:option>
+    <bcf:option type="multivalued">
+      <bcf:key>labeldatespec</bcf:key>
+      <bcf:value order="1" type="field">pubstate</bcf:value>
+      <bcf:value order="2" type="field">date</bcf:value>
+      <bcf:value order="3" type="field">eventdate</bcf:value>
+      <bcf:value order="4" type="field">year</bcf:value>
+      <bcf:value order="5" type="string">nodate</bcf:value>
+    </bcf:option>
+    <bcf:option type="singlevalued">
+      <bcf:key>julian</bcf:key>
+      <bcf:value>0</bcf:value>
+    </bcf:option>
+    <bcf:option type="singlevalued">
+      <bcf:key>gregorianstart</bcf:key>
+      <bcf:value>1582-10-15</bcf:value>
+    </bcf:option>
+    <bcf:option type="singlevalued">
+      <bcf:key>maxalphanames</bcf:key>
+      <bcf:value>3</bcf:value>
+    </bcf:option>
+    <bcf:option type="singlevalued">
+      <bcf:key>maxbibnames</bcf:key>
+      <bcf:value>20</bcf:value>
+    </bcf:option>
+    <bcf:option type="singlevalued">
+      <bcf:key>maxcitenames</bcf:key>
+      <bcf:value>2</bcf:value>
+    </bcf:option>
+    <bcf:option type="singlevalued">
+      <bcf:key>maxsortnames</bcf:key>
+      <bcf:value>20</bcf:value>
+    </bcf:option>
+    <bcf:option type="singlevalued">
+      <bcf:key>maxitems</bcf:key>
+      <bcf:value>999</bcf:value>
+    </bcf:option>
+    <bcf:option type="singlevalued">
+      <bcf:key>minalphanames</bcf:key>
+      <bcf:value>1</bcf:value>
+    </bcf:option>
+    <bcf:option type="singlevalued">
+      <bcf:key>minbibnames</bcf:key>
+      <bcf:value>19</bcf:value>
+    </bcf:option>
+    <bcf:option type="singlevalued">
+      <bcf:key>mincitenames</bcf:key>
+      <bcf:value>1</bcf:value>
+    </bcf:option>
+    <bcf:option type="singlevalued">
+      <bcf:key>minsortnames</bcf:key>
+      <bcf:value>19</bcf:value>
+    </bcf:option>
+    <bcf:option type="singlevalued">
+      <bcf:key>minitems</bcf:key>
+      <bcf:value>1</bcf:value>
+    </bcf:option>
+    <bcf:option type="singlevalued">
+      <bcf:key>nohashothers</bcf:key>
+      <bcf:value>0</bcf:value>
+    </bcf:option>
+    <bcf:option type="singlevalued">
+      <bcf:key>noroman</bcf:key>
+      <bcf:value>0</bcf:value>
+    </bcf:option>
+    <bcf:option type="singlevalued">
+      <bcf:key>nosortothers</bcf:key>
+      <bcf:value>0</bcf:value>
+    </bcf:option>
+    <bcf:option type="singlevalued">
+      <bcf:key>singletitle</bcf:key>
+      <bcf:value>0</bcf:value>
+    </bcf:option>
+    <bcf:option type="singlevalued">
+      <bcf:key>skipbib</bcf:key>
+      <bcf:value>0</bcf:value>
+    </bcf:option>
+    <bcf:option type="singlevalued">
+      <bcf:key>skipbiblist</bcf:key>
+      <bcf:value>0</bcf:value>
+    </bcf:option>
+    <bcf:option type="singlevalued">
+      <bcf:key>skiplab</bcf:key>
+      <bcf:value>0</bcf:value>
+    </bcf:option>
+    <bcf:option type="singlevalued">
+      <bcf:key>sortalphaothers</bcf:key>
+      <bcf:value>+</bcf:value>
+    </bcf:option>
+    <bcf:option type="singlevalued">
+      <bcf:key>sortlocale</bcf:key>
+      <bcf:value>english</bcf:value>
+    </bcf:option>
+    <bcf:option type="singlevalued">
+      <bcf:key>sortingtemplatename</bcf:key>
+      <bcf:value>apa</bcf:value>
+    </bcf:option>
+    <bcf:option type="singlevalued">
+      <bcf:key>sortsets</bcf:key>
+      <bcf:value>0</bcf:value>
+    </bcf:option>
+    <bcf:option type="singlevalued">
+      <bcf:key>uniquelist</bcf:key>
+      <bcf:value>minyear</bcf:value>
+    </bcf:option>
+    <bcf:option type="singlevalued">
+      <bcf:key>uniquename</bcf:key>
+      <bcf:value>init</bcf:value>
+    </bcf:option>
+    <bcf:option type="singlevalued">
+      <bcf:key>uniqueprimaryauthor</bcf:key>
+      <bcf:value>1</bcf:value>
+    </bcf:option>
+    <bcf:option type="singlevalued">
+      <bcf:key>uniquetitle</bcf:key>
+      <bcf:value>0</bcf:value>
+    </bcf:option>
+    <bcf:option type="singlevalued">
+      <bcf:key>uniquebaretitle</bcf:key>
+      <bcf:value>0</bcf:value>
+    </bcf:option>
+    <bcf:option type="singlevalued">
+      <bcf:key>uniquework</bcf:key>
+      <bcf:value>0</bcf:value>
+    </bcf:option>
+    <bcf:option type="singlevalued">
+      <bcf:key>useprefix</bcf:key>
+      <bcf:value>1</bcf:value>
+    </bcf:option>
+    <bcf:option type="singlevalued">
+      <bcf:key>useafterword</bcf:key>
+      <bcf:value>1</bcf:value>
+    </bcf:option>
+    <bcf:option type="singlevalued">
+      <bcf:key>useannotator</bcf:key>
+      <bcf:value>1</bcf:value>
+    </bcf:option>
+    <bcf:option type="singlevalued">
+      <bcf:key>useauthor</bcf:key>
+      <bcf:value>1</bcf:value>
+    </bcf:option>
+    <bcf:option type="singlevalued">
+      <bcf:key>usebookauthor</bcf:key>
+      <bcf:value>1</bcf:value>
+    </bcf:option>
+    <bcf:option type="singlevalued">
+      <bcf:key>usecommentator</bcf:key>
+      <bcf:value>1</bcf:value>
+    </bcf:option>
+    <bcf:option type="singlevalued">
+      <bcf:key>useeditor</bcf:key>
+      <bcf:value>1</bcf:value>
+    </bcf:option>
+    <bcf:option type="singlevalued">
+      <bcf:key>useeditora</bcf:key>
+      <bcf:value>1</bcf:value>
+    </bcf:option>
+    <bcf:option type="singlevalued">
+      <bcf:key>useeditorb</bcf:key>
+      <bcf:value>1</bcf:value>
+    </bcf:option>
+    <bcf:option type="singlevalued">
+      <bcf:key>useeditorc</bcf:key>
+      <bcf:value>1</bcf:value>
+    </bcf:option>
+    <bcf:option type="singlevalued">
+      <bcf:key>useforeword</bcf:key>
+      <bcf:value>1</bcf:value>
+    </bcf:option>
+    <bcf:option type="singlevalued">
+      <bcf:key>useholder</bcf:key>
+      <bcf:value>1</bcf:value>
+    </bcf:option>
+    <bcf:option type="singlevalued">
+      <bcf:key>useintroduction</bcf:key>
+      <bcf:value>1</bcf:value>
+    </bcf:option>
+    <bcf:option type="singlevalued">
+      <bcf:key>usenamea</bcf:key>
+      <bcf:value>1</bcf:value>
+    </bcf:option>
+    <bcf:option type="singlevalued">
+      <bcf:key>usenameb</bcf:key>
+      <bcf:value>1</bcf:value>
+    </bcf:option>
+    <bcf:option type="singlevalued">
+      <bcf:key>usenamec</bcf:key>
+      <bcf:value>1</bcf:value>
+    </bcf:option>
+    <bcf:option type="singlevalued">
+      <bcf:key>usetranslator</bcf:key>
+      <bcf:value>1</bcf:value>
+    </bcf:option>
+    <bcf:option type="singlevalued">
+      <bcf:key>useshortauthor</bcf:key>
+      <bcf:value>1</bcf:value>
+    </bcf:option>
+    <bcf:option type="singlevalued">
+      <bcf:key>useshorteditor</bcf:key>
+      <bcf:value>1</bcf:value>
+    </bcf:option>
+    <bcf:option type="singlevalued">
+      <bcf:key>usenarrator</bcf:key>
+      <bcf:value>1</bcf:value>
+    </bcf:option>
+    <bcf:option type="singlevalued">
+      <bcf:key>useexecproducer</bcf:key>
+      <bcf:value>1</bcf:value>
+    </bcf:option>
+    <bcf:option type="singlevalued">
+      <bcf:key>useexecdirector</bcf:key>
+      <bcf:value>1</bcf:value>
+    </bcf:option>
+    <bcf:option type="singlevalued">
+      <bcf:key>usewith</bcf:key>
+      <bcf:value>1</bcf:value>
+    </bcf:option>
+  </bcf:options>
+  <!-- online -->
+  <bcf:options component="biblatex" type="online">
+    <bcf:option type="singlevalued">
+      <bcf:key>labelalpha</bcf:key>
+      <bcf:value>0</bcf:value>
+    </bcf:option>
+    <bcf:option type="multivalued">
+      <bcf:key>labelnamespec</bcf:key>
+      <bcf:value order="1">shortauthor</bcf:value>
+      <bcf:value order="2">author</bcf:value>
+      <bcf:value order="3">shorteditor</bcf:value>
+      <bcf:value order="4">editor</bcf:value>
+    </bcf:option>
+    <bcf:option type="singlevalued">
+      <bcf:key>labeltitle</bcf:key>
+      <bcf:value>0</bcf:value>
+    </bcf:option>
+    <bcf:option type="multivalued">
+      <bcf:key>labeltitlespec</bcf:key>
+      <bcf:value order="1">shorttitle</bcf:value>
+      <bcf:value order="2">title</bcf:value>
+      <bcf:value order="3">maintitle</bcf:value>
+    </bcf:option>
+    <bcf:option type="singlevalued">
+      <bcf:key>labeltitleyear</bcf:key>
+      <bcf:value>0</bcf:value>
+    </bcf:option>
+    <bcf:option type="singlevalued">
+      <bcf:key>labeldateparts</bcf:key>
+      <bcf:value>1</bcf:value>
+    </bcf:option>
+    <bcf:option type="multivalued">
+      <bcf:key>labeldatespec</bcf:key>
+      <bcf:value order="1" type="field">pubstate</bcf:value>
+      <bcf:value order="2" type="field">date</bcf:value>
+      <bcf:value order="3" type="field">eventdate</bcf:value>
+      <bcf:value order="4" type="field">year</bcf:value>
+      <bcf:value order="5" type="string">nodate</bcf:value>
+    </bcf:option>
+    <bcf:option type="singlevalued">
+      <bcf:key>maxalphanames</bcf:key>
+      <bcf:value>3</bcf:value>
+    </bcf:option>
+    <bcf:option type="singlevalued">
+      <bcf:key>maxbibnames</bcf:key>
+      <bcf:value>20</bcf:value>
+    </bcf:option>
+    <bcf:option type="singlevalued">
+      <bcf:key>maxcitenames</bcf:key>
+      <bcf:value>2</bcf:value>
+    </bcf:option>
+    <bcf:option type="singlevalued">
+      <bcf:key>maxsortnames</bcf:key>
+      <bcf:value>20</bcf:value>
+    </bcf:option>
+    <bcf:option type="singlevalued">
+      <bcf:key>maxitems</bcf:key>
+      <bcf:value>999</bcf:value>
+    </bcf:option>
+    <bcf:option type="singlevalued">
+      <bcf:key>minalphanames</bcf:key>
+      <bcf:value>1</bcf:value>
+    </bcf:option>
+    <bcf:option type="singlevalued">
+      <bcf:key>minbibnames</bcf:key>
+      <bcf:value>19</bcf:value>
+    </bcf:option>
+    <bcf:option type="singlevalued">
+      <bcf:key>mincitenames</bcf:key>
+      <bcf:value>1</bcf:value>
+    </bcf:option>
+    <bcf:option type="singlevalued">
+      <bcf:key>minsortnames</bcf:key>
+      <bcf:value>19</bcf:value>
+    </bcf:option>
+    <bcf:option type="singlevalued">
+      <bcf:key>minitems</bcf:key>
+      <bcf:value>1</bcf:value>
+    </bcf:option>
+    <bcf:option type="singlevalued">
+      <bcf:key>nohashothers</bcf:key>
+      <bcf:value>0</bcf:value>
+    </bcf:option>
+    <bcf:option type="singlevalued">
+      <bcf:key>noroman</bcf:key>
+      <bcf:value>0</bcf:value>
+    </bcf:option>
+    <bcf:option type="singlevalued">
+      <bcf:key>nosortothers</bcf:key>
+      <bcf:value>0</bcf:value>
+    </bcf:option>
+    <bcf:option type="singlevalued">
+      <bcf:key>singletitle</bcf:key>
+      <bcf:value>0</bcf:value>
+    </bcf:option>
+    <bcf:option type="singlevalued">
+      <bcf:key>skipbib</bcf:key>
+      <bcf:value>0</bcf:value>
+    </bcf:option>
+    <bcf:option type="singlevalued">
+      <bcf:key>skiplab</bcf:key>
+      <bcf:value>0</bcf:value>
+    </bcf:option>
+    <bcf:option type="singlevalued">
+      <bcf:key>skipbiblist</bcf:key>
+      <bcf:value>0</bcf:value>
+    </bcf:option>
+    <bcf:option type="singlevalued">
+      <bcf:key>uniquelist</bcf:key>
+      <bcf:value>minyear</bcf:value>
+    </bcf:option>
+    <bcf:option type="singlevalued">
+      <bcf:key>uniquename</bcf:key>
+      <bcf:value>init</bcf:value>
+    </bcf:option>
+    <bcf:option type="singlevalued">
+      <bcf:key>uniqueprimaryauthor</bcf:key>
+      <bcf:value>1</bcf:value>
+    </bcf:option>
+    <bcf:option type="singlevalued">
+      <bcf:key>uniquetitle</bcf:key>
+      <bcf:value>0</bcf:value>
+    </bcf:option>
+    <bcf:option type="singlevalued">
+      <bcf:key>uniquebaretitle</bcf:key>
+      <bcf:value>0</bcf:value>
+    </bcf:option>
+    <bcf:option type="singlevalued">
+      <bcf:key>uniquework</bcf:key>
+      <bcf:value>0</bcf:value>
+    </bcf:option>
+    <bcf:option type="singlevalued">
+      <bcf:key>useprefix</bcf:key>
+      <bcf:value>1</bcf:value>
+    </bcf:option>
+    <bcf:option type="singlevalued">
+      <bcf:key>useafterword</bcf:key>
+      <bcf:value>1</bcf:value>
+    </bcf:option>
+    <bcf:option type="singlevalued">
+      <bcf:key>useannotator</bcf:key>
+      <bcf:value>1</bcf:value>
+    </bcf:option>
+    <bcf:option type="singlevalued">
+      <bcf:key>useauthor</bcf:key>
+      <bcf:value>1</bcf:value>
+    </bcf:option>
+    <bcf:option type="singlevalued">
+      <bcf:key>usebookauthor</bcf:key>
+      <bcf:value>1</bcf:value>
+    </bcf:option>
+    <bcf:option type="singlevalued">
+      <bcf:key>usecommentator</bcf:key>
+      <bcf:value>1</bcf:value>
+    </bcf:option>
+    <bcf:option type="singlevalued">
+      <bcf:key>useeditor</bcf:key>
+      <bcf:value>1</bcf:value>
+    </bcf:option>
+    <bcf:option type="singlevalued">
+      <bcf:key>useeditora</bcf:key>
+      <bcf:value>1</bcf:value>
+    </bcf:option>
+    <bcf:option type="singlevalued">
+      <bcf:key>useeditorb</bcf:key>
+      <bcf:value>1</bcf:value>
+    </bcf:option>
+    <bcf:option type="singlevalued">
+      <bcf:key>useeditorc</bcf:key>
+      <bcf:value>1</bcf:value>
+    </bcf:option>
+    <bcf:option type="singlevalued">
+      <bcf:key>useforeword</bcf:key>
+      <bcf:value>1</bcf:value>
+    </bcf:option>
+    <bcf:option type="singlevalued">
+      <bcf:key>useholder</bcf:key>
+      <bcf:value>1</bcf:value>
+    </bcf:option>
+    <bcf:option type="singlevalued">
+      <bcf:key>useintroduction</bcf:key>
+      <bcf:value>1</bcf:value>
+    </bcf:option>
+    <bcf:option type="singlevalued">
+      <bcf:key>usenamea</bcf:key>
+      <bcf:value>1</bcf:value>
+    </bcf:option>
+    <bcf:option type="singlevalued">
+      <bcf:key>usenameb</bcf:key>
+      <bcf:value>1</bcf:value>
+    </bcf:option>
+    <bcf:option type="singlevalued">
+      <bcf:key>usenamec</bcf:key>
+      <bcf:value>1</bcf:value>
+    </bcf:option>
+    <bcf:option type="singlevalued">
+      <bcf:key>usetranslator</bcf:key>
+      <bcf:value>1</bcf:value>
+    </bcf:option>
+    <bcf:option type="singlevalued">
+      <bcf:key>useshortauthor</bcf:key>
+      <bcf:value>1</bcf:value>
+    </bcf:option>
+    <bcf:option type="singlevalued">
+      <bcf:key>useshorteditor</bcf:key>
+      <bcf:value>1</bcf:value>
+    </bcf:option>
+    <bcf:option type="singlevalued">
+      <bcf:key>usenarrator</bcf:key>
+      <bcf:value>1</bcf:value>
+    </bcf:option>
+    <bcf:option type="singlevalued">
+      <bcf:key>useexecproducer</bcf:key>
+      <bcf:value>1</bcf:value>
+    </bcf:option>
+    <bcf:option type="singlevalued">
+      <bcf:key>useexecdirector</bcf:key>
+      <bcf:value>1</bcf:value>
+    </bcf:option>
+    <bcf:option type="singlevalued">
+      <bcf:key>usewith</bcf:key>
+      <bcf:value>1</bcf:value>
+    </bcf:option>
+  </bcf:options>
+  <!-- constitution -->
+  <bcf:options component="biblatex" type="constitution">
+    <bcf:option type="singlevalued">
+      <bcf:key>labelalpha</bcf:key>
+      <bcf:value>0</bcf:value>
+    </bcf:option>
+    <bcf:option type="multivalued">
+      <bcf:key>labelnamespec</bcf:key>
+      <bcf:value order="1">shortauthor</bcf:value>
+      <bcf:value order="2">author</bcf:value>
+      <bcf:value order="3">shorteditor</bcf:value>
+      <bcf:value order="4">editor</bcf:value>
+    </bcf:option>
+    <bcf:option type="singlevalued">
+      <bcf:key>labeltitle</bcf:key>
+      <bcf:value>0</bcf:value>
+    </bcf:option>
+    <bcf:option type="multivalued">
+      <bcf:key>labeltitlespec</bcf:key>
+      <bcf:value order="1">shorttitle</bcf:value>
+      <bcf:value order="2">title</bcf:value>
+      <bcf:value order="3">maintitle</bcf:value>
+    </bcf:option>
+    <bcf:option type="singlevalued">
+      <bcf:key>labeltitleyear</bcf:key>
+      <bcf:value>0</bcf:value>
+    </bcf:option>
+    <bcf:option type="singlevalued">
+      <bcf:key>labeldateparts</bcf:key>
+      <bcf:value>1</bcf:value>
+    </bcf:option>
+    <bcf:option type="multivalued">
+      <bcf:key>labeldatespec</bcf:key>
+      <bcf:value order="1" type="field">date</bcf:value>
+    </bcf:option>
+    <bcf:option type="singlevalued">
+      <bcf:key>maxalphanames</bcf:key>
+      <bcf:value>3</bcf:value>
+    </bcf:option>
+    <bcf:option type="singlevalued">
+      <bcf:key>maxbibnames</bcf:key>
+      <bcf:value>20</bcf:value>
+    </bcf:option>
+    <bcf:option type="singlevalued">
+      <bcf:key>maxcitenames</bcf:key>
+      <bcf:value>2</bcf:value>
+    </bcf:option>
+    <bcf:option type="singlevalued">
+      <bcf:key>maxsortnames</bcf:key>
+      <bcf:value>20</bcf:value>
+    </bcf:option>
+    <bcf:option type="singlevalued">
+      <bcf:key>maxitems</bcf:key>
+      <bcf:value>999</bcf:value>
+    </bcf:option>
+    <bcf:option type="singlevalued">
+      <bcf:key>minalphanames</bcf:key>
+      <bcf:value>1</bcf:value>
+    </bcf:option>
+    <bcf:option type="singlevalued">
+      <bcf:key>minbibnames</bcf:key>
+      <bcf:value>19</bcf:value>
+    </bcf:option>
+    <bcf:option type="singlevalued">
+      <bcf:key>mincitenames</bcf:key>
+      <bcf:value>1</bcf:value>
+    </bcf:option>
+    <bcf:option type="singlevalued">
+      <bcf:key>minsortnames</bcf:key>
+      <bcf:value>19</bcf:value>
+    </bcf:option>
+    <bcf:option type="singlevalued">
+      <bcf:key>minitems</bcf:key>
+      <bcf:value>1</bcf:value>
+    </bcf:option>
+    <bcf:option type="singlevalued">
+      <bcf:key>nohashothers</bcf:key>
+      <bcf:value>0</bcf:value>
+    </bcf:option>
+    <bcf:option type="singlevalued">
+      <bcf:key>noroman</bcf:key>
+      <bcf:value>0</bcf:value>
+    </bcf:option>
+    <bcf:option type="singlevalued">
+      <bcf:key>nosortothers</bcf:key>
+      <bcf:value>0</bcf:value>
+    </bcf:option>
+    <bcf:option type="singlevalued">
+      <bcf:key>singletitle</bcf:key>
+      <bcf:value>0</bcf:value>
+    </bcf:option>
+    <bcf:option type="singlevalued">
+      <bcf:key>skipbib</bcf:key>
+      <bcf:value>0</bcf:value>
+    </bcf:option>
+    <bcf:option type="singlevalued">
+      <bcf:key>skiplab</bcf:key>
+      <bcf:value>0</bcf:value>
+    </bcf:option>
+    <bcf:option type="singlevalued">
+      <bcf:key>skipbiblist</bcf:key>
+      <bcf:value>0</bcf:value>
+    </bcf:option>
+    <bcf:option type="singlevalued">
+      <bcf:key>uniquelist</bcf:key>
+      <bcf:value>minyear</bcf:value>
+    </bcf:option>
+    <bcf:option type="singlevalued">
+      <bcf:key>uniquename</bcf:key>
+      <bcf:value>init</bcf:value>
+    </bcf:option>
+    <bcf:option type="singlevalued">
+      <bcf:key>uniqueprimaryauthor</bcf:key>
+      <bcf:value>1</bcf:value>
+    </bcf:option>
+    <bcf:option type="singlevalued">
+      <bcf:key>uniquetitle</bcf:key>
+      <bcf:value>0</bcf:value>
+    </bcf:option>
+    <bcf:option type="singlevalued">
+      <bcf:key>uniquebaretitle</bcf:key>
+      <bcf:value>0</bcf:value>
+    </bcf:option>
+    <bcf:option type="singlevalued">
+      <bcf:key>uniquework</bcf:key>
+      <bcf:value>0</bcf:value>
+    </bcf:option>
+    <bcf:option type="singlevalued">
+      <bcf:key>useprefix</bcf:key>
+      <bcf:value>1</bcf:value>
+    </bcf:option>
+    <bcf:option type="singlevalued">
+      <bcf:key>useafterword</bcf:key>
+      <bcf:value>1</bcf:value>
+    </bcf:option>
+    <bcf:option type="singlevalued">
+      <bcf:key>useannotator</bcf:key>
+      <bcf:value>1</bcf:value>
+    </bcf:option>
+    <bcf:option type="singlevalued">
+      <bcf:key>useauthor</bcf:key>
+      <bcf:value>1</bcf:value>
+    </bcf:option>
+    <bcf:option type="singlevalued">
+      <bcf:key>usebookauthor</bcf:key>
+      <bcf:value>1</bcf:value>
+    </bcf:option>
+    <bcf:option type="singlevalued">
+      <bcf:key>usecommentator</bcf:key>
+      <bcf:value>1</bcf:value>
+    </bcf:option>
+    <bcf:option type="singlevalued">
+      <bcf:key>useeditor</bcf:key>
+      <bcf:value>1</bcf:value>
+    </bcf:option>
+    <bcf:option type="singlevalued">
+      <bcf:key>useeditora</bcf:key>
+      <bcf:value>1</bcf:value>
+    </bcf:option>
+    <bcf:option type="singlevalued">
+      <bcf:key>useeditorb</bcf:key>
+      <bcf:value>1</bcf:value>
+    </bcf:option>
+    <bcf:option type="singlevalued">
+      <bcf:key>useeditorc</bcf:key>
+      <bcf:value>1</bcf:value>
+    </bcf:option>
+    <bcf:option type="singlevalued">
+      <bcf:key>useforeword</bcf:key>
+      <bcf:value>1</bcf:value>
+    </bcf:option>
+    <bcf:option type="singlevalued">
+      <bcf:key>useholder</bcf:key>
+      <bcf:value>1</bcf:value>
+    </bcf:option>
+    <bcf:option type="singlevalued">
+      <bcf:key>useintroduction</bcf:key>
+      <bcf:value>1</bcf:value>
+    </bcf:option>
+    <bcf:option type="singlevalued">
+      <bcf:key>usenamea</bcf:key>
+      <bcf:value>1</bcf:value>
+    </bcf:option>
+    <bcf:option type="singlevalued">
+      <bcf:key>usenameb</bcf:key>
+      <bcf:value>1</bcf:value>
+    </bcf:option>
+    <bcf:option type="singlevalued">
+      <bcf:key>usenamec</bcf:key>
+      <bcf:value>1</bcf:value>
+    </bcf:option>
+    <bcf:option type="singlevalued">
+      <bcf:key>usetranslator</bcf:key>
+      <bcf:value>1</bcf:value>
+    </bcf:option>
+    <bcf:option type="singlevalued">
+      <bcf:key>useshortauthor</bcf:key>
+      <bcf:value>1</bcf:value>
+    </bcf:option>
+    <bcf:option type="singlevalued">
+      <bcf:key>useshorteditor</bcf:key>
+      <bcf:value>1</bcf:value>
+    </bcf:option>
+    <bcf:option type="singlevalued">
+      <bcf:key>usenarrator</bcf:key>
+      <bcf:value>1</bcf:value>
+    </bcf:option>
+    <bcf:option type="singlevalued">
+      <bcf:key>useexecproducer</bcf:key>
+      <bcf:value>1</bcf:value>
+    </bcf:option>
+    <bcf:option type="singlevalued">
+      <bcf:key>useexecdirector</bcf:key>
+      <bcf:value>1</bcf:value>
+    </bcf:option>
+    <bcf:option type="singlevalued">
+      <bcf:key>usewith</bcf:key>
+      <bcf:value>1</bcf:value>
+    </bcf:option>
+  </bcf:options>
+  <!-- BIBLATEX OPTION SCOPE -->
+  <bcf:optionscope type="GLOBAL">
+    <bcf:option datatype="xml">datamodel</bcf:option>
+    <bcf:option datatype="xml">labelalphanametemplate</bcf:option>
+    <bcf:option datatype="xml">labelalphatemplate</bcf:option>
+    <bcf:option datatype="xml">inheritance</bcf:option>
+    <bcf:option datatype="xml">translit</bcf:option>
+    <bcf:option datatype="xml">uniquenametemplate</bcf:option>
+    <bcf:option datatype="xml">sortingnamekeytemplate</bcf:option>
+    <bcf:option datatype="xml">sortingtemplate</bcf:option>
+    <bcf:option datatype="xml">extradatespec</bcf:option>
+    <bcf:option datatype="xml">labelnamespec</bcf:option>
+    <bcf:option datatype="xml">labeltitlespec</bcf:option>
+    <bcf:option datatype="xml">labeldatespec</bcf:option>
+    <bcf:option datatype="string">controlversion</bcf:option>
+    <bcf:option datatype="string">alphaothers</bcf:option>
+    <bcf:option datatype="string">sortalphaothers</bcf:option>
+    <bcf:option datatype="string">presort</bcf:option>
+    <bcf:option datatype="string">texencoding</bcf:option>
+    <bcf:option datatype="string">bibencoding</bcf:option>
+    <bcf:option datatype="string">sortingtemplatename</bcf:option>
+    <bcf:option datatype="string">sortlocale</bcf:option>
+    <bcf:option datatype="string">language</bcf:option>
+    <bcf:option datatype="string">autolang</bcf:option>
+    <bcf:option datatype="string">langhook</bcf:option>
+    <bcf:option datatype="string">indexing</bcf:option>
+    <bcf:option datatype="string">hyperref</bcf:option>
+    <bcf:option datatype="string">backrefsetstyle</bcf:option>
+    <bcf:option datatype="string">block</bcf:option>
+    <bcf:option datatype="string">pagetracker</bcf:option>
+    <bcf:option datatype="string">citecounter</bcf:option>
+    <bcf:option datatype="string">citetracker</bcf:option>
+    <bcf:option datatype="string">ibidtracker</bcf:option>
+    <bcf:option datatype="string">idemtracker</bcf:option>
+    <bcf:option datatype="string">opcittracker</bcf:option>
+    <bcf:option datatype="string">loccittracker</bcf:option>
+    <bcf:option datatype="string">labeldate</bcf:option>
+    <bcf:option datatype="string">labeltime</bcf:option>
+    <bcf:option datatype="string">dateera</bcf:option>
+    <bcf:option datatype="string">date</bcf:option>
+    <bcf:option datatype="string">time</bcf:option>
+    <bcf:option datatype="string">eventdate</bcf:option>
+    <bcf:option datatype="string">eventtime</bcf:option>
+    <bcf:option datatype="string">origdate</bcf:option>
+    <bcf:option datatype="string">origtime</bcf:option>
+    <bcf:option datatype="string">urldate</bcf:option>
+    <bcf:option datatype="string">urltime</bcf:option>
+    <bcf:option datatype="string">alldatesusetime</bcf:option>
+    <bcf:option datatype="string">alldates</bcf:option>
+    <bcf:option datatype="string">alltimes</bcf:option>
+    <bcf:option datatype="string">gregorianstart</bcf:option>
+    <bcf:option datatype="string">autocite</bcf:option>
+    <bcf:option datatype="string">notetype</bcf:option>
+    <bcf:option datatype="string">uniquelist</bcf:option>
+    <bcf:option datatype="string">uniquename</bcf:option>
+    <bcf:option datatype="string">refsection</bcf:option>
+    <bcf:option datatype="string">refsegment</bcf:option>
+    <bcf:option datatype="string">citereset</bcf:option>
+    <bcf:option datatype="string">sortlos</bcf:option>
+    <bcf:option datatype="string">babel</bcf:option>
+    <bcf:option datatype="string">datelabel</bcf:option>
+    <bcf:option datatype="string">backrefstyle</bcf:option>
+    <bcf:option datatype="string">arxiv</bcf:option>
+    <bcf:option datatype="boolean">familyinits</bcf:option>
+    <bcf:option datatype="boolean">giveninits</bcf:option>
+    <bcf:option datatype="boolean">prefixinits</bcf:option>
+    <bcf:option datatype="boolean">suffixinits</bcf:option>
+    <bcf:option datatype="boolean">useafterword</bcf:option>
+    <bcf:option datatype="boolean">useannotator</bcf:option>
+    <bcf:option datatype="boolean">useauthor</bcf:option>
+    <bcf:option datatype="boolean">usebookauthor</bcf:option>
+    <bcf:option datatype="boolean">usecommentator</bcf:option>
+    <bcf:option datatype="boolean">useeditor</bcf:option>
+    <bcf:option datatype="boolean">useeditora</bcf:option>
+    <bcf:option datatype="boolean">useeditorb</bcf:option>
+    <bcf:option datatype="boolean">useeditorc</bcf:option>
+    <bcf:option datatype="boolean">useforeword</bcf:option>
+    <bcf:option datatype="boolean">useholder</bcf:option>
+    <bcf:option datatype="boolean">useintroduction</bcf:option>
+    <bcf:option datatype="boolean">usenamea</bcf:option>
+    <bcf:option datatype="boolean">usenameb</bcf:option>
+    <bcf:option datatype="boolean">usenamec</bcf:option>
+    <bcf:option datatype="boolean">usetranslator</bcf:option>
+    <bcf:option datatype="boolean">useshortauthor</bcf:option>
+    <bcf:option datatype="boolean">useshorteditor</bcf:option>
+    <bcf:option datatype="boolean">usenarrator</bcf:option>
+    <bcf:option datatype="boolean">useexecproducer</bcf:option>
+    <bcf:option datatype="boolean">useexecdirector</bcf:option>
+    <bcf:option datatype="boolean">usewith</bcf:option>
+    <bcf:option datatype="boolean">debug</bcf:option>
+    <bcf:option datatype="boolean">loadfiles</bcf:option>
+    <bcf:option datatype="boolean">safeinputenc</bcf:option>
+    <bcf:option datatype="boolean">sortcase</bcf:option>
+    <bcf:option datatype="boolean">sortupper</bcf:option>
+    <bcf:option datatype="boolean">terseinits</bcf:option>
+    <bcf:option datatype="boolean">abbreviate</bcf:option>
+    <bcf:option datatype="boolean">dateabbrev</bcf:option>
+    <bcf:option datatype="boolean">clearlang</bcf:option>
+    <bcf:option datatype="boolean">sortcites</bcf:option>
+    <bcf:option datatype="boolean">sortsets</bcf:option>
+    <bcf:option datatype="boolean">backref</bcf:option>
+    <bcf:option datatype="boolean">backreffloats</bcf:option>
+    <bcf:option datatype="boolean">trackfloats</bcf:option>
+    <bcf:option datatype="boolean">parentracker</bcf:option>
+    <bcf:option datatype="boolean">labeldateusetime</bcf:option>
+    <bcf:option datatype="boolean">datecirca</bcf:option>
+    <bcf:option datatype="boolean">dateuncertain</bcf:option>
+    <bcf:option datatype="boolean">dateusetime</bcf:option>
+    <bcf:option datatype="boolean">eventdateusetime</bcf:option>
+    <bcf:option datatype="boolean">origdateusetime</bcf:option>
+    <bcf:option datatype="boolean">urldateusetime</bcf:option>
+    <bcf:option datatype="boolean">julian</bcf:option>
+    <bcf:option datatype="boolean">datezeros</bcf:option>
+    <bcf:option datatype="boolean">timezeros</bcf:option>
+    <bcf:option datatype="boolean">timezones</bcf:option>
+    <bcf:option datatype="boolean">seconds</bcf:option>
+    <bcf:option datatype="boolean">autopunct</bcf:option>
+    <bcf:option datatype="boolean">punctfont</bcf:option>
+    <bcf:option datatype="boolean">labelnumber</bcf:option>
+    <bcf:option datatype="boolean">labelalpha</bcf:option>
+    <bcf:option datatype="boolean">labeltitle</bcf:option>
+    <bcf:option datatype="boolean">labeltitleyear</bcf:option>
+    <bcf:option datatype="boolean">labeldateparts</bcf:option>
+    <bcf:option datatype="boolean">nohashothers</bcf:option>
+    <bcf:option datatype="boolean">nosortothers</bcf:option>
+    <bcf:option datatype="boolean">noroman</bcf:option>
+    <bcf:option datatype="boolean">singletitle</bcf:option>
+    <bcf:option datatype="boolean">uniquetitle</bcf:option>
+    <bcf:option datatype="boolean">uniquebaretitle</bcf:option>
+    <bcf:option datatype="boolean">uniquework</bcf:option>
+    <bcf:option datatype="boolean">uniqueprimaryauthor</bcf:option>
+    <bcf:option datatype="boolean">defernumbers</bcf:option>
+    <bcf:option datatype="boolean">locallabelwidth</bcf:option>
+    <bcf:option datatype="boolean">bibwarn</bcf:option>
+    <bcf:option datatype="boolean">useprefix</bcf:option>
+    <bcf:option datatype="boolean">skipbib</bcf:option>
+    <bcf:option datatype="boolean">skipbiblist</bcf:option>
+    <bcf:option datatype="boolean">skiplab</bcf:option>
+    <bcf:option datatype="boolean">dataonly</bcf:option>
+    <bcf:option datatype="boolean">defernums</bcf:option>
+    <bcf:option datatype="boolean">firstinits</bcf:option>
+    <bcf:option datatype="boolean">sortfirstinits</bcf:option>
+    <bcf:option datatype="boolean">sortgiveninits</bcf:option>
+    <bcf:option datatype="boolean">labelyear</bcf:option>
+    <bcf:option datatype="boolean">isbn</bcf:option>
+    <bcf:option datatype="boolean">url</bcf:option>
+    <bcf:option datatype="boolean">doi</bcf:option>
+    <bcf:option datatype="boolean">eprint</bcf:option>
+    <bcf:option datatype="boolean">related</bcf:option>
+    <bcf:option datatype="boolean">apamaxprtauth</bcf:option>
+    <bcf:option datatype="boolean">annotation</bcf:option>
+    <bcf:option datatype="boolean">dashed</bcf:option>
+    <bcf:option datatype="boolean">bibtexcaseprotection</bcf:option>
+    <bcf:option datatype="integer">mincrossrefs</bcf:option>
+    <bcf:option datatype="integer">minxrefs</bcf:option>
+    <bcf:option datatype="integer">maxnames</bcf:option>
+    <bcf:option datatype="integer">minnames</bcf:option>
+    <bcf:option datatype="integer">maxbibnames</bcf:option>
+    <bcf:option datatype="integer">minbibnames</bcf:option>
+    <bcf:option datatype="integer">maxcitenames</bcf:option>
+    <bcf:option datatype="integer">mincitenames</bcf:option>
+    <bcf:option datatype="integer">maxsortnames</bcf:option>
+    <bcf:option datatype="integer">minsortnames</bcf:option>
+    <bcf:option datatype="integer">maxitems</bcf:option>
+    <bcf:option datatype="integer">minitems</bcf:option>
+    <bcf:option datatype="integer">maxalphanames</bcf:option>
+    <bcf:option datatype="integer">minalphanames</bcf:option>
+    <bcf:option datatype="integer">maxparens</bcf:option>
+    <bcf:option datatype="integer">dateeraauto</bcf:option>
+  </bcf:optionscope>
+  <bcf:optionscope type="ENTRYTYPE">
+    <bcf:option datatype="string">alphaothers</bcf:option>
+    <bcf:option datatype="string">sortalphaothers</bcf:option>
+    <bcf:option datatype="string">presort</bcf:option>
+    <bcf:option datatype="string">indexing</bcf:option>
+    <bcf:option datatype="string">citetracker</bcf:option>
+    <bcf:option datatype="string">ibidtracker</bcf:option>
+    <bcf:option datatype="string">idemtracker</bcf:option>
+    <bcf:option datatype="string">opcittracker</bcf:option>
+    <bcf:option datatype="string">loccittracker</bcf:option>
+    <bcf:option datatype="string">uniquelist</bcf:option>
+    <bcf:option datatype="string">uniquename</bcf:option>
+    <bcf:option datatype="boolean">familyinits</bcf:option>
+    <bcf:option datatype="boolean">giveninits</bcf:option>
+    <bcf:option datatype="boolean">prefixinits</bcf:option>
+    <bcf:option datatype="boolean">suffixinits</bcf:option>
+    <bcf:option datatype="boolean">useafterword</bcf:option>
+    <bcf:option datatype="boolean">useannotator</bcf:option>
+    <bcf:option datatype="boolean">useauthor</bcf:option>
+    <bcf:option datatype="boolean">usebookauthor</bcf:option>
+    <bcf:option datatype="boolean">usecommentator</bcf:option>
+    <bcf:option datatype="boolean">useeditor</bcf:option>
+    <bcf:option datatype="boolean">useeditora</bcf:option>
+    <bcf:option datatype="boolean">useeditorb</bcf:option>
+    <bcf:option datatype="boolean">useeditorc</bcf:option>
+    <bcf:option datatype="boolean">useforeword</bcf:option>
+    <bcf:option datatype="boolean">useholder</bcf:option>
+    <bcf:option datatype="boolean">useintroduction</bcf:option>
+    <bcf:option datatype="boolean">usenamea</bcf:option>
+    <bcf:option datatype="boolean">usenameb</bcf:option>
+    <bcf:option datatype="boolean">usenamec</bcf:option>
+    <bcf:option datatype="boolean">usetranslator</bcf:option>
+    <bcf:option datatype="boolean">useshortauthor</bcf:option>
+    <bcf:option datatype="boolean">useshorteditor</bcf:option>
+    <bcf:option datatype="boolean">usenarrator</bcf:option>
+    <bcf:option datatype="boolean">useexecproducer</bcf:option>
+    <bcf:option datatype="boolean">useexecdirector</bcf:option>
+    <bcf:option datatype="boolean">usewith</bcf:option>
+    <bcf:option datatype="boolean">terseinits</bcf:option>
+    <bcf:option datatype="boolean">abbreviate</bcf:option>
+    <bcf:option datatype="boolean">dateabbrev</bcf:option>
+    <bcf:option datatype="boolean">clearlang</bcf:option>
+    <bcf:option datatype="boolean">labelnumber</bcf:option>
+    <bcf:option datatype="boolean">labelalpha</bcf:option>
+    <bcf:option datatype="boolean">labeltitle</bcf:option>
+    <bcf:option datatype="boolean">labeltitleyear</bcf:option>
+    <bcf:option datatype="boolean">labeldateparts</bcf:option>
+    <bcf:option datatype="boolean">nohashothers</bcf:option>
+    <bcf:option datatype="boolean">nosortothers</bcf:option>
+    <bcf:option datatype="boolean">noroman</bcf:option>
+    <bcf:option datatype="boolean">singletitle</bcf:option>
+    <bcf:option datatype="boolean">uniquetitle</bcf:option>
+    <bcf:option datatype="boolean">uniquebaretitle</bcf:option>
+    <bcf:option datatype="boolean">uniquework</bcf:option>
+    <bcf:option datatype="boolean">uniqueprimaryauthor</bcf:option>
+    <bcf:option datatype="boolean">useprefix</bcf:option>
+    <bcf:option datatype="boolean">skipbib</bcf:option>
+    <bcf:option datatype="boolean">skipbiblist</bcf:option>
+    <bcf:option datatype="boolean">skiplab</bcf:option>
+    <bcf:option datatype="boolean">dataonly</bcf:option>
+    <bcf:option datatype="boolean">skiplos</bcf:option>
+    <bcf:option datatype="boolean">labelyear</bcf:option>
+    <bcf:option datatype="boolean">isbn</bcf:option>
+    <bcf:option datatype="boolean">url</bcf:option>
+    <bcf:option datatype="boolean">doi</bcf:option>
+    <bcf:option datatype="boolean">eprint</bcf:option>
+    <bcf:option datatype="boolean">related</bcf:option>
+    <bcf:option datatype="boolean">annotation</bcf:option>
+    <bcf:option datatype="boolean">bibtexcaseprotection</bcf:option>
+    <bcf:option datatype="xml">labelalphatemplate</bcf:option>
+    <bcf:option datatype="xml">translit</bcf:option>
+    <bcf:option datatype="xml">sortexclusion</bcf:option>
+    <bcf:option datatype="xml">sortinclusion</bcf:option>
+    <bcf:option datatype="xml">labelnamespec</bcf:option>
+    <bcf:option datatype="xml">labeltitlespec</bcf:option>
+    <bcf:option datatype="xml">labeldatespec</bcf:option>
+    <bcf:option datatype="integer">maxnames</bcf:option>
+    <bcf:option datatype="integer">minnames</bcf:option>
+    <bcf:option datatype="integer">maxbibnames</bcf:option>
+    <bcf:option datatype="integer">minbibnames</bcf:option>
+    <bcf:option datatype="integer">maxcitenames</bcf:option>
+    <bcf:option datatype="integer">mincitenames</bcf:option>
+    <bcf:option datatype="integer">maxsortnames</bcf:option>
+    <bcf:option datatype="integer">minsortnames</bcf:option>
+    <bcf:option datatype="integer">maxitems</bcf:option>
+    <bcf:option datatype="integer">minitems</bcf:option>
+    <bcf:option datatype="integer">maxalphanames</bcf:option>
+    <bcf:option datatype="integer">minalphanames</bcf:option>
+  </bcf:optionscope>
+  <bcf:optionscope type="ENTRY">
+    <bcf:option datatype="string">noinherit</bcf:option>
+    <bcf:option datatype="string" backendin="sortingnamekeytemplatename,uniquenametemplatename,labelalphanametemplatename">nametemplates</bcf:option>
+    <bcf:option datatype="string" backendout="1">labelalphanametemplatename</bcf:option>
+    <bcf:option datatype="string" backendout="1">uniquenametemplatename</bcf:option>
+    <bcf:option datatype="string" backendout="1">sortingnamekeytemplatename</bcf:option>
+    <bcf:option datatype="string">presort</bcf:option>
+    <bcf:option datatype="string" backendout="1">indexing</bcf:option>
+    <bcf:option datatype="string" backendout="1">citetracker</bcf:option>
+    <bcf:option datatype="string" backendout="1">ibidtracker</bcf:option>
+    <bcf:option datatype="string" backendout="1">idemtracker</bcf:option>
+    <bcf:option datatype="string" backendout="1">opcittracker</bcf:option>
+    <bcf:option datatype="string" backendout="1">loccittracker</bcf:option>
+    <bcf:option datatype="string">uniquelist</bcf:option>
+    <bcf:option datatype="string">uniquename</bcf:option>
+    <bcf:option datatype="boolean" backendout="1">familyinits</bcf:option>
+    <bcf:option datatype="boolean" backendout="1">giveninits</bcf:option>
+    <bcf:option datatype="boolean" backendout="1">prefixinits</bcf:option>
+    <bcf:option datatype="boolean" backendout="1">suffixinits</bcf:option>
+    <bcf:option datatype="boolean" backendout="1">useafterword</bcf:option>
+    <bcf:option datatype="boolean" backendout="1">useannotator</bcf:option>
+    <bcf:option datatype="boolean" backendout="1">useauthor</bcf:option>
+    <bcf:option datatype="boolean" backendout="1">usebookauthor</bcf:option>
+    <bcf:option datatype="boolean" backendout="1">usecommentator</bcf:option>
+    <bcf:option datatype="boolean" backendout="1">useeditor</bcf:option>
+    <bcf:option datatype="boolean" backendout="1">useeditora</bcf:option>
+    <bcf:option datatype="boolean" backendout="1">useeditorb</bcf:option>
+    <bcf:option datatype="boolean" backendout="1">useeditorc</bcf:option>
+    <bcf:option datatype="boolean" backendout="1">useforeword</bcf:option>
+    <bcf:option datatype="boolean" backendout="1">useholder</bcf:option>
+    <bcf:option datatype="boolean" backendout="1">useintroduction</bcf:option>
+    <bcf:option datatype="boolean" backendout="1">usenamea</bcf:option>
+    <bcf:option datatype="boolean" backendout="1">usenameb</bcf:option>
+    <bcf:option datatype="boolean" backendout="1">usenamec</bcf:option>
+    <bcf:option datatype="boolean" backendout="1">usetranslator</bcf:option>
+    <bcf:option datatype="boolean" backendout="1">useshortauthor</bcf:option>
+    <bcf:option datatype="boolean" backendout="1">useshorteditor</bcf:option>
+    <bcf:option datatype="boolean" backendout="1">usenarrator</bcf:option>
+    <bcf:option datatype="boolean" backendout="1">useexecproducer</bcf:option>
+    <bcf:option datatype="boolean" backendout="1">useexecdirector</bcf:option>
+    <bcf:option datatype="boolean" backendout="1">usewith</bcf:option>
+    <bcf:option datatype="boolean" backendout="1">terseinits</bcf:option>
+    <bcf:option datatype="boolean" backendout="1">abbreviate</bcf:option>
+    <bcf:option datatype="boolean" backendout="1">dateabbrev</bcf:option>
+    <bcf:option datatype="boolean" backendout="1">clearlang</bcf:option>
+    <bcf:option datatype="boolean" backendout="1">labelnumber</bcf:option>
+    <bcf:option datatype="boolean" backendout="1">labelalpha</bcf:option>
+    <bcf:option datatype="boolean" backendout="1">labeltitle</bcf:option>
+    <bcf:option datatype="boolean" backendout="1">labeltitleyear</bcf:option>
+    <bcf:option datatype="boolean" backendout="1">labeldateparts</bcf:option>
+    <bcf:option datatype="boolean">nohashothers</bcf:option>
+    <bcf:option datatype="boolean">nosortothers</bcf:option>
+    <bcf:option datatype="boolean">noroman</bcf:option>
+    <bcf:option datatype="boolean">singletitle</bcf:option>
+    <bcf:option datatype="boolean">uniquetitle</bcf:option>
+    <bcf:option datatype="boolean">uniquebaretitle</bcf:option>
+    <bcf:option datatype="boolean">uniquework</bcf:option>
+    <bcf:option datatype="boolean">uniqueprimaryauthor</bcf:option>
+    <bcf:option datatype="boolean" backendout="1">useprefix</bcf:option>
+    <bcf:option datatype="boolean" backendout="1">skipbib</bcf:option>
+    <bcf:option datatype="boolean" backendout="1">skipbiblist</bcf:option>
+    <bcf:option datatype="boolean" backendout="1">skiplab</bcf:option>
+    <bcf:option datatype="boolean" backendin="uniquename=false,uniquelist=false,skipbib=true,skipbiblist=true,skiplab=true">dataonly</bcf:option>
+    <bcf:option datatype="boolean" backendout="1">skiplos</bcf:option>
+    <bcf:option datatype="boolean" backendout="1">isbn</bcf:option>
+    <bcf:option datatype="boolean" backendout="1">url</bcf:option>
+    <bcf:option datatype="boolean" backendout="1">doi</bcf:option>
+    <bcf:option datatype="boolean" backendout="1">eprint</bcf:option>
+    <bcf:option datatype="boolean" backendout="1">related</bcf:option>
+    <bcf:option datatype="boolean" backendout="1">annotation</bcf:option>
+    <bcf:option datatype="boolean" backendout="1">bibtexcaseprotection</bcf:option>
+    <bcf:option datatype="integer" backendin="maxcitenames,maxbibnames,maxsortnames">maxnames</bcf:option>
+    <bcf:option datatype="integer" backendin="mincitenames,minbibnames,minsortnames">minnames</bcf:option>
+    <bcf:option datatype="integer" backendout="1">maxbibnames</bcf:option>
+    <bcf:option datatype="integer" backendout="1">minbibnames</bcf:option>
+    <bcf:option datatype="integer" backendout="1">maxcitenames</bcf:option>
+    <bcf:option datatype="integer" backendout="1">mincitenames</bcf:option>
+    <bcf:option datatype="integer" backendout="1">maxsortnames</bcf:option>
+    <bcf:option datatype="integer" backendout="1">minsortnames</bcf:option>
+    <bcf:option datatype="integer" backendout="1">maxitems</bcf:option>
+    <bcf:option datatype="integer" backendout="1">minitems</bcf:option>
+    <bcf:option datatype="integer" backendout="1">maxalphanames</bcf:option>
+    <bcf:option datatype="integer" backendout="1">minalphanames</bcf:option>
+  </bcf:optionscope>
+  <bcf:optionscope type="NAMELIST">
+    <bcf:option datatype="string" backendin="sortingnamekeytemplatename,uniquenametemplatename,labelalphanametemplatename">nametemplates</bcf:option>
+    <bcf:option datatype="string" backendout="1">labelalphanametemplatename</bcf:option>
+    <bcf:option datatype="string" backendout="1">uniquenametemplatename</bcf:option>
+    <bcf:option datatype="string" backendout="1">sortingnamekeytemplatename</bcf:option>
+    <bcf:option datatype="string">uniquelist</bcf:option>
+    <bcf:option datatype="string">uniquename</bcf:option>
+    <bcf:option datatype="boolean" backendout="1">familyinits</bcf:option>
+    <bcf:option datatype="boolean" backendout="1">giveninits</bcf:option>
+    <bcf:option datatype="boolean" backendout="1">prefixinits</bcf:option>
+    <bcf:option datatype="boolean" backendout="1">suffixinits</bcf:option>
+    <bcf:option datatype="boolean" backendout="1">terseinits</bcf:option>
+    <bcf:option datatype="boolean">nohashothers</bcf:option>
+    <bcf:option datatype="boolean">nosortothers</bcf:option>
+    <bcf:option datatype="boolean" backendout="1">useprefix</bcf:option>
+  </bcf:optionscope>
+  <bcf:optionscope type="NAME">
+    <bcf:option datatype="string" backendin="sortingnamekeytemplatename,uniquenametemplatename,labelalphanametemplatename">nametemplates</bcf:option>
+    <bcf:option datatype="string" backendout="1">labelalphanametemplatename</bcf:option>
+    <bcf:option datatype="string" backendout="1">uniquenametemplatename</bcf:option>
+    <bcf:option datatype="string" backendout="1">sortingnamekeytemplatename</bcf:option>
+    <bcf:option datatype="string">uniquename</bcf:option>
+    <bcf:option datatype="boolean" backendout="1">familyinits</bcf:option>
+    <bcf:option datatype="boolean" backendout="1">giveninits</bcf:option>
+    <bcf:option datatype="boolean" backendout="1">prefixinits</bcf:option>
+    <bcf:option datatype="boolean" backendout="1">suffixinits</bcf:option>
+    <bcf:option datatype="boolean" backendout="1">terseinits</bcf:option>
+    <bcf:option datatype="boolean" backendout="1">useprefix</bcf:option>
+  </bcf:optionscope>
+  <!-- DATAFIELDSETS -->
+  <bcf:datafieldset name="setnames">
+    <bcf:member datatype="name" fieldtype="list"/>
+  </bcf:datafieldset>
+  <bcf:datafieldset name="settitles">
+    <bcf:member field="title"/>
+    <bcf:member field="booktitle"/>
+    <bcf:member field="eventtitle"/>
+    <bcf:member field="issuetitle"/>
+    <bcf:member field="journaltitle"/>
+    <bcf:member field="maintitle"/>
+    <bcf:member field="origtitle"/>
+  </bcf:datafieldset>
+  <!-- SOURCEMAP -->
+  <bcf:sourcemap>
+    <bcf:maps datatype="bibtex" level="style">
+      <bcf:map>
+        <bcf:map_step map_type_source="reference" map_type_target="book"/>
+      </bcf:map>
+      <bcf:map>
+        <bcf:map_step map_type_source="inreference" map_type_target="inbook"/>
+      </bcf:map>
+      <bcf:map>
+        <bcf:map_step map_type_source="collection" map_type_target="book"/>
+      </bcf:map>
+      <bcf:map>
+        <bcf:map_step map_type_source="incollection" map_type_target="inbook"/>
+      </bcf:map>
+      <bcf:map>
+        <bcf:map_step map_type_source="hardware" map_type_target="software"/>
+      </bcf:map>
+      <bcf:map>
+        <bcf:map_step map_field_source="groupauthor" map_field_target="author"/>
+      </bcf:map>
+      <bcf:map>
+        <bcf:per_type>proceedings</bcf:per_type>
+        <bcf:map_step map_field_source="booktitle" map_field_target="title"/>
+        <bcf:map_step map_type_source="proceedings" map_type_target="book"/>
+      </bcf:map>
+      <bcf:map>
+        <bcf:per_type>inproceedings</bcf:per_type>
+        <bcf:map_step map_notfield="editor" map_final="1"/>
+        <bcf:map_step map_field_source="booktitle" map_field_target="journaltitle"/>
+        <bcf:map_step map_type_source="inproceedings" map_type_target="article"/>
+      </bcf:map>
+      <bcf:map>
+        <bcf:map_step map_type_source="inproceedings" map_type_target="inbook"/>
+      </bcf:map>
+      <bcf:map>
+        <bcf:map_step map_field_source="year" map_final="1"/>
+        <bcf:map_step map_field_set="pubstate" map_null="1"/>
+      </bcf:map>
+      <bcf:map>
+        <bcf:map_step map_field_source="date" map_final="1"/>
+        <bcf:map_step map_field_set="pubstate" map_null="1"/>
+      </bcf:map>
+      <bcf:map>
+        <bcf:map_step map_field_source="author" map_match="([^{}]+)" map_final="1"/>
+        <bcf:map_step map_field_source="publisher" map_match="$1" map_final="1"/>
+        <bcf:map_step map_field_set="publisher" map_null="1"/>
+      </bcf:map>
+    </bcf:maps>
+    <bcf:maps datatype="bibtex" level="driver">
+      <bcf:map>
+        <bcf:map_step map_field_set="day" map_null="1"/>
+      </bcf:map>
+      <bcf:map>
+        <bcf:map_step map_type_source="conference" map_type_target="inproceedings"/>
+        <bcf:map_step map_type_source="electronic" map_type_target="online"/>
+        <bcf:map_step map_type_source="www" map_type_target="online"/>
+      </bcf:map>
+      <bcf:map>
+        <bcf:map_step map_type_source="mastersthesis" map_type_target="thesis" map_final="1"/>
+        <bcf:map_step map_field_set="type" map_field_value="mathesis"/>
+      </bcf:map>
+      <bcf:map>
+        <bcf:map_step map_type_source="phdthesis" map_type_target="thesis" map_final="1"/>
+        <bcf:map_step map_field_set="type" map_field_value="phdthesis"/>
+      </bcf:map>
+      <bcf:map>
+        <bcf:map_step map_type_source="techreport" map_type_target="report" map_final="1"/>
+        <bcf:map_step map_field_set="type" map_field_value="techreport"/>
+      </bcf:map>
+      <bcf:map>
+        <bcf:map_step map_field_source="hyphenation" map_field_target="langid"/>
+        <bcf:map_step map_field_source="address" map_field_target="location"/>
+        <bcf:map_step map_field_source="school" map_field_target="institution"/>
+        <bcf:map_step map_field_source="annote" map_field_target="annotation"/>
+        <bcf:map_step map_field_source="archiveprefix" map_field_target="eprinttype"/>
+        <bcf:map_step map_field_source="journal" map_field_target="journaltitle"/>
+        <bcf:map_step map_field_source="primaryclass" map_field_target="eprintclass"/>
+        <bcf:map_step map_field_source="key" map_field_target="sortkey"/>
+        <bcf:map_step map_field_source="pdf" map_field_target="file"/>
+      </bcf:map>
+    </bcf:maps>
+  </bcf:sourcemap>
+  <!-- LABELALPHA NAME TEMPLATE -->
+  <bcf:labelalphanametemplate name="global">
+    <bcf:namepart order="1" use="1" pre="1" substring_width="1" substring_compound="1">prefix</bcf:namepart>
+    <bcf:namepart order="2">family</bcf:namepart>
+  </bcf:labelalphanametemplate>
+  <!-- LABELALPHA TEMPLATE -->
+  <bcf:labelalphatemplate type="global">
+    <bcf:labelelement order="1">
+      <bcf:labelpart final="1">shorthand</bcf:labelpart>
+      <bcf:labelpart>label</bcf:labelpart>
+      <bcf:labelpart substring_width="3" substring_side="left" ifnames="1">labelname</bcf:labelpart>
+      <bcf:labelpart substring_width="1" substring_side="left">labelname</bcf:labelpart>
+    </bcf:labelelement>
+    <bcf:labelelement order="2">
+      <bcf:labelpart substring_width="2" substring_side="right">year</bcf:labelpart>
+    </bcf:labelelement>
+  </bcf:labelalphatemplate>
+  <!-- EXTRADATE -->
+  <bcf:extradatespec>
+    <bcf:scope>
+      <bcf:field order="1">labelyear</bcf:field>
+      <bcf:field order="2">year</bcf:field>
+    </bcf:scope>
+  </bcf:extradatespec>
+  <!-- INHERITANCE -->
+  <bcf:inheritance>
+    <bcf:defaults inherit_all="true" override_target="false">
+    </bcf:defaults>
+    <bcf:inherit>
+      <bcf:type_pair source="mvbook" target="inbook"/>
+      <bcf:type_pair source="mvbook" target="bookinbook"/>
+      <bcf:type_pair source="mvbook" target="suppbook"/>
+      <bcf:type_pair source="book" target="inbook"/>
+      <bcf:type_pair source="book" target="bookinbook"/>
+      <bcf:type_pair source="book" target="suppbook"/>
+      <bcf:field source="author" target="author"/>
+      <bcf:field source="author" target="bookauthor"/>
+    </bcf:inherit>
+    <bcf:inherit>
+      <bcf:type_pair source="mvbook" target="book"/>
+      <bcf:type_pair source="mvbook" target="inbook"/>
+      <bcf:type_pair source="mvbook" target="bookinbook"/>
+      <bcf:type_pair source="mvbook" target="suppbook"/>
+      <bcf:field source="title" target="maintitle"/>
+      <bcf:field source="subtitle" target="mainsubtitle"/>
+      <bcf:field source="titleaddon" target="maintitleaddon"/>
+      <bcf:field source="shorttitle" skip="true"/>
+      <bcf:field source="sorttitle" skip="true"/>
+      <bcf:field source="indextitle" skip="true"/>
+      <bcf:field source="indexsorttitle" skip="true"/>
+    </bcf:inherit>
+    <bcf:inherit>
+      <bcf:type_pair source="mvcollection" target="collection"/>
+      <bcf:type_pair source="mvcollection" target="reference"/>
+      <bcf:type_pair source="mvcollection" target="incollection"/>
+      <bcf:type_pair source="mvcollection" target="inreference"/>
+      <bcf:type_pair source="mvcollection" target="suppcollection"/>
+      <bcf:type_pair source="mvreference" target="collection"/>
+      <bcf:type_pair source="mvreference" target="reference"/>
+      <bcf:type_pair source="mvreference" target="incollection"/>
+      <bcf:type_pair source="mvreference" target="inreference"/>
+      <bcf:type_pair source="mvreference" target="suppcollection"/>
+      <bcf:field source="title" target="maintitle"/>
+      <bcf:field source="subtitle" target="mainsubtitle"/>
+      <bcf:field source="titleaddon" target="maintitleaddon"/>
+      <bcf:field source="shorttitle" skip="true"/>
+      <bcf:field source="sorttitle" skip="true"/>
+      <bcf:field source="indextitle" skip="true"/>
+      <bcf:field source="indexsorttitle" skip="true"/>
+    </bcf:inherit>
+    <bcf:inherit>
+      <bcf:type_pair source="mvproceedings" target="proceedings"/>
+      <bcf:type_pair source="mvproceedings" target="inproceedings"/>
+      <bcf:field source="title" target="maintitle"/>
+      <bcf:field source="subtitle" target="mainsubtitle"/>
+      <bcf:field source="titleaddon" target="maintitleaddon"/>
+      <bcf:field source="shorttitle" skip="true"/>
+      <bcf:field source="sorttitle" skip="true"/>
+      <bcf:field source="indextitle" skip="true"/>
+      <bcf:field source="indexsorttitle" skip="true"/>
+    </bcf:inherit>
+    <bcf:inherit>
+      <bcf:type_pair source="book" target="inbook"/>
+      <bcf:type_pair source="book" target="bookinbook"/>
+      <bcf:type_pair source="book" target="suppbook"/>
+      <bcf:field source="title" target="booktitle"/>
+      <bcf:field source="subtitle" target="booksubtitle"/>
+      <bcf:field source="titleaddon" target="booktitleaddon"/>
+      <bcf:field source="shorttitle" skip="true"/>
+      <bcf:field source="sorttitle" skip="true"/>
+      <bcf:field source="indextitle" skip="true"/>
+      <bcf:field source="indexsorttitle" skip="true"/>
+    </bcf:inherit>
+    <bcf:inherit>
+      <bcf:type_pair source="collection" target="incollection"/>
+      <bcf:type_pair source="collection" target="inreference"/>
+      <bcf:type_pair source="collection" target="suppcollection"/>
+      <bcf:type_pair source="reference" target="incollection"/>
+      <bcf:type_pair source="reference" target="inreference"/>
+      <bcf:type_pair source="reference" target="suppcollection"/>
+      <bcf:field source="title" target="booktitle"/>
+      <bcf:field source="subtitle" target="booksubtitle"/>
+      <bcf:field source="titleaddon" target="booktitleaddon"/>
+      <bcf:field source="shorttitle" skip="true"/>
+      <bcf:field source="sorttitle" skip="true"/>
+      <bcf:field source="indextitle" skip="true"/>
+      <bcf:field source="indexsorttitle" skip="true"/>
+    </bcf:inherit>
+    <bcf:inherit>
+      <bcf:type_pair source="proceedings" target="inproceedings"/>
+      <bcf:field source="title" target="booktitle"/>
+      <bcf:field source="subtitle" target="booksubtitle"/>
+      <bcf:field source="titleaddon" target="booktitleaddon"/>
+      <bcf:field source="shorttitle" skip="true"/>
+      <bcf:field source="sorttitle" skip="true"/>
+      <bcf:field source="indextitle" skip="true"/>
+      <bcf:field source="indexsorttitle" skip="true"/>
+    </bcf:inherit>
+    <bcf:inherit>
+      <bcf:type_pair source="periodical" target="article"/>
+      <bcf:type_pair source="periodical" target="suppperiodical"/>
+      <bcf:field source="title" target="journaltitle"/>
+      <bcf:field source="subtitle" target="journalsubtitle"/>
+      <bcf:field source="titleaddon" target="journaltitleaddon"/>
+      <bcf:field source="shorttitle" skip="true"/>
+      <bcf:field source="sorttitle" skip="true"/>
+      <bcf:field source="indextitle" skip="true"/>
+      <bcf:field source="indexsorttitle" skip="true"/>
+    </bcf:inherit>
+    <bcf:inherit>
+      <bcf:type_pair source="*" target="*"/>
+      <bcf:field source="ids" skip="true"/>
+      <bcf:field source="crossref" skip="true"/>
+      <bcf:field source="xref" skip="true"/>
+      <bcf:field source="entryset" skip="true"/>
+      <bcf:field source="entrysubtype" skip="true"/>
+      <bcf:field source="execute" skip="true"/>
+      <bcf:field source="label" skip="true"/>
+      <bcf:field source="options" skip="true"/>
+      <bcf:field source="presort" skip="true"/>
+      <bcf:field source="related" skip="true"/>
+      <bcf:field source="relatedoptions" skip="true"/>
+      <bcf:field source="relatedstring" skip="true"/>
+      <bcf:field source="relatedtype" skip="true"/>
+      <bcf:field source="shorthand" skip="true"/>
+      <bcf:field source="shorthandintro" skip="true"/>
+      <bcf:field source="sortkey" skip="true"/>
+    </bcf:inherit>
+  </bcf:inheritance>
+  <!-- NOSORT -->
+  <bcf:nosorts>
+    <bcf:nosort field="setnames" value="\p{General_Category=Punctuation}"/>
+    <bcf:nosort field="settitles" value="\A(?:The|An|A)\s+"/>
+  </bcf:nosorts>
+  <!-- UNIQUENAME TEMPLATES -->
+  <bcf:uniquenametemplate name="global">
+    <bcf:namepart order="1" use="1" base="1">prefix</bcf:namepart>
+    <bcf:namepart order="2" base="1">family</bcf:namepart>
+    <bcf:namepart order="3">given</bcf:namepart>
+    <bcf:namepart order="4">suffix</bcf:namepart>
+  </bcf:uniquenametemplate>
+  <!-- SORTING NAME KEY TEMPLATES -->
+  <bcf:sortingnamekeytemplate name="global">
+    <bcf:keypart order="1">
+      <bcf:part type="namepart" order="1" use="1">prefix</bcf:part>
+      <bcf:part type="namepart" order="2">family</bcf:part>
+    </bcf:keypart>
+    <bcf:keypart order="2">
+      <bcf:part type="namepart" order="1">given</bcf:part>
+    </bcf:keypart>
+    <bcf:keypart order="3">
+      <bcf:part type="namepart" order="1">suffix</bcf:part>
+    </bcf:keypart>
+    <bcf:keypart order="4">
+      <bcf:part type="namepart" order="1" use="0">prefix</bcf:part>
+    </bcf:keypart>
+  </bcf:sortingnamekeytemplate>
+  <bcf:presort>mm</bcf:presort>
+  <!-- DATA MODEL -->
+  <bcf:datamodel>
+    <bcf:constants>
+      <bcf:constant type="list" name="gender">sf,sm,sn,pf,pm,pn,pp</bcf:constant>
+      <bcf:constant type="list" name="nameparts">family,given,prefix,suffix</bcf:constant>
+      <bcf:constant type="list" name="optiondatatypes">boolean,integer,string,xml</bcf:constant>
+      <bcf:constant type="list" name="multiscriptforms">default,transliteration,transcription,translation</bcf:constant>
+    </bcf:constants>
+    <bcf:entrytypes>
+      <bcf:entrytype>article</bcf:entrytype>
+      <bcf:entrytype>artwork</bcf:entrytype>
+      <bcf:entrytype>audio</bcf:entrytype>
+      <bcf:entrytype>bibnote</bcf:entrytype>
+      <bcf:entrytype>book</bcf:entrytype>
+      <bcf:entrytype>bookinbook</bcf:entrytype>
+      <bcf:entrytype>booklet</bcf:entrytype>
+      <bcf:entrytype>collection</bcf:entrytype>
+      <bcf:entrytype>commentary</bcf:entrytype>
+      <bcf:entrytype>customa</bcf:entrytype>
+      <bcf:entrytype>customb</bcf:entrytype>
+      <bcf:entrytype>customc</bcf:entrytype>
+      <bcf:entrytype>customd</bcf:entrytype>
+      <bcf:entrytype>custome</bcf:entrytype>
+      <bcf:entrytype>customf</bcf:entrytype>
+      <bcf:entrytype>dataset</bcf:entrytype>
+      <bcf:entrytype>inbook</bcf:entrytype>
+      <bcf:entrytype>incollection</bcf:entrytype>
+      <bcf:entrytype>inproceedings</bcf:entrytype>
+      <bcf:entrytype>inreference</bcf:entrytype>
+      <bcf:entrytype>image</bcf:entrytype>
+      <bcf:entrytype>jurisdiction</bcf:entrytype>
+      <bcf:entrytype>legal</bcf:entrytype>
+      <bcf:entrytype>legislation</bcf:entrytype>
+      <bcf:entrytype>letter</bcf:entrytype>
+      <bcf:entrytype>manual</bcf:entrytype>
+      <bcf:entrytype>misc</bcf:entrytype>
+      <bcf:entrytype>movie</bcf:entrytype>
+      <bcf:entrytype>music</bcf:entrytype>
+      <bcf:entrytype>mvcollection</bcf:entrytype>
+      <bcf:entrytype>mvreference</bcf:entrytype>
+      <bcf:entrytype>mvproceedings</bcf:entrytype>
+      <bcf:entrytype>mvbook</bcf:entrytype>
+      <bcf:entrytype>online</bcf:entrytype>
+      <bcf:entrytype>patent</bcf:entrytype>
+      <bcf:entrytype>performance</bcf:entrytype>
+      <bcf:entrytype>periodical</bcf:entrytype>
+      <bcf:entrytype>proceedings</bcf:entrytype>
+      <bcf:entrytype>reference</bcf:entrytype>
+      <bcf:entrytype>report</bcf:entrytype>
+      <bcf:entrytype>review</bcf:entrytype>
+      <bcf:entrytype>set</bcf:entrytype>
+      <bcf:entrytype>software</bcf:entrytype>
+      <bcf:entrytype>standard</bcf:entrytype>
+      <bcf:entrytype>suppbook</bcf:entrytype>
+      <bcf:entrytype>suppcollection</bcf:entrytype>
+      <bcf:entrytype>suppperiodical</bcf:entrytype>
+      <bcf:entrytype>thesis</bcf:entrytype>
+      <bcf:entrytype>unpublished</bcf:entrytype>
+      <bcf:entrytype>video</bcf:entrytype>
+      <bcf:entrytype skip_output="true">xdata</bcf:entrytype>
+      <bcf:entrytype>presentation</bcf:entrytype>
+      <bcf:entrytype>constitution</bcf:entrytype>
+      <bcf:entrytype>legmaterial</bcf:entrytype>
+      <bcf:entrytype>legadminmaterial</bcf:entrytype>
+      <bcf:entrytype>nameonly</bcf:entrytype>
+    </bcf:entrytypes>
+    <bcf:fields>
+      <bcf:field fieldtype="field" datatype="integer">sortyear</bcf:field>
+      <bcf:field fieldtype="field" datatype="integer">volume</bcf:field>
+      <bcf:field fieldtype="field" datatype="integer">volumes</bcf:field>
+      <bcf:field fieldtype="field" datatype="literal">abstract</bcf:field>
+      <bcf:field fieldtype="field" datatype="literal">addendum</bcf:field>
+      <bcf:field fieldtype="field" datatype="literal">annotation</bcf:field>
+      <bcf:field fieldtype="field" datatype="literal">booksubtitle</bcf:field>
+      <bcf:field fieldtype="field" datatype="literal">booktitle</bcf:field>
+      <bcf:field fieldtype="field" datatype="literal">booktitleaddon</bcf:field>
+      <bcf:field fieldtype="field" datatype="literal">chapter</bcf:field>
+      <bcf:field fieldtype="field" datatype="literal">edition</bcf:field>
+      <bcf:field fieldtype="field" datatype="literal">eid</bcf:field>
+      <bcf:field fieldtype="field" datatype="literal">entrysubtype</bcf:field>
+      <bcf:field fieldtype="field" datatype="literal">eprintclass</bcf:field>
+      <bcf:field fieldtype="field" datatype="literal">eprinttype</bcf:field>
+      <bcf:field fieldtype="field" datatype="literal">eventtitle</bcf:field>
+      <bcf:field fieldtype="field" datatype="literal">eventtitleaddon</bcf:field>
+      <bcf:field fieldtype="field" datatype="literal">gender</bcf:field>
+      <bcf:field fieldtype="field" datatype="literal">howpublished</bcf:field>
+      <bcf:field fieldtype="field" datatype="literal">indexsorttitle</bcf:field>
+      <bcf:field fieldtype="field" datatype="literal">indextitle</bcf:field>
+      <bcf:field fieldtype="field" datatype="literal">isan</bcf:field>
+      <bcf:field fieldtype="field" datatype="literal">isbn</bcf:field>
+      <bcf:field fieldtype="field" datatype="literal">ismn</bcf:field>
+      <bcf:field fieldtype="field" datatype="literal">isrn</bcf:field>
+      <bcf:field fieldtype="field" datatype="literal">issn</bcf:field>
+      <bcf:field fieldtype="field" datatype="literal">issue</bcf:field>
+      <bcf:field fieldtype="field" datatype="literal">issuesubtitle</bcf:field>
+      <bcf:field fieldtype="field" datatype="literal">issuetitle</bcf:field>
+      <bcf:field fieldtype="field" datatype="literal">issuetitleaddon</bcf:field>
+      <bcf:field fieldtype="field" datatype="literal">iswc</bcf:field>
+      <bcf:field fieldtype="field" datatype="literal">journalsubtitle</bcf:field>
+      <bcf:field fieldtype="field" datatype="literal">journaltitle</bcf:field>
+      <bcf:field fieldtype="field" datatype="literal">journaltitleaddon</bcf:field>
+      <bcf:field fieldtype="field" datatype="literal">label</bcf:field>
+      <bcf:field fieldtype="field" datatype="literal">langid</bcf:field>
+      <bcf:field fieldtype="field" datatype="literal">langidopts</bcf:field>
+      <bcf:field fieldtype="field" datatype="literal">library</bcf:field>
+      <bcf:field fieldtype="field" datatype="literal">mainsubtitle</bcf:field>
+      <bcf:field fieldtype="field" datatype="literal">maintitle</bcf:field>
+      <bcf:field fieldtype="field" datatype="literal">maintitleaddon</bcf:field>
+      <bcf:field fieldtype="field" datatype="literal">nameaddon</bcf:field>
+      <bcf:field fieldtype="field" datatype="literal">note</bcf:field>
+      <bcf:field fieldtype="field" datatype="literal">number</bcf:field>
+      <bcf:field fieldtype="field" datatype="literal">origtitle</bcf:field>
+      <bcf:field fieldtype="field" datatype="literal">pagetotal</bcf:field>
+      <bcf:field fieldtype="field" datatype="literal">part</bcf:field>
+      <bcf:field fieldtype="field" datatype="literal">relatedstring</bcf:field>
+      <bcf:field fieldtype="field" datatype="literal">relatedtype</bcf:field>
+      <bcf:field fieldtype="field" datatype="literal">reprinttitle</bcf:field>
+      <bcf:field fieldtype="field" datatype="literal">series</bcf:field>
+      <bcf:field fieldtype="field" datatype="literal">shorthandintro</bcf:field>
+      <bcf:field fieldtype="field" datatype="literal">subtitle</bcf:field>
+      <bcf:field fieldtype="field" datatype="literal">title</bcf:field>
+      <bcf:field fieldtype="field" datatype="literal">titleaddon</bcf:field>
+      <bcf:field fieldtype="field" datatype="literal">usera</bcf:field>
+      <bcf:field fieldtype="field" datatype="literal">userb</bcf:field>
+      <bcf:field fieldtype="field" datatype="literal">userc</bcf:field>
+      <bcf:field fieldtype="field" datatype="literal">userd</bcf:field>
+      <bcf:field fieldtype="field" datatype="literal">usere</bcf:field>
+      <bcf:field fieldtype="field" datatype="literal">userf</bcf:field>
+      <bcf:field fieldtype="field" datatype="literal">venue</bcf:field>
+      <bcf:field fieldtype="field" datatype="literal">version</bcf:field>
+      <bcf:field fieldtype="field" datatype="literal" label="true">shorthand</bcf:field>
+      <bcf:field fieldtype="field" datatype="literal" label="true">shortjournal</bcf:field>
+      <bcf:field fieldtype="field" datatype="literal" label="true">shortseries</bcf:field>
+      <bcf:field fieldtype="field" datatype="literal" label="true">shorttitle</bcf:field>
+      <bcf:field fieldtype="field" datatype="literal" skip_output="true">sorttitle</bcf:field>
+      <bcf:field fieldtype="field" datatype="literal" skip_output="true">sortshorthand</bcf:field>
+      <bcf:field fieldtype="field" datatype="literal" skip_output="true">sortkey</bcf:field>
+      <bcf:field fieldtype="field" datatype="literal" skip_output="true">presort</bcf:field>
+      <bcf:field fieldtype="list" datatype="literal">institution</bcf:field>
+      <bcf:field fieldtype="list" datatype="literal">lista</bcf:field>
+      <bcf:field fieldtype="list" datatype="literal">listb</bcf:field>
+      <bcf:field fieldtype="list" datatype="literal">listc</bcf:field>
+      <bcf:field fieldtype="list" datatype="literal">listd</bcf:field>
+      <bcf:field fieldtype="list" datatype="literal">liste</bcf:field>
+      <bcf:field fieldtype="list" datatype="literal">listf</bcf:field>
+      <bcf:field fieldtype="list" datatype="literal">location</bcf:field>
+      <bcf:field fieldtype="list" datatype="literal">organization</bcf:field>
+      <bcf:field fieldtype="list" datatype="literal">origlocation</bcf:field>
+      <bcf:field fieldtype="list" datatype="literal">origpublisher</bcf:field>
+      <bcf:field fieldtype="list" datatype="literal">publisher</bcf:field>
+      <bcf:field fieldtype="list" datatype="name">afterword</bcf:field>
+      <bcf:field fieldtype="list" datatype="name">annotator</bcf:field>
+      <bcf:field fieldtype="list" datatype="name">author</bcf:field>
+      <bcf:field fieldtype="list" datatype="name">bookauthor</bcf:field>
+      <bcf:field fieldtype="list" datatype="name">commentator</bcf:field>
+      <bcf:field fieldtype="list" datatype="name">editor</bcf:field>
+      <bcf:field fieldtype="list" datatype="name">editora</bcf:field>
+      <bcf:field fieldtype="list" datatype="name">editorb</bcf:field>
+      <bcf:field fieldtype="list" datatype="name">editorc</bcf:field>
+      <bcf:field fieldtype="list" datatype="name">foreword</bcf:field>
+      <bcf:field fieldtype="list" datatype="name">holder</bcf:field>
+      <bcf:field fieldtype="list" datatype="name">introduction</bcf:field>
+      <bcf:field fieldtype="list" datatype="name">namea</bcf:field>
+      <bcf:field fieldtype="list" datatype="name">nameb</bcf:field>
+      <bcf:field fieldtype="list" datatype="name">namec</bcf:field>
+      <bcf:field fieldtype="list" datatype="name">translator</bcf:field>
+      <bcf:field fieldtype="list" datatype="name" label="true">shortauthor</bcf:field>
+      <bcf:field fieldtype="list" datatype="name" label="true">shorteditor</bcf:field>
+      <bcf:field fieldtype="list" datatype="name" skip_output="true">sortname</bcf:field>
+      <bcf:field fieldtype="field" datatype="key">authortype</bcf:field>
+      <bcf:field fieldtype="field" datatype="key">editoratype</bcf:field>
+      <bcf:field fieldtype="field" datatype="key">editorbtype</bcf:field>
+      <bcf:field fieldtype="field" datatype="key">editorctype</bcf:field>
+      <bcf:field fieldtype="field" datatype="key">editortype</bcf:field>
+      <bcf:field fieldtype="field" datatype="key">bookpagination</bcf:field>
+      <bcf:field fieldtype="field" datatype="key">nameatype</bcf:field>
+      <bcf:field fieldtype="field" datatype="key">namebtype</bcf:field>
+      <bcf:field fieldtype="field" datatype="key">namectype</bcf:field>
+      <bcf:field fieldtype="field" datatype="key">pagination</bcf:field>
+      <bcf:field fieldtype="field" datatype="key">pubstate</bcf:field>
+      <bcf:field fieldtype="field" datatype="key">type</bcf:field>
+      <bcf:field fieldtype="list" datatype="key">language</bcf:field>
+      <bcf:field fieldtype="list" datatype="key">origlanguage</bcf:field>
+      <bcf:field fieldtype="field" datatype="entrykey">crossref</bcf:field>
+      <bcf:field fieldtype="field" datatype="entrykey">xref</bcf:field>
+      <bcf:field fieldtype="field" datatype="date" skip_output="true">date</bcf:field>
+      <bcf:field fieldtype="field" datatype="datepart" nullok="true">endyear</bcf:field>
+      <bcf:field fieldtype="field" datatype="datepart" nullok="true">year</bcf:field>
+      <bcf:field fieldtype="field" datatype="datepart">month</bcf:field>
+      <bcf:field fieldtype="field" datatype="datepart">day</bcf:field>
+      <bcf:field fieldtype="field" datatype="datepart">hour</bcf:field>
+      <bcf:field fieldtype="field" datatype="datepart">minute</bcf:field>
+      <bcf:field fieldtype="field" datatype="datepart">second</bcf:field>
+      <bcf:field fieldtype="field" datatype="datepart">timezone</bcf:field>
+      <bcf:field fieldtype="field" datatype="datepart">yeardivision</bcf:field>
+      <bcf:field fieldtype="field" datatype="datepart">endmonth</bcf:field>
+      <bcf:field fieldtype="field" datatype="datepart">endday</bcf:field>
+      <bcf:field fieldtype="field" datatype="datepart">endhour</bcf:field>
+      <bcf:field fieldtype="field" datatype="datepart">endminute</bcf:field>
+      <bcf:field fieldtype="field" datatype="datepart">endsecond</bcf:field>
+      <bcf:field fieldtype="field" datatype="datepart">endtimezone</bcf:field>
+      <bcf:field fieldtype="field" datatype="datepart">endyeardivision</bcf:field>
+      <bcf:field fieldtype="field" datatype="date" skip_output="true">eventdate</bcf:field>
+      <bcf:field fieldtype="field" datatype="datepart" nullok="true">eventendyear</bcf:field>
+      <bcf:field fieldtype="field" datatype="datepart" nullok="true">eventyear</bcf:field>
+      <bcf:field fieldtype="field" datatype="datepart">eventmonth</bcf:field>
+      <bcf:field fieldtype="field" datatype="datepart">eventday</bcf:field>
+      <bcf:field fieldtype="field" datatype="datepart">eventhour</bcf:field>
+      <bcf:field fieldtype="field" datatype="datepart">eventminute</bcf:field>
+      <bcf:field fieldtype="field" datatype="datepart">eventsecond</bcf:field>
+      <bcf:field fieldtype="field" datatype="datepart">eventtimezone</bcf:field>
+      <bcf:field fieldtype="field" datatype="datepart">eventyeardivision</bcf:field>
+      <bcf:field fieldtype="field" datatype="datepart">eventendmonth</bcf:field>
+      <bcf:field fieldtype="field" datatype="datepart">eventendday</bcf:field>
+      <bcf:field fieldtype="field" datatype="datepart">eventendhour</bcf:field>
+      <bcf:field fieldtype="field" datatype="datepart">eventendminute</bcf:field>
+      <bcf:field fieldtype="field" datatype="datepart">eventendsecond</bcf:field>
+      <bcf:field fieldtype="field" datatype="datepart">eventendtimezone</bcf:field>
+      <bcf:field fieldtype="field" datatype="datepart">eventendyeardivision</bcf:field>
+      <bcf:field fieldtype="field" datatype="date" skip_output="true">origdate</bcf:field>
+      <bcf:field fieldtype="field" datatype="datepart" nullok="true">origendyear</bcf:field>
+      <bcf:field fieldtype="field" datatype="datepart" nullok="true">origyear</bcf:field>
+      <bcf:field fieldtype="field" datatype="datepart">origmonth</bcf:field>
+      <bcf:field fieldtype="field" datatype="datepart">origday</bcf:field>
+      <bcf:field fieldtype="field" datatype="datepart">orighour</bcf:field>
+      <bcf:field fieldtype="field" datatype="datepart">origminute</bcf:field>
+      <bcf:field fieldtype="field" datatype="datepart">origsecond</bcf:field>
+      <bcf:field fieldtype="field" datatype="datepart">origtimezone</bcf:field>
+      <bcf:field fieldtype="field" datatype="datepart">origyeardivision</bcf:field>
+      <bcf:field fieldtype="field" datatype="datepart">origendmonth</bcf:field>
+      <bcf:field fieldtype="field" datatype="datepart">origendday</bcf:field>
+      <bcf:field fieldtype="field" datatype="datepart">origendhour</bcf:field>
+      <bcf:field fieldtype="field" datatype="datepart">origendminute</bcf:field>
+      <bcf:field fieldtype="field" datatype="datepart">origendsecond</bcf:field>
+      <bcf:field fieldtype="field" datatype="datepart">origendtimezone</bcf:field>
+      <bcf:field fieldtype="field" datatype="datepart">origendyeardivision</bcf:field>
+      <bcf:field fieldtype="field" datatype="date" skip_output="true">urldate</bcf:field>
+      <bcf:field fieldtype="field" datatype="datepart" nullok="true">urlendyear</bcf:field>
+      <bcf:field fieldtype="field" datatype="datepart" nullok="true">urlyear</bcf:field>
+      <bcf:field fieldtype="field" datatype="datepart">urlmonth</bcf:field>
+      <bcf:field fieldtype="field" datatype="datepart">urlday</bcf:field>
+      <bcf:field fieldtype="field" datatype="datepart">urlhour</bcf:field>
+      <bcf:field fieldtype="field" datatype="datepart">urlminute</bcf:field>
+      <bcf:field fieldtype="field" datatype="datepart">urlsecond</bcf:field>
+      <bcf:field fieldtype="field" datatype="datepart">urltimezone</bcf:field>
+      <bcf:field fieldtype="field" datatype="datepart">urlyeardivision</bcf:field>
+      <bcf:field fieldtype="field" datatype="datepart">urlendmonth</bcf:field>
+      <bcf:field fieldtype="field" datatype="datepart">urlendday</bcf:field>
+      <bcf:field fieldtype="field" datatype="datepart">urlendhour</bcf:field>
+      <bcf:field fieldtype="field" datatype="datepart">urlendminute</bcf:field>
+      <bcf:field fieldtype="field" datatype="datepart">urlendsecond</bcf:field>
+      <bcf:field fieldtype="field" datatype="datepart">urlendtimezone</bcf:field>
+      <bcf:field fieldtype="field" datatype="datepart">urlendyeardivision</bcf:field>
+      <bcf:field fieldtype="field" datatype="verbatim">doi</bcf:field>
+      <bcf:field fieldtype="field" datatype="verbatim">eprint</bcf:field>
+      <bcf:field fieldtype="field" datatype="verbatim">file</bcf:field>
+      <bcf:field fieldtype="field" datatype="verbatim">verba</bcf:field>
+      <bcf:field fieldtype="field" datatype="verbatim">verbb</bcf:field>
+      <bcf:field fieldtype="field" datatype="verbatim">verbc</bcf:field>
+      <bcf:field fieldtype="field" datatype="uri">url</bcf:field>
+      <bcf:field fieldtype="field" format="xsv" datatype="entrykey" skip_output="true">xdata</bcf:field>
+      <bcf:field fieldtype="field" format="xsv" datatype="entrykey" skip_output="true">ids</bcf:field>
+      <bcf:field fieldtype="field" format="xsv" datatype="entrykey" skip_output="true">entryset</bcf:field>
+      <bcf:field fieldtype="field" format="xsv" datatype="entrykey">related</bcf:field>
+      <bcf:field fieldtype="field" format="xsv" datatype="keyword">keywords</bcf:field>
+      <bcf:field fieldtype="field" format="xsv" datatype="option" skip_output="true">options</bcf:field>
+      <bcf:field fieldtype="field" format="xsv" datatype="option" skip_output="true">relatedoptions</bcf:field>
+      <bcf:field fieldtype="field" datatype="range">pages</bcf:field>
+      <bcf:field fieldtype="field" datatype="code">execute</bcf:field>
+      <bcf:field fieldtype="list" datatype="name">narrator</bcf:field>
+      <bcf:field fieldtype="list" datatype="name">execproducer</bcf:field>
+      <bcf:field fieldtype="list" datatype="name">execdirector</bcf:field>
+      <bcf:field fieldtype="list" datatype="name">with</bcf:field>
+      <bcf:field fieldtype="list" datatype="literal">citation</bcf:field>
+      <bcf:field fieldtype="field" datatype="literal">source</bcf:field>
+      <bcf:field fieldtype="field" datatype="literal">article</bcf:field>
+      <bcf:field fieldtype="field" datatype="literal">section</bcf:field>
+      <bcf:field fieldtype="field" datatype="literal">amendment</bcf:field>
+      <bcf:field fieldtype="field" datatype="literal">appentry</bcf:field>
+    </bcf:fields>
+    <bcf:entryfields>
+      <bcf:field>abstract</bcf:field>
+      <bcf:field>annotation</bcf:field>
+      <bcf:field>authortype</bcf:field>
+      <bcf:field>bookpagination</bcf:field>
+      <bcf:field>crossref</bcf:field>
+      <bcf:field>day</bcf:field>
+      <bcf:field>doi</bcf:field>
+      <bcf:field>eprint</bcf:field>
+      <bcf:field>eprintclass</bcf:field>
+      <bcf:field>eprinttype</bcf:field>
+      <bcf:field>endday</bcf:field>
+      <bcf:field>endhour</bcf:field>
+      <bcf:field>endminute</bcf:field>
+      <bcf:field>endmonth</bcf:field>
+      <bcf:field>endsecond</bcf:field>
+      <bcf:field>endtimezone</bcf:field>
+      <bcf:field>endyear</bcf:field>
+      <bcf:field>endyeardivision</bcf:field>
+      <bcf:field>entryset</bcf:field>
+      <bcf:field>entrysubtype</bcf:field>
+      <bcf:field>execute</bcf:field>
+      <bcf:field>file</bcf:field>
+      <bcf:field>gender</bcf:field>
+      <bcf:field>hour</bcf:field>
+      <bcf:field>ids</bcf:field>
+      <bcf:field>indextitle</bcf:field>
+      <bcf:field>indexsorttitle</bcf:field>
+      <bcf:field>isan</bcf:field>
+      <bcf:field>ismn</bcf:field>
+      <bcf:field>iswc</bcf:field>
+      <bcf:field>keywords</bcf:field>
+      <bcf:field>label</bcf:field>
+      <bcf:field>langid</bcf:field>
+      <bcf:field>langidopts</bcf:field>
+      <bcf:field>library</bcf:field>
+      <bcf:field>lista</bcf:field>
+      <bcf:field>listb</bcf:field>
+      <bcf:field>listc</bcf:field>
+      <bcf:field>listd</bcf:field>
+      <bcf:field>liste</bcf:field>
+      <bcf:field>listf</bcf:field>
+      <bcf:field>minute</bcf:field>
+      <bcf:field>month</bcf:field>
+      <bcf:field>namea</bcf:field>
+      <bcf:field>nameb</bcf:field>
+      <bcf:field>namec</bcf:field>
+      <bcf:field>nameatype</bcf:field>
+      <bcf:field>namebtype</bcf:field>
+      <bcf:field>namectype</bcf:field>
+      <bcf:field>nameaddon</bcf:field>
+      <bcf:field>options</bcf:field>
+      <bcf:field>origday</bcf:field>
+      <bcf:field>origendday</bcf:field>
+      <bcf:field>origendhour</bcf:field>
+      <bcf:field>origendminute</bcf:field>
+      <bcf:field>origendmonth</bcf:field>
+      <bcf:field>origendsecond</bcf:field>
+      <bcf:field>origendtimezone</bcf:field>
+      <bcf:field>origendyear</bcf:field>
+      <bcf:field>origendyeardivision</bcf:field>
+      <bcf:field>orighour</bcf:field>
+      <bcf:field>origminute</bcf:field>
+      <bcf:field>origmonth</bcf:field>
+      <bcf:field>origsecond</bcf:field>
+      <bcf:field>origtimezone</bcf:field>
+      <bcf:field>origyear</bcf:field>
+      <bcf:field>origyeardivision</bcf:field>
+      <bcf:field>origlocation</bcf:field>
+      <bcf:field>origpublisher</bcf:field>
+      <bcf:field>origtitle</bcf:field>
+      <bcf:field>pagination</bcf:field>
+      <bcf:field>presort</bcf:field>
+      <bcf:field>related</bcf:field>
+      <bcf:field>relatedoptions</bcf:field>
+      <bcf:field>relatedstring</bcf:field>
+      <bcf:field>relatedtype</bcf:field>
+      <bcf:field>second</bcf:field>
+      <bcf:field>shortauthor</bcf:field>
+      <bcf:field>shorteditor</bcf:field>
+      <bcf:field>shorthand</bcf:field>
+      <bcf:field>shorthandintro</bcf:field>
+      <bcf:field>shortjournal</bcf:field>
+      <bcf:field>shortseries</bcf:field>
+      <bcf:field>shorttitle</bcf:field>
+      <bcf:field>sortkey</bcf:field>
+      <bcf:field>sortname</bcf:field>
+      <bcf:field>sortshorthand</bcf:field>
+      <bcf:field>sorttitle</bcf:field>
+      <bcf:field>sortyear</bcf:field>
+      <bcf:field>timezone</bcf:field>
+      <bcf:field>url</bcf:field>
+      <bcf:field>urlday</bcf:field>
+      <bcf:field>urlendday</bcf:field>
+      <bcf:field>urlendhour</bcf:field>
+      <bcf:field>urlendminute</bcf:field>
+      <bcf:field>urlendmonth</bcf:field>
+      <bcf:field>urlendsecond</bcf:field>
+      <bcf:field>urlendtimezone</bcf:field>
+      <bcf:field>urlendyear</bcf:field>
+      <bcf:field>urlhour</bcf:field>
+      <bcf:field>urlminute</bcf:field>
+      <bcf:field>urlmonth</bcf:field>
+      <bcf:field>urlsecond</bcf:field>
+      <bcf:field>urltimezone</bcf:field>
+      <bcf:field>urlyear</bcf:field>
+      <bcf:field>usera</bcf:field>
+      <bcf:field>userb</bcf:field>
+      <bcf:field>userc</bcf:field>
+      <bcf:field>userd</bcf:field>
+      <bcf:field>usere</bcf:field>
+      <bcf:field>userf</bcf:field>
+      <bcf:field>verba</bcf:field>
+      <bcf:field>verbb</bcf:field>
+      <bcf:field>verbc</bcf:field>
+      <bcf:field>xdata</bcf:field>
+      <bcf:field>xref</bcf:field>
+      <bcf:field>year</bcf:field>
+      <bcf:field>yeardivision</bcf:field>
+    </bcf:entryfields>
+    <bcf:entryfields>
+      <bcf:entrytype>set</bcf:entrytype>
+      <bcf:field>entryset</bcf:field>
+    </bcf:entryfields>
+    <bcf:entryfields>
+      <bcf:entrytype>article</bcf:entrytype>
+      <bcf:field>addendum</bcf:field>
+      <bcf:field>annotator</bcf:field>
+      <bcf:field>author</bcf:field>
+      <bcf:field>commentator</bcf:field>
+      <bcf:field>editor</bcf:field>
+      <bcf:field>editora</bcf:field>
+      <bcf:field>editorb</bcf:field>
+      <bcf:field>editorc</bcf:field>
+      <bcf:field>editortype</bcf:field>
+      <bcf:field>editoratype</bcf:field>
+      <bcf:field>editorbtype</bcf:field>
+      <bcf:field>editorctype</bcf:field>
+      <bcf:field>eid</bcf:field>
+      <bcf:field>issn</bcf:field>
+      <bcf:field>issue</bcf:field>
+      <bcf:field>issuetitle</bcf:field>
+      <bcf:field>issuesubtitle</bcf:field>
+      <bcf:field>issuetitleaddon</bcf:field>
+      <bcf:field>journalsubtitle</bcf:field>
+      <bcf:field>journaltitle</bcf:field>
+      <bcf:field>journaltitleaddon</bcf:field>
+      <bcf:field>language</bcf:field>
+      <bcf:field>note</bcf:field>
+      <bcf:field>number</bcf:field>
+      <bcf:field>origlanguage</bcf:field>
+      <bcf:field>pages</bcf:field>
+      <bcf:field>pubstate</bcf:field>
+      <bcf:field>series</bcf:field>
+      <bcf:field>subtitle</bcf:field>
+      <bcf:field>title</bcf:field>
+      <bcf:field>titleaddon</bcf:field>
+      <bcf:field>translator</bcf:field>
+      <bcf:field>version</bcf:field>
+      <bcf:field>volume</bcf:field>
+    </bcf:entryfields>
+    <bcf:entryfields>
+      <bcf:entrytype>bibnote</bcf:entrytype>
+      <bcf:field>note</bcf:field>
+    </bcf:entryfields>
+    <bcf:entryfields>
+      <bcf:entrytype>book</bcf:entrytype>
+      <bcf:field>author</bcf:field>
+      <bcf:field>addendum</bcf:field>
+      <bcf:field>afterword</bcf:field>
+      <bcf:field>annotator</bcf:field>
+      <bcf:field>chapter</bcf:field>
+      <bcf:field>commentator</bcf:field>
+      <bcf:field>edition</bcf:field>
+      <bcf:field>editor</bcf:field>
+      <bcf:field>editora</bcf:field>
+      <bcf:field>editorb</bcf:field>
+      <bcf:field>editorc</bcf:field>
+      <bcf:field>editortype</bcf:field>
+      <bcf:field>editoratype</bcf:field>
+      <bcf:field>editorbtype</bcf:field>
+      <bcf:field>editorctype</bcf:field>
+      <bcf:field>eid</bcf:field>
+      <bcf:field>foreword</bcf:field>
+      <bcf:field>introduction</bcf:field>
+      <bcf:field>isbn</bcf:field>
+      <bcf:field>language</bcf:field>
+      <bcf:field>location</bcf:field>
+      <bcf:field>maintitle</bcf:field>
+      <bcf:field>maintitleaddon</bcf:field>
+      <bcf:field>mainsubtitle</bcf:field>
+      <bcf:field>note</bcf:field>
+      <bcf:field>number</bcf:field>
+      <bcf:field>origlanguage</bcf:field>
+      <bcf:field>pages</bcf:field>
+      <bcf:field>pagetotal</bcf:field>
+      <bcf:field>part</bcf:field>
+      <bcf:field>publisher</bcf:field>
+      <bcf:field>pubstate</bcf:field>
+      <bcf:field>series</bcf:field>
+      <bcf:field>subtitle</bcf:field>
+      <bcf:field>title</bcf:field>
+      <bcf:field>titleaddon</bcf:field>
+      <bcf:field>translator</bcf:field>
+      <bcf:field>volume</bcf:field>
+      <bcf:field>volumes</bcf:field>
+    </bcf:entryfields>
+    <bcf:entryfields>
+      <bcf:entrytype>mvbook</bcf:entrytype>
+      <bcf:field>addendum</bcf:field>
+      <bcf:field>afterword</bcf:field>
+      <bcf:field>annotator</bcf:field>
+      <bcf:field>author</bcf:field>
+      <bcf:field>commentator</bcf:field>
+      <bcf:field>edition</bcf:field>
+      <bcf:field>editor</bcf:field>
+      <bcf:field>editora</bcf:field>
+      <bcf:field>editorb</bcf:field>
+      <bcf:field>editorc</bcf:field>
+      <bcf:field>editortype</bcf:field>
+      <bcf:field>editoratype</bcf:field>
+      <bcf:field>editorbtype</bcf:field>
+      <bcf:field>editorctype</bcf:field>
+      <bcf:field>foreword</bcf:field>
+      <bcf:field>introduction</bcf:field>
+      <bcf:field>isbn</bcf:field>
+      <bcf:field>language</bcf:field>
+      <bcf:field>location</bcf:field>
+      <bcf:field>note</bcf:field>
+      <bcf:field>number</bcf:field>
+      <bcf:field>origlanguage</bcf:field>
+      <bcf:field>pagetotal</bcf:field>
+      <bcf:field>publisher</bcf:field>
+      <bcf:field>pubstate</bcf:field>
+      <bcf:field>series</bcf:field>
+      <bcf:field>subtitle</bcf:field>
+      <bcf:field>title</bcf:field>
+      <bcf:field>titleaddon</bcf:field>
+      <bcf:field>translator</bcf:field>
+      <bcf:field>volume</bcf:field>
+      <bcf:field>volumes</bcf:field>
+    </bcf:entryfields>
+    <bcf:entryfields>
+      <bcf:entrytype>inbook</bcf:entrytype>
+      <bcf:entrytype>bookinbook</bcf:entrytype>
+      <bcf:entrytype>suppbook</bcf:entrytype>
+      <bcf:field>addendum</bcf:field>
+      <bcf:field>afterword</bcf:field>
+      <bcf:field>annotator</bcf:field>
+      <bcf:field>author</bcf:field>
+      <bcf:field>booktitle</bcf:field>
+      <bcf:field>bookauthor</bcf:field>
+      <bcf:field>booksubtitle</bcf:field>
+      <bcf:field>booktitleaddon</bcf:field>
+      <bcf:field>chapter</bcf:field>
+      <bcf:field>commentator</bcf:field>
+      <bcf:field>edition</bcf:field>
+      <bcf:field>editor</bcf:field>
+      <bcf:field>editora</bcf:field>
+      <bcf:field>editorb</bcf:field>
+      <bcf:field>editorc</bcf:field>
+      <bcf:field>editortype</bcf:field>
+      <bcf:field>editoratype</bcf:field>
+      <bcf:field>editorbtype</bcf:field>
+      <bcf:field>editorctype</bcf:field>
+      <bcf:field>eid</bcf:field>
+      <bcf:field>foreword</bcf:field>
+      <bcf:field>introduction</bcf:field>
+      <bcf:field>isbn</bcf:field>
+      <bcf:field>language</bcf:field>
+      <bcf:field>location</bcf:field>
+      <bcf:field>mainsubtitle</bcf:field>
+      <bcf:field>maintitle</bcf:field>
+      <bcf:field>maintitleaddon</bcf:field>
+      <bcf:field>note</bcf:field>
+      <bcf:field>number</bcf:field>
+      <bcf:field>origlanguage</bcf:field>
+      <bcf:field>part</bcf:field>
+      <bcf:field>publisher</bcf:field>
+      <bcf:field>pages</bcf:field>
+      <bcf:field>pubstate</bcf:field>
+      <bcf:field>series</bcf:field>
+      <bcf:field>subtitle</bcf:field>
+      <bcf:field>title</bcf:field>
+      <bcf:field>titleaddon</bcf:field>
+      <bcf:field>translator</bcf:field>
+      <bcf:field>volume</bcf:field>
+      <bcf:field>volumes</bcf:field>
+    </bcf:entryfields>
+    <bcf:entryfields>
+      <bcf:entrytype>booklet</bcf:entrytype>
+      <bcf:field>addendum</bcf:field>
+      <bcf:field>author</bcf:field>
+      <bcf:field>chapter</bcf:field>
+      <bcf:field>editor</bcf:field>
+      <bcf:field>editortype</bcf:field>
+      <bcf:field>eid</bcf:field>
+      <bcf:field>howpublished</bcf:field>
+      <bcf:field>language</bcf:field>
+      <bcf:field>location</bcf:field>
+      <bcf:field>note</bcf:field>
+      <bcf:field>pages</bcf:field>
+      <bcf:field>pagetotal</bcf:field>
+      <bcf:field>pubstate</bcf:field>
+      <bcf:field>subtitle</bcf:field>
+      <bcf:field>title</bcf:field>
+      <bcf:field>titleaddon</bcf:field>
+      <bcf:field>type</bcf:field>
+    </bcf:entryfields>
+    <bcf:entryfields>
+      <bcf:entrytype>collection</bcf:entrytype>
+      <bcf:entrytype>reference</bcf:entrytype>
+      <bcf:field>addendum</bcf:field>
+      <bcf:field>afterword</bcf:field>
+      <bcf:field>annotator</bcf:field>
+      <bcf:field>chapter</bcf:field>
+      <bcf:field>commentator</bcf:field>
+      <bcf:field>edition</bcf:field>
+      <bcf:field>editor</bcf:field>
+      <bcf:field>editora</bcf:field>
+      <bcf:field>editorb</bcf:field>
+      <bcf:field>editorc</bcf:field>
+      <bcf:field>editortype</bcf:field>
+      <bcf:field>editoratype</bcf:field>
+      <bcf:field>editorbtype</bcf:field>
+      <bcf:field>editorctype</bcf:field>
+      <bcf:field>eid</bcf:field>
+      <bcf:field>foreword</bcf:field>
+      <bcf:field>introduction</bcf:field>
+      <bcf:field>isbn</bcf:field>
+      <bcf:field>language</bcf:field>
+      <bcf:field>location</bcf:field>
+      <bcf:field>mainsubtitle</bcf:field>
+      <bcf:field>maintitle</bcf:field>
+      <bcf:field>maintitleaddon</bcf:field>
+      <bcf:field>note</bcf:field>
+      <bcf:field>number</bcf:field>
+      <bcf:field>origlanguage</bcf:field>
+      <bcf:field>pages</bcf:field>
+      <bcf:field>pagetotal</bcf:field>
+      <bcf:field>part</bcf:field>
+      <bcf:field>publisher</bcf:field>
+      <bcf:field>pubstate</bcf:field>
+      <bcf:field>series</bcf:field>
+      <bcf:field>subtitle</bcf:field>
+      <bcf:field>title</bcf:field>
+      <bcf:field>titleaddon</bcf:field>
+      <bcf:field>translator</bcf:field>
+      <bcf:field>volume</bcf:field>
+      <bcf:field>volumes</bcf:field>
+    </bcf:entryfields>
+    <bcf:entryfields>
+      <bcf:entrytype>mvcollection</bcf:entrytype>
+      <bcf:entrytype>mvreference</bcf:entrytype>
+      <bcf:field>addendum</bcf:field>
+      <bcf:field>afterword</bcf:field>
+      <bcf:field>annotator</bcf:field>
+      <bcf:field>author</bcf:field>
+      <bcf:field>commentator</bcf:field>
+      <bcf:field>edition</bcf:field>
+      <bcf:field>editor</bcf:field>
+      <bcf:field>editora</bcf:field>
+      <bcf:field>editorb</bcf:field>
+      <bcf:field>editorc</bcf:field>
+      <bcf:field>editortype</bcf:field>
+      <bcf:field>editoratype</bcf:field>
+      <bcf:field>editorbtype</bcf:field>
+      <bcf:field>editorctype</bcf:field>
+      <bcf:field>foreword</bcf:field>
+      <bcf:field>introduction</bcf:field>
+      <bcf:field>isbn</bcf:field>
+      <bcf:field>language</bcf:field>
+      <bcf:field>location</bcf:field>
+      <bcf:field>note</bcf:field>
+      <bcf:field>number</bcf:field>
+      <bcf:field>origlanguage</bcf:field>
+      <bcf:field>publisher</bcf:field>
+      <bcf:field>pubstate</bcf:field>
+      <bcf:field>subtitle</bcf:field>
+      <bcf:field>title</bcf:field>
+      <bcf:field>titleaddon</bcf:field>
+      <bcf:field>translator</bcf:field>
+      <bcf:field>volume</bcf:field>
+      <bcf:field>volumes</bcf:field>
+    </bcf:entryfields>
+    <bcf:entryfields>
+      <bcf:entrytype>incollection</bcf:entrytype>
+      <bcf:entrytype>suppcollection</bcf:entrytype>
+      <bcf:entrytype>inreference</bcf:entrytype>
+      <bcf:field>addendum</bcf:field>
+      <bcf:field>afterword</bcf:field>
+      <bcf:field>annotator</bcf:field>
+      <bcf:field>author</bcf:field>
+      <bcf:field>booksubtitle</bcf:field>
+      <bcf:field>booktitle</bcf:field>
+      <bcf:field>booktitleaddon</bcf:field>
+      <bcf:field>chapter</bcf:field>
+      <bcf:field>commentator</bcf:field>
+      <bcf:field>edition</bcf:field>
+      <bcf:field>editor</bcf:field>
+      <bcf:field>editora</bcf:field>
+      <bcf:field>editorb</bcf:field>
+      <bcf:field>editorc</bcf:field>
+      <bcf:field>editortype</bcf:field>
+      <bcf:field>editoratype</bcf:field>
+      <bcf:field>editorbtype</bcf:field>
+      <bcf:field>editorctype</bcf:field>
+      <bcf:field>eid</bcf:field>
+      <bcf:field>foreword</bcf:field>
+      <bcf:field>introduction</bcf:field>
+      <bcf:field>isbn</bcf:field>
+      <bcf:field>language</bcf:field>
+      <bcf:field>location</bcf:field>
+      <bcf:field>mainsubtitle</bcf:field>
+      <bcf:field>maintitle</bcf:field>
+      <bcf:field>maintitleaddon</bcf:field>
+      <bcf:field>note</bcf:field>
+      <bcf:field>number</bcf:field>
+      <bcf:field>origlanguage</bcf:field>
+      <bcf:field>pages</bcf:field>
+      <bcf:field>part</bcf:field>
+      <bcf:field>publisher</bcf:field>
+      <bcf:field>pubstate</bcf:field>
+      <bcf:field>series</bcf:field>
+      <bcf:field>subtitle</bcf:field>
+      <bcf:field>title</bcf:field>
+      <bcf:field>titleaddon</bcf:field>
+      <bcf:field>translator</bcf:field>
+      <bcf:field>volume</bcf:field>
+      <bcf:field>volumes</bcf:field>
+    </bcf:entryfields>
+    <bcf:entryfields>
+      <bcf:entrytype>dataset</bcf:entrytype>
+      <bcf:field>addendum</bcf:field>
+      <bcf:field>author</bcf:field>
+      <bcf:field>edition</bcf:field>
+      <bcf:field>editor</bcf:field>
+      <bcf:field>editortype</bcf:field>
+      <bcf:field>language</bcf:field>
+      <bcf:field>location</bcf:field>
+      <bcf:field>note</bcf:field>
+      <bcf:field>number</bcf:field>
+      <bcf:field>organization</bcf:field>
+      <bcf:field>publisher</bcf:field>
+      <bcf:field>pubstate</bcf:field>
+      <bcf:field>series</bcf:field>
+      <bcf:field>subtitle</bcf:field>
+      <bcf:field>title</bcf:field>
+      <bcf:field>titleaddon</bcf:field>
+      <bcf:field>type</bcf:field>
+      <bcf:field>version</bcf:field>
+    </bcf:entryfields>
+    <bcf:entryfields>
+      <bcf:entrytype>manual</bcf:entrytype>
+      <bcf:field>addendum</bcf:field>
+      <bcf:field>author</bcf:field>
+      <bcf:field>chapter</bcf:field>
+      <bcf:field>edition</bcf:field>
+      <bcf:field>editor</bcf:field>
+      <bcf:field>editortype</bcf:field>
+      <bcf:field>eid</bcf:field>
+      <bcf:field>isbn</bcf:field>
+      <bcf:field>language</bcf:field>
+      <bcf:field>location</bcf:field>
+      <bcf:field>note</bcf:field>
+      <bcf:field>number</bcf:field>
+      <bcf:field>organization</bcf:field>
+      <bcf:field>pages</bcf:field>
+      <bcf:field>pagetotal</bcf:field>
+      <bcf:field>publisher</bcf:field>
+      <bcf:field>pubstate</bcf:field>
+      <bcf:field>series</bcf:field>
+      <bcf:field>subtitle</bcf:field>
+      <bcf:field>title</bcf:field>
+      <bcf:field>titleaddon</bcf:field>
+      <bcf:field>type</bcf:field>
+      <bcf:field>version</bcf:field>
+    </bcf:entryfields>
+    <bcf:entryfields>
+      <bcf:entrytype>misc</bcf:entrytype>
+      <bcf:entrytype>software</bcf:entrytype>
+      <bcf:field>addendum</bcf:field>
+      <bcf:field>author</bcf:field>
+      <bcf:field>editor</bcf:field>
+      <bcf:field>editortype</bcf:field>
+      <bcf:field>howpublished</bcf:field>
+      <bcf:field>language</bcf:field>
+      <bcf:field>location</bcf:field>
+      <bcf:field>note</bcf:field>
+      <bcf:field>organization</bcf:field>
+      <bcf:field>pubstate</bcf:field>
+      <bcf:field>subtitle</bcf:field>
+      <bcf:field>title</bcf:field>
+      <bcf:field>titleaddon</bcf:field>
+      <bcf:field>type</bcf:field>
+      <bcf:field>version</bcf:field>
+    </bcf:entryfields>
+    <bcf:entryfields>
+      <bcf:entrytype>online</bcf:entrytype>
+      <bcf:field>addendum</bcf:field>
+      <bcf:field>author</bcf:field>
+      <bcf:field>editor</bcf:field>
+      <bcf:field>editortype</bcf:field>
+      <bcf:field>language</bcf:field>
+      <bcf:field>note</bcf:field>
+      <bcf:field>organization</bcf:field>
+      <bcf:field>pubstate</bcf:field>
+      <bcf:field>subtitle</bcf:field>
+      <bcf:field>title</bcf:field>
+      <bcf:field>titleaddon</bcf:field>
+      <bcf:field>version</bcf:field>
+    </bcf:entryfields>
+    <bcf:entryfields>
+      <bcf:entrytype>patent</bcf:entrytype>
+      <bcf:field>addendum</bcf:field>
+      <bcf:field>author</bcf:field>
+      <bcf:field>holder</bcf:field>
+      <bcf:field>location</bcf:field>
+      <bcf:field>note</bcf:field>
+      <bcf:field>number</bcf:field>
+      <bcf:field>pubstate</bcf:field>
+      <bcf:field>subtitle</bcf:field>
+      <bcf:field>title</bcf:field>
+      <bcf:field>titleaddon</bcf:field>
+      <bcf:field>type</bcf:field>
+      <bcf:field>version</bcf:field>
+    </bcf:entryfields>
+    <bcf:entryfields>
+      <bcf:entrytype>periodical</bcf:entrytype>
+      <bcf:field>addendum</bcf:field>
+      <bcf:field>editor</bcf:field>
+      <bcf:field>editora</bcf:field>
+      <bcf:field>editorb</bcf:field>
+      <bcf:field>editorc</bcf:field>
+      <bcf:field>editortype</bcf:field>
+      <bcf:field>editoratype</bcf:field>
+      <bcf:field>editorbtype</bcf:field>
+      <bcf:field>editorctype</bcf:field>
+      <bcf:field>issn</bcf:field>
+      <bcf:field>issue</bcf:field>
+      <bcf:field>issuesubtitle</bcf:field>
+      <bcf:field>issuetitle</bcf:field>
+      <bcf:field>issuetitleaddon</bcf:field>
+      <bcf:field>language</bcf:field>
+      <bcf:field>note</bcf:field>
+      <bcf:field>number</bcf:field>
+      <bcf:field>pubstate</bcf:field>
+      <bcf:field>series</bcf:field>
+      <bcf:field>subtitle</bcf:field>
+      <bcf:field>title</bcf:field>
+      <bcf:field>titleaddon</bcf:field>
+      <bcf:field>volume</bcf:field>
+      <bcf:field>yeardivision</bcf:field>
+    </bcf:entryfields>
+    <bcf:entryfields>
+      <bcf:entrytype>mvproceedings</bcf:entrytype>
+      <bcf:field>addendum</bcf:field>
+      <bcf:field>editor</bcf:field>
+      <bcf:field>editortype</bcf:field>
+      <bcf:field>eventday</bcf:field>
+      <bcf:field>eventendday</bcf:field>
+      <bcf:field>eventendhour</bcf:field>
+      <bcf:field>eventendminute</bcf:field>
+      <bcf:field>eventendmonth</bcf:field>
+      <bcf:field>eventendsecond</bcf:field>
+      <bcf:field>eventendtimezone</bcf:field>
+      <bcf:field>eventendyear</bcf:field>
+      <bcf:field>eventendyeardivision</bcf:field>
+      <bcf:field>eventhour</bcf:field>
+      <bcf:field>eventminute</bcf:field>
+      <bcf:field>eventmonth</bcf:field>
+      <bcf:field>eventsecond</bcf:field>
+      <bcf:field>eventtimezone</bcf:field>
+      <bcf:field>eventyear</bcf:field>
+      <bcf:field>eventyeardivision</bcf:field>
+      <bcf:field>eventtitle</bcf:field>
+      <bcf:field>eventtitleaddon</bcf:field>
+      <bcf:field>isbn</bcf:field>
+      <bcf:field>language</bcf:field>
+      <bcf:field>location</bcf:field>
+      <bcf:field>note</bcf:field>
+      <bcf:field>number</bcf:field>
+      <bcf:field>organization</bcf:field>
+      <bcf:field>pagetotal</bcf:field>
+      <bcf:field>publisher</bcf:field>
+      <bcf:field>pubstate</bcf:field>
+      <bcf:field>series</bcf:field>
+      <bcf:field>subtitle</bcf:field>
+      <bcf:field>title</bcf:field>
+      <bcf:field>titleaddon</bcf:field>
+      <bcf:field>venue</bcf:field>
+      <bcf:field>volumes</bcf:field>
+    </bcf:entryfields>
+    <bcf:entryfields>
+      <bcf:entrytype>proceedings</bcf:entrytype>
+      <bcf:field>addendum</bcf:field>
+      <bcf:field>chapter</bcf:field>
+      <bcf:field>editor</bcf:field>
+      <bcf:field>editortype</bcf:field>
+      <bcf:field>eid</bcf:field>
+      <bcf:field>eventday</bcf:field>
+      <bcf:field>eventendday</bcf:field>
+      <bcf:field>eventendhour</bcf:field>
+      <bcf:field>eventendminute</bcf:field>
+      <bcf:field>eventendmonth</bcf:field>
+      <bcf:field>eventendsecond</bcf:field>
+      <bcf:field>eventendtimezone</bcf:field>
+      <bcf:field>eventendyear</bcf:field>
+      <bcf:field>eventendyeardivision</bcf:field>
+      <bcf:field>eventhour</bcf:field>
+      <bcf:field>eventminute</bcf:field>
+      <bcf:field>eventmonth</bcf:field>
+      <bcf:field>eventsecond</bcf:field>
+      <bcf:field>eventtimezone</bcf:field>
+      <bcf:field>eventyear</bcf:field>
+      <bcf:field>eventyeardivision</bcf:field>
+      <bcf:field>eventtitle</bcf:field>
+      <bcf:field>eventtitleaddon</bcf:field>
+      <bcf:field>isbn</bcf:field>
+      <bcf:field>language</bcf:field>
+      <bcf:field>location</bcf:field>
+      <bcf:field>mainsubtitle</bcf:field>
+      <bcf:field>maintitle</bcf:field>
+      <bcf:field>maintitleaddon</bcf:field>
+      <bcf:field>note</bcf:field>
+      <bcf:field>number</bcf:field>
+      <bcf:field>organization</bcf:field>
+      <bcf:field>pages</bcf:field>
+      <bcf:field>pagetotal</bcf:field>
+      <bcf:field>part</bcf:field>
+      <bcf:field>publisher</bcf:field>
+      <bcf:field>pubstate</bcf:field>
+      <bcf:field>series</bcf:field>
+      <bcf:field>subtitle</bcf:field>
+      <bcf:field>title</bcf:field>
+      <bcf:field>titleaddon</bcf:field>
+      <bcf:field>venue</bcf:field>
+      <bcf:field>volume</bcf:field>
+      <bcf:field>volumes</bcf:field>
+    </bcf:entryfields>
+    <bcf:entryfields>
+      <bcf:entrytype>inproceedings</bcf:entrytype>
+      <bcf:field>addendum</bcf:field>
+      <bcf:field>author</bcf:field>
+      <bcf:field>booksubtitle</bcf:field>
+      <bcf:field>booktitle</bcf:field>
+      <bcf:field>booktitleaddon</bcf:field>
+      <bcf:field>chapter</bcf:field>
+      <bcf:field>editor</bcf:field>
+      <bcf:field>editortype</bcf:field>
+      <bcf:field>eid</bcf:field>
+      <bcf:field>eventday</bcf:field>
+      <bcf:field>eventendday</bcf:field>
+      <bcf:field>eventendhour</bcf:field>
+      <bcf:field>eventendminute</bcf:field>
+      <bcf:field>eventendmonth</bcf:field>
+      <bcf:field>eventendsecond</bcf:field>
+      <bcf:field>eventendtimezone</bcf:field>
+      <bcf:field>eventendyear</bcf:field>
+      <bcf:field>eventendyeardivision</bcf:field>
+      <bcf:field>eventhour</bcf:field>
+      <bcf:field>eventminute</bcf:field>
+      <bcf:field>eventmonth</bcf:field>
+      <bcf:field>eventsecond</bcf:field>
+      <bcf:field>eventtimezone</bcf:field>
+      <bcf:field>eventyear</bcf:field>
+      <bcf:field>eventyeardivision</bcf:field>
+      <bcf:field>eventtitle</bcf:field>
+      <bcf:field>eventtitleaddon</bcf:field>
+      <bcf:field>isbn</bcf:field>
+      <bcf:field>language</bcf:field>
+      <bcf:field>location</bcf:field>
+      <bcf:field>mainsubtitle</bcf:field>
+      <bcf:field>maintitle</bcf:field>
+      <bcf:field>maintitleaddon</bcf:field>
+      <bcf:field>note</bcf:field>
+      <bcf:field>number</bcf:field>
+      <bcf:field>organization</bcf:field>
+      <bcf:field>pages</bcf:field>
+      <bcf:field>part</bcf:field>
+      <bcf:field>publisher</bcf:field>
+      <bcf:field>pubstate</bcf:field>
+      <bcf:field>series</bcf:field>
+      <bcf:field>subtitle</bcf:field>
+      <bcf:field>title</bcf:field>
+      <bcf:field>titleaddon</bcf:field>
+      <bcf:field>venue</bcf:field>
+      <bcf:field>volume</bcf:field>
+      <bcf:field>volumes</bcf:field>
+    </bcf:entryfields>
+    <bcf:entryfields>
+      <bcf:entrytype>report</bcf:entrytype>
+      <bcf:field>addendum</bcf:field>
+      <bcf:field>author</bcf:field>
+      <bcf:field>chapter</bcf:field>
+      <bcf:field>eid</bcf:field>
+      <bcf:field>institution</bcf:field>
+      <bcf:field>isrn</bcf:field>
+      <bcf:field>language</bcf:field>
+      <bcf:field>location</bcf:field>
+      <bcf:field>note</bcf:field>
+      <bcf:field>number</bcf:field>
+      <bcf:field>pages</bcf:field>
+      <bcf:field>pagetotal</bcf:field>
+      <bcf:field>pubstate</bcf:field>
+      <bcf:field>subtitle</bcf:field>
+      <bcf:field>title</bcf:field>
+      <bcf:field>titleaddon</bcf:field>
+      <bcf:field>type</bcf:field>
+      <bcf:field>version</bcf:field>
+    </bcf:entryfields>
+    <bcf:entryfields>
+      <bcf:entrytype>thesis</bcf:entrytype>
+      <bcf:field>addendum</bcf:field>
+      <bcf:field>author</bcf:field>
+      <bcf:field>chapter</bcf:field>
+      <bcf:field>eid</bcf:field>
+      <bcf:field>institution</bcf:field>
+      <bcf:field>language</bcf:field>
+      <bcf:field>location</bcf:field>
+      <bcf:field>note</bcf:field>
+      <bcf:field>pages</bcf:field>
+      <bcf:field>pagetotal</bcf:field>
+      <bcf:field>pubstate</bcf:field>
+      <bcf:field>subtitle</bcf:field>
+      <bcf:field>title</bcf:field>
+      <bcf:field>titleaddon</bcf:field>
+      <bcf:field>type</bcf:field>
+    </bcf:entryfields>
+    <bcf:entryfields>
+      <bcf:entrytype>unpublished</bcf:entrytype>
+      <bcf:field>addendum</bcf:field>
+      <bcf:field>author</bcf:field>
+      <bcf:field>eventday</bcf:field>
+      <bcf:field>eventendday</bcf:field>
+      <bcf:field>eventendhour</bcf:field>
+      <bcf:field>eventendminute</bcf:field>
+      <bcf:field>eventendmonth</bcf:field>
+      <bcf:field>eventendsecond</bcf:field>
+      <bcf:field>eventendtimezone</bcf:field>
+      <bcf:field>eventendyear</bcf:field>
+      <bcf:field>eventendyeardivision</bcf:field>
+      <bcf:field>eventhour</bcf:field>
+      <bcf:field>eventminute</bcf:field>
+      <bcf:field>eventmonth</bcf:field>
+      <bcf:field>eventsecond</bcf:field>
+      <bcf:field>eventtimezone</bcf:field>
+      <bcf:field>eventyear</bcf:field>
+      <bcf:field>eventyeardivision</bcf:field>
+      <bcf:field>eventtitle</bcf:field>
+      <bcf:field>eventtitleaddon</bcf:field>
+      <bcf:field>howpublished</bcf:field>
+      <bcf:field>language</bcf:field>
+      <bcf:field>location</bcf:field>
+      <bcf:field>note</bcf:field>
+      <bcf:field>pubstate</bcf:field>
+      <bcf:field>subtitle</bcf:field>
+      <bcf:field>title</bcf:field>
+      <bcf:field>titleaddon</bcf:field>
+      <bcf:field>type</bcf:field>
+      <bcf:field>venue</bcf:field>
+    </bcf:entryfields>
+    <bcf:entryfields>
+      <bcf:field>with</bcf:field>
+      <bcf:field>narrator</bcf:field>
+      <bcf:field>execproducer</bcf:field>
+      <bcf:field>execdirector</bcf:field>
+    </bcf:entryfields>
+    <bcf:entryfields>
+      <bcf:entrytype>jurisdiction</bcf:entrytype>
+      <bcf:field>organization citation</bcf:field>
+    </bcf:entryfields>
+    <bcf:entryfields>
+      <bcf:entrytype>legmaterial</bcf:entrytype>
+      <bcf:field>source</bcf:field>
+    </bcf:entryfields>
+    <bcf:entryfields>
+      <bcf:entrytype>legadminmaterial</bcf:entrytype>
+      <bcf:field>citation</bcf:field>
+      <bcf:field>source</bcf:field>
+    </bcf:entryfields>
+    <bcf:entryfields>
+      <bcf:entrytype>constitution</bcf:entrytype>
+      <bcf:field>article</bcf:field>
+      <bcf:field>section</bcf:field>
+      <bcf:field>amendment</bcf:field>
+    </bcf:entryfields>
+    <bcf:entryfields>
+      <bcf:entrytype>software</bcf:entrytype>
+      <bcf:field>appentry</bcf:field>
+    </bcf:entryfields>
+    <bcf:entryfields>
+      <bcf:entrytype>report</bcf:entrytype>
+      <bcf:field>addendum</bcf:field>
+      <bcf:field>author</bcf:field>
+      <bcf:field>authortype</bcf:field>
+      <bcf:field>chapter</bcf:field>
+      <bcf:field>doi</bcf:field>
+      <bcf:field>eprint</bcf:field>
+      <bcf:field>eprintclass</bcf:field>
+      <bcf:field>eprinttype</bcf:field>
+      <bcf:field>institution</bcf:field>
+      <bcf:field>isrn</bcf:field>
+      <bcf:field>language</bcf:field>
+      <bcf:field>location</bcf:field>
+      <bcf:field>note</bcf:field>
+      <bcf:field>number</bcf:field>
+      <bcf:field>pages</bcf:field>
+      <bcf:field>pagetotal</bcf:field>
+      <bcf:field>pubstate</bcf:field>
+      <bcf:field>subtitle</bcf:field>
+      <bcf:field>title</bcf:field>
+      <bcf:field>titleaddon</bcf:field>
+      <bcf:field>type</bcf:field>
+      <bcf:field>version</bcf:field>
+    </bcf:entryfields>
+    <bcf:entryfields>
+      <bcf:entrytype>presentation</bcf:entrytype>
+      <bcf:field>addendum</bcf:field>
+      <bcf:field>author</bcf:field>
+      <bcf:field>booksubtitle</bcf:field>
+      <bcf:field>booktitle</bcf:field>
+      <bcf:field>booktitleaddon</bcf:field>
+      <bcf:field>chapter</bcf:field>
+      <bcf:field>doi</bcf:field>
+      <bcf:field>editor</bcf:field>
+      <bcf:field>editortype</bcf:field>
+      <bcf:field>eprint</bcf:field>
+      <bcf:field>eprintclass</bcf:field>
+      <bcf:field>eprinttype</bcf:field>
+      <bcf:field>eventday</bcf:field>
+      <bcf:field>eventendday</bcf:field>
+      <bcf:field>eventendhour</bcf:field>
+      <bcf:field>eventendminute</bcf:field>
+      <bcf:field>eventendmonth</bcf:field>
+      <bcf:field>eventendseason</bcf:field>
+      <bcf:field>eventendsecond</bcf:field>
+      <bcf:field>eventendtimezone</bcf:field>
+      <bcf:field>eventendyear</bcf:field>
+      <bcf:field>eventhour</bcf:field>
+      <bcf:field>eventminute</bcf:field>
+      <bcf:field>eventmonth</bcf:field>
+      <bcf:field>eventseason</bcf:field>
+      <bcf:field>eventsecond</bcf:field>
+      <bcf:field>eventtimezone</bcf:field>
+      <bcf:field>eventyear</bcf:field>
+      <bcf:field>eventtitle</bcf:field>
+      <bcf:field>eventtitleaddon</bcf:field>
+      <bcf:field>isbn</bcf:field>
+      <bcf:field>language</bcf:field>
+      <bcf:field>location</bcf:field>
+      <bcf:field>mainsubtitle</bcf:field>
+      <bcf:field>maintitle</bcf:field>
+      <bcf:field>maintitleaddon</bcf:field>
+      <bcf:field>note</bcf:field>
+      <bcf:field>number</bcf:field>
+      <bcf:field>organization</bcf:field>
+      <bcf:field>pages</bcf:field>
+      <bcf:field>part</bcf:field>
+      <bcf:field>publisher</bcf:field>
+      <bcf:field>pubstate</bcf:field>
+      <bcf:field>series</bcf:field>
+      <bcf:field>subtitle</bcf:field>
+      <bcf:field>title</bcf:field>
+      <bcf:field>titleaddon</bcf:field>
+      <bcf:field>venue</bcf:field>
+      <bcf:field>volume</bcf:field>
+      <bcf:field>volumes</bcf:field>
+    </bcf:entryfields>
+    <bcf:multiscriptfields>
+      <bcf:field>abstract</bcf:field>
+      <bcf:field>addendum</bcf:field>
+      <bcf:field>afterword</bcf:field>
+      <bcf:field>annotator</bcf:field>
+      <bcf:field>author</bcf:field>
+      <bcf:field>bookauthor</bcf:field>
+      <bcf:field>booksubtitle</bcf:field>
+      <bcf:field>booktitle</bcf:field>
+      <bcf:field>booktitleaddon</bcf:field>
+      <bcf:field>chapter</bcf:field>
+      <bcf:field>commentator</bcf:field>
+      <bcf:field>editor</bcf:field>
+      <bcf:field>editora</bcf:field>
+      <bcf:field>editorb</bcf:field>
+      <bcf:field>editorc</bcf:field>
+      <bcf:field>foreword</bcf:field>
+      <bcf:field>holder</bcf:field>
+      <bcf:field>institution</bcf:field>
+      <bcf:field>introduction</bcf:field>
+      <bcf:field>issuesubtitle</bcf:field>
+      <bcf:field>issuetitle</bcf:field>
+      <bcf:field>issuetitleaddon</bcf:field>
+      <bcf:field>journalsubtitle</bcf:field>
+      <bcf:field>journaltitle</bcf:field>
+      <bcf:field>journaltitleaddon</bcf:field>
+      <bcf:field>location</bcf:field>
+      <bcf:field>mainsubtitle</bcf:field>
+      <bcf:field>maintitle</bcf:field>
+      <bcf:field>maintitleaddon</bcf:field>
+      <bcf:field>nameaddon</bcf:field>
+      <bcf:field>note</bcf:field>
+      <bcf:field>organization</bcf:field>
+      <bcf:field>origlanguage</bcf:field>
+      <bcf:field>origlocation</bcf:field>
+      <bcf:field>origpublisher</bcf:field>
+      <bcf:field>origtitle</bcf:field>
+      <bcf:field>part</bcf:field>
+      <bcf:field>publisher</bcf:field>
+      <bcf:field>relatedstring</bcf:field>
+      <bcf:field>series</bcf:field>
+      <bcf:field>shortauthor</bcf:field>
+      <bcf:field>shorteditor</bcf:field>
+      <bcf:field>shorthand</bcf:field>
+      <bcf:field>shortjournal</bcf:field>
+      <bcf:field>shortseries</bcf:field>
+      <bcf:field>shorttitle</bcf:field>
+      <bcf:field>sortname</bcf:field>
+      <bcf:field>sortshorthand</bcf:field>
+      <bcf:field>sorttitle</bcf:field>
+      <bcf:field>subtitle</bcf:field>
+      <bcf:field>title</bcf:field>
+      <bcf:field>titleaddon</bcf:field>
+      <bcf:field>translator</bcf:field>
+      <bcf:field>venue</bcf:field>
+    </bcf:multiscriptfields>
+    <bcf:constraints>
+      <bcf:entrytype>article</bcf:entrytype>
+      <bcf:entrytype>book</bcf:entrytype>
+      <bcf:entrytype>inbook</bcf:entrytype>
+      <bcf:entrytype>bookinbook</bcf:entrytype>
+      <bcf:entrytype>suppbook</bcf:entrytype>
+      <bcf:entrytype>booklet</bcf:entrytype>
+      <bcf:entrytype>collection</bcf:entrytype>
+      <bcf:entrytype>incollection</bcf:entrytype>
+      <bcf:entrytype>suppcollection</bcf:entrytype>
+      <bcf:entrytype>manual</bcf:entrytype>
+      <bcf:entrytype>misc</bcf:entrytype>
+      <bcf:entrytype>mvbook</bcf:entrytype>
+      <bcf:entrytype>mvcollection</bcf:entrytype>
+      <bcf:entrytype>online</bcf:entrytype>
+      <bcf:entrytype>patent</bcf:entrytype>
+      <bcf:entrytype>periodical</bcf:entrytype>
+      <bcf:entrytype>suppperiodical</bcf:entrytype>
+      <bcf:entrytype>proceedings</bcf:entrytype>
+      <bcf:entrytype>inproceedings</bcf:entrytype>
+      <bcf:entrytype>reference</bcf:entrytype>
+      <bcf:entrytype>inreference</bcf:entrytype>
+      <bcf:entrytype>report</bcf:entrytype>
+      <bcf:entrytype>set</bcf:entrytype>
+      <bcf:entrytype>thesis</bcf:entrytype>
+      <bcf:entrytype>unpublished</bcf:entrytype>
+      <bcf:constraint type="mandatory">
+        <bcf:fieldxor>
+          <bcf:field>date</bcf:field>
+          <bcf:field>year</bcf:field>
+        </bcf:fieldxor>
+      </bcf:constraint>
+    </bcf:constraints>
+    <bcf:constraints>
+      <bcf:entrytype>set</bcf:entrytype>
+      <bcf:constraint type="mandatory">
+        <bcf:field>entryset</bcf:field>
+      </bcf:constraint>
+    </bcf:constraints>
+    <bcf:constraints>
+      <bcf:entrytype>article</bcf:entrytype>
+      <bcf:constraint type="mandatory">
+        <bcf:field>author</bcf:field>
+        <bcf:field>journaltitle</bcf:field>
+        <bcf:field>title</bcf:field>
+      </bcf:constraint>
+    </bcf:constraints>
+    <bcf:constraints>
+      <bcf:entrytype>book</bcf:entrytype>
+      <bcf:entrytype>mvbook</bcf:entrytype>
+      <bcf:constraint type="mandatory">
+        <bcf:field>author</bcf:field>
+        <bcf:field>title</bcf:field>
+      </bcf:constraint>
+    </bcf:constraints>
+    <bcf:constraints>
+      <bcf:entrytype>inbook</bcf:entrytype>
+      <bcf:entrytype>bookinbook</bcf:entrytype>
+      <bcf:entrytype>suppbook</bcf:entrytype>
+      <bcf:constraint type="mandatory">
+        <bcf:field>author</bcf:field>
+        <bcf:field>title</bcf:field>
+        <bcf:field>booktitle</bcf:field>
+      </bcf:constraint>
+    </bcf:constraints>
+    <bcf:constraints>
+      <bcf:entrytype>booklet</bcf:entrytype>
+      <bcf:constraint type="mandatory">
+        <bcf:fieldor>
+          <bcf:field>author</bcf:field>
+          <bcf:field>editor</bcf:field>
+        </bcf:fieldor>
+        <bcf:field>title</bcf:field>
+      </bcf:constraint>
+    </bcf:constraints>
+    <bcf:constraints>
+      <bcf:entrytype>collection</bcf:entrytype>
+      <bcf:entrytype>reference</bcf:entrytype>
+      <bcf:entrytype>mvcollection</bcf:entrytype>
+      <bcf:entrytype>mvreference</bcf:entrytype>
+      <bcf:constraint type="mandatory">
+        <bcf:field>editor</bcf:field>
+        <bcf:field>title</bcf:field>
+      </bcf:constraint>
+    </bcf:constraints>
+    <bcf:constraints>
+      <bcf:entrytype>incollection</bcf:entrytype>
+      <bcf:entrytype>suppcollection</bcf:entrytype>
+      <bcf:entrytype>inreference</bcf:entrytype>
+      <bcf:constraint type="mandatory">
+        <bcf:field>author</bcf:field>
+        <bcf:field>editor</bcf:field>
+        <bcf:field>title</bcf:field>
+        <bcf:field>booktitle</bcf:field>
+      </bcf:constraint>
+    </bcf:constraints>
+    <bcf:constraints>
+      <bcf:entrytype>dataset</bcf:entrytype>
+      <bcf:constraint type="mandatory">
+        <bcf:field>title</bcf:field>
+      </bcf:constraint>
+    </bcf:constraints>
+    <bcf:constraints>
+      <bcf:entrytype>manual</bcf:entrytype>
+      <bcf:constraint type="mandatory">
+        <bcf:field>title</bcf:field>
+      </bcf:constraint>
+    </bcf:constraints>
+    <bcf:constraints>
+      <bcf:entrytype>misc</bcf:entrytype>
+      <bcf:entrytype>software</bcf:entrytype>
+      <bcf:constraint type="mandatory">
+        <bcf:field>title</bcf:field>
+      </bcf:constraint>
+    </bcf:constraints>
+    <bcf:constraints>
+      <bcf:entrytype>online</bcf:entrytype>
+      <bcf:constraint type="mandatory">
+        <bcf:field>title</bcf:field>
+        <bcf:fieldor>
+          <bcf:field>url</bcf:field>
+          <bcf:field>doi</bcf:field>
+          <bcf:field>eprint</bcf:field>
+        </bcf:fieldor>
+      </bcf:constraint>
+    </bcf:constraints>
+    <bcf:constraints>
+      <bcf:entrytype>patent</bcf:entrytype>
+      <bcf:constraint type="mandatory">
+        <bcf:field>author</bcf:field>
+        <bcf:field>title</bcf:field>
+        <bcf:field>number</bcf:field>
+      </bcf:constraint>
+    </bcf:constraints>
+    <bcf:constraints>
+      <bcf:entrytype>periodical</bcf:entrytype>
+      <bcf:constraint type="mandatory">
+        <bcf:field>editor</bcf:field>
+        <bcf:field>title</bcf:field>
+      </bcf:constraint>
+    </bcf:constraints>
+    <bcf:constraints>
+      <bcf:entrytype>proceedings</bcf:entrytype>
+      <bcf:entrytype>mvproceedings</bcf:entrytype>
+      <bcf:constraint type="mandatory">
+        <bcf:field>title</bcf:field>
+      </bcf:constraint>
+    </bcf:constraints>
+    <bcf:constraints>
+      <bcf:entrytype>inproceedings</bcf:entrytype>
+      <bcf:constraint type="mandatory">
+        <bcf:field>author</bcf:field>
+        <bcf:field>title</bcf:field>
+        <bcf:field>booktitle</bcf:field>
+      </bcf:constraint>
+    </bcf:constraints>
+    <bcf:constraints>
+      <bcf:entrytype>report</bcf:entrytype>
+      <bcf:constraint type="mandatory">
+        <bcf:field>author</bcf:field>
+        <bcf:field>title</bcf:field>
+        <bcf:field>type</bcf:field>
+        <bcf:field>institution</bcf:field>
+      </bcf:constraint>
+    </bcf:constraints>
+    <bcf:constraints>
+      <bcf:entrytype>thesis</bcf:entrytype>
+      <bcf:constraint type="mandatory">
+        <bcf:field>author</bcf:field>
+        <bcf:field>title</bcf:field>
+        <bcf:field>type</bcf:field>
+        <bcf:field>institution</bcf:field>
+      </bcf:constraint>
+    </bcf:constraints>
+    <bcf:constraints>
+      <bcf:entrytype>unpublished</bcf:entrytype>
+      <bcf:constraint type="mandatory">
+        <bcf:field>author</bcf:field>
+        <bcf:field>title</bcf:field>
+      </bcf:constraint>
+    </bcf:constraints>
+    <bcf:constraints>
+      <bcf:constraint type="data" datatype="isbn">
+        <bcf:field>isbn</bcf:field>
+      </bcf:constraint>
+      <bcf:constraint type="data" datatype="issn">
+        <bcf:field>issn</bcf:field>
+      </bcf:constraint>
+      <bcf:constraint type="data" datatype="ismn">
+        <bcf:field>ismn</bcf:field>
+      </bcf:constraint>
+      <bcf:constraint type="data" datatype="pattern" pattern="(?:sf|sm|sn|pf|pm|pn|pp)">
+        <bcf:field>gender</bcf:field>
+      </bcf:constraint>
+    </bcf:constraints>
+    <bcf:constraints>
+      <bcf:entrytype>book</bcf:entrytype>
+      <bcf:entrytype>inbook</bcf:entrytype>
+      <bcf:entrytype>article</bcf:entrytype>
+      <bcf:entrytype>report</bcf:entrytype>
+      <bcf:constraint type="mandatory">
+        <bcf:field>author</bcf:field>
+        <bcf:field>title</bcf:field>
+      </bcf:constraint>
+    </bcf:constraints>
+  </bcf:datamodel>
+  <!-- CITATION DATA -->
+  <!-- SECTION 0 -->
+  <bcf:bibdata section="0">
+    <bcf:datasource type="file" datatype="bibtex" glob="false">bib/AA_Subjective_probability.bib</bcf:datasource>
+    <bcf:datasource type="file" datatype="bibtex" glob="false">bib/AB_Epistemic.bib</bcf:datasource>
+    <bcf:datasource type="file" datatype="bibtex" glob="false">bib/AB_Hitchhikers_guide.bib</bcf:datasource>
+    <bcf:datasource type="file" datatype="bibtex" glob="false">bib/Adams_Inexact.bib</bcf:datasource>
+    <bcf:datasource type="file" datatype="bibtex" glob="false">bib/AE_Framing.bib</bcf:datasource>
+    <bcf:datasource type="file" datatype="bibtex" glob="false">bib/AINU_Similarity_and_simple_lotteries.bib</bcf:datasource>
+    <bcf:datasource type="file" datatype="bibtex" glob="false">bib/Akhiezer_Moment_problem.bib</bcf:datasource>
+    <bcf:datasource type="file" datatype="bibtex" glob="false">bib/Akhiezer_The_classical_moment_problem.bib</bcf:datasource>
+    <bcf:datasource type="file" datatype="bibtex" glob="false">bib/AL01.bib</bcf:datasource>
+    <bcf:datasource type="file" datatype="bibtex" glob="false">bib/Allais_Paradox.bib</bcf:datasource>
+    <bcf:datasource type="file" datatype="bibtex" glob="false">bib/Amemiya_Qualitative_response_Survey.bib</bcf:datasource>
+    <bcf:datasource type="file" datatype="bibtex" glob="false">bib/Aumann_Notes_on_interactive_epistemology.bib</bcf:datasource>
+    <bcf:datasource type="file" datatype="bibtex" glob="false">bib/Aumann_Agreeing_to_disagree.bib</bcf:datasource>
+    <bcf:datasource type="file" datatype="bibtex" glob="false">bib/Azrieli_Valence_dimension.bib</bcf:datasource>
+    <bcf:datasource type="file" datatype="bibtex" glob="false">bib/Back-Insider_trading_in_cts_time.bib</bcf:datasource>
+    <bcf:datasource type="file" datatype="bibtex" glob="false">bib/Ball_Countable_paracompactness_of_linear_orders.bib</bcf:datasource>
+    <bcf:datasource type="file" datatype="bibtex" glob="false">bib/Balogh_Moritas_third_conjecture.bib</bcf:datasource>
+    <bcf:datasource type="file" datatype="bibtex" glob="false">bib/BarberaHammondSeidl2004handbook.bib</bcf:datasource>
+    <bcf:datasource type="file" datatype="bibtex" glob="false">bib/Barbos_Context_effects.bib</bcf:datasource>
+    <bcf:datasource type="file" datatype="bibtex" glob="false">bib/Barndorff_Shephard_Levy_processes.bib</bcf:datasource>
+    <bcf:datasource type="file" datatype="bibtex" glob="false">bib/Bernoulli_Moral_expectation.bib</bcf:datasource>
+    <bcf:datasource type="file" datatype="bibtex" glob="false">bib/Besan_Dran_Shan_Schae-Strategy.bib</bcf:datasource>
+    <bcf:datasource type="file" datatype="bibtex" glob="false">bib/Bewley86.bib</bcf:datasource>
+    <bcf:datasource type="file" datatype="bibtex" glob="false">bib/Beardon_Open_gap_theorem.bib</bcf:datasource>
+    <bcf:datasource type="file" datatype="bibtex" glob="false">bib/Bichteler_Stochastic_integration.bib</bcf:datasource>
+    <bcf:datasource type="file" datatype="bibtex" glob="false">bib/Bichteler_Jumps.bib</bcf:datasource>
+    <bcf:datasource type="file" datatype="bibtex" glob="false">bib/Billingsley_Probability_and_measure.bib</bcf:datasource>
+    <bcf:datasource type="file" datatype="bibtex" glob="false">bib/Binmore_Rational.bib</bcf:datasource>
+    <bcf:datasource type="file" datatype="bibtex" glob="false">bib/Binmore_Making_decisions_in_large_worlds.bib</bcf:datasource>
+    <bcf:datasource type="file" datatype="bibtex" glob="false">bib/Binmore_A_minimal_extension.bib</bcf:datasource>
+    <bcf:datasource type="file" datatype="bibtex" glob="false">bib/blackorby84diagrammatic.bib</bcf:datasource>
+    <bcf:datasource type="file" datatype="bibtex" glob="false">bib/Bleichrodt_Reference-dependence.bib</bcf:datasource>
+    <bcf:datasource type="file" datatype="bibtex" glob="false">bib/BM_Discontinuous_games.bib</bcf:datasource>
+    <bcf:datasource type="file" datatype="bibtex" glob="false">bib/BM_Representations_Book.bib</bcf:datasource>
+    <bcf:datasource type="file" datatype="bibtex" glob="false">bib/Bona_Combinatorics_Book.bib</bcf:datasource>
+    <bcf:datasource type="file" datatype="bibtex" glob="false">bib/BP_Brownian_bridge.bib</bcf:datasource>
+    <bcf:datasource type="file" datatype="bibtex" glob="false">bib/bourbaki98elements.bib</bcf:datasource>
+    <bcf:datasource type="file" datatype="bibtex" glob="false">bib/Bourbaki_Algebra_1.bib</bcf:datasource>
+    <bcf:datasource type="file" datatype="bibtex" glob="false">bib/BR_Beyond_revealed_preference.bib</bcf:datasource>
+    <bcf:datasource type="file" datatype="bibtex" glob="false">bib/BrazBout10Elicitation.bib</bcf:datasource>
+    <bcf:datasource type="file" datatype="bibtex" glob="false">bib/Bridges_Euclidean.bib</bcf:datasource>
+    <bcf:datasource type="file" datatype="bibtex" glob="false">bib/Bridges_Joint_continuity.bib</bcf:datasource>
+    <bcf:datasource type="file" datatype="bibtex" glob="false">bib/BT-Bond_price_dynamics.bib</bcf:datasource>
+    <bcf:datasource type="file" datatype="bibtex" glob="false">bib/Buzyakova_Submetrizable.bib</bcf:datasource>
+    <bcf:datasource type="file" datatype="bibtex" glob="false">bib/Cantor_1895.bib</bcf:datasource>
+    <bcf:datasource type="file" datatype="bibtex" glob="false">bib/CCM_Joint_continuity.bib</bcf:datasource>
+    <bcf:datasource type="file" datatype="bibtex" glob="false">bib/CES_Projective.bib</bcf:datasource>
+    <bcf:datasource type="file" datatype="bibtex" glob="false">bib/CES_Quadratic.bib</bcf:datasource>
+    <bcf:datasource type="file" datatype="bibtex" glob="false">bib/Chambers_Hayashi_2012.bib</bcf:datasource>
+    <bcf:datasource type="file" datatype="bibtex" glob="false">bib/CDFX_Uniform_topologies_on_types.bib</bcf:datasource>
+    <bcf:datasource type="file" datatype="bibtex" glob="false">bib/Chew_Betweenness.bib</bcf:datasource>
+    <bcf:datasource type="file" datatype="bibtex" glob="false">bib/Choquet_Topology.bib</bcf:datasource>
+    <bcf:datasource type="file" datatype="bibtex" glob="false">bib/Tkachuk_Cp_theory.bib</bcf:datasource>
+    <bcf:datasource type="file" datatype="bibtex" glob="false">bib/CS_Foundations.bib</bcf:datasource>
+    <bcf:datasource type="file" datatype="bibtex" glob="false">bib/Collier_Economic_causes_of_civil_conflict.bib</bcf:datasource>
+    <bcf:datasource type="file" datatype="bibtex" glob="false">bib/dAspremont_Gevers_Comparability.bib</bcf:datasource>
+    <bcf:datasource type="file" datatype="bibtex" glob="false">bib/Davis_Markov_models.bib</bcf:datasource>
+    <bcf:datasource type="file" datatype="bibtex" glob="false">bib/Debreu_1954_Ordinal.bib</bcf:datasource>
+    <bcf:datasource type="file" datatype="bibtex" glob="false">bib/Debreu_1964_Ordinal.bib</bcf:datasource>
+    <bcf:datasource type="file" datatype="bibtex" glob="false">bib/Debreu_Cardinal.bib</bcf:datasource>
+    <bcf:datasource type="file" datatype="bibtex" glob="false">bib/Dehaene_Conscious_and_nonconscious_processes.bib</bcf:datasource>
+    <bcf:datasource type="file" datatype="bibtex" glob="false">bib/Dekel_Betweenness.bib</bcf:datasource>
+    <bcf:datasource type="file" datatype="bibtex" glob="false">bib/DFM_Topologies_on_types.bib</bcf:datasource>
+    <bcf:datasource type="file" datatype="bibtex" glob="false">bib/DM-Efficiency.bib</bcf:datasource>
+    <bcf:datasource type="file" datatype="bibtex" glob="false">bib/DMOk01.bib</bcf:datasource>
+    <bcf:datasource type="file" datatype="bibtex" glob="false">bib/DMS_Parametric_continuity_in_dynamic.bib</bcf:datasource>
+    <bcf:datasource type="file" datatype="bibtex" glob="false">bib/DR_Noisy_brain.bib</bcf:datasource>
+    <bcf:datasource type="file" datatype="bibtex" glob="false">bib/DR_State-dependent_utility.bib</bcf:datasource>
+    <bcf:datasource type="file" datatype="bibtex" glob="false">bib/Dreze1961state-dependence.bib</bcf:datasource>
+    <bcf:datasource type="file" datatype="bibtex" glob="false">bib/Dhrymes_Mathematics_for_econometrics.bib</bcf:datasource>
+    <bcf:datasource type="file" datatype="bibtex" glob="false">bib/EG_Ambiguity.bib</bcf:datasource>
+    <bcf:datasource type="file" datatype="bibtex" glob="false">bib/Eilenberg_Ordinal_utility.bib</bcf:datasource>
+    <bcf:datasource type="file" datatype="bibtex" glob="false">bib/Ellsberg_Ambiguity.bib</bcf:datasource>
+    <bcf:datasource type="file" datatype="bibtex" glob="false">bib/EMS_Coarse_contingencies.bib</bcf:datasource>
+    <bcf:datasource type="file" datatype="bibtex" glob="false">bib/EO_Ordinal_multi-utility.bib</bcf:datasource>
+    <bcf:datasource type="file" datatype="bibtex" glob="false">bib/Evans_Simplex.bib</bcf:datasource>
+    <bcf:datasource type="file" datatype="bibtex" glob="false">bib/Fechner_Psychophysik.bib</bcf:datasource>
+    <bcf:datasource type="file" datatype="bibtex" glob="false">bib/Fishburn_Foundations_of_EU.bib</bcf:datasource>
+    <bcf:datasource type="file" datatype="bibtex" glob="false">bib/Fishburn_Lavalle_Context-dependent_choice.bib</bcf:datasource>
+    <bcf:datasource type="file" datatype="bibtex" glob="false">bib/Fishburn_Multilinear.bib</bcf:datasource>
+    <bcf:datasource type="file" datatype="bibtex" glob="false">bib/Fishburn_n-person_games.bib</bcf:datasource>
+    <bcf:datasource type="file" datatype="bibtex" glob="false">bib/Fishburn_Ordered_convex_sets.bib</bcf:datasource>
+    <bcf:datasource type="file" datatype="bibtex" glob="false">bib/Fishburn_Semiorders.bib</bcf:datasource>
+    <bcf:datasource type="file" datatype="bibtex" glob="false">bib/Fishburn_Skew-symmetric_bilinear.bib</bcf:datasource>
+    <bcf:datasource type="file" datatype="bibtex" glob="false">bib/Fishburn_Utility_theory_Book.bib</bcf:datasource>
+    <bcf:datasource type="file" datatype="bibtex" glob="false">bib/FR_Multilinear_utility.bib</bcf:datasource>
+    <bcf:datasource type="file" datatype="bibtex" glob="false">bib/FR_Mixture_axioms.bib</bcf:datasource>
+    <bcf:datasource type="file" datatype="bibtex" glob="false">bib/Galanis_Unawareness_of_theorems.bib</bcf:datasource>
+    <bcf:datasource type="file" datatype="bibtex" glob="false">bib/Gale_Compact_sets_of_functions.bib</bcf:datasource>
+    <bcf:datasource type="file" datatype="bibtex" glob="false">bib/Gilboa_Theory_of_decision_under_uncertainty.bib</bcf:datasource>
+    <bcf:datasource type="file" datatype="bibtex" glob="false">bib/GKMQT_Robust_experiments.bib</bcf:datasource>
+    <bcf:datasource type="file" datatype="bibtex" glob="false">bib/GKOQ-Submodels.bib</bcf:datasource>
+    <bcf:datasource type="file" datatype="bibtex" glob="false">bib/GKPS_Utilitarianism.bib</bcf:datasource>
+    <bcf:datasource type="file" datatype="bibtex" glob="false">bib/GKPS_JET.bib</bcf:datasource>
+    <bcf:datasource type="file" datatype="bibtex" glob="false">bib/GKPS_Generalised.bib</bcf:datasource>
+    <bcf:datasource type="file" datatype="bibtex" glob="false">bib/Ghirardato_Ignorance.bib</bcf:datasource>
+    <bcf:datasource type="file" datatype="bibtex" glob="false">bib/GHTV_Imprecise_information.bib</bcf:datasource>
+    <bcf:datasource type="file" datatype="bibtex" glob="false">bib/GM_Perfect_compacta.bib</bcf:datasource>
+    <bcf:datasource type="file" datatype="bibtex" glob="false">bib/GP_Preference_reversals.bib</bcf:datasource>
+    <bcf:datasource type="file" datatype="bibtex" glob="false">bib/GP_Differential_topology.bib</bcf:datasource>
+    <bcf:datasource type="file" datatype="bibtex" glob="false">bib/GPS_Psychological_games.bib</bcf:datasource>
+    <bcf:datasource type="file" datatype="bibtex" glob="false">bib/GPS_Rationality.bib</bcf:datasource>
+    <bcf:datasource type="file" datatype="bibtex" glob="false">bib/GS_Act_similarity.bib</bcf:datasource>
+    <bcf:datasource type="file" datatype="bibtex" glob="false">bib/GS_CBDT_Book.bib</bcf:datasource>
+    <bcf:datasource type="file" datatype="bibtex" glob="false">bib/GS_Context_EU.bib</bcf:datasource>
+    <bcf:datasource type="file" datatype="bibtex" glob="false">bib/GS_Inductive_inference.bib</bcf:datasource>
+    <bcf:datasource type="file" datatype="bibtex" glob="false">bib/GS_Maxmin.bib</bcf:datasource>
+    <bcf:datasource type="file" datatype="bibtex" glob="false">bib/GS_Restatement.bib</bcf:datasource>
+    <bcf:datasource type="file" datatype="bibtex" glob="false">bib/GS_CBDT_Original.bib</bcf:datasource>
+    <bcf:datasource type="file" datatype="bibtex" glob="false">bib/GSS_Ultimatum_game.bib</bcf:datasource>
+    <bcf:datasource type="file" datatype="bibtex" glob="false">bib/GT_Ultimatum_Survey.bib</bcf:datasource>
+    <bcf:datasource type="file" datatype="bibtex" glob="false">bib/Guardian_Merkel_strokes.bib</bcf:datasource>
+    <bcf:datasource type="file" datatype="bibtex" glob="false">bib/Halmos_Vector_spaces.bib</bcf:datasource>
+    <bcf:datasource type="file" datatype="bibtex" glob="false">bib/Hammond_Consequentialism.bib</bcf:datasource>
+    <bcf:datasource type="file" datatype="bibtex" glob="false">bib/Hammond_Consistent_plans.bib</bcf:datasource>
+    <bcf:datasource type="file" datatype="bibtex" glob="false">bib/Hammond_Ex-ante.bib</bcf:datasource>
+    <bcf:datasource type="file" datatype="bibtex" glob="false">bib/HHS_Knowing_whether_and_cardinality.bib</bcf:datasource>
+    <bcf:datasource type="file" datatype="bibtex" glob="false">bib/Heinonen_Nonsmooth_calculus.bib</bcf:datasource>
+    <bcf:datasource type="file" datatype="bibtex" glob="false">bib/Hernandez_Double_arrow.bib</bcf:datasource>
+    <bcf:datasource type="file" datatype="bibtex" glob="false">bib/Hildenbrand_Joint_continuity.bib</bcf:datasource>
+    <bcf:datasource type="file" datatype="bibtex" glob="false">bib/HM_Mixture_set.bib</bcf:datasource>
+    <bcf:datasource type="file" datatype="bibtex" glob="false">bib/HMS_Interactive_unawareness.bib</bcf:datasource>
+    <bcf:datasource type="file" datatype="bibtex" glob="false">bib/Houthakker_Revealed_preference.bib</bcf:datasource>
+    <bcf:datasource type="file" datatype="bibtex" glob="false">bib/HR-Knowledge_of_U.bib</bcf:datasource>
+    <bcf:datasource type="file" datatype="bibtex" glob="false">bib/HR-Knowledge_of_unawareness.bib</bcf:datasource>
+    <bcf:datasource type="file" datatype="bibtex" glob="false">bib/HR-Knowledge_of_U_rev.bib</bcf:datasource>
+    <bcf:datasource type="file" datatype="bibtex" glob="false">bib/HS_Coherent_beliefs_not_always_types.bib</bcf:datasource>
+    <bcf:datasource type="file" datatype="bibtex" glob="false">bib/HV_Nonconvexities.bib</bcf:datasource>
+    <bcf:datasource type="file" datatype="bibtex" glob="false">bib/HW_Dimension_theory.bib</bcf:datasource>
+    <bcf:datasource type="file" datatype="bibtex" glob="false">bib/Ichiishi_Game_theory.bib</bcf:datasource>
+    <bcf:datasource type="file" datatype="bibtex" glob="false">bib/Inoue_Path_continuity.bib</bcf:datasource>
+    <bcf:datasource type="file" datatype="bibtex" glob="false">bib/Jaffray_Separability.bib</bcf:datasource>
+    <bcf:datasource type="file" datatype="bibtex" glob="false">bib/Johnson_Compact_nonmetrizable.bib</bcf:datasource>
+    <bcf:datasource type="file" datatype="bibtex" glob="false">bib/Joshi_Topology.bib</bcf:datasource>
+    <bcf:datasource type="file" datatype="bibtex" glob="false">bib/JR_Entropy_for_skewness_and_kurtosis.bib</bcf:datasource>
+    <bcf:datasource type="file" datatype="bibtex" glob="false">bib/Junk_Maximum_entropy_for_reduced_moment_problems.bib</bcf:datasource>
+    <bcf:datasource type="file" datatype="bibtex" glob="false">bib/Kaneko_Epistemic_Introduction.bib</bcf:datasource>
+    <bcf:datasource type="file" datatype="bibtex" glob="false">bib/Kannai_Joint_continuity.bib</bcf:datasource>
+    <bcf:datasource type="file" datatype="bibtex" glob="false">bib/Karni_Medical_decision_making.bib</bcf:datasource>
+    <bcf:datasource type="file" datatype="bibtex" glob="false">bib/Kelley_Topology.bib</bcf:datasource>
+    <bcf:datasource type="file" datatype="bibtex" glob="false">bib/KKT_Dictator_game.bib</bcf:datasource>
+    <bcf:datasource type="file" datatype="bibtex" glob="false">bib/KLST_Measurement_theory_1.bib</bcf:datasource>
+    <bcf:datasource type="file" datatype="bibtex" glob="false">bib/KR_Reference-dependent_preferences.bib</bcf:datasource>
+    <bcf:datasource type="file" datatype="bibtex" glob="false">bib/KR_Reference-dependent_risk_attitudes.bib</bcf:datasource>
+    <bcf:datasource type="file" datatype="bibtex" glob="false">bib/Kreps_Notes.bib</bcf:datasource>
+    <bcf:datasource type="file" datatype="bibtex" glob="false">bib/KS_Extension_of_vNM.bib</bcf:datasource>
+    <bcf:datasource type="file" datatype="bibtex" glob="false">bib/KT_Prospect_theory.bib</bcf:datasource>
+    <bcf:datasource type="file" datatype="bibtex" glob="false">bib/Kuratowski_1.bib</bcf:datasource>
+    <bcf:datasource type="file" datatype="bibtex" glob="false">bib/Kuratowski_2.bib</bcf:datasource>
+    <bcf:datasource type="file" datatype="bibtex" glob="false">bib/KV_Reverse_Bayes.bib</bcf:datasource>
+    <bcf:datasource type="file" datatype="bibtex" glob="false">bib/KV-Awareness_of_U.bib</bcf:datasource>
+    <bcf:datasource type="file" datatype="bibtex" glob="false">bib/KW_Preference_foundations.bib</bcf:datasource>
+    <bcf:datasource type="file" datatype="bibtex" glob="false">bib/Lambek_Rings_and_modules.bib</bcf:datasource>
+    <bcf:datasource type="file" datatype="bibtex" glob="false">bib/Levin_Joint_continuity.bib</bcf:datasource>
+    <bcf:datasource type="file" datatype="bibtex" glob="false">bib/Linton_et_al_Multivariate_variance.bib</bcf:datasource>
+    <bcf:datasource type="file" datatype="bibtex" glob="false">bib/LS_Regret.bib</bcf:datasource>
+    <bcf:datasource type="file" datatype="bibtex" glob="false">bib/Maki_Philosophy_of_Economics.bib</bcf:datasource>
+    <bcf:datasource type="file" datatype="bibtex" glob="false">bib/Mas-Colell_Joint_continuity.bib</bcf:datasource>
+    <bcf:datasource type="file" datatype="bibtex" glob="false">bib/Mas-Colell_Public_good.bib</bcf:datasource>
+    <bcf:datasource type="file" datatype="bibtex" glob="false">bib/McFadden_Handbook.bib</bcf:datasource>
+    <bcf:datasource type="file" datatype="bibtex" glob="false">bib/McFadden_Synthesis.bib</bcf:datasource>
+    <bcf:datasource type="file" datatype="bibtex" glob="false">bib/McLennan_Fixed_point_theory.bib</bcf:datasource>
+    <bcf:datasource type="file" datatype="bibtex" glob="false">bib/Mehta_Ordinal_utility.bib</bcf:datasource>
+    <bcf:datasource type="file" datatype="bibtex" glob="false">bib/Mejias_et_al_Signal_cancellation.bib</bcf:datasource>
+    <bcf:datasource type="file" datatype="bibtex" glob="false">bib/Mejias_et_al_Redundant_signals.bib</bcf:datasource>
+    <bcf:datasource type="file" datatype="bibtex" glob="false">bib/Michael_Selection.bib</bcf:datasource>
+    <bcf:datasource type="file" datatype="bibtex" glob="false">bib/Michael_Spaces_of_subsets.bib</bcf:datasource>
+    <bcf:datasource type="file" datatype="bibtex" glob="false">bib/Milnor_Surgery.bib</bcf:datasource>
+    <bcf:datasource type="file" datatype="bibtex" glob="false">bib/MM_Lexicographic_semiorders.bib</bcf:datasource>
+    <bcf:datasource type="file" datatype="bibtex" glob="false">bib/MO_Status_quo_bias.bib</bcf:datasource>
+    <bcf:datasource type="file" datatype="bibtex" glob="false">bib/Mongin_Mixture_set.bib</bcf:datasource>
+    <bcf:datasource type="file" datatype="bibtex" glob="false">bib/Monteiro_Path_connected.bib</bcf:datasource>
+    <bcf:datasource type="file" datatype="bibtex" glob="false">bib/MR_Hindu-Muslim_violence.bib</bcf:datasource>
+    <bcf:datasource type="file" datatype="bibtex" glob="false">bib/MS_Envelope_theorems.bib</bcf:datasource>
+    <bcf:datasource type="file" datatype="bibtex" glob="false">bib/MSS_Civil_conflict.bib</bcf:datasource>
+    <bcf:datasource type="file" datatype="bibtex" glob="false">bib/MU_Best_response_equivalence.bib</bcf:datasource>
+    <bcf:datasource type="file" datatype="bibtex" glob="false">bib/Mukerji_Nonadditive.bib</bcf:datasource>
+    <bcf:datasource type="file" datatype="bibtex" glob="false">bib/Munkres_Topology.bib</bcf:datasource>
+    <bcf:datasource type="file" datatype="bibtex" glob="false">bib/MWG_Microeconomic_theory_Book.bib</bcf:datasource>
+    <bcf:datasource type="file" datatype="bibtex" glob="false">bib/Myerson_Scoring_rules.bib</bcf:datasource>
+    <bcf:datasource type="file" datatype="bibtex" glob="false">bib/MZ_Bayesian_analysis_for_games.bib</bcf:datasource>
+    <bcf:datasource type="file" datatype="bibtex" glob="false">bib/MZ_Infinite_dimensional_commodity_spaces.bib</bcf:datasource>
+    <bcf:datasource type="file" datatype="bibtex" glob="false">bib/Nakamura_EU_interval_order.bib</bcf:datasource>
+    <bcf:datasource type="file" datatype="bibtex" glob="false">bib/Nelson_Dynamical.bib</bcf:datasource>
+    <bcf:datasource type="file" datatype="bibtex" glob="false">bib/Nelson_Operator.bib</bcf:datasource>
+    <bcf:datasource type="file" datatype="bibtex" glob="false">bib/Nelson_Feynman_integrals.bib</bcf:datasource>
+    <bcf:datasource type="file" datatype="bibtex" glob="false">bib/NP_Diversity.bib</bcf:datasource>
+    <bcf:datasource type="file" datatype="bibtex" glob="false">bib/NP_Diversity_Handbook.bib</bcf:datasource>
+    <bcf:datasource type="file" datatype="bibtex" glob="false">bib/Nualart_Malliavin_calculus.bib</bcf:datasource>
+    <bcf:datasource type="file" datatype="bibtex" glob="false">bib/OCal_Continuous_context.bib</bcf:datasource>
+    <bcf:datasource type="file" datatype="bibtex" glob="false">bib/OCal_HM_extension.bib</bcf:datasource>
+    <bcf:datasource type="file" datatype="bibtex" glob="false">bib/OCal_Umax_in_context.bib</bcf:datasource>
+    <bcf:datasource type="file" datatype="bibtex" glob="false">bib/OCal_Indecisive_planning.bib</bcf:datasource>
+    <bcf:datasource type="file" datatype="bibtex" glob="false">bib/OCal_Lexicographic_reference_dependence.bib</bcf:datasource>
+    <bcf:datasource type="file" datatype="bibtex" glob="false">bib/OCal_Parametric_continuity.bib</bcf:datasource>
+    <bcf:datasource type="file" datatype="bibtex" glob="false">bib/OCal_Partially_observable.bib</bcf:datasource>
+    <bcf:datasource type="file" datatype="bibtex" glob="false">bib/OQ_Rules_of_thumb.bib</bcf:datasource>
+    <bcf:datasource type="file" datatype="bibtex" glob="false">bib/OCallaghan_EU_Extended.bib</bcf:datasource>
+    <bcf:datasource type="file" datatype="bibtex" glob="false">bib/OCallaghan_Ordinal_nonlinear_countable.bib</bcf:datasource>
+    <bcf:datasource type="file" datatype="bibtex" glob="false">bib/OCallaghan-Parametric_continuity.bib</bcf:datasource>
+    <bcf:datasource type="file" datatype="bibtex" glob="false">bib/OCallaghan-Partial_mixture_sets.bib</bcf:datasource>
+    <bcf:datasource type="file" datatype="bibtex" glob="false">bib/OCallaghan_Thesis.bib</bcf:datasource>
+    <bcf:datasource type="file" datatype="bibtex" glob="false">bib/OCallaghan_Uncountable_representation.bib</bcf:datasource>
+    <bcf:datasource type="file" datatype="bibtex" glob="false">bib/Orlik_Arrangements.bib</bcf:datasource>
+    <bcf:datasource type="file" datatype="bibtex" glob="false">bib/OT-Arrangements.bib</bcf:datasource>
+    <bcf:datasource type="file" datatype="bibtex" glob="false">bib/Ostraszewski_Compact_ordered_spaces.bib</bcf:datasource>
+    <bcf:datasource type="file" datatype="bibtex" glob="false">bib/Parthasarathy_Probability_on_metric.bib</bcf:datasource>
+    <bcf:datasource type="file" datatype="bibtex" glob="false">bib/PX_Context-dependence.bib</bcf:datasource>
+    <bcf:datasource type="file" datatype="bibtex" glob="false">bib/PX_Minimal_relativism.bib</bcf:datasource>
+    <bcf:datasource type="file" datatype="bibtex" glob="false">bib/PF_Structural_and_functional_brain_networks.bib</bcf:datasource>
+    <bcf:datasource type="file" datatype="bibtex" glob="false">bib/Quiggin_Anticipated_utility.bib</bcf:datasource>
+    <bcf:datasource type="file" datatype="bibtex" glob="false">bib/Reny_Nonconcavifiability.bib</bcf:datasource>
+    <bcf:datasource type="file" datatype="bibtex" glob="false">bib/Reny_Discontinuous_games.bib</bcf:datasource>
+    <bcf:datasource type="file" datatype="bibtex" glob="false">bib/Richter_Revealed_preference.bib</bcf:datasource>
+    <bcf:datasource type="file" datatype="bibtex" glob="false">bib/roberts80comparability.bib</bcf:datasource>
+    <bcf:datasource type="file" datatype="bibtex" glob="false">bib/RR_Back_to_fundamentals.bib</bcf:datasource>
+    <bcf:datasource type="file" datatype="bibtex" glob="false">bib/RS_Revealed_preference.bib</bcf:datasource>
+    <bcf:datasource type="file" datatype="bibtex" glob="false">bib/Rubinstein_Modeling_bounded_rationality.bib</bcf:datasource>
+    <bcf:datasource type="file" datatype="bibtex" glob="false">bib/Rubinstein_Economics_and_language.bib</bcf:datasource>
+    <bcf:datasource type="file" datatype="bibtex" glob="false">bib/Rubinstein00.bib</bcf:datasource>
+    <bcf:datasource type="file" datatype="bibtex" glob="false">bib/Sagi_Anchored.bib</bcf:datasource>
+    <bcf:datasource type="file" datatype="bibtex" glob="false">bib/Samuelson_38.bib</bcf:datasource>
+    <bcf:datasource type="file" datatype="bibtex" glob="false">bib/Samuelson_Independence.bib</bcf:datasource>
+    <bcf:datasource type="file" datatype="bibtex" glob="false">bib/Savage_SEU.bib</bcf:datasource>
+    <bcf:datasource type="file" datatype="bibtex" glob="false">bib/Schipper_Awareness_dependent_SEU.bib</bcf:datasource>
+    <bcf:datasource type="file" datatype="bibtex" glob="false">bib/Schipper_Preference-based.bib</bcf:datasource>
+    <bcf:datasource type="file" datatype="bibtex" glob="false">bib/Schmeidler_Original_Econometrica.bib</bcf:datasource>
+    <bcf:datasource type="file" datatype="bibtex" glob="false">bib/Schmeidler_Subjective_probability_without_additivity.bib</bcf:datasource>
+    <bcf:datasource type="file" datatype="bibtex" glob="false">bib/Schmidt_Reference-dependence.bib</bcf:datasource>
+    <bcf:datasource type="file" datatype="bibtex" glob="false">bib/Scott_Suppes_58.bib</bcf:datasource>
+    <bcf:datasource type="file" datatype="bibtex" glob="false">bib/Selten_Evolution_learning_and_economic_behavior.bib</bcf:datasource>
+    <bcf:datasource type="file" datatype="bibtex" glob="false">bib/Sen_Internal.bib</bcf:datasource>
+    <bcf:datasource type="file" datatype="bibtex" glob="false">bib/Seung_Connectome.bib</bcf:datasource>
+    <bcf:datasource type="file" datatype="bibtex" glob="false">bib/Shafir_Simonson_Tversky_1993&gt;Reason-based_choice.bib</bcf:datasource>
+    <bcf:datasource type="file" datatype="bibtex" glob="false">bib/SL_Preference_reversals.bib</bcf:datasource>
+    <bcf:datasource type="file" datatype="bibtex" glob="false">bib/SS_Continuous_time_games.bib</bcf:datasource>
+    <bcf:datasource type="file" datatype="bibtex" glob="false">bib/SS_Counterexamples.bib</bcf:datasource>
+    <bcf:datasource type="file" datatype="bibtex" glob="false">bib/Stecher_et_al_Generating_ambiguity.bib</bcf:datasource>
+    <bcf:datasource type="file" datatype="bibtex" glob="false">bib/Stone_Product_spaces.bib</bcf:datasource>
+    <bcf:datasource type="file" datatype="bibtex" glob="false">bib/Strang_Linear_algebra.bib</bcf:datasource>
+    <bcf:datasource type="file" datatype="bibtex" glob="false">bib/Stoyanov_Krein_condition.bib</bcf:datasource>
+    <bcf:datasource type="file" datatype="bibtex" glob="false">bib/Sundaram_Optimisation_theory.bib</bcf:datasource>
+    <bcf:datasource type="file" datatype="bibtex" glob="false">bib/SZ_Discrete_envelope_theorem.bib</bcf:datasource>
+    <bcf:datasource type="file" datatype="bibtex" glob="false">bib/Tagliani_Moment_problem_and_maximum_entropy.bib</bcf:datasource>
+    <bcf:datasource type="file" datatype="bibtex" glob="false">bib/Taylor_Measure_theory_and_integration.bib</bcf:datasource>
+    <bcf:datasource type="file" datatype="bibtex" glob="false">bib/TSK_Preference_reversals.bib</bcf:datasource>
+    <bcf:datasource type="file" datatype="bibtex" glob="false">bib/Tversky_Intransitivity.bib</bcf:datasource>
+    <bcf:datasource type="file" datatype="bibtex" glob="false">bib/Tversky_Simonson_Context-dependent_preferences.bib</bcf:datasource>
+    <bcf:datasource type="file" datatype="bibtex" glob="false">bib/TZ_Order_topology.bib</bcf:datasource>
+    <bcf:datasource type="file" datatype="bibtex" glob="false">bib/Vaughan_Lexicographic_products.bib</bcf:datasource>
+    <bcf:datasource type="file" datatype="bibtex" glob="false">bib/Vind_Independent_preferences_JME.bib</bcf:datasource>
+    <bcf:datasource type="file" datatype="bibtex" glob="false">bib/VindGrodal03independence.bib</bcf:datasource>
+    <bcf:datasource type="file" datatype="bibtex" glob="false">bib/Vincke_Semiorder.bib</bcf:datasource>
+    <bcf:datasource type="file" datatype="bibtex" glob="false">bib/vNM_Book.bib</bcf:datasource>
+    <bcf:datasource type="file" datatype="bibtex" glob="false">bib/von_Neumann_The_computer_and_the_brain.bib</bcf:datasource>
+    <bcf:datasource type="file" datatype="bibtex" glob="false">bib/Webster_convexity.bib</bcf:datasource>
+    <bcf:datasource type="file" datatype="bibtex" glob="false">bib/Wold_Ordinal_utility.bib</bcf:datasource>
+    <bcf:datasource type="file" datatype="bibtex" glob="false">bib/Young_Scoring_functions.bib</bcf:datasource>
+    <bcf:datasource type="file" datatype="bibtex" glob="false">bib/Zabczyk_Chance_and_decision.bib</bcf:datasource>
+    <bcf:datasource type="file" datatype="bibtex" glob="false">bib/Zamir_Bayesian_games_2009.bib</bcf:datasource>
+    <bcf:datasource type="file" datatype="bibtex" glob="false">bib/stable-learning.bib</bcf:datasource>
+  </bcf:bibdata>
+  <bcf:section number="0">
+    <bcf:citekey order="1">hume1896treatise</bcf:citekey>
+    <bcf:citekey order="2">bartlett1933remembering</bcf:citekey>
+    <bcf:citekey order="2">suddendorf2007evolution</bcf:citekey>
+    <bcf:citekey order="2">mullally2014memory</bcf:citekey>
+    <bcf:citekey order="3">hastie2009elements</bcf:citekey>
+    <bcf:citekey order="4">bousquet2002stability</bcf:citekey>
+    <bcf:citekey order="4">poggio2004general</bcf:citekey>
+    <bcf:citekey order="4">mukherjee2006learning</bcf:citekey>
+    <bcf:citekey order="5">fama1970efficient</bcf:citekey>
+    <bcf:citekey order="5">malkiel1989efficient</bcf:citekey>
+    <bcf:citekey order="6">fama1970efficient</bcf:citekey>
+    <bcf:citekey order="6">malkiel1989efficient</bcf:citekey>
+    <bcf:citekey order="7">fama1970efficient</bcf:citekey>
+    <bcf:citekey order="8">fama1970efficient</bcf:citekey>
+    <bcf:citekey order="9">long1983real</bcf:citekey>
+    <bcf:citekey order="9">atalay2017important</bcf:citekey>
+    <bcf:citekey order="10">Fama-French</bcf:citekey>
+    <bcf:citekey order="11">Fama-French</bcf:citekey>
+    <bcf:citekey order="11">Harvey-Liu</bcf:citekey>
+    <bcf:citekey order="11">machine-learning</bcf:citekey>
+    <bcf:citekey order="12">Cucker-Smale</bcf:citekey>
+    <bcf:citekey order="12">Smale-Poggio</bcf:citekey>
+    <bcf:citekey order="12">mukherjee2006learning</bcf:citekey>
+    <bcf:citekey order="13">mukherjee2006learning</bcf:citekey>
+    <bcf:citekey order="14">mukherjee2006learning</bcf:citekey>
+    <bcf:citekey order="15">AG-Second_order_induction</bcf:citekey>
+    <bcf:citekey order="16">BN-empirical-no-arbitrage</bcf:citekey>
+    <bcf:citekey order="17">BIS-zeros</bcf:citekey>
+    <bcf:citekey order="18">Brealey-Myers</bcf:citekey>
+    <bcf:citekey order="19">Kunsch-Block_bootstrap</bcf:citekey>
+    <bcf:citekey order="19">PR-Stationary_bootstrap</bcf:citekey>
+    <bcf:citekey order="21">White-Data_snooping</bcf:citekey>
+    <bcf:citekey order="21">HL-Lucky_factors</bcf:citekey>
+    <bcf:citekey order="23">PR-Stationary_bootstrap</bcf:citekey>
+    <bcf:citekey order="25">Fama-market-efficiency</bcf:citekey>
+    <bcf:citekey order="26">poggio2004general</bcf:citekey>
+    <bcf:citekey order="26">mukherjee2006learning</bcf:citekey>
+    <bcf:citekey order="26">bousquet2002stability</bcf:citekey>
+    <bcf:citekey order="27">mukherjee2006learning</bcf:citekey>
+    <bcf:citekey order="28">Malkiel-market_efficiency</bcf:citekey>
+    <bcf:citekey order="30">Fama-market_efficiency</bcf:citekey>
+    <bcf:citekey order="32">Malkiel-market_efficiency</bcf:citekey>
+    <bcf:citekey order="34">Fama-Five-factor-model</bcf:citekey>
+    <bcf:citekey order="34">HL-Lucky_factors</bcf:citekey>
+    <bcf:citekey order="34">GKX-empirical_asset_pricing_via_ML</bcf:citekey>
+    <bcf:citekey order="35">Stanley-Arrangements</bcf:citekey>
+    <bcf:citekey order="36">Sagan-Zaslavski</bcf:citekey>
+    <bcf:citekey order="38">OT-Arrangements</bcf:citekey>
+    <bcf:citekey order="38">Dimca-Arrangements</bcf:citekey>
+    <bcf:citekey order="38">Stanley-Arrangements</bcf:citekey>
+    <bcf:citekey order="39">hume1896treatise</bcf:citekey>
+    <bcf:citekey order="40">bartlett1933remembering</bcf:citekey>
+    <bcf:citekey order="41">suddendorf2007evolution</bcf:citekey>
+    <bcf:citekey order="42">mullally2014memory</bcf:citekey>
+    <bcf:citekey order="43">hastie2009elements</bcf:citekey>
+    <bcf:citekey order="44">bousquet2002stability</bcf:citekey>
+    <bcf:citekey order="45">poggio2004general</bcf:citekey>
+    <bcf:citekey order="46">mukherjee2006learning</bcf:citekey>
+    <bcf:citekey order="47">fama1970efficient</bcf:citekey>
+    <bcf:citekey order="48">malkiel1989efficient</bcf:citekey>
+    <bcf:citekey order="49">long1983real</bcf:citekey>
+    <bcf:citekey order="50">atalay2017important</bcf:citekey>
+    <bcf:citekey order="51">Fama-French</bcf:citekey>
+    <bcf:citekey order="52">Harvey-Liu</bcf:citekey>
+    <bcf:citekey order="53">machine-learning</bcf:citekey>
+    <bcf:citekey order="54">Cucker-Smale</bcf:citekey>
+    <bcf:citekey order="55">Smale-Poggio</bcf:citekey>
+    <bcf:citekey order="56">AG-Second_order_induction</bcf:citekey>
+    <bcf:citekey order="57">BN-empirical-no-arbitrage</bcf:citekey>
+    <bcf:citekey order="58">BIS-zeros</bcf:citekey>
+    <bcf:citekey order="59">Brealey-Myers</bcf:citekey>
+    <bcf:citekey order="60">Kunsch-Block_bootstrap</bcf:citekey>
+    <bcf:citekey order="61">PR-Stationary_bootstrap</bcf:citekey>
+    <bcf:citekey order="62">White-Data_snooping</bcf:citekey>
+    <bcf:citekey order="63">HL-Lucky_factors</bcf:citekey>
+    <bcf:citekey order="64">Fama-market-efficiency</bcf:citekey>
+    <bcf:citekey order="65">Malkiel-market_efficiency</bcf:citekey>
+    <bcf:citekey order="66">Fama-market_efficiency</bcf:citekey>
+    <bcf:citekey order="67">Fama-Five-factor-model</bcf:citekey>
+    <bcf:citekey order="68">GKX-empirical_asset_pricing_via_ML</bcf:citekey>
+    <bcf:citekey order="69">Stanley-Arrangements</bcf:citekey>
+    <bcf:citekey order="70">Sagan-Zaslavski</bcf:citekey>
+    <bcf:citekey order="71">OT-Arrangements</bcf:citekey>
+    <bcf:citekey order="72">Dimca-Arrangements</bcf:citekey>
+  </bcf:section>
+  <!-- SORTING TEMPLATES -->
+  <bcf:sortingtemplate name="apa">
+    <bcf:sort order="1">
+      <bcf:sortitem order="1">presort</bcf:sortitem>
+    </bcf:sort>
+    <bcf:sort order="2" final="1">
+      <bcf:sortitem order="1">sortkey</bcf:sortitem>
+    </bcf:sort>
+    <bcf:sort order="3">
+      <bcf:sortitem order="1">sortname</bcf:sortitem>
+      <bcf:sortitem order="2">author</bcf:sortitem>
+      <bcf:sortitem order="3">editor</bcf:sortitem>
+      <bcf:sortitem order="4">sorttitle</bcf:sortitem>
+      <bcf:sortitem order="5">title</bcf:sortitem>
+    </bcf:sort>
+    <bcf:sort order="4">
+      <bcf:sortitem order="1">pubstate</bcf:sortitem>
+    </bcf:sort>
+    <bcf:sort order="5">
+      <bcf:sortitem order="1">sortyear</bcf:sortitem>
+      <bcf:sortitem order="2">year</bcf:sortitem>
+      <bcf:sortitem literal="1" order="3">-2000000000</bcf:sortitem>
+    </bcf:sort>
+    <bcf:sort order="6">
+      <bcf:sortitem order="1">month</bcf:sortitem>
+      <bcf:sortitem literal="1" order="2">-2000000000</bcf:sortitem>
+    </bcf:sort>
+    <bcf:sort order="7">
+      <bcf:sortitem order="1">day</bcf:sortitem>
+      <bcf:sortitem literal="1" order="2">-2000000000</bcf:sortitem>
+    </bcf:sort>
+    <bcf:sort order="8">
+      <bcf:sortitem order="1">sorttitle</bcf:sortitem>
+      <bcf:sortitem order="2">title</bcf:sortitem>
+    </bcf:sort>
+    <bcf:sort order="9">
+      <bcf:sortitem order="1">volume</bcf:sortitem>
+      <bcf:sortitem literal="1" order="2">0</bcf:sortitem>
+    </bcf:sort>
+  </bcf:sortingtemplate>
+  <!-- DATALISTS -->
+  <bcf:datalist section="0"
+                name="apa/global//global/global"
+                type="entry"
+                sortingtemplatename="apa"
+                sortingnamekeytemplatename="global"
+                labelprefix=""
+                uniquenametemplatename="global"
+                labelalphanametemplatename="global">
+  </bcf:datalist>
+</bcf:controlfile>
