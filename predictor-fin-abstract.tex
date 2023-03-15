@@ -5,23 +5,23 @@
   pricing kernels preserve information and support the efficient markets
   hypothesis since the marginal impact of the next observation is decreasing in
   the relative frequency of its type. Our contribution is to derive the current
-  kernel on the basis of sentiments (a mapping of samples of past cases to
-  rankings), for a broader class of stable learner.  This extension of
-  \cite{GS_Inductive_inference} is justified by US Treasury bond market data
-  for the period 1961-2023. Our ``\parthreediv\ of data'' condition on daily
-    rankings of annual yields
-  %(for any three maturity dates, past cases support $4$ or more of the $3! =
-  %6$ total rankings of annual yields) 
-  holds across 91\% of the sample for all 30 maturity dates.  When stronger
-  diversity conditions fail, stability requires out-of-sample validation:
-  sentient agents might simulate or imagine the impact of novel data;
-  artificial ones might engage in leave-one-\emph{type}-out cross validation;
-  or, one might bypass sentiments and directly rule out Dutch books. Our
+  kernel on the basis of sentiments (a mapping from samples to rankings) for a
+  broader class of stable learners. This extension of Gilboa and Schmeidler
+  (2003) is justified by US Treasury bond market data for the period 1961-2023.
+  Our ``partial-3-diversity of data'' condition on daily rankings of annual
+  yields holds across 91\% of the sample for all 30 maturity dates. When
+  stronger diversity conditions fail, stability requires out-of-sample
+  validation: sentient agents may simulate or imagine the impact of novel data;
+  artificial ones may engage in leave-one-type-out cross-validation; in market
+  settings, one may bypass sentiments and directly rule out Dutch books. Our
   framework embeds current sentiments in a system of potential generalisations
-  thus enabling within-sample testing of stability against novel case types.
-%In the setting of \citet{GS_Inductive_inference}, we weaken the diversity
-%axiom to allow us to account We provide an axiomatic derivation of prices in
-%the market for Zeros (zero-coupon bonds derived from US Treasuries).
+  thus enabling within-sample testing of stability for any form of external
+  validation.
+%(for any three maturity dates, past cases support $4$ or more of the $3! = 6$
+%total rankings of annual yields) In the setting of
+%\citet{GS_Inductive_inference}, we weaken the diversity axiom to allow us to
+%account We provide an axiomatic derivation of prices in the market for Zeros
+%(zero-coupon bonds derived from US Treasuries).
 %
 %A learner (prediction model) is stable if it generalizes from the current
 %sample of past cases to samples that include novel case types without revising
