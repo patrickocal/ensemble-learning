@@ -5,8 +5,7 @@
 \listfiles
 \usepackage{./Paper_preamble}
 \usepackage{bm}
-%  \usepackage{../../preamble_files/Paper_preamble}
-%\input{../../bib/_addbibresource_Alphabetical_Aligned.tex}
+\input{bib/addbibresource-loc.tex}
 
 %includeonly 
 %\includeonly{./introduction.tex}
@@ -569,42 +568,41 @@ data.
   %\tableofcontents introduction
   %\renewcommand*{\thefootnote}{\arabic{footnote}}
 
-  \section{Introduction} \label{sec-introduction} \textsc{When the data is
-  insufficiently rich, prediction requires the imagination} to go beyond the
-  current sample of past cases (observations). To paraphrase \citep[pages 9 and
-  10]{hume1896treatise} distinction: \emph{the memory is tied down, by original
-  impressions \emph{[past cases]}, without any power of variation; in contrast,
-  the imagination is free to transpose and change its ideas.} Well-established
-  neuroscientific evidence points to an important role for the imagination and
-  the degrees of freedom or flexibility that it provides in improving
-  prediction and thus the chances of survival
-  \citep{Bartlett-remembering,Sudendorf-Corballis-foresight,MM-memory-imagination-prediction}.
+  \section{Introduction} \label{sec-introduction} \textsc{In general,
+  prediction requires the imagination} to go beyond the current sample of past
+  cases (observations). To paraphrase \citep[pages 9 and 10]{hume1896treatise}:
+  \emph{the memory is tied down, by original impressions \emph{[past cases]},
+  without any power of variation; in contrast, the imagination is free to
+  transpose and change its ideas.} Well-established neuroscientific evidence
+  points to an important role for the imagination and the degrees of freedom or
+  flexibility that it provides in improving prediction and thus the chances of
+  survival
+  \citep{bartlett1933remembering,suddendorf2007evolution,mullally2014memory}.
   But what of artificial intelligence and its success in prediction despite the
   absence of an ``imagination''? In machine learning the practice of splitting
   the data into a training set and a test set is standard
-  \citet{Hastie-Tibshiriani-Statistical_learning}.  We may interpret the
-  training set as memory and the test set as a form of imagination in the sense
-  that it allows the learner to explore the world beyond past cases.  To
-  account for all kinds of intelligence, we provide an axiomatic framework that
-  allows us to capture the behaviour of learners (prediction models) with the
-  ability to externally (out-of-sample) validate.  The axioms we provide are
-  agnostic in relation to the method of external validation. The goal is
-  instead to allow an observer to determine whether or not the learner is
-  indeed able to generalise to richer samples of past cases in a consistent
-  manner.
+  \citep{hastie2009elements}.  We may interpret the training set as memory and
+  the test set as a form of imagination in the sense that it allows the learner
+  to explore the world beyond past cases.  To account for all kinds of
+  intelligence, we provide an axiomatic framework that allows us to capture the
+  behaviour of learners (prediction models) with the ability to externally
+  (out-of-sample) validate.  The axioms we provide are agnostic in relation to
+  the method of external validation. The goal is instead to allow an observer
+  to determine whether or not the learner is indeed able to generalise to
+  richer samples of past cases in a consistent manner.
   %In our framework, the prudent learner takes an within-sample perspective
   %\citep[page 7, experiment 1]{chervonenkis-recollections} and considers the
   %potential for generalizing to richer samples of past cases. 
  
   External validation enables the learner (prediction model) to generalize from
   the current sample to new ones. The key to generalization is stability
-  \citep{Busquet-Elisseeff-stability-and-generalization,Poggio-stability-and-predictivity}.
-  Loosely speaking, a learner is stable if small changes in the data yield
-  small changes in its predictions.  Whereas in classical learning theory, the
-  goal is to minimize the empirical error as measured on the training set, the
+  \citep{bousquet2002stability,poggio2004general,mukherjee2006learning} Loosely
+  speaking, a learner is stable if small changes in the data yield small
+  changes in its predictions.  Whereas in classical learning theory, the goal
+  is to minimize the empirical error as measured on the training set, the
   present framework allows for more abstract goals. Moreover, to account for
   agents that are sentient such as humans or mice, we derive the learner's
-  kernel on basis of {sentiments}.  We formalise \emph{sentiments} a mapping
+  kernel on basis of {sentiments}.  We formalise \emph{sentiments} as a mapping
   from samples of past cases to rankings of underlying objects of interest
   (henceforth eventualities).
   
@@ -679,23 +677,21 @@ exploit should have more stable market pricing kernels.
  
  
 The second implication speaks directly to the timeless topic of market
-efficiency
-\citep{Bachelier-market-efficiency,Samuelson-market-efficiency,Fama-market-efficiency,Malkiel-market-efficiency,GKX-empirical-asset-pricing-via-ml}.
-Stable pricing kernels provide an explanation for why we might expect a passive
-(\ie\ buy-and-hold) strategy to perform at least as well as any other strategy.
-(The semi-martingale hypothesis of \citet{Fama-market-efficiency}.) This
-explanation is as follows. If the market pricing kernel is stable, then the
-success of an active strategy depends solely on its ability to predict the
-impact of the next case type.  Whilst this does simplify the task, it also
-means that the impact of the next case is unlikely to be large. This is the
-nature of the empirical mean: the most likely cases are those that have
-occurred most frequently in the past. The impact of a new case is likely to be
-crowded out by the frequency of those that it resembles.  On the flip side,
-unstable pricing kernels come with arbitrage opportunities and learners
-modifying their kernels.  Moreover, by virtue of the fact that unstable market
-pricing kernels cannot be expressed as an empirical mean: price movements are
-likely to be larger; passive strategies are less attractive; active strategies
-may indeed be less volatile.
+efficiency \citet{fama1970efficient,malkiel1989efficient}.  Stable pricing
+kernels provide an explanation for why we might expect a passive (\ie\
+buy-and-hold) strategy to perform at least as well as any other strategy.  (The
+semi-martingale hypothesis of \citet{fama1970efficient}.) This explanation is
+as follows. If the market pricing kernel is stable, then the success of an
+active strategy depends solely on its ability to predict the impact of the next
+case type.  Whilst this does simplify the task, it also means that the impact
+of the next case is unlikely to be large. This is the nature of the empirical
+mean: the most likely cases are those that have occurred most frequently in the
+past. The impact of a new case is likely to be crowded out by the frequency of
+those that it resembles.  On the flip side, unstable pricing kernels come with
+arbitrage opportunities and learners modifying their kernels.  Moreover, by
+virtue of the fact that unstable market pricing kernels cannot be expressed as
+an empirical mean: price movements are likely to be larger; passive strategies
+are less attractive; active strategies may indeed be less volatile.
 
 The third implication motivates the present {generalization} of \gsii. Similar to
 \gsii, the learner is endowed with a mapping from finite resamplings of past
@@ -964,7 +960,7 @@ novel types of case (the prudent, Pru).
   \begin{example}[A multi-sectoral investment setting]\label{eg-multi-sector}
   Suppose Inny and {Pru} are potential representative agents in a
     multi-sectoral macroeconomy
-    \citep{LP-real_business_cycles,Atalay-sectoral_shocks_matter}.
+    \citep{long1983real,atalay2017important}.
     %(See
     %\citet{GLS-empirical-similarity} for a related axiomatic derivation for
     %representative agents.)
@@ -1027,7 +1023,7 @@ novel types of case (the prudent, Pru).
   \citep{Fama-French,Harvey-Liu,machine-learning}.  Such an interpretation
   brings our notation closer to the standard form that one finds in the
   statistical learning literature
-  \citep{Cucker-Smale,Smale-Poggio,Mukherjee-Poggio}.
+  \citep{Cucker-Smale,Smale-Poggio,mukherjee2006learning}.
 
 
   Let $(Y, \leq^*)$ denote a suitably ordered criterion space for evaluating
@@ -1041,7 +1037,7 @@ novel types of case (the prudent, Pru).
   Our goal is to derive a stable learning map $D \mapsto f_D$ on the basis of
   the rankings map $D \mapsto \preceqb_D$ where $D$ is any finite sample of past
   cases.\footnote{The term learning map is introduced in
-  \citet{Mukherjee-Poggio}. There stability is defined in terms of continuity
+  \citet{mukherjee2006learning}. There stability is defined in terms of continuity
   of the learning map, something that we prove in \cref{prop-stability},
   below.}
 \end{example}
@@ -1696,7 +1692,7 @@ Maxwell B.  Stinchcombe for bringing this point to my attention.}
 %information is revealed by varying the sample and generating new rankings of
 %$X$ (and, implicitly, new rankings of the set $S$ of securities and $Y$).
 %The rankings map is the mathematical object to which the axioms apply. It
-%corresponds to what \citet{Mukherjee-Poggio} refer to as the learning
+%corresponds to what \citet{mukherjee2006learning} refer to as the learning
 %algorithm which is a mapping $D \mapsto \mc H$. Where 
 
 %For each $C$ in $\mbbdp \bs \mbbd$, the fact that for some $c \in [ \novel ]$,
@@ -2592,10 +2588,10 @@ Key to the proof of \cref{prop-stability} is that the new pricing kernel
 $\beta$ coincides with the old one $B$ on $X \times \mbbd$.
 \Cref{prop-stability} thus demonstrates that \stability\ implies the usual
 notion of stability of statistical learning
-\citep{Poggio,Mukherjee-Poggio,Bousquet-Elisseeff}. That is to say it implies
-continuity of the learning map (here induced by the ranking map)
-$L:\bigsqcup_{i \geq 1} Z^n \rightarrow \mc H$ from the sample space to the
-hypothesis space \citep{Mukherjee}.  
+\citep{poggio2004general,mukherjee2006learning,bousquet2002stability}. That is
+to say it implies continuity of the learning map (here induced by the ranking
+map) $L:\bigsqcup_{i \geq 1} Z^n \rightarrow \mc H$ from the sample space to
+the hypothesis space \citep{mukherjee2006learning}.  
 
 The following corollary of \cref{prop-stability} confirms that, for stable
 pricing kernels, the impact of the arrival of a given case type is decreasing
@@ -3305,8 +3301,8 @@ value of information in past cases.
 %that it is of less value to learners that find it costly to imagine worlds that
 %are far from their own. \Cref{cor-efficiency} provides additional support for
 %this argument.
+\printbibliography
 
-\bibliographystyle{apalike} \bibliography{references}
 \makeatletter
 \def\@seccntformat#1{Appendix\,\csname the#1\endcsname.\quad}
 \makeatother

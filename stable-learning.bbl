@@ -1,118 +1,496 @@
-\begin{thebibliography}{}
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.2 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
 
-\bibitem[Argenziano and Gilboa, 2019]{AG-Second-order_induction}
-Argenziano, R. and Gilboa, I. (2019).
-\newblock Second-order induction in prediction problems.
-\newblock {\em Proceedings of the National Academy of Sciences},
-  116(21):10323--10328.
 
-\bibitem[Bradbury and Ross, 1990]{BR-Novelty_and_intransitivity}
-Bradbury, H. and Ross, K. (1990).
-\newblock The effects of novelty and choice materials on the intransitivity of
-  preferences of children and adults.
-\newblock {\em Annals of Operations Research}, 23(1):141--159.
+\refsection{0}
+  \datalist[entry]{apa/global//global/global}
+    \entry{atalay2017important}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=c8875d828f277dc6baa5bb9982a5ef91}{%
+           family={Atalay},
+           familyi={A\bibinitperiod},
+           given={Enghin},
+           giveni={E\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {American Economic Association 2014 Broadway, Suite 305, Nashville, TN 37203-2425}%
+      }
+      \strng{namehash}{c8875d828f277dc6baa5bb9982a5ef91}
+      \strng{fullhash}{c8875d828f277dc6baa5bb9982a5ef91}
+      \strng{bibnamehash}{c8875d828f277dc6baa5bb9982a5ef91}
+      \strng{authorbibnamehash}{c8875d828f277dc6baa5bb9982a5ef91}
+      \strng{authornamehash}{c8875d828f277dc6baa5bb9982a5ef91}
+      \strng{authorfullhash}{c8875d828f277dc6baa5bb9982a5ef91}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{American Economic Journal: Macroeconomics}
+      \field{number}{4}
+      \field{title}{How important are sectoral shocks?}
+      \field{volume}{9}
+      \field{year}{2017}
+      \field{pages}{254\bibrangedash 280}
+      \range{pages}{27}
+    \endentry
+    \entry{bartlett1933remembering}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=b9a83be6c84a50a2e9c16584593b6537}{%
+           family={Bartlett},
+           familyi={B\bibinitperiod},
+           given={FC},
+           giveni={F\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{b9a83be6c84a50a2e9c16584593b6537}
+      \strng{fullhash}{b9a83be6c84a50a2e9c16584593b6537}
+      \strng{bibnamehash}{b9a83be6c84a50a2e9c16584593b6537}
+      \strng{authorbibnamehash}{b9a83be6c84a50a2e9c16584593b6537}
+      \strng{authornamehash}{b9a83be6c84a50a2e9c16584593b6537}
+      \strng{authorfullhash}{b9a83be6c84a50a2e9c16584593b6537}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Mind}
+      \field{number}{167}
+      \field{title}{Remembering: A Study in Experimental and Social Psychology}
+      \field{volume}{42}
+      \field{year}{1933}
+    \endentry
+    \entry{bousquet2002stability}{article}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=cf4fea95321213e7dc3532fd33b85112}{%
+           family={Bousquet},
+           familyi={B\bibinitperiod},
+           given={Olivier},
+           giveni={O\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=af1237fe610213b60eefaf767e506435}{%
+           family={Elisseeff},
+           familyi={E\bibinitperiod},
+           given={André},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {JMLR. org}%
+      }
+      \strng{namehash}{95b6cda25f84c26f4cee89f563e92bc3}
+      \strng{fullhash}{95b6cda25f84c26f4cee89f563e92bc3}
+      \strng{bibnamehash}{95b6cda25f84c26f4cee89f563e92bc3}
+      \strng{authorbibnamehash}{95b6cda25f84c26f4cee89f563e92bc3}
+      \strng{authornamehash}{95b6cda25f84c26f4cee89f563e92bc3}
+      \strng{authorfullhash}{95b6cda25f84c26f4cee89f563e92bc3}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{The Journal of Machine Learning Research}
+      \field{title}{Stability and generalization}
+      \field{volume}{2}
+      \field{year}{2002}
+      \field{pages}{499\bibrangedash 526}
+      \range{pages}{28}
+    \endentry
+    \entry{fama1970efficient}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=cf1dad75742cba1f00261a0ee70e7ba2}{%
+           family={Fama},
+           familyi={F\bibinitperiod},
+           given={Eugene\bibnamedelima F},
+           giveni={E\bibinitperiod\bibinitdelim F\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {JSTOR}%
+      }
+      \strng{namehash}{cf1dad75742cba1f00261a0ee70e7ba2}
+      \strng{fullhash}{cf1dad75742cba1f00261a0ee70e7ba2}
+      \strng{bibnamehash}{cf1dad75742cba1f00261a0ee70e7ba2}
+      \strng{authorbibnamehash}{cf1dad75742cba1f00261a0ee70e7ba2}
+      \strng{authornamehash}{cf1dad75742cba1f00261a0ee70e7ba2}
+      \strng{authorfullhash}{cf1dad75742cba1f00261a0ee70e7ba2}
+      \field{sortinit}{F}
+      \field{sortinithash}{2638baaa20439f1b5a8f80c6c08a13b4}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{The journal of Finance}
+      \field{number}{2}
+      \field{title}{Efficient capital markets: A review of theory and empirical work}
+      \field{volume}{25}
+      \field{year}{1970}
+      \field{pages}{383\bibrangedash 417}
+      \range{pages}{35}
+    \endentry
+    \entry{hume1896treatise}{book}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=8fd91102ac431dcdcc4641419cdfb8f0}{%
+           family={Hume},
+           familyi={H\bibinitperiod},
+           given={David},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Clarendon Press}%
+      }
+      \strng{namehash}{8fd91102ac431dcdcc4641419cdfb8f0}
+      \strng{fullhash}{8fd91102ac431dcdcc4641419cdfb8f0}
+      \strng{bibnamehash}{8fd91102ac431dcdcc4641419cdfb8f0}
+      \strng{authorbibnamehash}{8fd91102ac431dcdcc4641419cdfb8f0}
+      \strng{authornamehash}{8fd91102ac431dcdcc4641419cdfb8f0}
+      \strng{authorfullhash}{8fd91102ac431dcdcc4641419cdfb8f0}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{origyear}{1739}
+      \field{title}{A treatise of human nature}
+      \field{year}{1896}
+      \field{origdateera}{ce}
+    \endentry
+    \entry{long1983real}{article}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=282c3d3d928e64de6a6c9d4156d1ef3b}{%
+           family={Long\bibnamedelima Jr},
+           familyi={L\bibinitperiod\bibinitdelim J\bibinitperiod},
+           given={John\bibnamedelima B},
+           giveni={J\bibinitperiod\bibinitdelim B\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=2b218f33c7db74d1ee729235772f282d}{%
+           family={Plosser},
+           familyi={P\bibinitperiod},
+           given={Charles\bibnamedelima I},
+           giveni={C\bibinitperiod\bibinitdelim I\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {The University of Chicago Press}%
+      }
+      \strng{namehash}{7181b5160532422155fe936b4fb7a640}
+      \strng{fullhash}{7181b5160532422155fe936b4fb7a640}
+      \strng{bibnamehash}{7181b5160532422155fe936b4fb7a640}
+      \strng{authorbibnamehash}{7181b5160532422155fe936b4fb7a640}
+      \strng{authornamehash}{7181b5160532422155fe936b4fb7a640}
+      \strng{authorfullhash}{7181b5160532422155fe936b4fb7a640}
+      \field{sortinit}{L}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of political Economy}
+      \field{number}{1}
+      \field{title}{Real business cycles}
+      \field{volume}{91}
+      \field{year}{1983}
+      \field{pages}{39\bibrangedash 69}
+      \range{pages}{31}
+    \endentry
+    \entry{malkiel1989efficient}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=cbb3a6e4525234998fcdea53c693e8a1}{%
+           family={Malkiel},
+           familyi={M\bibinitperiod},
+           given={Burton\bibnamedelima G},
+           giveni={B\bibinitperiod\bibinitdelim G\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Springer}%
+      }
+      \strng{namehash}{cbb3a6e4525234998fcdea53c693e8a1}
+      \strng{fullhash}{cbb3a6e4525234998fcdea53c693e8a1}
+      \strng{bibnamehash}{cbb3a6e4525234998fcdea53c693e8a1}
+      \strng{authorbibnamehash}{cbb3a6e4525234998fcdea53c693e8a1}
+      \strng{authornamehash}{cbb3a6e4525234998fcdea53c693e8a1}
+      \strng{authorfullhash}{cbb3a6e4525234998fcdea53c693e8a1}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Finance}
+      \field{title}{Efficient market hypothesis}
+      \field{year}{1989}
+      \field{pages}{127\bibrangedash 134}
+      \range{pages}{8}
+    \endentry
+    \entry{mukherjee2006learning}{article}{}
+      \name{author}{4}{}{%
+        {{un=0,uniquepart=base,hash=49a355d0c2a2e9b223f90f3e0088cb29}{%
+           family={Mukherjee},
+           familyi={M\bibinitperiod},
+           given={Sayan},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=156804623cd62fb419db269c507e26ce}{%
+           family={Niyogi},
+           familyi={N\bibinitperiod},
+           given={Partha},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=f65eec80d26b2ab02398d1e78643c9a6}{%
+           family={Poggio},
+           familyi={P\bibinitperiod},
+           given={Tomaso},
+           giveni={T\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=e23fc7f17578c9dee0a37ccf3784673d}{%
+           family={Rifkin},
+           familyi={R\bibinitperiod},
+           given={Ryan},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Citeseer}%
+      }
+      \strng{namehash}{668f6ca2246ee75193eaa4ee8b124ad1}
+      \strng{fullhash}{84f70426410872ae807d7c1b57d3a264}
+      \strng{bibnamehash}{84f70426410872ae807d7c1b57d3a264}
+      \strng{authorbibnamehash}{84f70426410872ae807d7c1b57d3a264}
+      \strng{authornamehash}{668f6ca2246ee75193eaa4ee8b124ad1}
+      \strng{authorfullhash}{84f70426410872ae807d7c1b57d3a264}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Advances in Computational Mathematics}
+      \field{title}{Learning theory: stability is sufficient for generalization and necessary and sufficient for consistency of empirical risk minimization}
+      \field{volume}{25}
+      \field{year}{2006}
+      \field{pages}{161\bibrangedash 193}
+      \range{pages}{33}
+    \endentry
+    \entry{mullally2014memory}{article}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=ab57c941bbf8499ca92988eb54cff4d1}{%
+           family={Mullally},
+           familyi={M\bibinitperiod},
+           given={Sinéad\bibnamedelima L},
+           giveni={S\bibinitperiod\bibinitdelim L\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=c9e050befca392801701f212c3d5d5f9}{%
+           family={Maguire},
+           familyi={M\bibinitperiod},
+           given={Eleanor\bibnamedelima A},
+           giveni={E\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Sage Publications Sage CA: Los Angeles, CA}%
+      }
+      \strng{namehash}{5e179c592411267c7ec65fbb557c38c2}
+      \strng{fullhash}{5e179c592411267c7ec65fbb557c38c2}
+      \strng{bibnamehash}{5e179c592411267c7ec65fbb557c38c2}
+      \strng{authorbibnamehash}{5e179c592411267c7ec65fbb557c38c2}
+      \strng{authornamehash}{5e179c592411267c7ec65fbb557c38c2}
+      \strng{authorfullhash}{5e179c592411267c7ec65fbb557c38c2}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{The Neuroscientist}
+      \field{number}{3}
+      \field{title}{Memory, imagination, and predicting the future: A common brain mechanism?}
+      \field{volume}{20}
+      \field{year}{2014}
+      \field{pages}{220\bibrangedash 234}
+      \range{pages}{15}
+    \endentry
+    \entry{OT-Arrangements}{book}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=3c00fbe40229caa9425ccd32472c9ec4}{%
+           family={Orlik},
+           familyi={O\bibinitperiod},
+           given={Peter},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=7970e54ab7af9bff1d1961a28f1b7239}{%
+           family={Terao},
+           familyi={T\bibinitperiod},
+           given={Hiroaki},
+           giveni={H\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Springer Science \& Business Media}%
+      }
+      \strng{namehash}{9c31c9601739cfc86503e404ae46032f}
+      \strng{fullhash}{9c31c9601739cfc86503e404ae46032f}
+      \strng{bibnamehash}{9c31c9601739cfc86503e404ae46032f}
+      \strng{authorbibnamehash}{9c31c9601739cfc86503e404ae46032f}
+      \strng{authornamehash}{9c31c9601739cfc86503e404ae46032f}
+      \strng{authorfullhash}{9c31c9601739cfc86503e404ae46032f}
+      \field{sortinit}{O}
+      \field{sortinithash}{2cd7140a07aea5341f9e2771efe90aae}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Arrangements of hyperplanes}
+      \field{volume}{300}
+      \field{year}{2013}
+    \endentry
+    \entry{poggio2004general}{article}{}
+      \name{author}{4}{}{%
+        {{un=0,uniquepart=base,hash=f65eec80d26b2ab02398d1e78643c9a6}{%
+           family={Poggio},
+           familyi={P\bibinitperiod},
+           given={Tomaso},
+           giveni={T\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=e23fc7f17578c9dee0a37ccf3784673d}{%
+           family={Rifkin},
+           familyi={R\bibinitperiod},
+           given={Ryan},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=49a355d0c2a2e9b223f90f3e0088cb29}{%
+           family={Mukherjee},
+           familyi={M\bibinitperiod},
+           given={Sayan},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=156804623cd62fb419db269c507e26ce}{%
+           family={Niyogi},
+           familyi={N\bibinitperiod},
+           given={Partha},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Nature Publishing Group UK London}%
+      }
+      \strng{namehash}{627311addeaa87b4288e39150d254065}
+      \strng{fullhash}{c682060c2311bd2c152a47e105e417e0}
+      \strng{bibnamehash}{c682060c2311bd2c152a47e105e417e0}
+      \strng{authorbibnamehash}{c682060c2311bd2c152a47e105e417e0}
+      \strng{authornamehash}{627311addeaa87b4288e39150d254065}
+      \strng{authorfullhash}{c682060c2311bd2c152a47e105e417e0}
+      \field{sortinit}{P}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Nature}
+      \field{number}{6981}
+      \field{title}{General conditions for predictivity in learning theory}
+      \field{volume}{428}
+      \field{year}{2004}
+      \field{pages}{419\bibrangedash 422}
+      \range{pages}{4}
+    \endentry
+    \entry{suddendorf2007evolution}{article}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=01fa3c89c133f93de1409d88883545a6}{%
+           family={Suddendorf},
+           familyi={S\bibinitperiod},
+           given={Thomas},
+           giveni={T\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=a1b7d8bbd272d17f04dc5bb5fc7c5ae6}{%
+           family={Corballis},
+           familyi={C\bibinitperiod},
+           given={Michael\bibnamedelima C},
+           giveni={M\bibinitperiod\bibinitdelim C\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Cambridge University Press}%
+      }
+      \strng{namehash}{d02c6becec7d41425bab31c3ae3d9bad}
+      \strng{fullhash}{d02c6becec7d41425bab31c3ae3d9bad}
+      \strng{bibnamehash}{d02c6becec7d41425bab31c3ae3d9bad}
+      \strng{authorbibnamehash}{d02c6becec7d41425bab31c3ae3d9bad}
+      \strng{authornamehash}{d02c6becec7d41425bab31c3ae3d9bad}
+      \strng{authorfullhash}{d02c6becec7d41425bab31c3ae3d9bad}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Behavioral and brain sciences}
+      \field{number}{3}
+      \field{title}{The evolution of foresight: What is mental time travel, and is it unique to humans?}
+      \field{volume}{30}
+      \field{year}{2007}
+      \field{pages}{299\bibrangedash 313}
+      \range{pages}{15}
+    \endentry
+  \enddatalist
+  \missing{AG-Second_order_induction}
+  \missing{BIS-zeros}
+  \missing{BN-empirical-no-arbitrage}
+  \missing{Bousquet-Elisseeff}
+  \missing{Brealey-Myers}
+  \missing{Cucker-Smale}
+  \missing{Dimca-Arrangements}
+  \missing{Fama-Five-factor-model}
+  \missing{Fama-French}
+  \missing{Fama-market-efficiency}
+  \missing{Fama-market_efficiency}
+  \missing{GKX-empirical_asset_pricing_via_ML}
+  \missing{HL-Lucky_factors}
+  \missing{Harvey-Liu}
+  \missing{Kunsch-Block_bootstrap}
+  \missing{Malkiel-market_efficiency}
+  \missing{Mukherjee}
+  \missing{Mukherjee-Poggio}
+  \missing{PR-Stationary_bootstrap}
+  \missing{Poggio}
+  \missing{Sagan-Zaslavski}
+  \missing{Smale-Poggio}
+  \missing{Stanley-Arrangements}
+  \missing{White-Data_snooping}
+  \missing{machine-learning}
+\endrefsection
+\endinput
 
-\bibitem[Cowles, 1933]{Cowles-Forecasting}
-Cowles, A. (1933).
-\newblock Can stock market forecasters forecast?
-\newblock {\em Econometrica: Journal of the Econometric Society}, pages
-  309--324.
-
-\bibitem[Dimca, 2017]{Dimca-Arrangements}
-Dimca, A. (2017).
-\newblock {\em Hyperplane Arrangements: An Introduction}.
-\newblock Springer International Publishing.
-\newblock 10.1007/978-3-319-56221-6.
-
-\bibitem[Dobkin and Reiss, 1980]{DR-Linear_programming}
-Dobkin, D.~P. and Reiss, S.~P. (1980).
-\newblock The complexity of linear programming.
-\newblock {\em Theoretical Computer Science}, 11(1):1--18.
-
-\bibitem[Enkavi et~al., 2017]{Enkavi-Hippocampal_dependence}
-Enkavi, A.~Z., Weber, B., Zweyer, I., Wagner, J., Elger, C.~E., Weber, E.~U.,
-  and Johnson, E.~J. (2017).
-\newblock Evidence for hippocampal dependence of value-based decisions.
-\newblock {\em Scientific reports}, 7(1):1--9.
-
-\bibitem[Fama and French, 2010]{FF-Luck_vs_skill}
-Fama, E.~F. and French, K.~R. (2010).
-\newblock Luck versus skill in the cross-section of mutual fund returns.
-\newblock {\em The journal of finance}, 65(5):1915--1947.
-
-\bibitem[Fama and MacBeth, 1973]{FM-Two_pass}
-Fama, E.~F. and MacBeth, J.~D. (1973).
-\newblock Risk, return, and equilibrium: Empirical tests.
-\newblock {\em Journal of political economy}, 81(3):607--636.
-
-\bibitem[Gilboa and Schmeidler, 2003]{GS_Inductive_inference}
-Gilboa, I. and Schmeidler, D. (2003).
-\newblock Inductive inference: An axiomatic approach.
-\newblock {\em Econometrica}, 71(1):1--26.
-
-\bibitem[Harvey and Liu, 2015]{HL-Lucky_factors}
-Harvey, C.~R. and Liu, Y. (2015).
-\newblock Lucky factors.
-\newblock {\em Available at SSRN}, 2528780:980.
-
-\bibitem[Hassabis et~al., 2007]{Hassabis-Hippocampal_dependence}
-Hassabis, D., Kumaran, D., Vann, S.~D., and Maguire, E.~A. (2007).
-\newblock Patients with hippocampal amnesia cannot imagine new experiences.
-\newblock {\em Proceedings of the National Academy of Sciences},
-  104(5):1726--1731.
-
-\bibitem[Lee and Sidford, 2015]{LS_Linear_programming}
-Lee, Y.~T. and Sidford, A. (2015).
-\newblock Efficient inverse maintenance and faster algorithms for linear
-  programming.
-\newblock In {\em 2015 IEEE 56th Annual Symposium on Foundations of Computer
-  Science}, pages 230--249. IEEE.
-
-\bibitem[O'Callaghan, 2017]{OCallaghan-Parametric_continuity}
-O'Callaghan, P.~H. (2017).
-\newblock Axioms for parametric continuity of utility when the topology is
-  coarse.
-\newblock {\em Journal of Mathematical Economics}, 72:88 -- 94.
-
-\bibitem[Orlik and Terao, 2013]{OT-Arrangements}
-Orlik, P. and Terao, H. (2013).
-\newblock {\em Arrangements of hyperplanes}, volume 300.
-\newblock Springer Science \& Business Media.
-
-\bibitem[Rangel et~al., 2008]{Rangel-Value-based_neurobiology}
-Rangel, A., Camerer, C., and Montague, P.~R. (2008).
-\newblock A framework for studying the neurobiology of value-based decision
-  making.
-\newblock {\em Nature reviews neuroscience}, 9(7):545--556.
-
-\bibitem[Sagan, 1999]{Sagan-Zaslavski}
-Sagan, B. (1999).
-\newblock Why the characteristic polynomial factors.
-\newblock {\em Bulletin of the American Mathematical Society}, 36(2):113--133.
-
-\bibitem[Schacter et~al., 2007]{Schacter-Hippocampal_dependence}
-Schacter, D.~L., Addis, D.~R., and Buckner, R.~L. (2007).
-\newblock Remembering the past to imagine the future: the prospective brain.
-\newblock {\em Nature reviews neuroscience}, 8(9):657--661.
-
-\bibitem[Stanley, 2004]{Stanley-Arrangements}
-Stanley, R.~P. (2004).
-\newblock An introduction to hyperplane arrangements.
-\newblock {\em Geometric combinatorics}, 13:389--496.
-
-\bibitem[Weinstein, 1968a]{Weinstein-Intransitivity}
-Weinstein, A.~A. (1968a).
-\newblock Individual preference intransitivity.
-\newblock {\em Southern Economic Journal}, pages 335--343.
-
-\bibitem[Weinstein, 1968b]{Weinstein-Transitivity}
-Weinstein, A.~A. (1968b).
-\newblock Transitivity of preference: a comparison among age groups.
-\newblock {\em Journal of Political Economy}, 76(2):307--311.
-
-\bibitem[White, 2000]{White-Data_snooping}
-White, H. (2000).
-\newblock A reality check for data snooping.
-\newblock {\em Econometrica}, 68(5):1097--1126.
-
-\end{thebibliography}
