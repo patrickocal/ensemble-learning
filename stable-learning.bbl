@@ -72,7 +72,7 @@
            givenun=0}}%
       }
       \list{publisher}{1}{%
-        {American Economic Association 2014 Broadway, Suite 305, Nashville, TN 37203-2425}%
+        {American Economic Association}%
       }
       \strng{namehash}{c8875d828f277dc6baa5bb9982a5ef91}
       \strng{fullhash}{c8875d828f277dc6baa5bb9982a5ef91}
@@ -88,12 +88,16 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{American Economic Journal: Macroeconomics}
+      \field{month}{10}
       \field{number}{4}
-      \field{title}{How important are sectoral shocks?}
+      \field{title}{How Important Are Sectoral Shocks?}
       \field{volume}{9}
       \field{year}{2017}
       \field{pages}{254\bibrangedash 280}
       \range{pages}{27}
+      \verb{doi}
+      \verb 10.1257/mac.20160353
+      \endverb
     \endentry
     \entry{barillas2019speculation}{article}{}
       \name{author}{2}{}{%
@@ -139,21 +143,24 @@
       \verb 10.1287/mnsc.2018.3027
       \endverb
     \endentry
-    \entry{bartlett1933remembering}{article}{}
+    \entry{bartlett1932remembering}{book}{}
       \name{author}{1}{}{%
-        {{un=0,uniquepart=base,hash=b9a83be6c84a50a2e9c16584593b6537}{%
+        {{un=0,uniquepart=base,hash=ac7ce88f068aac0c7d56f0c6901babf2}{%
            family={Bartlett},
            familyi={B\bibinitperiod},
-           given={FC},
-           giveni={F\bibinitperiod},
+           given={Frederic\bibnamedelima C.},
+           giveni={F\bibinitperiod\bibinitdelim C\bibinitperiod},
            givenun=0}}%
       }
-      \strng{namehash}{b9a83be6c84a50a2e9c16584593b6537}
-      \strng{fullhash}{b9a83be6c84a50a2e9c16584593b6537}
-      \strng{bibnamehash}{b9a83be6c84a50a2e9c16584593b6537}
-      \strng{authorbibnamehash}{b9a83be6c84a50a2e9c16584593b6537}
-      \strng{authornamehash}{b9a83be6c84a50a2e9c16584593b6537}
-      \strng{authorfullhash}{b9a83be6c84a50a2e9c16584593b6537}
+      \list{publisher}{1}{%
+        {Cambridge University Press}%
+      }
+      \strng{namehash}{ac7ce88f068aac0c7d56f0c6901babf2}
+      \strng{fullhash}{ac7ce88f068aac0c7d56f0c6901babf2}
+      \strng{bibnamehash}{ac7ce88f068aac0c7d56f0c6901babf2}
+      \strng{authorbibnamehash}{ac7ce88f068aac0c7d56f0c6901babf2}
+      \strng{authornamehash}{ac7ce88f068aac0c7d56f0c6901babf2}
+      \strng{authorfullhash}{ac7ce88f068aac0c7d56f0c6901babf2}
       \field{sortinit}{B}
       \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
       \field{extradatescope}{labelyear}
@@ -161,11 +168,8 @@
       \true{uniqueprimaryauthor}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{journaltitle}{Mind}
-      \field{number}{167}
-      \field{title}{Remembering: A Study in Experimental and Social Psychology}
-      \field{volume}{42}
-      \field{year}{1933}
+      \field{title}{Remembering: A study in experimental and social psychology}
+      \field{year}{1932}
     \endentry
     \entry{bousquet2002stability}{article}{}
       \name{author}{2}{}{%
@@ -204,6 +208,12 @@
       \field{year}{2002}
       \field{pages}{499\bibrangedash 526}
       \range{pages}{28}
+      \verb{urlraw}
+      \verb https://www.jmlr.org/papers/v2/bousquet02a.html
+      \endverb
+      \verb{url}
+      \verb https://www.jmlr.org/papers/v2/bousquet02a.html
+      \endverb
     \endentry
     \entry{brealey2020principles}{book}{}
       \name{author}{11}{}{%
