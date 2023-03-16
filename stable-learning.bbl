@@ -19,7 +19,50 @@
 
 \refsection{0}
   \datalist[entry]{apa/global//global/global}
-    \entry{atalay2017important}{article}{}
+    \entry{argenziano2019second}{article}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=d93b24a100367abd9b38272e243fc762}{%
+           family={Argenziano},
+           familyi={A\bibinitperiod},
+           given={Rossella},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=2cdcd3e31354c4e936987b8f22726de6}{%
+           family={Gilboa},
+           familyi={G\bibinitperiod},
+           given={Itzhak},
+           giveni={I\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Proceedings of the National Academy of Sciences}%
+      }
+      \strng{namehash}{4b4980d5cb14e0a9488b842f21a76750}
+      \strng{fullhash}{4b4980d5cb14e0a9488b842f21a76750}
+      \strng{bibnamehash}{4b4980d5cb14e0a9488b842f21a76750}
+      \strng{authorbibnamehash}{4b4980d5cb14e0a9488b842f21a76750}
+      \strng{authornamehash}{4b4980d5cb14e0a9488b842f21a76750}
+      \strng{authorfullhash}{4b4980d5cb14e0a9488b842f21a76750}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Proceedings of the National Academy of Sciences}
+      \field{month}{5}
+      \field{number}{21}
+      \field{title}{Second-order induction in prediction problems}
+      \field{volume}{116}
+      \field{year}{2019}
+      \field{pages}{10323\bibrangedash 10328}
+      \range{pages}{6}
+      \verb{doi}
+      \verb 10.1073/pnas.1901597116
+      \endverb
+    \endentry
+    \entry{atalay2017how}{article}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=c8875d828f277dc6baa5bb9982a5ef91}{%
            family={Atalay},
@@ -51,6 +94,50 @@
       \field{year}{2017}
       \field{pages}{254\bibrangedash 280}
       \range{pages}{27}
+    \endentry
+    \entry{barillas2019speculation}{article}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=709f8921eeff060877238f705909b622}{%
+           family={Barillas},
+           familyi={B\bibinitperiod},
+           given={Francisco},
+           giveni={F\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=35c53c1507529fd59468f1a879b419c7}{%
+           family={Nimark},
+           familyi={N\bibinitperiod},
+           given={Kristoffer},
+           giveni={K\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{2}{%
+        {Institute for Operations Research}%
+        {the Management Sciences ({INFORMS})}%
+      }
+      \strng{namehash}{dd683f939df6c44233ad259799f8a13e}
+      \strng{fullhash}{dd683f939df6c44233ad259799f8a13e}
+      \strng{bibnamehash}{dd683f939df6c44233ad259799f8a13e}
+      \strng{authorbibnamehash}{dd683f939df6c44233ad259799f8a13e}
+      \strng{authornamehash}{dd683f939df6c44233ad259799f8a13e}
+      \strng{authorfullhash}{dd683f939df6c44233ad259799f8a13e}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Management Science}
+      \field{month}{9}
+      \field{number}{9}
+      \field{title}{Speculation and the Bond Market: An Empirical No-Arbitrage Framework}
+      \field{volume}{65}
+      \field{year}{2019}
+      \field{pages}{4179\bibrangedash 4203}
+      \range{pages}{25}
+      \verb{doi}
+      \verb 10.1287/mnsc.2018.3027
+      \endverb
     \endentry
     \entry{bartlett1933remembering}{article}{}
       \name{author}{1}{}{%
@@ -118,12 +205,172 @@
       \field{pages}{499\bibrangedash 526}
       \range{pages}{28}
     \endentry
+    \entry{brealey2020principles}{book}{}
+      \name{author}{11}{}{%
+        {{un=0,uniquepart=base,hash=c8895c1c32114a394f534f81b838434d}{%
+           family={Brealey},
+           familyi={B\bibinitperiod},
+           given={Richard\bibnamedelima A.},
+           giveni={R\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=3d7068666d7dcd171a85877d829f5d03}{%
+           family={Brealey},
+           familyi={B\bibinitperiod},
+           given={Richard},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=9a2f0de54e27a150828a72e8de11763c}{%
+           family={Brealey},
+           familyi={B\bibinitperiod},
+           given={David},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=3d7068666d7dcd171a85877d829f5d03}{%
+           family={Brealey},
+           familyi={B\bibinitperiod},
+           given={Richard},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=3675e62e3b86fc5c50cb9ff3f96f01d8}{%
+           family={Richard},
+           familyi={R\bibinitperiod},
+           given={Brealey},
+           giveni={B\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=c8895c1c32114a394f534f81b838434d}{%
+           family={Brealey},
+           familyi={B\bibinitperiod},
+           given={Richard\bibnamedelima A.},
+           giveni={R\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=c9074b1d43acf1c207553f26fc755441}{%
+           family={Myers},
+           familyi={M\bibinitperiod},
+           given={Stewart\bibnamedelima C.},
+           giveni={S\bibinitperiod\bibinitdelim C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=86bd75c0f65033e37f051cfdb3c434c7}{%
+           family={Allen},
+           familyi={A\bibinitperiod},
+           given={Franklin},
+           giveni={F\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=a5da49ac43f2fe5b8841ba553f80d4b5}{%
+           family={BREALEY},
+           familyi={B\bibinitperiod}}}%
+        {{un=0,uniquepart=base,hash=c7a9bec495e305223acb0b6cbb3e4d97}{%
+           family={Mohanty},
+           familyi={M\bibinitperiod},
+           given={Pitabas},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=3d7068666d7dcd171a85877d829f5d03}{%
+           family={Brealey},
+           familyi={B\bibinitperiod},
+           given={Richard},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {McGraw Hill}%
+      }
+      \strng{namehash}{746fb4243cc662f4659947a1f8a2a6e3}
+      \strng{fullhash}{42d0a2952fa17dc039f35f508f331947}
+      \strng{bibnamehash}{42d0a2952fa17dc039f35f508f331947}
+      \strng{authorbibnamehash}{42d0a2952fa17dc039f35f508f331947}
+      \strng{authornamehash}{746fb4243cc662f4659947a1f8a2a6e3}
+      \strng{authorfullhash}{42d0a2952fa17dc039f35f508f331947}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{9781260013900}
+      \field{title}{Principles of Corporate Finance 13th Edition}
+      \field{year}{2020}
+    \endentry
+    \entry{cucker2001mathematical}{article}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=0af19d6725b2b802000cc6b4fb959660}{%
+           family={Cucker},
+           familyi={C\bibinitperiod},
+           given={Felipe},
+           giveni={F\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=427b228cd811abaff86593adef97babb}{%
+           family={Smale},
+           familyi={S\bibinitperiod},
+           given={Steve},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {American Mathematical Society ({AMS})}%
+      }
+      \strng{namehash}{576db43fc11253974909362694bfa724}
+      \strng{fullhash}{576db43fc11253974909362694bfa724}
+      \strng{bibnamehash}{576db43fc11253974909362694bfa724}
+      \strng{authorbibnamehash}{576db43fc11253974909362694bfa724}
+      \strng{authornamehash}{576db43fc11253974909362694bfa724}
+      \strng{authorfullhash}{576db43fc11253974909362694bfa724}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Bulletin of the American Mathematical Society}
+      \field{month}{10}
+      \field{number}{1}
+      \field{title}{On the mathematical foundations of learning}
+      \field{volume}{39}
+      \field{year}{2001}
+      \field{pages}{1\bibrangedash 49}
+      \range{pages}{49}
+      \verb{doi}
+      \verb 10.1090/s0273-0979-01-00923-5
+      \endverb
+    \endentry
+    \entry{dimca2017hyperplane}{book}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=769acb73c2376fc609f7891ba466efac}{%
+           family={Dimca},
+           familyi={D\bibinitperiod},
+           given={Alexandru},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Springer International Publishing}%
+      }
+      \strng{namehash}{769acb73c2376fc609f7891ba466efac}
+      \strng{fullhash}{769acb73c2376fc609f7891ba466efac}
+      \strng{bibnamehash}{769acb73c2376fc609f7891ba466efac}
+      \strng{authorbibnamehash}{769acb73c2376fc609f7891ba466efac}
+      \strng{authornamehash}{769acb73c2376fc609f7891ba466efac}
+      \strng{authorfullhash}{769acb73c2376fc609f7891ba466efac}
+      \field{sortinit}{D}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Hyperplane Arrangements}
+      \field{year}{2017}
+      \verb{doi}
+      \verb 10.1007/978-3-319-56221-6
+      \endverb
+    \endentry
     \entry{fama1970efficient}{article}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=cf1dad75742cba1f00261a0ee70e7ba2}{%
            family={Fama},
            familyi={F\bibinitperiod},
-           given={Eugene\bibnamedelima F},
+           given={Eugene\bibnamedelima F.},
            giveni={E\bibinitperiod\bibinitdelim F\bibinitperiod},
            givenun=0}}%
       }
@@ -143,13 +390,205 @@
       \true{uniqueprimaryauthor}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{journaltitle}{The journal of Finance}
+      \field{journaltitle}{The Journal of Finance}
+      \field{month}{5}
       \field{number}{2}
-      \field{title}{Efficient capital markets: A review of theory and empirical work}
+      \field{title}{Efficient Capital Markets: A Review of Theory and Empirical Work}
       \field{volume}{25}
       \field{year}{1970}
-      \field{pages}{383\bibrangedash 417}
-      \range{pages}{35}
+      \field{pages}{383}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.2307/2325486
+      \endverb
+    \endentry
+    \entry{fama2015five}{article}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=cf1dad75742cba1f00261a0ee70e7ba2}{%
+           family={Fama},
+           familyi={F\bibinitperiod},
+           given={Eugene\bibnamedelima F.},
+           giveni={E\bibinitperiod\bibinitdelim F\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=4ca55f4db61ae3245d066a218dca72c8}{%
+           family={French},
+           familyi={F\bibinitperiod},
+           given={Kenneth\bibnamedelima R.},
+           giveni={K\bibinitperiod\bibinitdelim R\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Elsevier {BV}}%
+      }
+      \strng{namehash}{ac5c181ffbfa45c593cd5483bcb59bd3}
+      \strng{fullhash}{ac5c181ffbfa45c593cd5483bcb59bd3}
+      \strng{bibnamehash}{ac5c181ffbfa45c593cd5483bcb59bd3}
+      \strng{authorbibnamehash}{ac5c181ffbfa45c593cd5483bcb59bd3}
+      \strng{authornamehash}{ac5c181ffbfa45c593cd5483bcb59bd3}
+      \strng{authorfullhash}{ac5c181ffbfa45c593cd5483bcb59bd3}
+      \field{sortinit}{F}
+      \field{sortinithash}{2638baaa20439f1b5a8f80c6c08a13b4}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Financial Economics}
+      \field{month}{4}
+      \field{number}{1}
+      \field{title}{A five-factor asset pricing model}
+      \field{volume}{116}
+      \field{year}{2015}
+      \field{pages}{1\bibrangedash 22}
+      \range{pages}{22}
+      \verb{doi}
+      \verb 10.1016/j.jfineco.2014.10.010
+      \endverb
+    \endentry
+    \entry{gu2020empirical}{article}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=6dfe1a2bf09425e309ca767a1acc7325}{%
+           family={Gu},
+           familyi={G\bibinitperiod},
+           given={Shihao},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=96799198bea175b6a69479505180a2cd}{%
+           family={Kelly},
+           familyi={K\bibinitperiod},
+           given={Bryan},
+           giveni={B\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=c07af227d21eedc8d6d13f10a6243d02}{%
+           family={Xiu},
+           familyi={X\bibinitperiod},
+           given={Dacheng},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+      }
+      \name{editor}{1}{}{%
+        {{hash=e68d087702e9d9b1cac5745a7f97935a}{%
+           family={Karolyi},
+           familyi={K\bibinitperiod},
+           given={Andrew},
+           giveni={A\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Oxford University Press ({OUP})}%
+      }
+      \strng{namehash}{5a2306bd30910cd36a3da688076a2d28}
+      \strng{fullhash}{3fcd024cd3a906ee97216ed3d8ad76c6}
+      \strng{bibnamehash}{3fcd024cd3a906ee97216ed3d8ad76c6}
+      \strng{authorbibnamehash}{3fcd024cd3a906ee97216ed3d8ad76c6}
+      \strng{authornamehash}{5a2306bd30910cd36a3da688076a2d28}
+      \strng{authorfullhash}{3fcd024cd3a906ee97216ed3d8ad76c6}
+      \strng{editorbibnamehash}{e68d087702e9d9b1cac5745a7f97935a}
+      \strng{editornamehash}{e68d087702e9d9b1cac5745a7f97935a}
+      \strng{editorfullhash}{e68d087702e9d9b1cac5745a7f97935a}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{The Review of Financial Studies}
+      \field{month}{2}
+      \field{number}{5}
+      \field{title}{Empirical Asset Pricing via Machine Learning}
+      \field{volume}{33}
+      \field{year}{2020}
+      \field{pages}{2223\bibrangedash 2273}
+      \range{pages}{51}
+      \verb{doi}
+      \verb 10.1093/rfs/hhaa009
+      \endverb
+    \endentry
+    \entry{harvey2021lucky}{article}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=0bf0f19775c07a4b41c994dde24f6ecc}{%
+           family={Harvey},
+           familyi={H\bibinitperiod},
+           given={Campbell\bibnamedelima R.},
+           giveni={C\bibinitperiod\bibinitdelim R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=92f7474e36f4f2b59a14e85c0e738e40}{%
+           family={Liu},
+           familyi={L\bibinitperiod},
+           given={Yan},
+           giveni={Y\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Elsevier {BV}}%
+      }
+      \strng{namehash}{575db316f10e428883b284bc6c1fce9a}
+      \strng{fullhash}{575db316f10e428883b284bc6c1fce9a}
+      \strng{bibnamehash}{575db316f10e428883b284bc6c1fce9a}
+      \strng{authorbibnamehash}{575db316f10e428883b284bc6c1fce9a}
+      \strng{authornamehash}{575db316f10e428883b284bc6c1fce9a}
+      \strng{authorfullhash}{575db316f10e428883b284bc6c1fce9a}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Financial Economics}
+      \field{month}{8}
+      \field{number}{2}
+      \field{title}{Lucky factors}
+      \field{volume}{141}
+      \field{year}{2021}
+      \field{pages}{413\bibrangedash 435}
+      \range{pages}{23}
+      \verb{doi}
+      \verb 10.1016/j.jfineco.2021.04.014
+      \endverb
+    \endentry
+    \entry{hastie2009elements}{book}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=0cb8fe4210baa81c4b0e67913b4d2768}{%
+           family={Hastie},
+           familyi={H\bibinitperiod},
+           given={Trevor},
+           giveni={T\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=88eea600247d798f8b2ce0b2dc614492}{%
+           family={Tibshirani},
+           familyi={T\bibinitperiod},
+           given={Robert},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=971cf69058b64a94326dea0f2a8bbcce}{%
+           family={Friedman},
+           familyi={F\bibinitperiod},
+           given={Jerome},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Springer New York}%
+      }
+      \strng{namehash}{45eb7d473651da447f1d77717e7f8650}
+      \strng{fullhash}{7ca1bfe876d5e037b6aed69704221267}
+      \strng{bibnamehash}{7ca1bfe876d5e037b6aed69704221267}
+      \strng{authorbibnamehash}{7ca1bfe876d5e037b6aed69704221267}
+      \strng{authornamehash}{45eb7d473651da447f1d77717e7f8650}
+      \strng{authorfullhash}{7ca1bfe876d5e037b6aed69704221267}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{The Elements of Statistical Learning}
+      \field{year}{2009}
+      \verb{doi}
+      \verb 10.1007/978-0-387-84858-7
+      \endverb
     \endentry
     \entry{hume1896treatise}{book}{}
       \name{author}{1}{}{%
@@ -181,30 +620,65 @@
       \field{year}{1896}
       \field{origdateera}{ce}
     \endentry
+    \entry{kunsch1989jackknife}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=b67c5a8027bac6d2843540b17da7ee34}{%
+           family={Kunsch},
+           familyi={K\bibinitperiod},
+           given={Hans\bibnamedelima R.},
+           giveni={H\bibinitperiod\bibinitdelim R\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Institute of Mathematical Statistics}%
+      }
+      \strng{namehash}{b67c5a8027bac6d2843540b17da7ee34}
+      \strng{fullhash}{b67c5a8027bac6d2843540b17da7ee34}
+      \strng{bibnamehash}{b67c5a8027bac6d2843540b17da7ee34}
+      \strng{authorbibnamehash}{b67c5a8027bac6d2843540b17da7ee34}
+      \strng{authornamehash}{b67c5a8027bac6d2843540b17da7ee34}
+      \strng{authorfullhash}{b67c5a8027bac6d2843540b17da7ee34}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{The Annals of Statistics}
+      \field{month}{9}
+      \field{number}{3}
+      \field{title}{The Jackknife and the Bootstrap for General Stationary Observations}
+      \field{volume}{17}
+      \field{year}{1989}
+      \verb{doi}
+      \verb 10.1214/aos/1176347265
+      \endverb
+    \endentry
     \entry{long1983real}{article}{}
       \name{author}{2}{}{%
-        {{un=0,uniquepart=base,hash=282c3d3d928e64de6a6c9d4156d1ef3b}{%
-           family={Long\bibnamedelima Jr},
-           familyi={L\bibinitperiod\bibinitdelim J\bibinitperiod},
-           given={John\bibnamedelima B},
+        {{un=0,uniquepart=base,hash=b2ea062882d1a37c46a0ad1a693a6012}{%
+           family={Long},
+           familyi={L\bibinitperiod},
+           given={John\bibnamedelima B.},
            giveni={J\bibinitperiod\bibinitdelim B\bibinitperiod},
            givenun=0}}%
         {{un=0,uniquepart=base,hash=2b218f33c7db74d1ee729235772f282d}{%
            family={Plosser},
            familyi={P\bibinitperiod},
-           given={Charles\bibnamedelima I},
+           given={Charles\bibnamedelima I.},
            giveni={C\bibinitperiod\bibinitdelim I\bibinitperiod},
            givenun=0}}%
       }
       \list{publisher}{1}{%
-        {The University of Chicago Press}%
+        {University of Chicago Press}%
       }
-      \strng{namehash}{7181b5160532422155fe936b4fb7a640}
-      \strng{fullhash}{7181b5160532422155fe936b4fb7a640}
-      \strng{bibnamehash}{7181b5160532422155fe936b4fb7a640}
-      \strng{authorbibnamehash}{7181b5160532422155fe936b4fb7a640}
-      \strng{authornamehash}{7181b5160532422155fe936b4fb7a640}
-      \strng{authorfullhash}{7181b5160532422155fe936b4fb7a640}
+      \strng{namehash}{d9b38c84b9040469b03edd5d70af36ba}
+      \strng{fullhash}{d9b38c84b9040469b03edd5d70af36ba}
+      \strng{bibnamehash}{d9b38c84b9040469b03edd5d70af36ba}
+      \strng{authorbibnamehash}{d9b38c84b9040469b03edd5d70af36ba}
+      \strng{authornamehash}{d9b38c84b9040469b03edd5d70af36ba}
+      \strng{authorfullhash}{d9b38c84b9040469b03edd5d70af36ba}
       \field{sortinit}{L}
       \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
       \field{extradatescope}{labelyear}
@@ -212,15 +686,19 @@
       \true{uniqueprimaryauthor}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{journaltitle}{Journal of political Economy}
+      \field{journaltitle}{Journal of Political Economy}
+      \field{month}{2}
       \field{number}{1}
-      \field{title}{Real business cycles}
+      \field{title}{Real Business Cycles}
       \field{volume}{91}
       \field{year}{1983}
       \field{pages}{39\bibrangedash 69}
       \range{pages}{31}
+      \verb{doi}
+      \verb 10.1086/261128
+      \endverb
     \endentry
-    \entry{malkiel1989efficient}{article}{}
+    \entry{malkiel2003efficient}{article}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=cbb3a6e4525234998fcdea53c693e8a1}{%
            family={Malkiel},
@@ -230,7 +708,7 @@
            givenun=0}}%
       }
       \list{publisher}{1}{%
-        {Springer}%
+        {American Economic Association}%
       }
       \strng{namehash}{cbb3a6e4525234998fcdea53c693e8a1}
       \strng{fullhash}{cbb3a6e4525234998fcdea53c693e8a1}
@@ -245,11 +723,17 @@
       \true{uniqueprimaryauthor}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{journaltitle}{Finance}
-      \field{title}{Efficient market hypothesis}
-      \field{year}{1989}
-      \field{pages}{127\bibrangedash 134}
-      \range{pages}{8}
+      \field{journaltitle}{Journal of Economic Perspectives}
+      \field{month}{2}
+      \field{number}{1}
+      \field{title}{The Efficient Market Hypothesis and Its Critics}
+      \field{volume}{17}
+      \field{year}{2003}
+      \field{pages}{59\bibrangedash 82}
+      \range{pages}{24}
+      \verb{doi}
+      \verb 10.1257/089533003321164958
+      \endverb
     \endentry
     \entry{mukherjee2006learning}{article}{}
       \name{author}{4}{}{%
@@ -278,8 +762,9 @@
            giveni={R\bibinitperiod},
            givenun=0}}%
       }
-      \list{publisher}{1}{%
-        {Citeseer}%
+      \list{publisher}{2}{%
+        {Springer Science}%
+        {Business Media {LLC}}%
       }
       \strng{namehash}{668f6ca2246ee75193eaa4ee8b124ad1}
       \strng{fullhash}{84f70426410872ae807d7c1b57d3a264}
@@ -295,29 +780,34 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Advances in Computational Mathematics}
+      \field{month}{7}
+      \field{number}{1-3}
       \field{title}{Learning theory: stability is sufficient for generalization and necessary and sufficient for consistency of empirical risk minimization}
       \field{volume}{25}
       \field{year}{2006}
       \field{pages}{161\bibrangedash 193}
       \range{pages}{33}
+      \verb{doi}
+      \verb 10.1007/s10444-004-7634-z
+      \endverb
     \endentry
-    \entry{mullally2014memory}{article}{}
+    \entry{mullally2013memory}{article}{}
       \name{author}{2}{}{%
         {{un=0,uniquepart=base,hash=ab57c941bbf8499ca92988eb54cff4d1}{%
            family={Mullally},
            familyi={M\bibinitperiod},
-           given={Sinéad\bibnamedelima L},
+           given={Sinéad\bibnamedelima L.},
            giveni={S\bibinitperiod\bibinitdelim L\bibinitperiod},
            givenun=0}}%
         {{un=0,uniquepart=base,hash=c9e050befca392801701f212c3d5d5f9}{%
            family={Maguire},
            familyi={M\bibinitperiod},
-           given={Eleanor\bibnamedelima A},
+           given={Eleanor\bibnamedelima A.},
            giveni={E\bibinitperiod\bibinitdelim A\bibinitperiod},
            givenun=0}}%
       }
       \list{publisher}{1}{%
-        {Sage Publications Sage CA: Los Angeles, CA}%
+        {{SAGE} Publications}%
       }
       \strng{namehash}{5e179c592411267c7ec65fbb557c38c2}
       \strng{fullhash}{5e179c592411267c7ec65fbb557c38c2}
@@ -333,14 +823,18 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{The Neuroscientist}
+      \field{month}{7}
       \field{number}{3}
-      \field{title}{Memory, imagination, and predicting the future: A common brain mechanism?}
+      \field{title}{Memory, Imagination, and Predicting the Future}
       \field{volume}{20}
-      \field{year}{2014}
+      \field{year}{2013}
       \field{pages}{220\bibrangedash 234}
       \range{pages}{15}
+      \verb{doi}
+      \verb 10.1177/1073858413495091
+      \endverb
     \endentry
-    \entry{OT-Arrangements}{book}{}
+    \entry{orlik1992arrangements}{book}{}
       \name{author}{2}{}{%
         {{un=0,uniquepart=base,hash=3c00fbe40229caa9425ccd32472c9ec4}{%
            family={Orlik},
@@ -356,7 +850,7 @@
            givenun=0}}%
       }
       \list{publisher}{1}{%
-        {Springer Science \& Business Media}%
+        {Springer Berlin Heidelberg}%
       }
       \strng{namehash}{9c31c9601739cfc86503e404ae46032f}
       \strng{fullhash}{9c31c9601739cfc86503e404ae46032f}
@@ -371,9 +865,11 @@
       \true{uniqueprimaryauthor}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{title}{Arrangements of hyperplanes}
-      \field{volume}{300}
-      \field{year}{2013}
+      \field{title}{Arrangements of Hyperplanes}
+      \field{year}{1992}
+      \verb{doi}
+      \verb 10.1007/978-3-662-02772-1
+      \endverb
     \endentry
     \entry{poggio2004general}{article}{}
       \name{author}{4}{}{%
@@ -402,8 +898,9 @@
            giveni={P\bibinitperiod},
            givenun=0}}%
       }
-      \list{publisher}{1}{%
-        {Nature Publishing Group UK London}%
+      \list{publisher}{2}{%
+        {Springer Science}%
+        {Business Media {LLC}}%
       }
       \strng{namehash}{627311addeaa87b4288e39150d254065}
       \strng{fullhash}{c682060c2311bd2c152a47e105e417e0}
@@ -419,12 +916,173 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Nature}
+      \field{month}{3}
       \field{number}{6981}
       \field{title}{General conditions for predictivity in learning theory}
       \field{volume}{428}
       \field{year}{2004}
       \field{pages}{419\bibrangedash 422}
       \range{pages}{4}
+      \verb{doi}
+      \verb 10.1038/nature02341
+      \endverb
+    \endentry
+    \entry{poggio2003mathematics}{article}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=f65eec80d26b2ab02398d1e78643c9a6}{%
+           family={Poggio},
+           familyi={P\bibinitperiod},
+           given={Tomaso},
+           giveni={T\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=427b228cd811abaff86593adef97babb}{%
+           family={Smale},
+           familyi={S\bibinitperiod},
+           given={Steve},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{ee222315f2afabca143e0f52408bcac5}
+      \strng{fullhash}{ee222315f2afabca143e0f52408bcac5}
+      \strng{bibnamehash}{ee222315f2afabca143e0f52408bcac5}
+      \strng{authorbibnamehash}{ee222315f2afabca143e0f52408bcac5}
+      \strng{authornamehash}{ee222315f2afabca143e0f52408bcac5}
+      \strng{authorfullhash}{ee222315f2afabca143e0f52408bcac5}
+      \field{sortinit}{P}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Notices of the AMS}
+      \field{number}{5}
+      \field{title}{The mathematics of learning: Dealing with data}
+      \field{volume}{50}
+      \field{year}{2003}
+      \field{pages}{537\bibrangedash 544}
+      \range{pages}{8}
+      \verb{urlraw}
+      \verb https://www.ams.org/notices/200305/fea-smale.pdf
+      \endverb
+      \verb{url}
+      \verb https://www.ams.org/notices/200305/fea-smale.pdf
+      \endverb
+    \endentry
+    \entry{politis1994stationary}{article}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=316247c93f9ac61484ddbcbbf2b77150}{%
+           family={Politis},
+           familyi={P\bibinitperiod},
+           given={Dimitris\bibnamedelima N.},
+           giveni={D\bibinitperiod\bibinitdelim N\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=043cf59d11cb3a7265c4f148bff2975d}{%
+           family={Romano},
+           familyi={R\bibinitperiod},
+           given={Joseph\bibnamedelima P.},
+           giveni={J\bibinitperiod\bibinitdelim P\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Informa {UK} Limited}%
+      }
+      \strng{namehash}{759ce237c059bc725267ac98f4109171}
+      \strng{fullhash}{759ce237c059bc725267ac98f4109171}
+      \strng{bibnamehash}{759ce237c059bc725267ac98f4109171}
+      \strng{authorbibnamehash}{759ce237c059bc725267ac98f4109171}
+      \strng{authornamehash}{759ce237c059bc725267ac98f4109171}
+      \strng{authorfullhash}{759ce237c059bc725267ac98f4109171}
+      \field{sortinit}{P}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of the American Statistical Association}
+      \field{month}{12}
+      \field{number}{428}
+      \field{title}{The Stationary Bootstrap}
+      \field{volume}{89}
+      \field{year}{1994}
+      \field{pages}{1303\bibrangedash 1313}
+      \range{pages}{11}
+      \verb{doi}
+      \verb 10.1080/01621459.1994.10476870
+      \endverb
+    \endentry
+    \entry{sagan1999why}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=79fbe6e8777412f4e34d9a877ccbb628}{%
+           family={Sagan},
+           familyi={S\bibinitperiod},
+           given={Bruce},
+           giveni={B\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {American Mathematical Society ({AMS})}%
+      }
+      \strng{namehash}{79fbe6e8777412f4e34d9a877ccbb628}
+      \strng{fullhash}{79fbe6e8777412f4e34d9a877ccbb628}
+      \strng{bibnamehash}{79fbe6e8777412f4e34d9a877ccbb628}
+      \strng{authorbibnamehash}{79fbe6e8777412f4e34d9a877ccbb628}
+      \strng{authornamehash}{79fbe6e8777412f4e34d9a877ccbb628}
+      \strng{authorfullhash}{79fbe6e8777412f4e34d9a877ccbb628}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Bulletin of the American Mathematical Society}
+      \field{month}{2}
+      \field{number}{2}
+      \field{title}{Why the characteristic polynomial factors}
+      \field{volume}{36}
+      \field{year}{1999}
+      \field{pages}{113\bibrangedash 133}
+      \range{pages}{21}
+      \verb{doi}
+      \verb 10.1090/s0273-0979-99-00775-2
+      \endverb
+    \endentry
+    \entry{stanley2007introduction}{inbook}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=314c60abd82e05d246cf98c56687717a}{%
+           family={Stanley},
+           familyi={S\bibinitperiod},
+           given={Richard},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {American Mathematical Society}%
+      }
+      \strng{namehash}{314c60abd82e05d246cf98c56687717a}
+      \strng{fullhash}{314c60abd82e05d246cf98c56687717a}
+      \strng{bibnamehash}{314c60abd82e05d246cf98c56687717a}
+      \strng{authorbibnamehash}{314c60abd82e05d246cf98c56687717a}
+      \strng{authornamehash}{314c60abd82e05d246cf98c56687717a}
+      \strng{authorfullhash}{314c60abd82e05d246cf98c56687717a}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Geometric Combinatorics}
+      \field{month}{10}
+      \field{title}{An introduction to hyperplane arrangements}
+      \field{year}{2007}
+      \field{pages}{389\bibrangedash 496}
+      \range{pages}{108}
+      \verb{doi}
+      \verb 10.1090/pcms/013/08
+      \endverb
     \endentry
     \entry{suddendorf2007evolution}{article}{}
       \name{author}{2}{}{%
@@ -437,12 +1095,12 @@
         {{un=0,uniquepart=base,hash=a1b7d8bbd272d17f04dc5bb5fc7c5ae6}{%
            family={Corballis},
            familyi={C\bibinitperiod},
-           given={Michael\bibnamedelima C},
+           given={Michael\bibnamedelima C.},
            giveni={M\bibinitperiod\bibinitdelim C\bibinitperiod},
            givenun=0}}%
       }
       \list{publisher}{1}{%
-        {Cambridge University Press}%
+        {Cambridge University Press ({CUP})}%
       }
       \strng{namehash}{d02c6becec7d41425bab31c3ae3d9bad}
       \strng{fullhash}{d02c6becec7d41425bab31c3ae3d9bad}
@@ -457,40 +1115,56 @@
       \true{uniqueprimaryauthor}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{journaltitle}{Behavioral and brain sciences}
+      \field{journaltitle}{Behavioral and Brain Sciences}
+      \field{month}{6}
       \field{number}{3}
       \field{title}{The evolution of foresight: What is mental time travel, and is it unique to humans?}
       \field{volume}{30}
       \field{year}{2007}
       \field{pages}{299\bibrangedash 313}
       \range{pages}{15}
+      \verb{doi}
+      \verb 10.1017/s0140525x07001975
+      \endverb
+    \endentry
+    \entry{white2000reality}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=426e452a5ec8e692f7740ce0d3e3655c}{%
+           family={White},
+           familyi={W\bibinitperiod},
+           given={Halbert},
+           giveni={H\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {The Econometric Society}%
+      }
+      \strng{namehash}{426e452a5ec8e692f7740ce0d3e3655c}
+      \strng{fullhash}{426e452a5ec8e692f7740ce0d3e3655c}
+      \strng{bibnamehash}{426e452a5ec8e692f7740ce0d3e3655c}
+      \strng{authorbibnamehash}{426e452a5ec8e692f7740ce0d3e3655c}
+      \strng{authornamehash}{426e452a5ec8e692f7740ce0d3e3655c}
+      \strng{authorfullhash}{426e452a5ec8e692f7740ce0d3e3655c}
+      \field{sortinit}{W}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Econometrica}
+      \field{month}{9}
+      \field{number}{5}
+      \field{title}{A Reality Check for Data Snooping}
+      \field{volume}{68}
+      \field{year}{2000}
+      \field{pages}{1097\bibrangedash 1126}
+      \range{pages}{30}
+      \verb{doi}
+      \verb 10.1111/1468-0262.00152
+      \endverb
     \endentry
   \enddatalist
-  \missing{AG-Second_order_induction}
-  \missing{BIS-zeros}
-  \missing{BN-empirical-no-arbitrage}
-  \missing{Bousquet-Elisseeff}
-  \missing{Brealey-Myers}
-  \missing{Cucker-Smale}
-  \missing{Dimca-Arrangements}
-  \missing{Fama-Five-factor-model}
-  \missing{Fama-French}
-  \missing{Fama-market-efficiency}
-  \missing{Fama-market_efficiency}
-  \missing{GKX-empirical_asset_pricing_via_ML}
-  \missing{HL-Lucky_factors}
-  \missing{Harvey-Liu}
-  \missing{Kunsch-Block_bootstrap}
-  \missing{Malkiel-market_efficiency}
-  \missing{Mukherjee}
-  \missing{Mukherjee-Poggio}
-  \missing{PR-Stationary_bootstrap}
-  \missing{Poggio}
-  \missing{Sagan-Zaslavski}
-  \missing{Smale-Poggio}
-  \missing{Stanley-Arrangements}
-  \missing{White-Data_snooping}
-  \missing{machine-learning}
 \endrefsection
 \endinput
 

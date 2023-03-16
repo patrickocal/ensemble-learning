@@ -5,8 +5,7 @@
 \listfiles
 \usepackage{./Paper_preamble}
 \usepackage{bm}
-\input{bib/addbibresource-loc.tex}
-
+\addbibresource{stable-learning-jabref.bib}
 %includeonly 
 %\includeonly{./introduction.tex}
 
@@ -577,7 +576,7 @@ data.
   points to an important role for the imagination and the degrees of freedom or
   flexibility that it provides in improving prediction and thus the chances of
   survival
-  \citep{bartlett1933remembering,suddendorf2007evolution,mullally2014memory}.
+  \citep{bartlett1933remembering,suddendorf2007evolution,mullally2013memory}.
   But what of artificial intelligence and its success in prediction despite the
   absence of an ``imagination''? In machine learning the practice of splitting
   the data into a training set and a test set is standard
@@ -591,7 +590,7 @@ data.
   to determine whether or not the learner is indeed able to generalise to
   richer samples of past cases in a consistent manner.
   %In our framework, the prudent learner takes an within-sample perspective
-  %\citep[page 7, experiment 1]{chervonenkis-recollections} and considers the
+  %\citep[page 7, experiment 1]{chervonenkis2015chervonenkis's} and considers the
   %potential for generalizing to richer samples of past cases. 
  
   External validation enables the learner (prediction model) to generalize from
@@ -624,7 +623,7 @@ data.
   %More formally, a kernel is stable provided that, as a function of past
   %cases,
   %it forms a groupoid over eventualities (in \citet[henceforth \gsii
-  %]{GS_Inductive_inference} kernels with this property satisfy the Jacobi
+  %]{gilboa2003inductive} kernels with this property satisfy the Jacobi
   %equations).
   %%In all settings, novel types may reveal intransitivities in
   %%unstable kernels thus providing a reason to modify or re-evaluate past
@@ -677,7 +676,7 @@ exploit should have more stable market pricing kernels.
  
  
 The second implication speaks directly to the timeless topic of market
-efficiency \citet{fama1970efficient,malkiel1989efficient}.  Stable pricing
+efficiency \citet{fama1970efficient,malkiel2003efficient}.  Stable pricing
 kernels provide an explanation for why we might expect a passive (\ie\
 buy-and-hold) strategy to perform at least as well as any other strategy.  (The
 semi-martingale hypothesis of \citet{fama1970efficient}.) This explanation is
@@ -698,7 +697,7 @@ The third implication motivates the present {generalization} of \gsii. Similar t
 cases to rankings of eventualities (a rankings map).  Via the basic axioms, all
 learners (stable or not) are characterised by a kernel that, for every pair of
 eventualities, gives rise to a linear function on samples of past cases.
-%\citet[henceforth \gsii]{GS_Inductive_inference}.  
+%\citet[henceforth \gsii]{gilboa2003inductive}.  
 %When is prudence required to achieve stability? It turns out that, when the
 %data is suitably rich, a learner is guaranteed to be stable.
 %Of course what is rich
@@ -734,14 +733,14 @@ relevant data) and where arbitrage opportunities are difficult to exploit.
 %\gsii\ makes no distinction between the memory and the imagination.  Given
 %that
 %neuroscience tells us of a common mechanism for the memory, imagination and
-%prediction \citep[for a recent review]{MM-Memory_imagination_prediction}, one
+%prediction \citep[for a recent review]{mullally2013memory}, one
 %could argue that a single notion of ``conceivable'' cases is all we need.  But
 %whereas past cases are often observable, the imagination is not.
 %%Hume paraphrase was here
 %Moreover, in terms of external validation, the
 %same questions arise. For what is outside of the current sample is, by
 %construction, unobservable to the learner. One form of external validation is
-%leave-one-out cross-validation which \citep{AG-Second-order_induction}
+%leave-one-out cross-validation which \citep{argenziano2019second}
 %interpret as a form of second-order induction. Leave-one-out is a special case
 %of $k$-fold cross-validation with $k$ equal to the sample size.  It also gives
 %rise to a notion of stability in learning theory (also known as
@@ -762,7 +761,7 @@ novel types of case (the prudent, Pru).
 %the-world approach that is most common in microeconomics. There, frequencies
 %play less of a role since the likelihood is subsumed into the posterior
 %together with the prior.  Our formal starting point is the axiomatic framework
-%of \citet[henceforth \gsii]{GS_Inductive_inference}.
+%of \citet[henceforth \gsii]{gilboa2003inductive}.
 % 
 %  
 %
@@ -786,7 +785,7 @@ novel types of case (the prudent, Pru).
 
 % Inductive inference, together with the tools that enable it, is the standard
 % in empirical finance
-% \citep{Cowles-Forecasting,Fama-market-efficiency,Malkiel-market-efficiency,White-Data_snooping,FF-Luck_vs_skill,HL-Lucky_factors,GKX-empirical_asset_pricing_via_ML}.
+% \citep{cowles1944stock,fama1970efficient,malkiel2003efficient,white2000reality,fama2015five,harvey2021lucky,gu2020empirical}.
 % A market maker adopts an active trading strategy provided it performs well
 % out of sample relative to a passive (\ie\ buy-and-hold) strategy. On the
 % other side of this coin, the theory of efficient markets dictates that, at
@@ -804,7 +803,7 @@ novel types of case (the prudent, Pru).
 % that seeks to exploit patterns in past cases against a passive strategy.  By
 % running this race repeatedly at different points in time, we conclude that
 % markets are efficient if passive beats every active strategy sufficiently
-% often, out-of-sample \citep{MN-big_data,BH-out_of_sample}.  
+% often, out-of-sample \citep{martin2022market,guo2006out}.  
 % 
 %
 % The point of \gsii\ is to explain how priors are formed, rather
@@ -960,9 +959,9 @@ novel types of case (the prudent, Pru).
   \begin{example}[A multi-sectoral investment setting]\label{eg-multi-sector}
   Suppose Inny and {Pru} are potential representative agents in a
     multi-sectoral macroeconomy
-    \citep{long1983real,atalay2017important}.
+    \citep{long1983real,atalay2017how}.
     %(See
-    %\citet{GLS-empirical-similarity} for a related axiomatic derivation for
+    %\citet{gilboa2006empirical} for a related axiomatic derivation for
     %representative agents.)
     Instead of maturity dates, as in \cref{eg-zeros}, $X$ is a variety of
     sectors with $x_0$ being the household (\ie\ consumption sector).  The
@@ -1018,12 +1017,12 @@ novel types of case (the prudent, Pru).
   consists of a set of indices for faces of a tali, rate movements, maturity
   dates and sectors. A different, causal interpretation is possible if we let
   each $x \in X$ denote distinct combination of risk factors such as the market
-  factor, firm size and book-to-market equity \citep{Fama-French}. Thus each
+  factor, firm size and book-to-market equity \citep{fama2015five}. Thus each
   $x$ forms a model with which to forecast stock or bond market returns
-  \citep{Fama-French,Harvey-Liu,machine-learning}.  Such an interpretation
+  \citep{fama2015five,harvey2021lucky,gu2020empirical}.  Such an interpretation
   brings our notation closer to the standard form that one finds in the
   statistical learning literature
-  \citep{Cucker-Smale,Smale-Poggio,mukherjee2006learning}.
+  \citep{cucker2001mathematical,poggio2003mathematics,mukherjee2006learning}.
 
 
   Let $(Y, \leq^*)$ denote a suitably ordered criterion space for evaluating
@@ -1049,7 +1048,7 @@ novel types of case (the prudent, Pru).
     for market efficiency identification of pricing kernels in more detail. In
     \cref{sec-discussion} we provide a more detailed comparison of our main
     theorem with that of \gsii\ as well as matters such as second-order
-    induction \citep{AG-Second_order_induction}.
+    induction \citep{argenziano2019second}.
  
  
 %In market settings, agents with intransitive rankings do not survive the
@@ -1068,7 +1067,7 @@ novel types of case (the prudent, Pru).
 % for such behavior. We demonstrate the model's efficacy through applications
 % to no-arbitrage asset pricing.  The axiomatic framework for case-based
 % prediction and inductive inference of \citet[henceforth
-% \gsii]{GS_Inductive_inference} is our starting point. 
+% \gsii]{gilboa2003inductive} is our starting point. 
 % 
 %%By compensating for inexperience or insufficiently rich data,
 %%prudent use of the imagination to conjure up novel types of case can ensure an
@@ -1152,7 +1151,7 @@ novel types of case (the prudent, Pru).
 %violations of the basic axioms of \gsii.  This invisible hand/``Deus ex
 %machina'' style result is similar in spirit, yet quite different from notions
 %of market efficiency that are surveyed in
-%\citet{Fama-market_efficiency,Malkiel-market_efficiency}. Those notions of
+%\citet{fama1970efficient,malkiel2003efficient}. Those notions of
 %market efficiency are expressed in terms of a ``fair game'' or expected
     %return.
 %Markets are efficient if the expected return of a portfolio is no higher than
@@ -1227,8 +1226,8 @@ novel types of case (the prudent, Pru).
 %% description of the sub-prime mortgage crisis was beyond reach.  The central
 %% role of simulation and bootstrap methods in empirical finance points to a
 %% prevalence of inductive reasoning.\footnote{Consider
-%% \citet{Cowles-Forecasting}, \citet{White-Data_snooping},
-%% \citet{FF-Luck_vs_skill} and \citet{HL-Lucky_factors}.} That is, to
+%% \citet{cowles1944stock}, \citet{white2000reality},
+%% \citet{fama2015five} and \citet{harvey2021lucky}.} That is, to
 %% forecasting on the basis of past cases as opposed to a full description of
 %% future states. At the same time, market makers need to set prices that are
 %% robust to changes that open the door to exploitation via arbitrage.
@@ -1251,9 +1250,9 @@ novel types of case (the prudent, Pru).
 %%\citet{GKMQT_Robust_experiments}) on unawareness and robustness in the
 %%state-space sense provide part of our inspiration for the present upgrade to
 %%the axiomatic foundations of inductive inference in \citet[henceforth
-%%\gsii]{GS_Inductive_inference}. By taking rankings as primitive, we extend
+%%\gsii]{gilboa2003inductive}. By taking rankings as primitive, we extend
 %%\gsii\ to accommodate a forward-looking version of the second-order induction
-%%of \citet{AG-Second-order_induction}. 
+%%of \citet{argenziano2019second}. 
 %
 %In the present framework, the basic building blocks of the model are
 %observations or (synonymously) past cases. A given past case may be empirical
@@ -2186,8 +2185,8 @@ any another; nor is any pair collinear.  The final key to the proof of
   % some key concepts from the literature on hyperplane
 % arrangements.\footnote{A
   % more detailed introduction can be found in the classic text
-  % \citet{OT-Arrangements}, the recent \citet{Dimca-Arrangements} and the
-  % lecture notes \citet{Stanley-Arrangements}.}
+  % \citet{orlik1992arrangements}, the recent \citet{dimca2017hyperplane} and the
+  % lecture notes \citet{stanley2007introduction}.}
 \begin{definition*} %We will use the following notation.
   For $Y \in 2 ^ { X }$, $v^{ \dd } : Y^{2}\times \mbbc \rightarrow \R$
   satisfies the \emph{groupoid property} (Jacobi identity) whenever, for every
@@ -2239,22 +2238,21 @@ to exchange a bond at a given date, price and amount in the future.  Building
 on \cref{eg-zeros}, let $X$ denote the set of settlement/maturity dates for
 forwards associated with given zero-coupon bond (a \emph{Zero}) issued by the
 same entity. In particular, take $X = \{x_0, x_1, \dots\}$ such that $x_0 = 0$
-and $x_k < x_{k + 1}$ for all feasible $k$.
-\begin{remark*}[on zero-coupon bonds]
-  Although coupon-paying bonds are far more common, Zeros provide a natural
-  asset for studying no-arbitrage pricing \citep{BN-empirical-no-arbitrage}.
-  Zeros are typically generated by ``stripping'' coupon-paying bonds of their
-  coupons enroute to deriving benchmark zero-coupon yield curves
-  \citep{BIS-zeros}.\footnote{Recall that Zeros are a common way to derive the
-  implied yield curve. They are generated by taking a coupon-paying bond price
-  and subtracting of the present value of each of its coupons. These present
-  values are calculated using price of Zeros with shorter maturities
-  \citep{Brealey-Myers}.} Since coupon stripping is reversible, restricting
-  attention to Zeros is without loss of generality.  Indeed, modulo
+and $x_k < x_{k + 1}$ for all feasible $k$.  \begin{remark*}[on zero-coupon
+  bonds] Although coupon-paying bonds are far more common, Zeros provide a
+  natural asset for studying no-arbitrage pricing
+  \citep{barillas2019speculation}.  Zeros are generated by ``stripping''
+  coupon-paying bonds of their coupons enroute to deriving benchmark
+  zero-coupon yield curves.\footnote{Recall that Zeros are a common way to
+  derive the implied yield curve. They are generated by taking a coupon-paying
+  bond price and subtracting of the present value of each of its coupons. These
+  present values are calculated using price of Zeros with shorter maturities
+  \citep{brealey2020principles}.} Since coupon stripping is reversible,
+  restricting attention to Zeros is without loss of generality.  Indeed, modulo
   surmountable complications relating to the uncertainty of the cashflows, the
   arguments that follow extend to dividend-paying stocks.
- % (In this case, via options markets, we may identify suitable
- % benchmarks for calculating the present value of dividends.)
+  % (In this case, via options markets, we may identify suitable benchmarks for
+  % calculating the present value of dividends.)
 \end{remark*}
 
 Let $\past$ denote the (unique) current history of time-series data that are
@@ -2262,14 +2260,14 @@ relevant to this market for Zeros.  We generate the set $\mbbc$ of past cases
 by taking each case $c \in \mbbc$ to consist of market-relevant data from a
 given time interval (a block of time periods) in the past. Block resampling of
 time series data was originally developed by
-\citet{Kunsch-Block_bootstrap,PR-Stationary_bootstrap}. (For applications to
-finance problems see \citet{White-Data_snooping,HL-Lucky_factors}.) For the
+\citet{kunsch1989jackknife,politis1994stationary}. (For applications to
+finance problems see \citet{white2000reality,harvey2021lucky}.) For the
 present purposes, blocks need to be chosen so that, for any $k > 0$ and
 resampling $D = \{c_1, \dots, c_k\}$, what matters is the number of repetitions
 of a given case type, not the order of the cases that form the pseudo-time
 series. In other words, $D \sim^\star D'$ for any permutation $D'$ of the cases
 in $D$.  It is straightforward to verify that this is indeed the case for the
-stationary bootstrap of \citet[section 2]{PR-Stationary_bootstrap}.
+stationary bootstrap of \citet[section 2]{politis1994stationary}.
 
 The free case $\novel$ has no additional structure beyond that of
 \cref{sec-model,sec-main}.
@@ -2524,7 +2522,7 @@ as we can go, but in the present context we can say more.
 
 \paragraph{Market efficiency} We begin with a proposition that justifies our
 claim that when \stability\ holds, so will the efficient markets hypothesis in
-the usual \citep{Fama-market-efficiency} sense: passive (buy-and-hold)
+the usual \citep{fama1970efficient} sense: passive (buy-and-hold)
 strategies outperform active ones.  To this end, let $\beta : X \times \mbbdp
 \rightarrow \nnreal$ be an empirical bond price function such that its
 restriction to $X \times \mbbd$ coincides with $B$ of \cref{cor-bond-rep} and
@@ -2709,7 +2707,7 @@ well-defined pricing kernel (in the sense of \cref{prop-bond-rep}). To our
 knowledge, this feature is absent in the literature.
 
 
-\Citet[p.60]{Malkiel-market_efficiency} points out that ``Markets can be
+\Citet[p.60]{malkiel2003efficient} points out that ``Markets can be
 efficient even if many market participants are quite irrational.'' Here, we can
 show that markets can be efficient, in the sense that the pricing kernel is
 stable (and thus acting as if it were guided by a prudent market maker), even
@@ -2731,12 +2729,12 @@ Prudent pricing emerges from market activity even in the absence of prudent
 agents.
 
 This inductive notion of market efficiency differs from the more Bayesian and
-forward-looking definitions of \citet{Fama-market_efficiency} and
-\citet{Malkiel-market_efficiency}. It is not a form of weak efficiency, for we
+forward-looking definitions of \citet{fama1970efficient} and
+\citet{malkiel2003efficient}. It is not a form of weak efficiency, for we
 may define cases to include more than historical data on prices. We may include
 features such as firm size or price-earnings data or indeed any of the many
 other factors that are extensively discussed in the literature
-\citep{Fama-Five-factor-model,HL-Lucky_factors,GKX-empirical_asset_pricing_via_ML}.
+\citep{fama2015five,harvey2021lucky,gu2020empirical}.
 
 
 %Prudent pricing in the absence of prudent market makers is on the one hand
@@ -3152,8 +3150,8 @@ value of information in past cases.
 %%may be exposed to arbitrage and need to respecify her entire model ``on the
 %%fly''. Such a step corresponds to the intermittent respecification of her
 %%similarity weighting function $\mathbf{v}(x,c)$, as
-%%\citet[p.10324]{AG-Second-order_induction} describe. 
-%In \citet{AG-Second-order_induction}, the ``leave-one-out'' technique of
+%%\citet[p.10324]{argenziano2019second} describe. 
+%In \citet{argenziano2019second}, the ``leave-one-out'' technique of
 %cross-validating the model by omitting a case of each type is intuitively and
 %operationally close to our inclusion of the free case $\novel$. The difference
 %is that by introducing a degree of freedom, our market maker can use her
@@ -4007,7 +4005,7 @@ $\mc L_{\mdoubleplus}$ respectively. In \gsii, as a consequence of \fourdiv,
 $\mc H_{\mdoubleplus}$ is always central. In our setting, it is only $\mc H$
 that is guaranteed to be central. In general an arrangement is central, if, and
 only if, its intersection semilattice has a unique maximal element
-\citep[proposition 2.3]{Stanley-Arrangements}. Thus, if $\mc H_{\mdoubleplus}$
+\citep[proposition 2.3]{stanley2007introduction}. Thus, if $\mc H_{\mdoubleplus}$
 is \emph{centerless}, then $\mc L_{\mdoubleplus}$ is a meet semilattice with
 multiple maxima: as in \cref{eg-zaslavski}.  Extending our notation: if
 $Y = \{x,y,z,w\}$, then the unique intersection $A^{Y}$ is the (nonempty)
@@ -4036,8 +4034,8 @@ recursively via
 % of the subarrangement $\mc A^{\{x,y\} \{z,w\}} = \{H^{\{x,y\}}, H^{\{z,w\}}\}$,
 % we will write $\tilde\bmu (\{x,y\}\{z,w\}) \defeq \bmu (A^{\{x,y\}\{z,w\}})$.
 The above definition of Zaslavski's theorem is explicitly provided by
-\citet{Sagan-Zaslavski}. Specialised to the present setting, the more common
-\citep[see ][]{OT-Arrangements,Dimca-Arrangements,Stanley-Arrangements} ``rank''
+\citet{sagan1999why}. Specialised to the present setting, the more common
+\citep[see ][]{orlik1992arrangements,dimca2017hyperplane,stanley2007introduction} ``rank''
 version of Zaslavski's theorem is
 \begin{linenomath*}
   \begin{equation*}\countof \mc G  =\sum_{\substack{\mc A \subseteq \mc H\\
@@ -4343,8 +4341,8 @@ The following is a translation of \cref{obs-c2d}.
   % Then, via an example, we introduce
   % some key concepts from the literature on hyperplane arrangements.\footnote{A
   %   more detailed introduction can be found in the classic text
-  %   \citet{OT-Arrangements}, the recent \citet{Dimca-Arrangements} and the
-  %   lecture notes \citet{Stanley-Arrangements}.}
+  %   \citet{orlik1992arrangements}, the recent \citet{dimca2017hyperplane} and the
+  %   lecture notes \citet{stanley2007introduction}.}
 \begin{definition*}%\label{def-jac-rep} %We will use the following notation.
 
   For $Y \in 2 ^ { X }$, the matrix
