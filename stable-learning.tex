@@ -568,42 +568,46 @@ data.
   %\renewcommand*{\thefootnote}{\arabic{footnote}}
 
   \section{Introduction} \label{sec-introduction} \textsc{In general,
-  prediction requires the imagination} to go beyond the current sample of past
-  cases (observations). To paraphrase \citep[pages 9 and 10]{hume1896treatise}:
-  \emph{the memory is tied down, by original impressions \emph{[past cases]},
-  without any power of variation; in contrast, the imagination is free to
-  transpose and change its ideas.} Well-established neuroscientific evidence
-  points to an important role for the imagination and the degrees of freedom or
-  flexibility that it provides in improving prediction and thus the chances of
-  survival
+  prediction requires imagination}: the capacity to go beyond the current
+  training set of past cases. To paraphrase \citep[pages 9 and
+  10]{hume1896treatise}: \emph{the memory is tied down, by original impressions
+  \emph{[past cases]}, without any power of variation; in contrast, the
+  imagination is free to transpose and change its ideas.} Well-established
+  neuroscientific evidence points to an important role for the imagination and
+  the degrees of freedom or flexibility that it provides in improving
+  prediction and thus the chances of survival
   \citep{bartlett1932remembering,suddendorf2007evolution,mullally2013memory}.
-  But what of artificial intelligence and its success in prediction despite the
-  absence of an ``imagination''? In machine learning the practice of splitting
-  the data into a training set and a test set is standard
-  \citep{hastie2009elements}.  We may interpret the training set as memory and
-  the test set as a form of imagination in the sense that it allows the learner
-  to explore the world beyond past cases.  To account for all kinds of
-  intelligence, we provide an axiomatic framework that allows us to capture the
-  behaviour of learners (prediction models) with the ability to externally
-  (out-of-sample) validate.  The axioms we provide are agnostic in relation to
-  the method of external validation. The goal is instead to allow an observer
-  to determine whether or not the learner is indeed able to generalise to
-  richer samples of past cases in a consistent manner.
-  %In our framework, the prudent learner takes an within-sample perspective
-  %\citep[page 7, experiment 1]{chervonenkis2015recollections} and considers the
-  %potential for generalizing to richer samples of past cases. 
- 
-  External validation enables the learner (prediction model) to generalize from
-  the current sample to new ones. The key to generalization is stability
+  In machine learning, where learners (prediction models) are artificial, the
+  practice of splitting the data into a training set and a test set is a
+  standard \citep{hastie2009elements}. Cases in the training set resemble
+  memories whereas cases in the test set resemble instances of the imagination
+  in the sense that they allow the learner to explore unseen and potentially
+  novel data.
+
+  The goal of external validation is generalization: the ability to adapt
+  appropriately to previously unseen data.  The key to generalization is
+  stability
   \citep{bousquet2002stability,poggio2004general,mukherjee2006learning} Loosely
   speaking, a learner is stable if small changes in the data yield small
-  changes in its predictions.  Whereas in classical learning theory, the goal
-  is to minimize the empirical error as measured on the training set, the
-  present framework allows for more abstract goals. Moreover, to account for
-  agents that are sentient such as humans or mice, we derive the learner's
-  kernel on basis of {sentiments}.  We formalise \emph{sentiments} as a mapping
-  from samples of past cases to rankings of underlying objects of interest
-  (henceforth eventualities).
+  changes in its predictions: continuity of the learning map from training sets
+  to weighting functions (kernels).  \cite{mccloskey1989catastrophic} provides
+  famous examples of unstable learning where training on new cases causes
+  current kernels to unravel in what is called catastrophic interference.
+
+  In this paper, we derive the learner's kernel on basis of {sentiments}.  We
+  formalise \emph{sentiments} as a mapping from samples of past cases to
+  rankings of underlying objects of interest.  To account for all kinds of
+  intelligence, we provide a framework that captures the behaviour of learners
+  with the ability to externally validate their model. The axioms we provide
+  are agnostic in relation to the method of external validation. The goal is
+  instead to allow an observer to determine whether or not the learner is able
+  to generalise to richer training sets of past cases in a consistent manner.
+  %In our framework, the prudent learner takes an within-sample perspective
+  %\citep[page 7, experiment 1]{chervonenkis2015recollections} and considers
+  %the potential for generalizing to richer samples of past cases.  Whereas in
+  %classical learning theory, the goal is to minimize the empirical error as
+  %measured on the training set, the present framework allows for more abstract
+  %goals.
   
   Stability is the key axiom in the present derivation of a learner's kernel on
   the basis of qualitative rankings, given any finite resampling of past
@@ -613,7 +617,7 @@ data.
   learners generalize to novel case types without needing to: re-evaluate past
   rankings; generate intransitive rankings; or suppress novel (transitive)
   rankings. In essence, a stable learner's kernel is not only stable in a
-  literal sense, it also allows for meaningful and unbiased generalisations.
+  literal sense, it also allows for meaningful, unbiased generalisations.
  
   %What sort of prediction problem might force an unstable learner to modify
   %its kernel?  generalizes to novel case types without revealing intransitive
@@ -639,15 +643,16 @@ data.
 % %expense.
 
 Stable learners stand in contrast to those that learn by doing. Children are
-encouraged to learn by making mistakes. They are free to modify their beliefs
-and behaviour after the event: the intransitive rankings that novel case types
-may reveal are of little consequence.  But what of a market maker that exposes
-their pricing kernel either directly or indirectly (by buying and selling
-securities) on a financial market? We show that a market maker fails to be
-stable if, and only if, the returns on investment that they offer provide a
-free lunch to other agents today (\ie\ before any novel case types arrive and
-before they have a chance to re-evaluate).  This equivalence between stability
-(tomorrow) and no-arbitrage (today) is at the heart of the present paper and it
+encouraged to learn by making (noncatastrophic) mistakes. They are free to
+modify their beliefs and behaviour after the event: the intransitive rankings
+that novel case types may reveal \citep{weinstein} are of little consequence.
+But what of a market maker that exposes their pricing kernel either directly or
+indirectly (by buying and selling securities) on a financial market? We show
+that a market maker fails to be stable if, and only if, the returns on
+investment that they offer provide a free lunch to other agents today (\ie\
+before any novel case types arrive and before they have a chance to
+re-evaluate).  This equivalence between stability (when novel data arrives
+tomorrow) and no-arbitrage (today) is at the heart of the present paper and it
 has a number of interesting implications.\footnote{In general, the learner is
 stable if, and only if, its kernel forms a groupoid over eventualities. This
 concept corresponds to the Jacobi equations in \gsii.}

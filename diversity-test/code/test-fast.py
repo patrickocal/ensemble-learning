@@ -5,6 +5,7 @@ import numpy as np
 import pandas as pd
 import pickle 
 import matplotlib.pyplot as plt
+import matplotlib as mpl
 from time import time
 #-----------------------------------------------------------------------------#
 #-----------some functions for translating between rankings in different forms#
@@ -283,6 +284,32 @@ def genascendingdfs(datapath, svenypath):
     sveny_asc = sveny_dec[::-1]
     with open(datapath + "sveny-asc.pkl", "wb") as f:
         pickle.dump(sveny_asc, f)
+#-----------a function to generate cumulative frequencies for 4-diversity
+def gen4divres(dictofres, comb4, datapath):
+    l = len(comb4)
+    ak4 = np.zeros(l, dtype=int)
+    dd4 = np.zeros(l, dtype=int)
+    freq4 = np.zeros(numdays, dtype=int)
+    cumfreq4 = np.zeros(numdays, dtype=int)
+    l = 4
+    for k in range(len(comb4)):
+        j = comb4[k]
+     #   print(j)
+        guesscomb = np.array(list(combinations(j, 3)))
+     #   print(guesscomb)
+        gcomb = [str(i).strip('[]') for i in guesscomb]
+     #   print(gcomb)
+        gcomb = [gcomb[i].split() for i in range(l)]
+        gcomb = [' '.join(gcomb[i]) for i in range(l)]
+        gcomb = ['[' + gcomb[i] + ']' for i in range(l)]
+     #   print(gcomb)
+        ak4[k] = np.min([dictofres[6]["testdctlsls"][i][2][-1] for i in gcomb])
+        if ak4[k] >= 6:
+            dd4[k] = np.max([dictofres[6]["testdctlsls"][i][3][-1] for i in gcomb])
+            freq4[dd4[k]] += 1
+            cumfreq4[dd4[k]:] += 1
+    with open(datapath + "-cumfreq4.pkl", "wb") as f:
+        pickle.dump(cumfreq4, f)
 #=============================================================================#
 #-----------processing begins here (above functions to go in a separate module)
 #=============================================================================#
@@ -352,6 +379,20 @@ pathtoresults = {k: s + order + "-diversity_threshold_" + str(k)
 #-----------KEY STEP: uncomment on first run to generate the test results
 #genresults(div_pts, scomb, numdays, pathtoresults, testls)
 #-----------------------------------------------------------------------------#
+fig = plt.figure()
+ax = fig.add_subplot()
+#fig.subplots_adjust(top=0.85)
+fig.suptitle('Cumulative count of successes as a proportion of total',
+             fontsize=14, fontweight='bold')
+ax.set_xlabel("Days in sample", fontsize=12)
+ax.set_ylabel("Cumulative frequency", fontsize=12)
+#ax.yticks(np.arange(0, 1.2, 0.2))
+ax.set_xticks(ticks=np.arange(0, len(rankings), 1000),
+              labels=[sveny.iloc[i, 0] for i in np.arange(0, len(rankings),
+                                                          1000)],
+              rotation=45, ha='right', rotation_mode='anchor')
+fig.subplots_adjust(bottom=0.20)
+#plt.xlim = (0, numdays); plt.ylim = (0, 1.2)
 #-----------load the results dict
 resdict = {}
 for test in testls:
@@ -387,8 +428,9 @@ for test in testls:
     print(resdict[test].keys())
     print(np.max(freq), np.argmax(freq))
     print("current max over all times is", maxdd, "\n")
-    print("Proportion of dates that condition", test, "holds is ",
+    print("Proportion of dates that threshold", test, "holds is ",
           1 - maxdd/len(rankings))
+    ax.plot(sveny.iloc[:, 0], cumfreq / len(a))
 #    print("rankings row 0 is ", rankings.iloc[0, :])
 #    print("sveny row 0 is ", sveny.iloc[0,:])
 #    print("rankings row where diversity is", test, "is ",
@@ -397,45 +439,26 @@ for test in testls:
 #          sveny.iloc[maxdd - 1, :])
 #    convar = {"maturity" : mat, "threshold" : test, "order" : order}
 #    print(convar)
-    plt.plot(sveny.iloc[:, 0], cumfreq / len(a))
 #    print(numdays - maxdd)
-plt.yticks(np.arange(0, 1.2, 0.2))
-plt.xticks([sveny.iloc[i, 0] for i in np.arange(0, len(rankings), 1000)],
-           rotation=45, ha='right', rotation_mode='anchor')
-plt.xlim = (0, numdays); plt.ylim = (0, 1.2)
-plt.xlabel("Days in sample")
-plt.ylabel("Cumulative frequency")
 
+#-----------print/generate/plot results for 4-diversity
 a4 = np.array(list(combinations(range(1, mat + 1), 4)))
-l = len(a4)
-ak4 = np.zeros(l, dtype=int)
-dd4 = np.zeros(l, dtype=int)
-freq4 = np.zeros(numdays, dtype=int)
-cumfreq4 = np.zeros(numdays, dtype=int)
-l = 4
-for k in range(len(a4)):
-    j = a4[k]
-    print(j)
-    guesscomb = np.array(list(combinations(j, 3)))
-    print(guesscomb)
-    gcomb = [str(i).strip('[]') for i in guesscomb]
-    print(gcomb)
-    gcomb = [gcomb[i].split() for i in range(l)]
-    gcomb = [' '.join(gcomb[i]) for i in range(l)]
-    gcomb = ['[' + gcomb[i] + ']' for i in range(l)]
-    print(gcomb)
-    ak4[k] = np.min([resdict[6]["testdctlsls"][i][2][-1] for i in gcomb])
-    if ak4[k] >= 6:
-        dd4[k] = np.max([resdict[6]["testdctlsls"][i][3][-1] for i in gcomb])
-        freq4[dd4[k]] += 1
-        cumfreq4[dd4[k]:] += 1
-        
-plt.plot(sveny.iloc[:, 0], cumfreq4 / len(a4))
-plt.legend(["partial-3-diversity", "3-diversity", "4-diversity"])
-print(cumfreq4[-1] / len(a4))
+#gen4divres(resdict, a4, s)        
+with open(s + "-cumfreq4.pkl", "rb") as f:
+    cumfreq4 = pickle.load(f)
+ax.plot(sveny.iloc[:, 0], cumfreq4 / len(a4))
+print("For 4-div, the proportion of successes is", cumfreq4[-1] / len(a4))
 
 end = time()
 print("This run took", end - start, "seconds.")
+#mpl.rcParams.update({
+#    "text.usetex": True,
+#    "font.family": "sans-serif",
+#    "font.sans-serif": "Helvetica",
+#    "font.size": "14",
+#    })
+
+ax.legend(["partial-3-diversity", "3-diversity", "4-diversity"])
 plt.show()
 
 

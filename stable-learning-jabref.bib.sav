@@ -431,4 +431,14 @@
   pages   = {187--192},
 }
 
+@InCollection{mccloskey1989catastrophic,
+  author    = {Michael McCloskey and Neal J. Cohen},
+  booktitle = {Psychology of Learning and Motivation},
+  publisher = {Elsevier},
+  title     = {Catastrophic Interference in Connectionist Networks: The Sequential Learning Problem},
+  year      = {1989},
+  pages     = {109--165},
+  doi       = {10.1016/s0079-7421(08)60536-8},
+}
+
 @Comment{jabref-meta: databaseType:bibtex;}

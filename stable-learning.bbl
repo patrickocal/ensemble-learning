@@ -745,6 +745,46 @@
       \verb 10.1257/089533003321164958
       \endverb
     \endentry
+    \entry{mccloskey1989catastrophic}{inbook}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=da4b0bb4a2a41b49cf13bd92c00bae58}{%
+           family={McCloskey},
+           familyi={M\bibinitperiod},
+           given={Michael},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=9733e4c7b52529226a797b797913f12a}{%
+           family={Cohen},
+           familyi={C\bibinitperiod},
+           given={Neal\bibnamedelima J.},
+           giveni={N\bibinitperiod\bibinitdelim J\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Elsevier}%
+      }
+      \strng{namehash}{29195b20dff2c44ac7176972a86b421b}
+      \strng{fullhash}{29195b20dff2c44ac7176972a86b421b}
+      \strng{bibnamehash}{29195b20dff2c44ac7176972a86b421b}
+      \strng{authorbibnamehash}{29195b20dff2c44ac7176972a86b421b}
+      \strng{authornamehash}{29195b20dff2c44ac7176972a86b421b}
+      \strng{authorfullhash}{29195b20dff2c44ac7176972a86b421b}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Psychology of Learning and Motivation}
+      \field{title}{Catastrophic Interference in Connectionist Networks: The Sequential Learning Problem}
+      \field{year}{1989}
+      \field{pages}{109\bibrangedash 165}
+      \range{pages}{57}
+      \verb{doi}
+      \verb 10.1016/s0079-7421(08)60536-8
+      \endverb
+    \endentry
     \entry{mukherjee2006learning}{article}{}
       \name{author}{4}{}{%
         {{un=0,uniquepart=base,hash=49a355d0c2a2e9b223f90f3e0088cb29}{%
