@@ -5499,36 +5499,40 @@ u^{\ij}, L \rangle$.  Now note that, via equations
 \eqref{eq-iz}--\eqref{eq-yzw}, we obtain
 \begin{linenomath*}
   \begin{equation}\label{eq-3d-epsilon}
-    \pi  \acute{\eta}^{\xz} + \rho  \acute{\eta}^{\yz} = \acute{\eta}^{\wz} + \epsilon \neq
-    \acute{\eta}^{\wz},
+    \pi \acute{\eta}^{\xz} + \rho \acute{\eta}^{\yz} = \acute{\eta}^{\wz} +
+    \epsilon \neq \acute{\eta}^{\wz}.
   \end{equation}
 \end{linenomath*}
-so that, for every $\epsilon\neq 0$,
-$\{\acute{u}^{\ij} = u^{\ij} \times \acute{\eta}^{\ij}: \ij = \xz, \yz, \wz\}$
-forms a linearly independent set. Let
-$\{\acute{u}^{\ij}: i,j \in \{x,y,z\}\cup \{y,z,w\}\}$ be defined similarly. To
-complete the definition of $\acute{u}^{\dd}$, we appeal to the fact that, via
-\threejac, $u^{\dd}$ satisfies equations \eqref{eq-xy}--\eqref{eq-xz}. In
-particular, from these equations, take parameters $\alpha$, $\beta$, and $\gamma$
-and let $\acute{\eta}^{\xw}$ be the (unique) solution to the Jacobi identity
+For $(i, j) \neq (x, w), (w, x)$, let $\acute{u}^{\ij}:= u^{\ij} \times
+\acute{\eta}^{\ij}$.  Then, for every $\epsilon\neq 0$, 
+\begin{linenomath*}
+  \begin{equation}
+    \{\acute{u}^{\ij}: \ij = \xz, \yz, \wz\}
+  \end{equation}
+\end{linenomath*}
+  forms a linearly independent set.  To complete the definition of
+  $\acute{u}^{\dd}$, we appeal to the fact that, via \threejac, $u^{\dd}$
+  satisfies equations \eqref{eq-xy}--\eqref{eq-xz}. In particular, from these
+  equations, take parameters $\alpha$, $\beta$, and $\gamma$ and let
+  $\acute{\eta}^{\xw}$ be the (unique) solution to the Jacobi identity
 \begin{linenomath*}
   \begin{equation}\label{eq-xw}
-    \alpha  \acute{\eta}^{\xw} =  \gamma  \acute{\eta}^{\xy} + \beta \acute{\eta}^{\yw} =
-    -\langle \gamma  u^{\xy} , J \rangle -
-    \tfrac{1-\acute{\lambda}}{\acute{\lambda}}\langle\beta u^{\yw}, L  \rangle.
+    \alpha \acute{\eta}^{\xw} = \gamma \acute{\eta}^{\xy} + \beta
+    \acute{\eta}^{\yw} = -\langle \gamma u^{\xy} , J \rangle -
+    \tfrac{1-\acute{\lambda}}{\acute{\lambda}}\langle\beta u^{\yw}, L \rangle.
   \end{equation}
 \end{linenomath*}
-For the same set of parameter values, $\acute{u}^{\dd}$ also satisfies
-\eqref{eq-xy}--\eqref{eq-xz}. That is, for $\{x,y,z\}$, via \cref{eq-xyz} and \eqref{eq-xz},
-$\gamma \acute{\eta}^{\xy}+\tau \acute{\eta}^{\yz} = \phi \acute{\eta}^{\xz}$,
-so that $\acute{u}^{\dd}$ satisfies \eqref{eq-xz}. For $\{y,z,w\}$, Via \cref{eq-yzw} and
-\eqref{eq-yz},
-$\hat{\beta} \acute{\eta}^{\yw}+\sigma \acute{\eta}^{\wz} = \tau
-\acute{\eta}^{\yz}$, so that $\acute{u}^{\dd}$ satisfies \eqref{eq-yz}. For $\{x,y,w\}$,
-via \cref{eq-xw}, $\acute{u}^{\dd}$ satisfies \eqref{eq-xy}.  We now demonstrate
-that for the final triple $\{x,z,w\}$,  the Jacobi identity holds if
-$\hat{\beta} = \beta$, and  $\{\acute{u}^{\xw},\acute{u}^{\wz},\acute{u}^{\xz}\}$
-has rank $3$ otherwise.
+For these parameter values, $\acute{u}^{\dd}$ also satisfies
+\eqref{eq-xy}--\eqref{eq-xz} of the proof of \cref{lem-induction}. That is, for
+$\{x,y,z\}$, via \cref{eq-xyz} and \eqref{eq-xz}, $\gamma
+\acute{\eta}^{\xy}+\tau \acute{\eta}^{\yz} = \phi \acute{\eta}^{\xz}$, so that
+$\acute{u}^{\dd}$ satisfies \eqref{eq-xz}. For $\{y,z,w\}$, Via \cref{eq-yzw}
+and \eqref{eq-yz}, $\hat{\beta} \acute{\eta}^{\yw}+\sigma \acute{\eta}^{\wz} =
+\tau \acute{\eta}^{\yz}$, so that $\acute{u}^{\dd}$ satisfies \eqref{eq-yz}.
+For $\{x,y,w\}$, via \cref{eq-xw}, $\acute{u}^{\dd}$ satisfies \eqref{eq-xy}.
+We now demonstrate that for the final triple $\{x,z,w\}$, the Jacobi identity
+holds if $\hat{\beta} = \beta$, and
+$\{\acute{u}^{\xw},\acute{u}^{\wz},\acute{u}^{\xz}\}$ has rank $3$ otherwise.
 
 First extract the parameters from equations \eqref{eq-xy}--\eqref{eq-xz} to
 obtain the matrix form
