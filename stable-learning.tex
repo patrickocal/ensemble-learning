@@ -10,7 +10,7 @@
 %\includeonly{./introduction.tex}
 
   \linespread{1.41}
-  \linespread{1}
+%  \linespread{1}
 
  % \geometry{showframe=true}
    \geometry{a4paper,margin=1.25in}%,footskip=.25in}
@@ -699,7 +699,7 @@ are less attractive; active strategies may indeed be less volatile.
 
 The third implication motivates the present {generalization} of \gsii. Similar to
 \gsii, the learner is endowed with a mapping from finite resamplings of past
-cases to rankings of eventualities (a rankings map).  Via the basic axioms, all
+cases to rankings of eventualities (sentiments).  Via the basic axioms, all
 learners (stable or not) are characterised by a kernel that, for every pair of
 eventualities, gives rise to a linear function on samples of past cases.
 %\citet[henceforth \gsii]{gilboa2003inductive}.  
@@ -716,11 +716,11 @@ precise, a translation of the main result of \gsii\ to the present context
 tells us that a learner is guaranteed to be stable whenever resampling of past
 cases generates a \fourdiv\ of rankings: for every subset of $k \leq 4$
 eventualities, all $k!$ total orderings (of those $k$ eventualities) feature in
-the rankings map.  The \fourdiv\ axiom is sufficient but not necessary for
+{sentiments}.  The \fourdiv\ axiom is sufficient but not necessary for
 a kernel that, for every single eventuality, gives rise to a linear function on
 samples of past cases. The stability axiom allows us to substantially weaken
 \fourdiv\ to \parthreediv: for every subset of $k \leq 3$ eventualities, at
-least $k$ total orderings feature in the rankings map. Our main theorem then
+least $k$ total orderings feature in {sentiments}. Our main theorem then
 leads to the following hypothesis: we expect unstable learning to arise in
 settings where \fourdiv\ fails to hold and where prudence is required to
 achieve stability: \ie\ where the learners are inexperienced (short of
@@ -839,7 +839,7 @@ novel types of case (the prudent, Pru).
   conditional empirical distribution induces a single ranking of the set
   $X=\{1, 2, 3\}$ of eventualities (outcomes) for each sample. The resulting
   rankings map generates the arrangement of hyperplanes in \cref{fig-tali}.  To
-  each region of this arrangement, the rankings map assigns a distinct
+  each region of this arrangement, {sentiments} assigns a distinct
   total ranking.  
   %At each sample $D$ of past cases, we obtain a
   %ranking of $X$ by comparing the empirical frequencies in $D$.
@@ -1039,7 +1039,7 @@ novel types of case (the prudent, Pru).
   \leq^* f_D(x)$.
 
   Our goal is to derive a stable learning map $D \mapsto f_D$ on the basis of
-  the rankings map $D \mapsto \preceqb_D$ where $D$ is any finite sample of past
+  {sentiments} $D \mapsto \preceqb_D$ where $D$ is any finite sample of past
   cases.\footnote{The term learning map is introduced in
   \citet{mukherjee2006learning}. There stability is defined in terms of continuity
   of the learning map, something that we prove in \cref{prop-stability},
@@ -1624,7 +1624,6 @@ variable, \emph{free} case $\novel$.
   %cases are indeed ``tied down, original impressions''. Moreover, the
   %imagination is indeed free to ``transpose and change its ideas'' via copies
   %of $\novel$, all of which are free of content and, in this sense, identical.
-
   By way of analogy with computer memory, a natural implementation is as
   follows.  Take any case $c \in \mbbcp$ to consist of a pair $p \times m:$ a
   pointer $p$ that references a memory location and the memory content $m$.
@@ -1634,9 +1633,10 @@ variable, \emph{free} case $\novel$.
   [\novel]$ are indistinguishable in terms of content and are in this sense
   copies of $\novel$.
 
-  The learner is free to assign novel content to $\novel$ and before going on
-  to explore the prediction problem with this content in mind.  An outside
-  analyst who only observes past cases, can nonetheless use $\novel$ to analyse
+  The learner is free to assign novel, imagined content to $\novel$ and before
+  going on to explore the prediction problem with this content in mind.  As we
+  will show, an observer (or more sophisticated learner) who observes past
+  cases, but not the imagination, can nonetheless use $\novel$ to analyse the
   learners' behaviour.
 \end{remark*}
 
@@ -1659,8 +1659,8 @@ $\{\mbbc, \mbbcp\}$ without reference to the latter set. Similarly,
   and}\\ \mbbdp & \text{otherwise.} \end{array}\right.  \end{equation*}
 \end{linenomath*}
 %\vskip-5pt
-\paragraph{Rankings conditional on the data.}\hskip-5pt We now take a first
-step towards formalising the visual ranking maps of \cref{fig-tali,fig-rates}.
+\paragraph{Sentiments.}\hskip-5pt We now take a first
+step towards formalising the ranking maps of \cref{fig-tali,fig-rates}.
 (For the translation from databases to rational vectors, see
 \cref{sec-proof-main}.)
 For each $D$ in $\mbbd$, the learner is endowed with a well-defined
@@ -1668,7 +1668,7 @@ plausibility ranking $\preceqb_D$ in the set $\relations(X)$ of binary
 relations on $X$.  Denote the symmetric and asymmetric parts of $\preceqb_D$ by
 $\simeq _D$ and $\precb_D$ respectively. 
 
-A \emph{rankings map} $D \mapsto \preceqb_{D}$ is thus a vector in
+\emph{Sentiments} $D \mapsto \preceqb_{D}$ are thus a vector in
 $\relations(X)^{\mbbd}$ of the form
 \begin{linenomath*}
   \begin{equation*}\preceqb_{\mbbd} \defeq \langle\preceqb_{D} : D\in
@@ -1695,7 +1695,7 @@ Maxwell B.  Stinchcombe for bringing this point to my attention.}
 %y_{m+1})$. This
 %information is revealed by varying the sample and generating new rankings of
 %$X$ (and, implicitly, new rankings of the set $S$ of securities and $Y$).
-%The rankings map is the mathematical object to which the axioms apply. It
+%The {sentiments} are the mathematical object to which the axioms apply. It
 %corresponds to what \citet{mukherjee2006learning} refer to as the learning
 %algorithm which is a mapping $D \mapsto \mc H$. Where 
 
@@ -1769,14 +1769,15 @@ For every  $t \in \mbbtp$, there are infinitely many cases in $t$.
 % $C, D \in \mbbdp$ to be \emph{equivalent}, written $C\sim ^ \star D$,
 % if, and only if, $I _{ C } = I _{ D }$.
 
-\paragraph{Generalizations}\hskip-5pt of $\precsimb_{\mbbd}$ to $\dpp$ and thus
-novel case types require a suitable structure.
-\begin{definition}\label{def-{generalization}}
-  $\extb \defeq \langle \extb_{D}: D\in \dpp \rangle$ is a
-  \emph{{generalization}} (or $Y$-{generalization}) of
+\paragraph{Generalizations}\hskip-5pt of sentiments $\precsimb_\mbbd$ to
+$\mbbdp$ require a suitable structure. The following definition provides that
+structure. It also simplifies the exposition by accommodating generalizations
+that restrict attention to subsets $Y$ of $X$.
+\begin{definition}\label{def-{generalization}} $\extb \defeq \langle \extb_{D}:
+  D\in \dpp \rangle$ is a \emph{{generalization}} (or $Y$-{generalization}) of
   $\preceq_{\mbbd}$ if, for some nonempty $Y \subseteq X$, the following all
   hold$:$
- %such that $\hash Y = 3$ or $\hash Y = 4$,
+  %such that $\hash Y = 3$ or $\hash Y = 4$,
 
 \begin{enumerate}%[label=\textup{(\roman*)}]
 
@@ -1863,7 +1864,7 @@ $c \sim^{\extb} \novel$. Thus, there are as many regular {generalization}s as th
 past case types (\ie\ $\countof \mbbt$).  Yet every regular $Y$-{generalization} $\ext$
 is \emph{equivalent} to the unique improper $Y$-{generalization}
 $\langle \preceqb_{D} \cap Y^{2}: D \in \mbbd\rangle$ in the sense of 
-\begin{observation}\label{obs-reg-eq}%
+\begin{theoremEnd}{observation}\label{obs-reg-eq}%
   For every regular $Y$-{generalization} $\ext$ and improper $Y$-{generalization} $\aext$, for
   every $C \in \mbbdp$, there exists $D \in \mbbd$ such that
   $C \sim^{\extb} D$ and $\extb_{C} = \aextb_{D}$.\footnote{This means that
@@ -1872,23 +1873,28 @@ $\langle \preceqb_{D} \cap Y^{2}: D \in \mbbd\rangle$ in the sense of
     $\{D \times \aextb_{D}: D \in \mbbd\}$. The converse embedding follows from
     the nonrevision condition of \cref{def-{generalization}}.} % in the sense of
 %We extend this notion of equivalence to pairs of {generalization}s.
-\end{observation}
+\end{theoremEnd}
 
-\begin{proof}\label{proof-reg-eq} Fix $Y\subseteq
+\begin{proofEnd}\label{proof-reg-eq} Fix $Y\subseteq
   X$ nonempty and $\aext$ regular.  \Wlog, take $C \in \mbbdp \bs \mbbd$, so
-  that $C$ contains at least one copy of $\novel$.  For any $c \in C \cap
-  [ \novel ]$, the fact that $\aext$ is regular implies that $c
-  \sim^{\aextb} c _ 1$ for some $c _ 1 \in \mbbc$.  The richness assumption
-  ensures that we may choose $c _ 1$ from the complement of $C$.  Then,
-  since neither $c$ nor $c_{1}$ belong to $C _ 1 \defeq C \bs \{c\}$, $c
-  \sim^{\aextb} c_{1}$ implies $\aextb_{C} = \aextb _ { C _ 1 \cup \{c_{1}\}
-  }$.  If $c$ is the unique member of $C \cap [ \novel ]$, then the proof is
-  complete.  Otherwise, using the fact that $C$ is finite, we may proceed by
-  induction until we obtain a set $C _ n$ such that $C _ n \cap [\novel ]$
-  is empty and $D \defeq C _ n \cup \{ c _ 1 , \dots , c _ n \}$ belongs to $\mbbd$.  Part \ref{item-preserving} of \cref{def-{generalization}} then implies $\aextb _ { D } = \preceqb _ { D } \cap Y^{2}$, so that, since $\ext$ is
-  improper, $\aextb_{D}=\extb_{D}$.  Finally, since $C \sim ^{\aextb} D$, $\aextb _ { C } = \aextb_{D}$, as required.  \end{proof}
+  that $C$ contains at least one copy of $\novel$.  For any $c \in C \cap [
+    \novel ]$, the fact that $\aext$ is regular implies that $c \sim^{\aextb} c
+  _ 1$ for some $c _ 1 \in \mbbc$.  The richness assumption ensures that we may
+  choose $c _ 1$ from the complement of $C$.  Then, since neither $c$ nor
+  $c_{1}$ belong to $C _ 1 \defeq C \bs \{c\}$, $c \sim^{\aextb} c_{1}$ implies
+  $\aextb_{C} = \aextb _ { C _ 1 \cup \{c_{1}\} }$.  If $c$ is the unique
+  member of $C \cap [ \novel ]$, then the proof is complete.  Otherwise, using
+  the fact that $C$ is finite, we may proceed by induction until we obtain a
+  set $C _ n$ such that $C _ n \cap [\novel ]$ is empty and $D \defeq C _ n
+  \cup \{ c _ 1 , \dots , c _ n \}$ belongs to $\mbbd$.  Part
+  \ref{item-preserving} of \cref{def-{generalization}} then implies $\aextb _ {
+    D } = \preceqb _ { D } \cap Y^{2}$, so that, since $\ext$ is
+  improper, $\aextb_{D}=\extb_{D}$.  Finally, since $C \sim ^{\aextb} D$,
+$\aextb _ { C } = \aextb_{D}$, as required.
+\end{proofEnd}
   % \Cref{obs-reg-eq} allows us to identify $\preceq_{\mbbd}$ with any regular
-  % $Y$-{generalization} $\ext$ such that $Y=X$. This motivates our treatment of
+  % $Y$-{generalization} $\ext$ such that $Y=X$. This motivates our treatment
+% of
   % $\preceq_{\mbbd}$ as an improper {generalization} of itself.
 
 %axioms and main theorem
@@ -2243,8 +2249,9 @@ to exchange a bond at a given date, price and amount in the future.  Building
 on \cref{eg-zeros}, let $X$ denote the set of settlement/maturity dates for
 forwards associated with given zero-coupon bond (a \emph{Zero}) issued by the
 same entity. In particular, take $X = \{x_0, x_1, \dots\}$ such that $x_0 = 0$
-and $x_k < x_{k + 1}$ for all feasible $k$.  \begin{remark*}[on zero-coupon
-  bonds] Although coupon-paying bonds are far more common, Zeros provide a
+and $x_k < x_{k + 1}$ for all feasible $k$. 
+\begin{remark*}[on zero-coupon bonds]
+  Although coupon-paying bonds are far more common, Zeros provide a
   natural asset for studying no-arbitrage pricing
   \citep{barillas2019speculation}.  Zeros are generated by ``stripping''
   coupon-paying bonds of their coupons enroute to deriving benchmark
@@ -2339,7 +2346,7 @@ accumulating interest over $(y, x)$ simply means selling $(x, y)$.  Holding
   and only if, given $D$, the market maker would buy $(x, y)$. Under this
   interpretation, if at $\past$ the market maker agrees with the market, then
   $x \simeq_{\past} y$ for every $x, y \in X$. Thus, if the market maker agrees
-  with the market, then her rankings map is centered as in \cref{fig-tali}.
+  with the market, then her {sentiments} are centered as in \cref{fig-tali}.
   Our point is that the market maker may not agree with the market and thus the
   rankings map may be uncentered as in \cref{fig-rates}.  To operationalise
   this interpretation, simply suppress reference to $a^{\dd}$ in
@@ -2412,8 +2419,9 @@ Zero-market setting.
 
 \end{corollary}
 \begin{proof}[Proof of \cref{cor-bond-rep}]
-  Via \cref{cor-foureq}, $\preceq_{\mbbd}$ satisfies \stability\ if, and only if, there exists a pairwise Jacobi representation
-  $v^{\dd}: X^{2} \times \mbbc \rightarrow \R$.
+  Via \cref{cor-foureq}, $\preceq_{\mbbd}$ satisfies \stability\ if, and only
+  if, there exists a pairwise Jacobi representation $v^{\dd}: X^{2} \times
+  \mbbc \rightarrow \R$.
 % For each $x, y \in X$ and $c\in
 % \mbbc$ let 
 % \begin{equation*}\log {A}^{\xy}_{c} = v^{\xy}_c.\end{equation*}
@@ -2426,12 +2434,14 @@ Zero-market setting.
 \end{linenomath*}
 For the proof of \eqref{eq-bond-rep}, suppose that \withoutlog, $x \preceq_{D}
   y$, so that $\sum_{c\,\in D} v^{\yx}_{c} \leq 0$. Via the Jacobi identity we
-  have $ \sum_{c\,\in D} \left\{ v^{(y,0)} + v^{(0,x)} \right\} \leq 0$.
-  Via the representation property $v^{(y, y)} = 0$.
-  Another application of the Jacobi identity yields $v^{(y, 0)} = -v^{(0, y)}$. Thus, 
+  have $ \sum_{c\,\in D} \left\{ v^{(y,0)} + v^{(0,x)} \right\} \leq 0$.  Via
+  the representation property $v^{(y, y)} = 0$.  Another application of the
+  Jacobi identity yields $v^{(y, 0)} = -v^{(0, y)}$. Thus, 
 \begin{linenomath*}
-  \begin{equation*}\textstyle - \log B(x,D) + \log B(y,D) = \frac{1}{\lvert D\rvert}
-  \sum_{c\,\in D} \left \{v^{(0, x)}_{c} - v^{(0, y)}_{c}\right \} \leq 0.  \end{equation*}
+  \begin{equation*}\textstyle - \log B(x,D) + \log B(y,D) = \frac{1}{\lvert
+    D\rvert}
+  \sum_{c\,\in D} \left \{v^{(0, x)}_{c} - v^{(0, y)}_{c}\right \} \leq 0.
+  \end{equation*}
 \end{linenomath*}
 
 We now show that the bond price is a suitable function of the empirical yield
@@ -3443,7 +3453,7 @@ $t\in \mbbt$ and $J(\novel )= 0$.) This notion reflects the fact that, for the p
 of the present model, such $I$ and $J$ are equivalent.
 \begin{definition}\label{def-{generalization}Q}
  
-$\extb =\langle \extb_{J}: J \in \mbbjpp \rangle$ is an
+$\extb =\langle \extb_{J}: J \in \mbbjpp \rangle$ is a
   \emph{{generalization}}, and in particular a $Y$-\emph{{generalization}}, of
   $\preceqb _{ \mbbj }$ if, and only if, for some nonempty
   $Y \subseteq X$ both the following hold
@@ -3534,7 +3544,7 @@ novel. $\ext$ is novel if, for every $s \in \mbbt$, there exists $I$ in $\mbbj$ 
 % \mbbi$ to $Y$.}
  % axiomQ
 \paragraph{Axioms and theorem.} 
-We now restate the axioms for $Y$-{generalization}s $\ext$ of $\preceqb  _ \mbbj$.
+We restate the axioms for $Y$-{generalization}s $\ext$ of $\preceqb  _ \mbbj$.
 \begin{enumerate}[label=\textup{A\arabic*}$^\flat$]
  \setcounter{enumi}{-1}
 %   \item\label{p3dQ}
@@ -3760,11 +3770,12 @@ Moreover, $\mathbf{v}$ is unique in the sense of \cref{thm-main} part II, with
 
 
 %proof of thm-mainQ
-\section{The proof of \cref{thm-mainQ}}\label{sec-proof-mainQ} The present
-proof follows a similar structure to that of \gsii. That is, we begin with the
-proof for the case of arbitrary (nonempty) $X$ and finite $\mbbt$. We then
-show that we can ``patch'' the proof together to account for the case where $0
-<  \countof X < \infty = \countof \mbbt$.
+\section{The proof of \cref{thm-mainQ}}\label{sec-proof-mainQ} 
+%The present
+%proof follows a similar structure to that of \gsii. That is, we begin with the
+%proof for the case of arbitrary (nonempty) $X$ and finite $\mbbt$. We then
+%show that we can ``patch'' the proof together to account for the case where $0
+%<  \countof X < \infty = \countof \mbbt$.
 
 % We adopt the following notation.  For any $Y$-{generalization} $\ext$ and $x,y\in Y$,
 % let $\Phi^{\xy}, \Gamma^{\xy} , \textup{I}^{\{x,y\}} \subset \mbbj$ denote the
@@ -3792,127 +3803,201 @@ show that we can ``patch'' the proof together to account for the case where $0
 % $\grave{G}^{(x,y)}$ of
 % $\mbbjpp$, we will distinguish them via consistent  use of accents (as in
 % \cref{lem-insep}, below).
-
-\begin{step}[for $\countof \mbbt < \infty$, we characterise \ref{KQ}–\ref{AQ},
-  \twodiv\ and novel {generalization}s]\label{step-twodiv}
-  For any pair of vectors $\acute v, J: \mbbtpp \rightarrow \R$ and consider the
-  inner product
+For any pair of vectors $\acute v, J:
+  \mbbtpp \rightarrow \R$ such that $J \in \mbbjpp$, the linear operator
 \begin{linenomath*}
-  \begin{equation*} \langle \acute v, J \rangle \defeq \sum_{t \,\in \,\mbbtpp} v(t) J(t).\end{equation*}
+  \begin{equation*}
+   J \mapsto \langle \acute v, J \rangle \defeq \sum_{\{t : J(t) > 0\}} v(t)
+    \cdot J(t).
+  \end{equation*}
 \end{linenomath*}
-Since $\mbbtpp$ is finite, the linear operator
-$J \mapsto \langle \acute v , J \rangle$ is real-valued.  Let
-$\acute H \defeq \{J : \langle \acute v , J \rangle = 0 \}$, let
-$\acute G \defeq \{J: \langle \acute v, J \rangle > 0\}$, and let
-$\acute F \defeq \{J : \langle \acute v, J \rangle \geq 0\}$. Similarly, we take
-$\acute H_{\mdoubleplus} = \acute H\cap \posreal^{\mbbtpp}$ to be the
-(strictly) \emph{positive kernel} of $\langle \acute v , \cdot \rangle$ and, for
-$0 \not \leq \acute v \not \leq 0$, $\acute G_{\mdoubleplus}$ and
-$\acute F_{\mdoubleplus}$ are, respectively, the open and closed half-spaces of
-$\posreal ^{\mbbtpp}$ associated with $\acute v$. (For such $\acute v$, we also
-refer to $\acute H_{\mdoubleplus}$ as a hyperplane in $\posreal^{\mbbtpp}$.) For
-any $Y\in 2^{X}$ and matrix $\acute v : Y^{2}\times \mbbtpp\rightarrow \R$, each
-row vector $\acute v^{\xy}: \mbbtpp \rightarrow \R$ the associated spaces are
+is well-defined and real-valued by virtue of the fact that $J$ has finite
+  support.
+
+In our proof, we build on \gsii\ to directly prove all results regardless of
+the cardinality of $X$ and $\mbbt$. To facilitate this approach, we first 
+introduce the notion of an essentialization.
+
+Let $\R^{\oplus\mbbtpp}$ denote the vectors in $\R^{\mbbtpp}$ that have finite
+support and observe that $\mbbjpp \subseteq \R^{\oplus\mbbtpp}$ is the dense
+subset of rational vectors.  Given a vector $\acute{v}: \mbbtpp \rightarrow
+\R$, we associate the following subsets of $\R^{\oplus\mbbtpp}$: $\acute H =
+\{J : \langle \acute v , J \rangle = 0 \}$, $\acute G = \{J : \langle \acute v,
+J \rangle > 0\}$, and $\acute F = \{J : \langle \acute v, J \rangle \geq 0\}$.
+For any finite collection $\acute{\mc V} = \{\acute{v}_1, \dots, \acute{v}_n\}$
+of such vectors, let $\acute{\mc H}$ denote the associated collection or
+\emph{arrangement} of hyperplanes in $\R^{\oplus\mbbtpp}$. let $\acute{S} =
+\spann \acute{\mc V}$ denote the $\acute{\mathbf{r}}$-dimensional linear span
+of $\acute{\mc V}$. Then $\acute S$ is a well-defined inner-product space in
+its own right and let $\langle \cdot , \cdot \rangle_{\acute{S}}: \acute{S}^2
+\rightarrow \R$ denote the inner product. Let $\acute{p}: \R^{\oplus\mbbtpp}
+\rightarrow \acute{S}$ denote the orthogonal projection. Then observe that, for
+every $i = 1, \dots, n$, and $J \in \R^{\oplus\mbbtpp}$, $\langle \acute{v}_i,
+J \rangle = \langle \acute{v}_i, \acute{p}(J)\rangle$.  Moreover, note that,
+since $\acute{v}_i \in S$, $\langle \acute{v}_i, J \rangle = \langle
+\acute{v}_i, \acute{p}(J) \rangle_{\acute{S}}$.  The \emph{essentialization}
+${\mc H}_{\acute{S}}$ of the arrangement $\acute{\mc H}$ is the arrangement we
+obtain by orthogonally projecting $\acute{\mc H}$ onto $\acute{S}$.  That is,
+for every $H_{\acute{S}} \in {\mc H}_{\acute{S}}$, there exists $\acute{H} \in
+\acute{\mc H}$ such that $\acute{H} = \acute{p}^{-1}(H_{\acute{S}})$.  In the
+literature on arrangements of hyperplanes, it is common to work with the
+essentialization of an arrangement by default.  We therefore identify
+$\acute{\mc H}$ and $\mc{H}_{\acute{S}}$ and suppress reference to the latter
+subscript whenever no possible confusion may arise. The main benefit of
+essentializations is that they will allow us to work in finite dimensions
+whenever we consider a finite subset $Y\subseteq X$: regardless of the
+cardinality of $\mbbtpp$.
+
+Our domain of interest is $\nnreal^{\oplus\mbbtpp}$ and not the whole of
+$\R^{\oplus\mbbtpp}$. In order to be able to apply results from the literature
+on hyperplane arrangements without adjusting for boundaries, we find it useful
+to work within the relative interior $\acute{S}_{\mdoubleplus}$ of
+$\acute{S}_{\mplus} = \acute{p}(\nnreal^{\oplus\mbbtpp})$.  Observe
+$\acute{S}_{\mdoubleplus}$ is an open subset of the
+$\acute{\mathbf{r}}$-dimensional linear space $\acute{S}$.  For $\acute{H} \in
+\mc H$, take $\acute{H}_{\mdoubleplus} = \acute{H}\cap
+\acute{S}_{\mdoubleplus}$ to be the (strictly) \emph{positive} null-space of
+$\langle \acute v , \cdot \rangle_{\acute{S}}$ and, for $0 \not \leq \acute v
+\not \leq 0$, $\acute G_{\mdoubleplus}$ and $\acute F_{\mdoubleplus}$ are,
+respectively, the open and closed half-spaces of $\acute{S}_{\mdoubleplus}$
+associated with $\acute v$.  (For such $\acute v$, we also refer to $\acute
+H_{\mdoubleplus}$ as a hyperplane in $\acute{S}_{\mdoubleplus}$.) We refer to
+the non-negative counterpart of these sets as
+$\acute{H}_{\mplus},\acute{G}_{\mplus}$ and $\acute{F}_{\mplus}$.  For any
+finite $Y\in 2^{X}$ consider the matrix $\acute v^{\dd} : Y^{2}\times
+\mbbtpp\rightarrow \R$. For a given $x, y \in Y$ and row $\acute v^{\xy}:
+\mbbtpp \rightarrow \R$ of $\acute{v}^{\dd}$, the associated sets are
 $\acute H^{\{x,y\}}_{\mdoubleplus}$, $\acute G^{\xy}_{\mdoubleplus}$ and
 $\acute F^{\xy}_{\mdoubleplus}$ respectively.
+%It is natural to ask why we do not work with the latter sets throughout.  The
+%answer is that $\posreal^{\mbbtpp}$ has the same topological structure as
+%$\R^{\mbbtpp}$. By working with hyperplanes in $\posreal^{\mbbtpp}$, the key
+%result, Zaslavski's theorem, from the literature on arrangements (of
+%hyperplanes) applies without modification.
+%We briefly
+%introduce this literature
 
-
-    On occasion we refer to the non-negative counterpart of these sets
-    $\acute{H}_{\mplus},\acute{G}_{\mplus}$ and $\acute{F}_{\mplus}$ in
-    $\nnreal^{\mbbtpp}$. It is natural to ask why we do not work with the latter
-    sets throughout. The answer is that $\posreal^{\mbbtpp}$ has the same
-    topological structure as $\R^{\mbbtpp}$. By working with hyperplanes in
-    $\posreal^{\mbbtpp}$, the key result,  Zaslavski's theorem, from the literature on
-    arrangements (of hyperplanes) applies without
-    modification. We briefly introduce this literature following the next lemma
-    which corresponds to lemma 1 of \gsii\ and gives meaning to the statement
-    ``the arrangement generated by a {generalization}''.
-
-  
-   
-  % We abuse terminology, and refer to $\acute H$ as the kernel of $\acute v$
-%  The first lemma in the proof of \cref{thm-mainQ} builds on lemma 1 of \gsii.
- \begin{theoremEnd}{lemma}[two-diverse pairwise representation]\label{lem-insep}
+%Observe that for $\countof X=2$,
+%\cref{lem-insep} constitutes a proof of \cref{thm-mainQ}. For we may take
+%$\mathbf{v}: X \times \mbbt \rightarrow \R$ such that $\mathbf{v}(x,\cdot)=0$
+%and set $\mathbf{v}(y,\cdot)=v^{(x,y)}$, so that $v^{(x,y)}=
+%-\mathbf{v}(x,\cdot) + \mathbf{v}(y,\cdot)$.
+\begin{step}[characterisation of \ref{KQ}–\ref{AQ}, \twodiv\ and novel
+  {generalization}s]\label{step-twodiv} The following proposition corresponds to
+  lemma 1 of \gsii\ and gives meaning to the statement ``the arrangement
+  generated by a {generalization}''. 
  
-   Let $\aext$ be a $Y$-{generalization} of $\preceq_{\mbbj}$.  $\aext$ satisfies
-   \ref{KQ}--\ref{AQ} and \twodiv\ holds on $Y$, if, and only if, there exists a
-   matrix $\acute{v}^{(\cdot,\cdot)} : Y^{2} \times \mbbtpp \rightarrow \R$
-   such that, for every $x,y\in Y$, row
-   $\acute{v}^{(x,y)}: \mbbtpp \rightarrow \R$ and its associated spaces
-   $\acute H^{\{x,y\}}_{\mdoubleplus}$ and $\acute G^{\xy}_{\mdoubleplus}$
-   satisfy
-   \begin{enumerate}[label=\textup{(\roman*)}]
-   \item \label{K-insep}
-     $\acute H^{\{x,y\}}_{\mdoubleplus} \cap \mbb Q^{\mbbtpp} = \{J : x \anext_{J} y\}$ and
-     $\acute G ^{\xy}_{\mdoubleplus} \cap \mbb Q^{\mbbtpp}= \{ J: x \asext_{J} y\}$,
-   \item\label{D-insep}
+\begin{theoremEnd}{proposition}\label{prop-insep}
+  For every $Y \subseteq X$, \ref{KQ}--\ref{AQ} and \twodiv\ hold for the
+  $Y$-generalization $\aext$ if, and only if, there exists $\acute{v}^{\dd}:
+  Y^2 \times \mbbt \rightarrow \R$ such that,
+  \begin{enumerate}[label=\textup{(\roman*)}]
+    \item\label{prop-insep-rep} for every $x, y \in Y$ and $J \in \mbbjpp$, $x
+      \aext_J y$ if, and only if, $\langle \acute{v}^{\xy}, J \rangle > 0$$\,;$
+      \textup{and}
+    \item\label{prop-insep-2div} for every $x, y \in Y$, there exists $s, t \in
+      \mbbt$ such that $\acute{v}^{\xy}(s) < 0 < \acute{v}^{\xy}(t)$.
+  \end{enumerate}
+  Moreover, $\acute{v}^{\xy}$ is unique upto multiplication by a positive
+  scalar.
+\end{theoremEnd}
+  \begin{proofEnd}
+  Let $\mc Y = \{Y_\alpha \subseteq Y : \countof Y_\alpha = 2\}$ be the
+    collection of distinct (unordered) pairs in $Y$. For every $Y_\alpha \in
+    \mc Y$, \ref{T} holds simply because $Y_\alpha$ is of cardinality two;
+    moreover, on $Y_\alpha$, \fourdiv\ is equivalent to \twodiv. This allows us
+    to apply theorem 2 of \gsii.\footnote{\citeauthor{gilboa2003inductive}
+    explicitly prove their theorem 1 holds for the case of arbitrary $X$ and
+    $\mbbt$. But although their theorem 2 is stated and proved in the
+    first step (the case where $X, \mbbt < \infty$) of the proof of their
+    theorem 1, steps 2 and 3 of that proof apply equally to their theorem 2.}
+    (Part \ref{D-insep} of the present lemma follows from claim 5 of the proof
+    of lemma 1 of \gsii.) Thus, on $Y_\alpha$, \ref{KQ}–\ref{AQ} and \twodiv\
+    hold if, and only if, there exists of a matrix $v^{\dd}_{\alpha}:
+    Y_\alpha^2 \times \mbbtpp \rightarrow \R$ with rows satisfying condition
+    \ref{prop-insep-rep} of the present lemma.  In particular, \gsii\ yields a
+    matrix representation $v_\alpha : Y_\alpha \times \mbbtpp \rightarrow R$.
+    For $x, y \in Y_\alpha$, take $v^{\xy}_{\alpha} = - v_{\alpha}(x, \cdot) +
+    v_{\alpha}(y, \cdot)$.  For condition \ref{prop-insep-2div}, note that via
+    theorem 2 of \gsii, the matrix $v_\alpha$ is 2-diversified if, and only if,
+    \fourdiv\ holds for $\aext$ on $Y_\alpha$. Thus, for every $\lambda \in
+    \R$, $v_\alpha (x) \not \leq \lambda v_\alpha(y)$ if, and only if, \twodiv.
+    Take $\lambda = 1$ and observe that this implies $v^{\xy}_{\alpha}(s) < 0 <
+    v^{\xy}_{\alpha}(t)$ for some $s, t \in \mbbtpp$.
+ 
+  To extend this to arbitrary $Y \subseteq X$, note that, for some $A'$,
+    $\bigcup\{\mc Y_\alpha : \alpha \in A' \} = Y$. For an arbitrary function
+    $f$, let $\graph f$ denote the graph of that function. To obtain the
+    desired matrix $\acute{v}^{\dd}: Y^2 \times \mbbt \rightarrow \R$, take
+  \begin{equation}
+    \graph \acute{v}^{\dd} = \bigcup \{\graph v^{\dd}_{\alpha} : \alpha \in
+    A'\}.
+  \end{equation}
+% , via
+% \ref{prop-insep-rep}, there exists $J \in \mbbjpp$ such that $\langle
+% v^{\xy}_\alpha, J \rangle > 0$ if, and only if, there exists $J \in
+% \mbbjpp$ such that $x \asext_{J} y$. Take any $J \in \mbbjpp$ such that
+% $\langle v^{\xy}_\alpha, J \rangle > 0$. The fact that $J(t') \geq 0$ for
+% every $t' \in \mbbtpp$ then implies that, for some $t \in \mbbtpp$,
+% $v^{\xy}_\alpha(t) > 0$. Conversely, if, for some $t \in \mbbtpp$,
+% $v^{\xy}_\alpha(t) > 0$, then $x \asext_{J} y$ holds with $J = \delta_t$.
+  \end{proofEnd}
+We refer to a matrix $\acute{v}^{\dd}$ that satisfies condition
+\ref{prop-insep-2div} of \cref{prop-insep} as a \emph{$2$-diverse matrix}. We
+refer to a matrix $\acute{v}^{\dd}$ that satisfies \cref{prop-insep} as a
+$2$-diverse (pairwise) matrix representation of $\ext$.
 
-  $\acute{G}^{\xy}_{\mdoubleplus}$ and $\acute{G}^{\yx}_{\mdoubleplus}$ are
-  both nonempty if $x \neq y$ and both empty otherwise,
+   
+% The first lemma in the proof of \cref{thm-mainQ} builds on lemma 1 of \gsii.
+\begin{theoremEnd}{lemma}[two-diverse pairwise representation]\label{lem-insep}
+  Let $\aext$ be a $Y$-{generalization} of $\preceq_{\mbbj}$.  $\aext$
+  satisfies \ref{KQ}--\ref{AQ} and \twodiv\ holds on $Y$, if, and only if,
+  there exists a matrix $\acute{v}^{(\cdot,\cdot)} : Y^{2} \times \mbbtpp
+  \rightarrow \R$ such that, for every $x,y\in Y$, row $\acute{v}^{(x,y)}:
+  \mbbtpp \rightarrow \R$ and its associated spaces satisfy
+  \begin{enumerate}[label=\textup{(\roman*)}]
+     \item \label{K-insep} $\acute H^{\{x,y\}}_{\mplus} \cap \mbb Q^{\mbbtpp} =
+       \{J: x \anext_{J} y\}$ and $\acute G ^{\xy}_{\mplus} \cap \mbb
+       Q^{\mbbtpp}= \{ J: x \asext_{J} y\}$,
+     \item\label{D-insep} $\acute{G}^{\xy}_{\mdoubleplus}$ and
+       $\acute{G}^{\yx}_{\mdoubleplus}$ are both nonempty if $x \neq y$ and
+       both empty otherwise,
+     \item\label{skew-insep} $\acute H^{\{y,x\}}_{\mdoubleplus} =\acute
+       H^{\{x,y\}}_{\mdoubleplus}$ (and in particular $\acute{v} ^ \yx = -
+       \acute{v} ^ \xy$),
+     \item\label{unique-insep} $\acute H^{\{x,y\}}_{\mdoubleplus}$ is the
+       unique hyperplane in $\posreal^{\mbbtpp}$ that separates $\{J : x
+       \asextb_{J} y\}$ and $\{ J: y \asextb_{J} x\}$.
+  \end{enumerate}
 
-\item\label{skew-insep}
-
-  $\acute H^{\{y,x\}}_{\mdoubleplus} =\acute H^{\{x,y\}}_{\mdoubleplus}$ (and in particular
-  $\acute{v} ^ \yx = - \acute{v} ^ \xy$),
-
-% \item\label{nondom-insep}
-
-%   $\acute{v}^{\xy} \not \leq 0$ (\ie\ $\acute G^{\xy}$ is nonempty), and
-
-\item\label{unique-insep}
-
-  $\acute H^{\{x,y\}}_{\mdoubleplus}$ is the unique hyperplane in $\posreal^{\mbbtpp}$ that
-  separates $\{J : x \asextb_{J} y\}$ and $\{ J: y \asextb_{J} x\}$
-  ($\acute{v}^{\xy}$ is unique upto multiplication by a positive scalar).
-
-\end{enumerate}
 Moreover, $\aext$ is novel if, and only if, for every $t \neq \novel$,
-$\acute{v}^{\dd}(t) \neq \acute{v}^{\dd}(\novel)$.
-
+  $\acute{v}^{\dd}(t) \neq \acute{v}^{\dd}(\novel)$.
 \end{theoremEnd}
 \begin{proofEnd}%[Proof of \cref{lem-insep}]
   
-  In addition to \ref{KQ}–\ref{AQ}, the proof of lemma 1 of \gsii\ only appeals
-  to \twodiv. That lemma, like the present one, does not require \ref{TQ}, or
-  any diversity condition stronger than \twodiv\ since it is only result about
-  distinct pairs of elements $x$ and $y$ in isolation.
+%  In addition to \ref{KQ}–\ref{AQ}, the proof of lemma 1 of \gsii\ only appeals
+%  to \twodiv. That lemma, like the present one, does not require \ref{TQ}, or
+%  any diversity condition stronger than \twodiv\ since it is a result about
+%  distinct pairs of elements $x$ and $y$ in isolation.
+  
 
-  \Wlog\ we suppress reference to the acute accent.  Modulo notation, lemma 1 of
-  \gsii\ and its proof show that \ref{KQ}–\ref{AQ}, in addition to \twodiv\ on
-  $Y$, imply the existence $v^{\dd}$ with rows satisfying properties
-  \ref{K-insep}–\ref{unique-insep} of the present lemma.
-
-  We now prove the converse: that properties \ref{K-insep}–\ref{unique-insep}
-  imply the axioms hold.  For \ref{KQ}, fix arbitrary $J \in \mbbj$. For every
-  $x,y \in Y$, the fact that $\langle v^{\xy},\cdot \rangle$ is real-valued and,
-  via property \ref{skew-insep}, equal to $-\langle v^{\yx},\cdot \rangle$,
-  ensures that $J$ belongs to one of the sets $H_{\mdoubleplus}^{\{x,y\}}$,
-  $G_{\mdoubleplus}^{\xy}$ and $G_{\mdoubleplus}^{\yx}$. Then property
-  \ref{K-insep} and the fact that $J$ belongs to $\mbb Q^{\mbbtpp}$ completes
-  the proof. \ref{CQ} and \ref{AQ} hold by virtue of the fact that
-  $\langle v^{\xy},\cdot \rangle$ is linear on $\posreal^{\mbbtpp}$. Finally, we
-  prove that \twodiv\ holds. Take any distinct $x,y \in Y$. Then, via property
-  \ref{D-insep}, both $G_{\mdoubleplus}^{\xy}$ and $G_{\mdoubleplus}^{\yx}$ are
-  nonempty. By continuity of $\langle v^{\xy}, \cdot \rangle$,
-  $G_{\mdoubleplus}^{\xy}$ and $G_{\mdoubleplus}^{\yx}$ are also open in
-  $\posreal^{\mbbtpp}$. As such they each contain a rational vector, so that, by
-  property \ref{K-insep}, \twodiv\ holds on $\{x,y\}$.
- 
-  We now prove the characterisation of novel {generalization}s. Let $\ext$ be a novel
-  $Y$-{generalization} with matrix representation $v^{\dd}$ satisfying parts
-  \ref{K-insep}–\ref{unique-insep} of the lemma.  Fix arbitrary
-  $t \neq \novel$.  Then \cref{def-{generalization}Q} implies the existence of
-  $J \in \mbbj$ and $L = J \times 0 \in \mbbjp$ such that
-  $\extb _ { L + \delta_{t} } \neq \extb _ { L + \delta_{\novel} }$.  \Wlog,
-  consider the case where, for some $x , y \in Y$, it holds that both
-  $y \ext _ { L + \delta _ t } x$ and $x \sext _ { L + \delta_ \novel } y
- $. Equivalently,
+  In the remainder of the proof of the present lemma, we suppress reference to
+  the acute accent.  It remains for us to prove the characterisation of novel
+  {generalization}s.  Let $\ext$ be a novel $Y$-{generalization} with matrix
+  representation $v^{\dd}$ satisfying parts \ref{K-insep}–\ref{unique-insep} of
+  the lemma.  Fix arbitrary $t \neq \novel$.  Then \cref{def-{generalization}Q}
+  implies the existence of $J \in \mbbj$ and $L = J \times 0 \in \mbbjp$ such
+  that $\extb _ { L + \delta_{t} } \neq \extb _ { L + \delta_{\novel} }$.
+  \Wlog, consider the case where, for some $x , y \in Y$, it holds that both $y
+  \ext _ { L + \delta _ t } x$ and $x \sext _ { L + \delta_ \novel } y $.
+  Equivalently,
 \begin{linenomath*}
-  \begin{equation*} \langle v^{\xy}, L + \delta_ t \rangle \leq 0 <\langle v^{\xy}, L + \delta_
+  \begin{equation*} \langle v^{\xy}, L + \delta_ t \rangle \leq 0 <\langle
+    v^{\xy}, L + \delta_
   \novel\rangle \end{equation*}
 \end{linenomath*}
- which, via linearity of $\langle v^{\xy}, \cdot \rangle$, we
- may rearrange to obtain
+ which, via linearity of $\langle v^{\xy}, \cdot \rangle$, we may rearrange to
+  obtain
  \begin{linenomath*}
   \begin{equation}\label{eq-nov}
     v^{\xy} ( t ) \leq -\langle v^{\xy}, L \rangle < v ^ \xy ( \novel ) .
@@ -3944,16 +4029,6 @@ $L = \lambda \delta ^{ \novel } _ s$ and observe that
   $\extb _ { L + \delta ^{ \novel } _ t } \neq \extb _ { L + \delta ^{ \novel }
     _ \novel }$.
 \end{proofEnd}
-We refer to a matrix $v^{\dd}$ that satisfies condition \ref{D-insep} of
-\cref{lem-insep} (for every distinct $x,y\in Y$) as a \emph{$2$-diverse
-  matrix}. If $v^{\dd}$ satisfies all the conditions of \cref{lem-insep} with
-respect to a given {generalization} $\ext$ and, in addition, $x=y$ implies
-$v^{\xy}= 0$, then $v^{\dd}$ is a $2$-diverse pairwise representation of
-$\ext$.\footnote{Note that for $\countof X=2$, \cref{lem-insep} constitutes a
-  proof of \cref{thm-mainQ}. For we may take
-  $\mathbf{v}: X \times \mbbt \rightarrow \R$ such that $\mathbf{v}(x,\cdot)=0$
-  and set $\mathbf{v}(y,\cdot)=v^{(x,y)}$, so that
-  $v^{(x,y)}= -\mathbf{v}(x,\cdot) + \mathbf{v}(y,\cdot)$.}
 
 % \begin{remark*}
 %   Note that although \cref{lem-insep} takes the {generalization} as primitive, we will
@@ -4015,7 +4090,7 @@ is \emph{centerless}, then $\mc L_{\mdoubleplus}$ is a meet semilattice with
 multiple maxima: as in \cref{eg-zaslavski}.  Extending our notation: if
 $Y = \{x,y,z,w\}$, then the unique intersection $A^{Y}$ is the (nonempty)
 \emph{center} of $\mc A^{Y} = \mc H$. By $A^{\{x,y,z\}}$, we mean the
-intersection over $\mc A^{\{x,y,z\}} \defeq \{H^{\{i,j\}}: \text{$i\neq j$in
+intersection over $\mc A^{\{x,y,z\}} \defeq \{H^{\{i,j\}}: \text{$i\neq j$ in
  $\{x,y,z\}$}\}$. Finally, by $A^{\{x,y\}\{z,w\}}$, we mean the intersection
 over $\mc A^{\{x,y\}\{z,w\}} \defeq \{H^{\{x,y\}},H^{\{z,w\}}\}$.
 
@@ -4457,31 +4532,74 @@ $Y$-{generalization}s that are novel is nonempty. In this case, \stability\ impl
 % \end{comment}
  \end{step}
 \setcounter{step}{3}
-\begin{step}[for arbitrary $X$ and $\mbbt$, the induction
-  argument]\label{step-induction}
-  The present step is closely related to lemma 3 and claim 9 of \gsii. There the
-  authors establish that, when \fourdiv\ holds, $3$-Jac is a necessary and
-  sufficient condition for the (global) Jacobi identity to hold on $X$.
-  \gsii\ relies on the fact that \fourdiv\ implies linear independence of
-  $\{v^{\xy},v^{\yz}, v^{\zw}\}$ for every four distinct elements
-  $x,y,z,w \in X$. In the present setting, where \condtwodiv\ only implies
-  linear independence of pairs $\{v^{\xy},v^{\yz}\}$, the Jacobi identity
-  requires \fourjac.
 
+\begin{step}[for $\countof \mbbt < \infty$, the concluding arguments in the
+  proof of
+  \cref{thm-mainQ}]\label{step-conc-mainQ} In \cref{step-condtwodiv} we showed
+  that \ref{KQ}–\ref{c2dQ} hold if, and only if, $\preceq_{\mbbj}$ has a
+  conditionally $2$-diverse pairwise representation.  In \cref{step-stability},
+  we showed that, when $\preceq_{\mbbj}$ satisfies \ref{TQ}–\ref{c2dQ}, a
+  necessary and sufficient condition for \fourjac\ is \ref{PQ}.  In
+  \cref{step-induction}, via (mathematical) induction, we showed that
+  conditionally $2$-diverse Jacobi representations of $Y$-{generalization}s of
+  $\preceq_{\mbbj}$ such that $\countof Y = 4$, can be patched together to
+  obtain a conditionally $2$-diverse Jacobi representation of $\preceq_{\mbbj}$
+  (on all of $X$, regardless of cardinality). The fact that \ref{TQ} is
+  necessary for a Jacobi representation follows from \gsii.  As a consequence,
+  \ref{TQ}–\ref{c2dQ} and \ref{PQ} are necessary and sufficient for a
+  conditionally $2$-diverse Jacobi representation of $\preceq_{\mbbj}$. The
+  following argument then completes the proof of \cref{thm-mainQ}.
 
+  Let $v^{\dd}$ be a (conditionally $2$-diverse) Jacobi representation of
+  $\preceq_{\mbbj}$ and define $\mathbf{v}: X\times \mbbt \rightarrow \R$ as
+  follows. Fix arbitrary $w\in X$, and let $\mathbf{v}(w,\cdot) = 0$. Then, for
+  every $x\in X$, let $\mathbf{v}(x,\cdot) = v^{\wx}$. Recalling that $v^{\wx}=
+  -v^{\xw}$, note that, since the rows of $v^{\dd}$ satisfy the Jacobi
+  identity, for every $x,y\in X$, we have
+\begin{linenomath*}
+    \begin{equation*}v^{\xy}= v^{\xw}+v^{\wy} = -\mathbf{v}(x,\cdot) +
+    \mathbf{v}(y,\cdot).\end{equation*}
+\end{linenomath*}
+To see that \ref{rep-mainQ} holds note that, for every $J\in \mbbj$, we have $x
+  \preceq_{J} y$, if, and only if, $0 \leq \langle v^{\xy}, J \rangle$, if, and
+  only if, $\langle v(x,\cdot), J \rangle \leq \langle \mathbf{v}(y,\cdot), J
+  \rangle$.  For \ref{rows-mainQ}, note that, since $v^{\dd}$ is a
+  conditionally $2$-diverse pairwise representation, for every $x,y\in X$,
+\begin{linenomath*}
+  \begin{equation*}0 \not \leq v^{\xy} = - \mathbf{v}(x,\cdot) +
+  \mathbf{v}(y,\cdot).\end{equation*}
+\end{linenomath*} 
+Finally, for every $z\in X$, we have, for every $\lambda \in \R$, $v^{\zx} \neq
+  \lambda v^{\zy}$. Equivalently,
+\begin{linenomath*}
+  \begin{equation*} v(x,\cdot) \neq (1-\lambda) \mathbf{v}(z,\cdot ) + \lambda
+    \mathbf{v}(y,\cdot) . \end{equation*}
+\end{linenomath*}
+\Cref{thm-main} part II, on uniqueness, follows from \cref{lem-induction} and,
+  without modification, part 3 of the proof of theorem 2 of \gsii\ (see page
+  23).
+\end{step}
+ %for lemmata/steps in the proof of thm-foureq
+\begin{step}[for arbitrary $X$ and $\mbbt < \infty$, the induction
+  argument]\label{step-induction} The present step is closely related to lemma
+  3 and claim 9 of \gsii. There the authors establish that, when \fourdiv\
+  holds, $3$-Jac is a necessary and sufficient condition for the (global)
+  Jacobi identity to hold on $X$.  \gsii\ relies on the fact that \fourdiv\
+  implies linear independence of $\{v^{\xy},v^{\yz}, v^{\zw}\}$ for every four
+  distinct elements $x,y,z,w \in X$. In the present setting, where \condtwodiv\
+  only implies linear independence of pairs $\{v^{\xy},v^{\yz}\}$, the Jacobi
+  identity requires \fourjac.
  % induction argument
 \begin{theoremEnd}{lemma}[Jacobi representation]\label{lem-induction} Let
   $\preceq_{\mbbj}$ have a conditionally-$2$-diverse representation $u^{\dd}$.
   Then \fourjac\ holds if, and only if, $\preceq_{\mbbj}$ has a Jacobi
-  representation $v^{\dd}$.  Moreover, for every Jacobi representation
-  $\mathbf v ^{ \dd }$ of $\preceq_{\mbbj}$ there exists $\lambda > 0$
-  satisfying $\mathbf v ^{ (\cdot, \cdot) } = \lambda v ^{(\cdot, \cdot)}$.
-
+  representation $v^{\dd}$.  Moreover, for every Jacobi representation $\mathbf
+  v ^{ \dd }$ of $\preceq_{\mbbj}$ there exists $\lambda > 0$ satisfying
+  $\mathbf v ^{ (\cdot, \cdot) } = \lambda v ^{(\cdot, \cdot)}$.
 \end{theoremEnd}
-
 \begin{proofEnd}\label{proof-lem-induction}%[Proof of \cref{lem-induction}]
-  Note that, when $1 \leq \lvert X \rvert \leq 2$, \fourjac\ holds vacuously and
-  $\preceq_{\mbbj}$ has a Jacobi representation via \cref{lem-insep}.  For
+  Note that, when $1 \leq \lvert X \rvert \leq 2$, \fourjac\ holds vacuously
+  and $\preceq_{\mbbj}$ has a Jacobi representation via \cref{lem-insep}.  For
   general $X$, the fact that \fourjac\ is necessary for $\preceq_{\mbbj}$ to
   have a Jacobi representation follows simply because if the Jacobi identity
   holds on $X$, then it holds on every $Y\subseteq X$. For the sufficiency of
@@ -4593,137 +4711,97 @@ and appealing to linear independence of $\{u^{\yw}, u^{\wz}\}$ then yields the
 desired equalities $\beta = \beta'$ and $\sigma = \sigma '$.
   
   As a consequence of the above argument, for every $y , z \in Y$, take
-  $\hat{v}^{\yw}$ and $\hat{v}^{\wz}$ to be the unique vectors in
-  $\R^{\mbbt}$ that solve the equation
-  $\hat{v} ^{ \yw } + \hat{v} ^{ \wz } = \v ^{ \yz }$. For every $y , z \in Y$,
-  let $\hat{v}^{\yz} = \v^{\yz}$ and $\hat{v}^{(w,w)} = 0$.  Then the matrix
-  $\hat{v}^{\dd}$ with row vectors
-  $\left\{ \hat{v}^{\xy}: x , y \in W \right\}$ is a Jacobi representation of
-  $\hext$.
+  $\hat{v}^{\yw}$ and $\hat{v}^{\wz}$ to be the unique vectors in $\R^{\mbbt}$
+  that solve the equation $\hat{v} ^{ \yw } + \hat{v} ^{ \wz } = \v ^{ \yz }$.
+  For every $y , z \in Y$, let $\hat{v}^{\yz} = \v^{\yz}$ and $\hat{v}^{(w,w)}
+  = 0$.  Then the matrix $\hat{v}^{\dd}$ with row vectors $\left\{
+    \hat{v}^{\xy}: x , y \in W \right\}$ is a Jacobi representation of $\hext$.
 \end{proof}
-Our proof of \cref{claim-induction-well-defined} shows that the {generalization} to $W$
-holds for any initial subsegment of $Y$ consisting of four elements. Our proof
-thereby accounts for the case where  $X$ is infinite and  $w$  is a limit ordinal.
+Our proof of \cref{claim-induction-well-defined} shows that the
+{generalization} to $W$ holds for any initial subsegment of $Y$ consisting of
+four elements. Our proof thereby accounts for the case where $X$ is infinite
+and $w$ is a limit ordinal.
 \end{proofEnd}
 \end{step}
 
-\begin{step}[for $\countof \mbbt < \infty$, the concluding arguments in the
-  proof of
-  \cref{thm-mainQ}]\label{step-conc-mainQ} In \cref{step-condtwodiv} we showed
-  that \ref{KQ}–\ref{c2dQ} hold if, and only if, $\preceq_{\mbbj}$ has a
-  conditionally $2$-diverse pairwise representation.  In \cref{step-stability},
-  we showed that, when $\preceq_{\mbbj}$ satisfies \ref{TQ}–\ref{c2dQ}, a
-  necessary and sufficient condition for \fourjac\ is \ref{PQ}.  In
-  \cref{step-induction}, via (mathematical) induction, we showed that
-  conditionally $2$-diverse Jacobi representations of $Y$-{generalization}s of
-  $\preceq_{\mbbj}$ such that $\countof Y = 4$, can be patched together to
-  obtain a conditionally $2$-diverse Jacobi representation of $\preceq_{\mbbj}$
-  (on all of $X$, regardless of cardinality). The fact that \ref{TQ} is
-  necessary for a Jacobi representation follows from \gsii.  As a consequence,
-  \ref{TQ}–\ref{c2dQ} and \ref{PQ} are necessary and sufficient for a
-  conditionally $2$-diverse Jacobi representation of $\preceq_{\mbbj}$. The
-  following argument then completes the proof of \cref{thm-mainQ}.
-
-  Let $v^{\dd}$ be a (conditionally $2$-diverse) Jacobi representation of
-  $\preceq_{\mbbj}$ and define $\mathbf{v}: X\times \mbbt \rightarrow \R$ as
-  follows. Fix arbitrary $w\in X$, and let $\mathbf{v}(w,\cdot) = 0$. Then, for
-  every $x\in X$, let $\mathbf{v}(x,\cdot) = v^{\wx}$. Recalling that
-  $v^{\wx}= -v^{\xw}$, note that, since the rows of $v^{\dd}$ satisfy the Jacobi
-  identity, for every $x,y\in X$, we have
-\begin{linenomath*}
-    \begin{equation*}v^{\xy}= v^{\xw}+v^{\wy} = -\mathbf{v}(x,\cdot) + \mathbf{v}(y,\cdot).\end{equation*}
-\end{linenomath*}
-To see that
-  \ref{rep-mainQ} holds note that, for every $J\in \mbbj$, we have
-  $x \preceq_{J} y$, if, and only if, $0 \leq \langle v^{\xy}, J \rangle$, if,
-  and only if, $\langle v(x,\cdot), J \rangle \leq \langle \mathbf{v}(y,\cdot), J \rangle$.
-  For \ref{rows-mainQ}, note that, since $v^{\dd}$ is a conditionally
-  $2$-diverse pairwise representation, for every $x,y\in X$,
-\begin{linenomath*}
-  \begin{equation*}0 \not \leq v^{\xy} = - \mathbf{v}(x,\cdot) + \mathbf{v}(y,\cdot).\end{equation*}
-\end{linenomath*}  
-Finally, for every $z\in X$, we have, for every $\lambda \in \R$,
-$v^{\zx} \neq \lambda v^{\zy}$. Equivalently,
-\begin{linenomath*}
-  \begin{equation*} v(x,\cdot) \neq (1-\lambda) \mathbf{v}(z,\cdot ) +  \lambda
-    \mathbf{v}(y,\cdot) . \end{equation*}
-\end{linenomath*}
-\Cref{thm-main} part II, on uniqueness, follows from \cref{lem-induction} and,
-without modification, part 3 of the proof of theorem 2 of \gsii\ (see page 23).
-\end{step}
- %for lemmata/steps in the proof of thm-foureq
-
 \begin{step}[the case of arbitrary $X$ and $\mbbt$]\label{step-infinite}
   Note that the inner product we have been working with throughout is
-  well-defined on the infinite-dimensional, linear subspace
-  $\R^{\oplus \mbbtpp} \subset \R^{\mbbtpp}$ of vectors with finite
-  support. Indeed, for every $v \in \R^{\mbbtpp}$ and
-  $J \in \R^{\oplus\mbbtpp}_{\mplus}$, the inner product is a finite sum
+  well-defined on the infinite-dimensional, linear subspace $\R^{\oplus
+  \mbbtpp} \subset \R^{\mbbtpp}$ of vectors with finite support. Indeed, for
+  every $v \in \R^{\mbbtpp}$ and $J \in \R^{\oplus\mbbtpp}_{\mplus}$, the inner
+  product is a finite sum
 \begin{linenomath*}
-  \begin{equation*}\langle v, J\rangle = \sum_{\{t:J(t)>0\}}v(t)J(t).\end{equation*}
+  \begin{equation*}\langle v, J\rangle =
+  \sum_{\{t:J(t)>0\}}v(t)J(t).\end{equation*}
   \end{linenomath*}
   Next note that $\mbbjpp$ is just the set of rational-valued vectors in
   $\R^{\oplus \mbbtpp}$. As such, the notions of orthogonality and hyperplanes
   carry over to the present, infinite-dimensional, setting.  \Wlog, let $\aext$
-  be an improper $Y$-{generalization} of $\preceq_{\mbbj}$ and note that, for every
-  $Y\subseteq X$ of cardinality $2,3$ or $4$, the representation
-  $\acute{u}^{\dd}$ of $\aext$ has finite rank $\acute{\mathbf r}$. The
-  \emph{essentialization} $\ess(\acute{\mc H})$ of the associated arrangement
-  $\acute{\mc H}$ in $\R^{\oplus \mbbt}$ is the arrangement we obtain via the
-  by orthogonally projecting $\acute{\mc H}$ onto the
-  ($\acute{\mathbf r}$-dimensional) span of $\acute{u}^{\dd}$. Let
+  be an improper $Y$-{generalization} of $\preceq_{\mbbj}$ that satisfies
+  \ref{KQ}-\ref{p3dQ}.  When $\countof \mbbt = \infty$, \cref{lem-insep}, does
+  not hold (since the interior of $\R^{\oplus\mbbtpp}$ is empty). Nevertheless,
+  the preceding results extend to the present setting via the notion of an
+  \emph{essentialization}.  First note that, via theorem 2 of \gsii, there
+  exists a representation $\acute{u}^{\dd}$ of $\aext$. The construction is the
+  same as the one we present in proof of
+  \cref{lem-insep}.
+  For every $Y\subseteq X$ of
+  cardinality $2,3$ or $4$, the representation $\acute{u}^{\dd}$ of $\aext$ has
+  finite rank $\acute{\mathbf r}$. The \emph{essentialization} $\ess(\acute{\mc
+  H})$ of the associated arrangement $\acute{\mc H}$ in $\R^{\oplus \mbbt}$ is
+  the arrangement we obtain via the by orthogonally projecting $\acute{\mc H}$
+  onto the ($\acute{\mathbf r}$-dimensional) span of $\acute{u}^{\dd}$. Let
   $\textup{p}: \R^{\oplus \mbbt}\rightarrow S = \spann\{\acute{u}^{\dd}\}$
-  denote this projection. Then, for any $J\in \mbbjpp$, $J$ is the sum of
-  $\textup{p}(J)$ and a term that belongs to the kernel of $u^{\xy}$, for every
-  $x,y \in Y$. Thus, for every $J \in \R^{\oplus\mbbt}$,
-  $\langle u^{\xy}, J \rangle_{\,\R^{\oplus\mbbt}} = \langle u^{\xy},
-  \textup{p}(J) \rangle_{S}$. As such, all the structure of $\acute{\mc H}$ in
-  $\R^{\oplus\mbbt}$ is preserved by $\ess(\acute{\mc H})$ in the
-  finite-dimensional subspace $S$.
+  denote this projection.  Then, for every $x,y \in Y$, any $J\in \mbbjpp$, $J$
+  is the sum of $\textup{p}(J)$ and a term that lies in the null space of
+  $\langle \acute{u}^{\xy}, \cdot \rangle$. Thus, for every $J \in
+  \R^{\oplus\mbbt}$, $\langle \acute{u}^{\xy}, J \rangle = \langle
+  \acute{u}^{\xy}, \textup{p}(J) \rangle$. As such, all the structure of
+  $\acute{\mc H}$ in $\R^{\oplus\mbbt}$ is preserved by $\ess(\acute{\mc H})$
+  in the finite-dimensional subspace $S$.  On this space, define an inner
+  product $\langle \cdot , \cdot \rangle_{S}$.
 
   For $n = \acute{\mathbf{r}}$, take $\mc T= \{T_{i}: i = 1, \dots , n\}$ to be
-  an orthonormal basis for $S$. Then let $T: R^{n} \rightarrow S$ to be the
-  matrix with columns $\mc T$. Then, for every $J \in \R^{n}$,
-  $T(J) = J_{1} T_{1} + \cdots + J_{n}T_{n}$, where $J_{i} \in \R$ for each
-  $i$. Via orthonormality of $\mc T$,
-
+  an orthonormal basis for $S$. Then let $T: \R^{n} \rightarrow S$ to be the
+  matrix with columns $\mc T$. Then, for every $J \in \R^{n}$, $T(J) = J_{1}
+  T_{1} + \cdots + J_{n}T_{n}$, where $J_{i} \in \R$ for each $i$. Via
+  orthonormality of $\mc T$,
+%
+%\begin{linenomath*}
+%\begin{equation*}
+%\langle T_{i} , T_{j} \rangle_{S} = \left\{ 
+%\begin{array}{ll}
+%1 & \text{if $i = j$, and}\\
+%0 & \text{otherwise.}
+%\end{array}
+%\right.
+%\end{equation*}
+%\end{linenomath*} 
+it then follows that, for every pair of vectors $v,J \in \R^{n}$, we have
 \begin{linenomath*}
-\begin{equation*}
-\langle  T_{i} , T_{j} \rangle_{S} = \left\{ 
-\begin{array}{ll}
-1 & \text{if $i = j$, and}\\
-0 & \text{otherwise.}
-\end{array}
-\right.
-\end{equation*}
-\end{linenomath*} 
-\begin{linenomath*}
-It then follows that, for every pair of vectors $v,J \in
-  \R^{n}$, we have
-\begin{equation*} \langle T(v) , T(J) \rangle_{S} = \sum_{i,j = 1}^{n} v_{i}J_{j} \,\langle  T_{i},
+\begin{equation*} \langle T(v) , T(J) \rangle_{S} = \sum_{i,j = 1}^{n}
+  v_{i}J_{j} \,\langle T_{i},
    T_{j} \rangle_{S} = \langle v, J \rangle_{\,\R^{n}}.\end{equation*}
 \end{linenomath*}
-Now, for each row $u^{\xy}$ of $u^{\dd}$, let
-$\mathbf{\acute{u}}^{\xy} \defeq T^{-1} (\acute{u}^{\xy})$, and let
-$\mathbf{\acute{u}}^{\dd}$ denote the matrix with rows
-$\{\mathbf{\acute{u}}^{\xy}: x,y\in Y \}$. Then let
-$\mathbf{\aext}= \langle \mathbf{\aext}_{J}: J \in \mbb Q_{\mplus}^{n} \rangle$
-denote the {generalization} generated by $\mathbf{\acute{u}}^{\dd}$ in
-$\mbb Q_{\mplus}^{n}$, for every $x,y\in Y$ and every
-$J \in \mbb Q_{\mplus}^{n}$, satisfy $x \mathbin{\mathbf{\aext}}_{J} y$ if, and
-only if, $\langle \mathbf{\acute{u}}^{\xy},J \rangle_{\,\R^{n}} \geq 0$. Then,
-by construction, $\langle \mathbf{\acute{u}}^{\xy},J \rangle_{\,\R^{n}} \geq 0$
-if, and only if $\langle \acute{u}^{\xy}, T(J) \rangle_{S} \geq 0$. Thus,
-$x \mathbin{\mathbf{\aext}}_{J} y$ if, and only if, $x \aext_{T(J)} y$.
 
-Finally, note that, with the exception of \cref{lem-induction} of
+Let $\mathbf{\acute{u}}^{\dd}$ denote the matrix with rows
+$\left\{\mathbf{\acute{u}}^{\xy} \defeq (T^{-1}\ccirc P)
+\left(\acute{u}^{\xy}\right): x, y \in Y\right\}$. Then let $\mathbf{\aext}=
+\langle \mathbf{\aext}_{J}: J \in \mbb Q_{\mplus}^{n} \rangle$ denote the
+Y-{generalization} generated by $\mathbf{\acute{u}}^{\dd}$ in $\mbb
+Q_{\mplus}^{n}$, for every $x,y\in Y$ and every $J \in \mbb Q_{\mplus}^{n}$,
+satisfy $x \mathbin{\mathbf{\aext}}_{J} y$ if, and only if, $\langle
+\mathbf{\acute{u}}^{\xy},J \rangle_{\,\R^{n}} \geq 0$. Then, by construction,
+$\langle \mathbf{\acute{u}}^{\xy},J \rangle_{\,\R^{n}} \geq 0$ if, and only if
+$\langle \acute{u}^{\xy}, T(J) \rangle_{S} \geq 0$. Thus, $x
+\mathbin{\mathbf{\aext}}_{J} y$ if, and only if, $x \aext_{T(J)} y$.
+
+Next note that, with the exception of \cref{lem-induction} of
 \cref{step-induction}, all results in the proof of \cref{thm-mainQ} involve
-$Y$-{generalization}s $\ext$ of $\preceq_{\mbbj}$ for $\countof Y = 2,3$ or $4$.  By
-taking $\mbbt_{Y} = \{1,\dots, n\}$ and substituting for $\mbbt$ and then
-working with $\mathbf{\aext}$ and $\mathbf{\acute{u}}^{\dd}$ in $\R^{n}$, all
-these results extend to arbitrary $X$ and $\mbbt$.  And, since
-\cref{step-induction} holds for arbitrary $\mbbt$ and $X$, the proof of
-\cref{thm-mainQ} is indeed complete.
+$Y$-{generalization}s $\ext$ of $\preceq_{\mbbj}$ for $\countof Y = 2,3$ or
+$4$. Thus, via the above equivalence, all these results extend to arbitrary
+$\mbbt$.  And, since \cref{step-induction} holds for arbitrary $\mbbt$
+and $X$, the proof of \cref{thm-mainQ} is indeed complete. 
 \end{step}
 
 
@@ -4736,17 +4814,17 @@ these results extend to arbitrary $X$ and $\mbbt$.  And, since
    and only if, the Jacobi identity holds (for some pairwise representation of
    $\preceq_{\mbbj}$).
  \end{theorem}
- Via \cref{lem-induction}, it suffices to show that \stability\ is equivalent to
- \fourjac. Then by construction, \stability\ and \fourjac\ are conditions that
- apply independently to each subset $Y$ of $X$ that has cardinality $3$ or $4$.
- Throughout the present section, $Y\subseteq X$ has cardinality $3$ or $4$ and
- $\ext$ denotes the improper $Y$-{generalization} of $\preceq_{\mbbj}$. This will
- allow us to apply the translation of \cref{step-infinite} and work in a finite
- dimensional space. But first we need to rule out the following case.
- \paragraph{Suppose there is no testworthy $Y$-{generalization} that is
- novel,}\hskip-7pt In this case, \stability\ holds vacuously on $Y$. The follow
- lemma confirms that, in this case, \fourdiv\ holds and theorem 2 of \gsii\
- applies, so that \fourjac\ holds on $Y$.
+ Via \cref{lem-induction}, it suffices to show that \stability\ is equivalent
+ to \fourjac. Then by construction, \stability\ and \fourjac\ are conditions
+ that apply independently to each subset $Y$ of $X$ that has cardinality $3$ or
+ $4$.  Throughout the present section, $Y\subseteq X$ has cardinality $3$ or
+ $4$ and $\ext$ denotes the improper $Y$-{generalization} of $\preceq_{\mbbj}$.
+ This will allow us to apply the translation of \cref{step-infinite} and work
+ in a finite dimensional space. But first we need to rule out the following
+ case.  \paragraph{Suppose there is no testworthy $Y$-{generalization} that is
+ novel.}\hskip-7pt In this case, \stability\ holds vacuously on $Y$. The
+ following lemma then confirms that \fourdiv\ holds and theorem 2 of
+ \gsii\ applies, so that \fourjac\ holds on $Y$.
 % Since we need to study what happens when $\mbbc_{/\sim^{\star}}$ is infinite,
  % lem test empty implies diversity
 % This lemma does not rely on finiteness of $\mbbt$.
@@ -4756,8 +4834,8 @@ these results extend to arbitrary $X$ and $\mbbt$.  And, since
 % Q^{\oplus \,\mbbc_{/\sim^{\star}}}_{\mplus}$ instead of $\mbbj = \mbb
 % Q^\mbbt_{\mplus}$.
 \begin{lemma}\label{lem-test-empty-fourdiv}
-  If every testworthy $Y$-{generalization} of $\preceq_{\mbbj}$ is regular, then
-  $\lvert \mbbt \rvert = \infty$ and \fourdiv\ holds on $Y$.
+  If every testworthy $Y$-{generalization} of $\preceq_{\mbbj}$ is regular,
+  then $\lvert \mbbt \rvert = \infty$ and \fourdiv\ holds on $Y$.
 \end{lemma}
 
 \begin{proof}[Proof of \cref{lem-test-empty-fourdiv}] \label{proof-test-empty-fourdiv}
@@ -5041,25 +5119,25 @@ It therefore remains for us to show that every member of
 $\acute{\mc G}_{\mdoubleplus}$ is associated with a total ordering of $Y$.
 Since $\acute{\mc H}_{\mdoubleplus}$ is central,
 $\acute{\mc G}_{\mdoubleplus} \equiv \acute{\mc G}$, we
-suppress reference to $\mdoubleplus$. Let $\{\acute{G}^{r}: r = 1, \dots 6\}$ be
-an enumeration of $\acute{\mc G}$ such that $\acute{G}^{r}$ and
-$\acute{G}^{r+1}$ (\textup{mod} 6) are separated by a single hyperplane in
+suppress reference to $\mdoubleplus$. Let $\{\acute{G}_{r}: r = 1, \dots 6\}$ be
+an enumeration of $\acute{\mc G}$ such that $\acute{G}_{r}$ and
+$\acute{G}_{r+1}$ (\textup{mod} 6) are separated by a single hyperplane in
 $\acute{\mc H}$. Moreover, let the first four members of this enumeration
 intersect $\mbbj \times \{0\}$. Then, since
 $\extb = \langle \extb_{I}: I \in \mbbj \rangle$ satisfies \ref{TQ},
-$\acute{G}^{1}, \dots, \acute{G}^{4}$ are associated with total orders. Take
-$L \in \acute{G}^{5} \cap \mbbjp$ and consider the affine path
+$\acute{G}_{1}, \dots, \acute{G}_{4}$ are associated with total orders. Take
+$L \in \acute{G}_{5} \cap \mbbjp$ and consider the affine path
 $\lambda \mapsto \phi(\lambda)= (1-\lambda)\acute{L} + \lambda \acute{J}$, where
 $\acute{J}$ is defined in \cref{prop-central-testworthy}. For some rational
 $\lambda^{*}$ sufficiently close to, but greater than, $1$,
-$L^{*} = \phi(\lambda^{*})$ belongs to $\acute{G}^{*} \cap \mbbjp$ for some
-$\acute{G}^{*} \in \acute{\mc G}$. Since $\phi(1) = \acute{J}$ belongs to the
+$L^{*} = \phi(\lambda^{*})$ belongs to $\acute{G}_{*} \cap \mbbjp$ for some
+$\acute{G}_{*} \in \acute{\mc G}$. Since $\phi(1) = \acute{J}$ belongs to the
 center of $\mc H$, $L$ and $L^{*}$ are separated by all three members of
 $\mc H$, so that $\aextb_{L^{*}} = \aextb_{L}^{-1}$. Thus, $\aextb_{L}$ is
-transitive if, and only if, $\aextb_{L^{*}}$ is. Since $\acute{G}^{5}$ is
-separated from $\acute{G}^{*}$ by $3$ hyperplanes,
-$\acute{G}^{*} = \acute{G}^{2}$. Thus $\aextb_{L^{*}}$ is transitive.
-\emph{Mutatis mutandis}, the same argument shows that $\acute{G}^{6}$ is also
+transitive if, and only if, $\aextb_{L^{*}}$ is. Since $\acute{G}_{5}$ is
+separated from $\acute{G}_{*}$ by $3$ hyperplanes,
+$\acute{G}_{*} = \acute{G}_{2}$. Thus $\aextb_{L^{*}}$ is transitive.
+\emph{Mutatis mutandis}, the same argument shows that $\acute{G}_{6}$ is also
 associated with a total ordering of $Y$.
   %  An alternative proof that \fourjac\ holds on $Y$ is as follows. Since
   %  $\mathbf r =2$, there exist unique $\alpha , \beta$ in $\R \bs \{ 0\}$

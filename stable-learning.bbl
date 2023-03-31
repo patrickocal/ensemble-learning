@@ -455,6 +455,89 @@
       \verb 10.1016/j.jfineco.2014.10.010
       \endverb
     \endentry
+    \entry{gilboa2001theory}{book}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=2cdcd3e31354c4e936987b8f22726de6}{%
+           family={Gilboa},
+           familyi={G\bibinitperiod},
+           given={Itzhak},
+           giveni={I\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=e54561df4355c4959916e8a655f49c3c}{%
+           family={Schmeidler},
+           familyi={S\bibinitperiod},
+           given={David},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Cambridge University Press}%
+      }
+      \strng{namehash}{2c02a6baf1aac0beea9eaf7a1f1cdcff}
+      \strng{fullhash}{2c02a6baf1aac0beea9eaf7a1f1cdcff}
+      \strng{bibnamehash}{2c02a6baf1aac0beea9eaf7a1f1cdcff}
+      \strng{authorbibnamehash}{2c02a6baf1aac0beea9eaf7a1f1cdcff}
+      \strng{authornamehash}{2c02a6baf1aac0beea9eaf7a1f1cdcff}
+      \strng{authorfullhash}{2c02a6baf1aac0beea9eaf7a1f1cdcff}
+      \field{extraname}{1}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{7}
+      \field{title}{A Theory of Case-Based Decisions}
+      \field{year}{2001}
+      \verb{doi}
+      \verb 10.1017/cbo9780511493539
+      \endverb
+    \endentry
+    \entry{gilboa2003inductive}{article}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=2cdcd3e31354c4e936987b8f22726de6}{%
+           family={Gilboa},
+           familyi={G\bibinitperiod},
+           given={Itzhak},
+           giveni={I\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=e54561df4355c4959916e8a655f49c3c}{%
+           family={Schmeidler},
+           familyi={S\bibinitperiod},
+           given={David},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {The Econometric Society}%
+      }
+      \strng{namehash}{2c02a6baf1aac0beea9eaf7a1f1cdcff}
+      \strng{fullhash}{2c02a6baf1aac0beea9eaf7a1f1cdcff}
+      \strng{bibnamehash}{2c02a6baf1aac0beea9eaf7a1f1cdcff}
+      \strng{authorbibnamehash}{2c02a6baf1aac0beea9eaf7a1f1cdcff}
+      \strng{authornamehash}{2c02a6baf1aac0beea9eaf7a1f1cdcff}
+      \strng{authorfullhash}{2c02a6baf1aac0beea9eaf7a1f1cdcff}
+      \field{extraname}{2}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Econometrica}
+      \field{month}{1}
+      \field{number}{1}
+      \field{title}{Inductive Inference: An Axiomatic Approach}
+      \field{volume}{71}
+      \field{year}{2003}
+      \field{pages}{1\bibrangedash 26}
+      \range{pages}{26}
+      \verb{doi}
+      \verb 10.1111/1468-0262.00388
+      \endverb
+    \endentry
     \entry{gu2020empirical}{article}{}
       \name{author}{3}{}{%
         {{un=0,uniquepart=base,hash=6dfe1a2bf09425e309ca767a1acc7325}{%
@@ -1215,6 +1298,7 @@
       \endverb
     \endentry
   \enddatalist
+  \missing{weinstein}
 \endrefsection
 \endinput
 
