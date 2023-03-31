@@ -5029,48 +5029,45 @@ be infinite as we have seen in \cref{lem-test-empty-fourdiv}.
 % Henceforth, take $Y$ to satisfy $3 \leq \lvert Y \rvert \leq 4$.
 
 Recall the definition of central arrangements. We now show that the set of
-testworthy {generalization}s with a central arrangement is always nonempty.%  (The
-% trouble is that   such arrangements may also be dogmatic.)
+testworthy {generalization}s with a central arrangement is always nonempty.%
+(The
+% trouble is that such arrangements may also be dogmatic.)
 \begin{lemma}\label{prop-central-testworthy}
   For every $J \in \mbbj$ such that $\ext_{J}$ is total, there exists a
-  $Y$-{generalization} $\aext$ with $\aextb_{\novel } = \extb_{J } ^{-1}$. Moreover,
-  its arrangement $\acute{\mc H}_{\mdoubleplus}$ is central$;$ its
-  representation $\acute{u}^\dd$ has rank $\acute{\mathbf r}= \mathbf r
-  \,;$ and \fourjac\ holds for $\aext$ if, and only if, it holds for $\ext$.
+  $Y$-{generalization} $\aext$ with $\aextb_{\novel } = \extb_{J } ^{-1}$.
+  Moreover, its arrangement $\acute{\mc H}_{\mdoubleplus}$ is central$;$ its
+  representation $\acute{u}^\dd$ has rank $\acute{\mathbf r}= \mathbf r \,;$
+  and \fourjac\ holds for $\aext$ if, and only if, it holds for $\ext$.
 \end{lemma}
 \begin{proof} Let $J \in \mbbj$ such that $\ext_{J}$ is total. If, for some
   $t \in \mbbt$, $J(t) = 0$, then, via $\binom{\countof Y}{2}$ applications of
   \ref{AQ} (or the continuity properties of the inner product), there exists
   there $L \in \posreal^{\mbbt}$ such that $\extb_{L} = \extb_{J}$. Thus,
   \withoutlog, take $J(t)>0$ for every $t\in \mbbt$. For some rational
-  $0<\acute{\iota}<1$, let
-  $\acute{J} = (1-\acute{\iota})J \times \acute{\iota}$, so that $\acute{J}$
-  lies on the (relative) interior of $\mbbjp$.  Now, for every $x,y$ in $Y$,
-  let
+  $0<\acute{\iota}<1$, let $\acute{J} = (1-\acute{\iota})J \times
+  \acute{\iota}$, so that $\acute{J}$ lies on the (relative) interior of
+  $\mbbjp$.  Now, for every $x,y$ in $Y$, let
   \begin{linenomath*}
-  \begin{equation*}\acute{\eta}^{\xy} := -\frac{1- \acute{\iota}}{\acute{\iota}}\langle
-    u^{\xy}, J \rangle,
+  \begin{equation*}\acute{\eta}^{\xy} := -\frac{1-
+    \acute{\iota}}{\acute{\iota}}\langle u^{\xy}, J \rangle,
   \end{equation*}
   \end{linenomath*}
   and let $\acute{u}^{\xy}\defeq u^{\xy}\times \acute \eta^{\xy}$, so that
   $\langle \acute{u}^{\xy}, \acute{J} \rangle = 0$. Let $\aext$ be the
-  associated $Y$-{generalization}, so that by construction
-  $\aextb_{\novel} = \aextb_{J}^{-1}$.  Since
-  $\acute{J} \in \acute{H}^{\{x,y\}}$ for every distinct $x,y\in Y$,
-  $\acute{\mc H}$ is central. By construction, note that
-  $\mathbf r \leq \acute{\mathbf r} \leq \mathbf r + 1$. Moreover, recalling the
-  rank--nullity theorem, we have
-  $\acute{\mathbf r} = \countof \mbbtp - \textup
-  {dim}(\textup{ker}(\acute{u}^{\dd}))$. Now, $\acute{J} \in \R^{\mbbtp}$
-  belongs to $\textup{ker}(\acute{u}^{\dd})$, but not
-  $\textup{ker}(u^{\dd})\times 0 \subset \R^{\mbbtp}$. Moreover, the latter set
-  belongs to $\textup{ker}(\acute{u}^{\dd})$. Thus,
-  $\textup{ker}(\acute{u}^{\dd})$ is of dimension one more than
-  $\textup{ker}(u^{\dd})\subset \R^{\mbbt}$. Then since
-  $\countof \mbbtp = \mbbt +1$, the rank--nullity theorem yields
-  $\acute{\mathbf r} = \mathbf r$.  Finally, via linearity of the inner product,
-  the Jacobi equations \eqref{eq-xy}--\eqref{eq-xz} hold for $u^{\dd}$ if, and
-  only if, they hold for $\acute{\eta}^{\dd}$ and hence $\acute{u}^{\dd}$.
+  associated $Y$-{generalization}, so that by construction $\aextb_{\novel} =
+  \aextb_{J}^{-1}$.  Since $\acute{J} \in \acute{H}^{\{x,y\}}$ for every
+  distinct $x,y\in Y$, $\acute{\mc H}$ is central. By construction, note that
+  $\mathbf r \leq \acute{\mathbf r} \leq \mathbf r + 1$. Moreover, recalling
+  the rank--nullity theorem, we have $\acute{\mathbf r} = \countof \mbbtp -
+  \textup {dim}\left(\textup{ker}\left(\acute{u}^{\dd}\right)\right)$. Observe
+  that $\acute{J}$ belongs to $\textup{ker}\left(\acute{u}^{\dd}\right) \bs
+  \textup{ker}\left(u^{\dd}\right)\times 0$.  Thus,
+  $\textup{ker}\left(\acute{u}^{\dd}\right)$ is of dimension one more than
+  $\textup{ker}\left(u^{\dd}\right)\subset \R^{\mbbt}$. Then since $\countof
+  \mbbtp = \mbbt +1$, the rank--nullity theorem yields $\acute{\mathbf r} =
+  \mathbf r$.  Finally, via linearity of the inner product, the Jacobi
+  equations \eqref{eq-xy}--\eqref{eq-xz} hold for $u^{\dd}$ if, and only if,
+  they hold for $\acute{\eta}^{\dd}$ and hence $\acute{u}^{\dd}$.
 \end{proof}
 
 \paragraph{The case where $Y$ has cardinality
