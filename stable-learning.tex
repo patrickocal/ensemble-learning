@@ -5438,7 +5438,7 @@ subarrangement with cardinality $3$ has rank $3$.  Substituting into
 Fix arbitrary $J \in \mbbj$ such that $\ext_{J}$ is total, and, as in
 \cref{prop-central-testworthy}, \withoutlog, we take $J \in
 G_{\mdoubleplus}^{(x,y,z,w)}$.  Then, for $\acute{\iota} = \half$ and
-$\acute{J}^{\{x,y,z\}} = (1- \acute{\iota}) J \times \acute{\iota}$, let
+$\acute{J} = (1- \acute{\iota}) J \times \acute{\iota}$, let
 \begin{linenomath*}
   \begin{equation}\label{eq-xyz}
    \acute{\eta}^{\ij} = - \tfrac{1-\acute{\iota}}{\acute{\iota}} \langle
@@ -5446,57 +5446,90 @@ $\acute{J}^{\{x,y,z\}} = (1- \acute{\iota}) J \times \acute{\iota}$, let
     $i,j\in \{x,y,z\}$.}
  \end{equation}
 \end{linenomath*}
-Note that $\acute{\eta}^{\yz}>0$ is determined by \cref{eq-xyz}. Since
-$G^{(x,y,z,w)}_{\mdoubleplus}$ is open and the inner product is continuous,
-there exists a compact neighbourhood $N_{J} \subset
-G^{(x,y,z,w)}_{\mdoubleplus}$ of $J$ such that, for every $L\in N_{J}$,
-$\langle u^{\yz}, L\rangle < - \langle u^{\wz}, L \rangle$ if, and only if,
-$\langle u^{\yz},J \rangle <-\langle u^{\wz},J \rangle$. For any such $L \neq
-J$, take $\acute{\lambda}$ and $\epsilon$ to be solutions to
+%Since $G^{(x,y,z,w)}_{\mdoubleplus}$ is open and the inner product is
+%continuous, there exists a compact neighbourhood $N_{J} \subset
+%G^{(x,y,z,w)}_{\mdoubleplus}$ of $J$.
+%such that, for every $L\in N_{J}$,
+%\begin{linenomath*}
+% \begin{equation*}
+% \langle u^{\yz}, L\rangle < - \langle u^{\wz}, L \rangle \quad \textup{if,
+% and only if,} \quad
+% \langle u^{\yz},J \rangle <-\langle u^{\wz},J \rangle.
+% \end{equation*}
+%\end{linenomath*}
+Let $f: G^{(x, y, z, w)}_{\mdoubleplus} \rightarrow \acute{G}^{(x, y, z,
+w)}_{\mdoubleplus}$ be the mapping $L \rightarrow (1 - \acute{\lambda}) L
+\times \acute{\lambda}$, where $\acute{\lambda}$ is the solution to
+$\acute{\eta}^{\yz} = -\tfrac{1 - \acute{\lambda}}{\acute{\lambda}} \langle
+u^{\yz}, L \rangle$.  In particular, substituting for $\acute{\eta}^{\yz}$
+using \cref{eq-xyz}, we obtain $\frac{1- \acute{\lambda}}{\acute{\lambda}} =
+\frac{\langle u^{\yz},J \rangle}{\langle u^{\yz}, L \rangle}$ and
+$\acute{\lambda} = \frac{\langle u^{\yz}, L\rangle}{ \langle u^{\yz}, J \rangle
++ \langle u^{\yz}, L \rangle}$.  Since $J, L \in {G}^{\yz}$, all terms in the
+expression for $\acute{\lambda}$ are positive, so that $0 < \acute{\lambda} <
+1$ and, via convexity of $\acute{G}^{(x, y, z, w)}_{\mdoubleplus}$, $f$ is
+well-defined. As the quotient of continuous functions of $L$ (with the
+denominator $\langle u^{\yz}, J \rangle + \langle u^{\yz}, L \rangle$ 
+bounded away from zero) $f$ is continuous.  Finally, $\lim_{L \rightarrow
+J}f(L) = \acute{J}$.
+
+Via \ref{p3dQ} and $J \in G^{(x, y, z, w)}_{\mdoubleplus}$, $\langle u^{\yz},
+J\rangle \neq \langle u^{\zw}, J\rangle$ and both numbers are positive.  Via
+$u^{\wz} = - u^{\zw}$, it follows that $\zeta = \frac{\langle u^{\wz},
+J\rangle}{\langle u^{\yz}, J\rangle} < 0$ is the unique solution to 
 \begin{linenomath*}
-  \begin{equation}\label{eq-yzw}
-    \acute{\eta}^{\yz} = -\tfrac{1 - \acute{\lambda}}{\acute{\lambda}} \langle
-    u^{\yz}, L \rangle \quad \text{and} \quad \epsilon = \langle u^{\wz},
-    \tfrac{1-\acute{\lambda}}{\acute{\lambda}} L - J \rangle.
+  \begin{equation*}
+    \langle \zeta u^{\yz} - u^{\wz}, J \rangle = 0.
+  \end{equation*}
+\end{linenomath*}
+Continuity of the map $L \mapsto \frac{\langle u^{\wz}, L\rangle}{\langle
+u^{\yz}, L\rangle}$ on $G^{(x, y, z, w)}_{\mdoubleplus}$ and the fact that the
+latter set is open suffices for the existence of a sequence $(L_n: n = 1, 2,
+\dots)$, converging to $J$, such that, for every $n$, $L_n \mapsto \xi_{n} =
+\frac{\langle u^{\wz}, L_n\rangle}{\langle u^{\yz}, L_n\rangle}$ satisfies
+$\xi_n \neq \zeta$.
+
+Next, take $(\epsilon_n : n = 1, 2, \dots)$ be the following non-zero
+real-valued sequence of suitable small numbers that converge to zero:
+\begin{linenomath*}
+  \begin{equation} \label{eq-epsilon}
+    \epsilon_n := \langle \xi_n u^{\yz} - u^{\wz}, J\rangle = \langle u^{\wz},
+    \tfrac{1 - \acute{\lambda_n}}{\acute{\lambda_n}} L_n - J \rangle,
   \end{equation}
 \end{linenomath*}
-A rearrangement of the first equality in \cref{eq-yzw} and, via \cref{eq-xyz},
-a substitution for $\acute{\eta}^{\yz}$ yields $\acute{\lambda} = \frac{\langle
-u^{\yz}, L\rangle}{ \langle u^{\yz}, J \rangle + \langle u^{\yz}, L \rangle}$
-and $\frac{1- \acute{\lambda}}{\acute{\lambda}} = \frac{\langle u^{\yz},J
-\rangle}{\langle u^{\yz}, L \rangle}$. Since $N_{J} \subset G^{\yz}$, $0 <
-\acute{\lambda}<1$ and $\acute{L}^{\{y, z, w\}} \defeq (1 - \acute{\lambda}) L
-\times \acute{\lambda} \in \posreal^{\mbbtp}$ for every such $L$. On $N_{J}$,
-the denominator of the map $L \mapsto \acute{L}^{\{y, z, w\}}$ is bounded away
-from zero and continuous (since it is the quotient of continuous functions).
-Furthermore, $\lim_{L \rightarrow J}\acute{L}^{\{y,z,w\}} =
-\acute{J}^{\{y,z,w\}}$. Similarly, on $N_{J}$, the fact that $\langle u^{\yz},
-L \rangle>0$ ensures that the map $L \mapsto \epsilon$ is well-defined,
-continuous and $\lim_{L \rightarrow J} \epsilon = 0$.\footnote{Substituting for
-$\frac{1- \acute{\lambda}}{\acute{\lambda}}$ in the equation for $\epsilon$ in
-\eqref{eq-yzw} and rearranging yields a linear equation
-\begin{equation}\label{eq-k-linear}
-  k \langle u^{\yz} , L \rangle =\langle u^{\wz} , L \rangle
-  \end{equation}
-  in $L$, where $k = \tfrac{\epsilon+\langle u^{\wz},J \rangle}{\langle
-  u^{\yz},J\rangle}$. Note that, since $L \in G^{\zw}_{\mdoubleplus}\cap
-  G^{\yz}_{\mdoubleplus}$, $\langle u^{\wz}, L \rangle <0$ and $\langle
-  u^{\yz}, L \rangle > 0$; moreover, the same is true of $J$. Thus, $k<0$ or,
-  equivalently, $\epsilon < -\langle u^{\wz},J \rangle$.  If $\langle u^{\yz},L
-  \rangle < - \langle u^{\wz},L \rangle$, then, via \cref{eq-k-linear}, $k <
-  -1$. Moreover, our choice of $N_{J}$ is such that $\frac{\langle u^{\wz},J
-  \rangle}{\langle u^{\yz},J \rangle} < -1$. This ensures that, on $N_{J}$,
-  $\epsilon$ lies in a neighbourhood of zero, as required.}
- %Thus, for any fixed $\epsilon \neq 0$, there is at least one
- % solution to \cref{eq-yzw}. For even in the case where $\mbbt = \{s, t\}$ and
- % $L = (1- \lambda)\delta_{s}+ \lambda \delta_{t}$, we have two equations in
-  % two
- % unknowns.
+where $\frac{1 - \acute{\lambda_n}}{\acute{\lambda_n}} = \frac{\langle u^{\yz},
+J\rangle}{\langle u^{\yz}, L_n\rangle}$ is defined as in the definition of $f$
+above.
+%(We arrive at \ref{eq-epsilon} via bilinearity of the inner product and
+%simple substitution.)
+
+
+%\footnote{Substituting for $\frac{1- \acute{\lambda}}{\acute{\lambda}}$ in
+%the equation for $\epsilon$ in \eqref{eq-yzw} and rearranging yields a linear
+%equation
+%\begin{equation}\label{eq-k-linear}
+% k \langle u^{\yz} , L \rangle =\langle u^{\wz} , L \rangle
+% \end{equation}
+% in $L$, where $k = \tfrac{\epsilon+\langle u^{\wz},J \rangle}{\langle
+% u^{\yz},J\rangle}$. Note that, since $L \in G^{\zw}_{\mdoubleplus}\cap
+% G^{\yz}_{\mdoubleplus}$, $\langle u^{\wz}, L \rangle <0$ and $\langle
+% u^{\yz}, L \rangle > 0$; moreover, the same is true of $J$. Thus, $k<0$ or,
+% equivalently, $\epsilon < -\langle u^{\wz},J \rangle$.  If $\langle u^{\yz},L
+% \rangle < - \langle u^{\wz},L \rangle$, then, via \cref{eq-k-linear}, $k <
+% -1$. Moreover, our choice of $N_{J}$ is such that $\frac{\langle u^{\wz},J
+% \rangle}{\langle u^{\yz},J \rangle} < -1$. This ensures that, on $N_{J}$,
+% $\epsilon$ lies in a neighbourhood of zero, as required.}
+% %Thus, for any fixed $\epsilon \neq 0$, there is at least one
+% % solution to \cref{eq-yzw}. For even in the case where $\mbbt = \{s, t\}$
+% and
+% % $L = (1- \lambda)\delta_{s}+ \lambda \delta_{t}$, we have two equations in
+% % two
+% % unknowns.
+
 
 For every $(i, j) \in \{y,z,w\}^2 \bs \{(y, z), (z, y)\}$, let
 $\acute{\eta}^{\ij} = - \frac{1 - \acute{\lambda}}{\acute{\lambda}} \langle
-u^{\ij}, L \rangle$.  Now note that, via equations
-\eqref{eq-iz}--\eqref{eq-yzw}, we obtain
+u^{\ij}, L \rangle$.  Now note that, for every $L \neq J$,
 \begin{linenomath*}
   \begin{equation}\label{eq-3d-epsilon}
     \pi \acute{\eta}^{\xz} + \rho \acute{\eta}^{\yz} = \acute{\eta}^{\wz} +
@@ -5541,11 +5574,13 @@ obtain the matrix form
    \begin{blockarray}{ccccccc}
      \text{\footnotesize$\xw$} & \text{\footnotesize$\yw$} &
      \text{\footnotesize$\xy$} &\text{\footnotesize $\wz$}& \text{\footnotesize
-       $\yz$} & \text{\footnotesize $\xz$}\\
+     $\yz$} & \text{\footnotesize $\xz$}\\
      \begin{block}{[ccc|ccc]c}
-       \alpha & -\beta &  -\gamma  & 0 & 0 & 0 & \text{\footnotesize\eqref{eq-xy}} \\
-       0 & \hat{\beta} &  0 & \sigma&  -\tau & 0 & \text{\footnotesize\eqref{eq-yz}}\\
-       0 & 0 & \gamma  & 0  & \tau & -\phi & \text{\footnotesize\eqref{eq-xz}}\\
+       \alpha & -\beta & -\gamma & 0 & 0 & 0 &
+       \text{\footnotesize\eqref{eq-xy}} \\
+       0 & \hat{\beta} & 0 & \sigma& -\tau & 0 &
+       \text{\footnotesize\eqref{eq-yz}}\\
+       0 & 0 & \gamma & 0 & \tau & -\phi & \text{\footnotesize\eqref{eq-xz}}\\
      \end{block}
    \end{blockarray}
  \end{equation}
@@ -5561,29 +5596,30 @@ obtain
     \begin{blockarray}{ccccccc}
       \text{\footnotesize$\xw$} & \text{\footnotesize$\yw$} &
       \text{\footnotesize $\xy$} & \text{\footnotesize$\wz$} &
-      \text{\footnotesize
-        $\yz$} & \text{\footnotesize $\xz$}\\
+      \text{\footnotesize $\yz$} & \text{\footnotesize $\xz$}\\
       \begin{block}{[ccc|ccc]c}
         \alpha & 0 & 0 & \frac{\beta}{\hat{\beta}} \sigma&
-        (1-\frac{\beta}{\hat{\beta}})
-        \tau & -\phi & \text{\footnotesize\eqref{eq-xy}} \\
-        0 & \hat{\beta} &  0 & \sigma&  -\tau & 0 & \text{\footnotesize\eqref{eq-yz}}\\
-        0 & 0 & \gamma  & 0  & \tau & -\phi & \text{\footnotesize\eqref{eq-xz}}\\
+        (1-\frac{\beta}{\hat{\beta}}) \tau & -\phi &
+        \text{\footnotesize\eqref{eq-xy}} \\
+        0 & \hat{\beta} & 0 & \sigma& -\tau & 0 &
+        \text{\footnotesize\eqref{eq-yz}}\\
+        0 & 0 & \gamma & 0 & \tau & -\phi & \text{\footnotesize\eqref{eq-xz}}\\
       \end{block}
     \end{blockarray}.
   \end{equation}
 \end{linenomath*}
 In \cref{eq-matrix-6-echelon}, the fact that $\hat{\beta}$ (instead of $\beta$)
-that appears as a pivot in column $2$ indicates that, in this derivation, we
-are, \withoutlog, choosing $\acute{v}^{\yw} = \hat{\beta}
-\acute{u}^{\yw}$. \emph{Mutatis mutandis}, the conclusions we will draw are the
-same if instead we chose to define $\acute{v}^{\yw}$ using $\beta$. The other
-(relevant) rows of $\acute{v}^{\dd}: Y^{2} \times \mbbtp \rightarrow \R$ are
-$\acute{v}^{\xw} = \alpha \acute{u}^{\xw}$,
-$\acute{v}^{\xy} = \gamma \acute{u}^{\xy}$,
-$\acute{v}^{\zw}= \sigma\acute{u}^{\zw}$,
-$\acute{v}^{\yz} = \tau \acute{u}^{\yz}$ and
-$\acute{v}^{\xz} = \phi \acute{u}^{\xz}$.  % From \cref{eq-matrix-6-echelon}, it
+that appears as a pivot in column $2$, is a consequence of the fact that, in
+this derivation, we are choosing $\acute{v}^{\yw} = \hat{\beta}
+\acute{u}^{\yw}$.
+%\emph{Mutatis mutandis}, the conclusions we will draw are the
+%same if instead we chose to define $\acute{v}^{\yw}$ using $\beta$.
+The other (relevant) rows of $\acute{v}^{\dd}: Y^{2} \times \mbbtp \rightarrow
+\R$ are $\acute{v}^{\xw} = \alpha \acute{u}^{\xw}$, $\acute{v}^{\xy} = \gamma
+\acute{u}^{\xy}$, $\acute{v}^{\zw}= \sigma\acute{u}^{\zw}$, $\acute{v}^{\yz} =
+\tau \acute{u}^{\yz}$ and
+$\acute{v}^{\xz} = \phi \acute{u}^{\xz}$.  % From \cref{eq-matrix-6-echelon},
+it
 % is clear that the Jacobi identity
 % $\acute{v}^{\xw} = \acute{v}^{\xz} + \acute{v}^{\zw}$ holds if, and only if,
 % $\hat{\beta}= \beta$.  We now confirm that
