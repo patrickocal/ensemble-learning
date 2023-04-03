@@ -1015,34 +1015,34 @@ novel types of case (the prudent, Pru).
   suitably close to $y_\textup{new}$.
 \end{example}
 
-\begin{example}[Choosing factors]\label{eg-factors}
-  In \cref{eg-tali,eg-rates,eg-zeros,eg-multi-sector}, $X$ respectively
-  consists of a set of indices for faces of a tali, rate movements, maturity
-  dates and sectors. A different, causal interpretation is possible if we let
-  each $x \in X$ denote distinct combination of risk factors such as the market
-  factor, firm size and book-to-market equity \citep{fama2015five}. Thus each
-  $x$ forms a model with which to forecast stock or bond market returns
-  \citep{fama2015five,harvey2021lucky,gu2020empirical}.  Such an interpretation
-  brings our notation closer to the standard form that one finds in the
-  statistical learning literature
-  \citep{cucker2001mathematical,poggio2003mathematics,mukherjee2006learning}.
-
-
-  Let $(Y, \leq^*)$ denote a suitably ordered criterion space for evaluating
-  models.\footnote{We might induce $\leq^*$ via a norm on $Y$ so that $y \leq^*
-  y'$ if, and only if, for the true value $y^*$, $\lVert y - y^*\rVert \leq
-  \lVert y' - y^*\rVert$.}  The statement $x \preceq_D x'$ is interpreted as
-  ``At $D$, $x'$ is a more plausible model than $x$''. The learner subscribes
-  to this view if, and only if, the function $f_D: X \rightarrow Y$, $f_D(x')
-  \leq^* f_D(x)$.
-
-  Our goal is to derive a stable learning map $D \mapsto f_D$ on the basis of
-  {sentiments} $D \mapsto \preceqb_D$ where $D$ is any finite sample of past
-  cases.\footnote{The term learning map is introduced in
-  \citet{mukherjee2006learning}. There stability is defined in terms of continuity
-  of the learning map, something that we prove in \cref{prop-stability},
-  below.}
-\end{example}
+%\begin{example}[Choosing factors]\label{eg-factors}
+%  In \cref{eg-tali,eg-rates,eg-zeros,eg-multi-sector}, $X$ respectively
+%  consists of a set of indices for faces of a tali, rate movements, maturity
+%  dates and sectors. A different, causal interpretation is possible if we let
+%  each $x \in X$ denote distinct combination of risk factors such as the market
+%  factor, firm size and book-to-market equity \citep{fama2015five}. Thus each
+%  $x$ forms a model with which to forecast stock or bond market returns
+%  \citep{fama2015five,harvey2021lucky,gu2020empirical}.  Such an interpretation
+%  brings our notation closer to the standard form that one finds in the
+%  statistical learning literature
+%  \citep{cucker2001mathematical,poggio2003mathematics,mukherjee2006learning}.
+%
+%
+%  Let $(Y, \leq^*)$ denote a suitably ordered criterion space for evaluating
+%  models.\footnote{We might induce $\leq^*$ via a norm on $Y$ so that $y \leq^*
+%  y'$ if, and only if, for the true value $y^*$, $\lVert y - y^*\rVert \leq
+%  \lVert y' - y^*\rVert$.}  The statement $x \preceq_D x'$ is interpreted as
+%  ``At $D$, $x'$ is a more plausible model than $x$''. The learner subscribes
+%  to this view if, and only if, the function $f_D: X \rightarrow Y$, $f_D(x')
+%  \leq^* f_D(x)$.
+%
+%  Our goal is to derive a stable learning map $D \mapsto f_D$ on the basis of
+%  {sentiments} $D \mapsto \preceqb_D$ where $D$ is any finite sample of past
+%  cases.\footnote{The term learning map is introduced in
+%  \citet{mukherjee2006learning}. There stability is defined in terms of continuity
+%  of the learning map, something that we prove in \cref{prop-stability},
+%  below.}
+%\end{example}
     The rest of the paper is organised as follows. In \cref{sec-model} we
     present the model and key definitions. In \cref{sec-main} we present the
     axioms and main representation theorem. In \cref{sec-fin-app} we develop
@@ -1791,19 +1791,19 @@ every $c,d \in \cpp\bs D$,  if $c \sim^\star d$ then
   $\extb _ {D \cup \{c\}} = \extb _ {D \cup \{d\}}$.
 
 \end{enumerate}
-A {generalization} $\ext_{\dpp}$ is \emph{proper} if $\dpp = \mbbdp$ and improper
-  otherwise.
+A {generalization} $\ext_{\dpp}$ is \emph{proper} if $\dpp = \mbbdp$ and
+  improper otherwise.
  % , for some $Y$ and
  % every $D \in \mbbd$, $\extb_{D} = \preceqb_{D}\cap Y^{2}$.
 %Let $\ext^\star$ denote the unique (improper) {generalization}
 \end{definition}
- Observe that $\preceq_\mbbd$ is an (improper)
-{generalization} of itself: take $\dpp = \mbbd$ and $Y = X$.
-Indeed part \ref{item-preserving} of the definition implies that, for every
-$Y$-{generalization} $\ext$ and every $D\in \mbbd$, $\ext$ is simply the restriction
-$\preceqb_{D}\cap Y^{2}$ of $\preceq_{D}$ to $Y$.  We therefore refer to part
-\ref{item-preserving} of the definition of a {generalization} as the preservation or
-\emph{nonrevision} condition.
+Part \ref{item-preserving} of the definition implies that, for every
+$Y$-{generalization} $\ext$ and every $D\in \mbbd$, $\ext$ is simply the
+restriction $\preceqb_{D}\cap Y^{2}$ of $\preceq_{D}$ to $Y$.  We therefore
+refer to part \ref{item-preserving} of the definition of a {generalization} as
+the preservation or \emph{nonrevision} condition.
+%Observe that $\preceq_\mbbd$
+%is an (improper) {generalization} of itself: take $\dpp = \mbbd$ and $Y = X$.
 %We will often suppress reference to $Y$ and $\preceqb _ \mbbd$ and
 %refer to $\ext$ simply as a {generalization}.
 
@@ -2217,7 +2217,7 @@ $\preceqb_\mbbd$. This is the crux of \cref{thm-main}.
  \begin{proofEnd}%[Proof of \cref{cor-foureq}]
    This follows from \cref{thm-foureq}, \cref{lem-induction} and the fact that,
    via \cref{lem-test-empty-fourdiv}, \stability\ implies \ref{T}--\ref{A} when
-   the number of case types is finite. \label{proof-cor-foureq}
+   $\countof{\mbbt} \leq \infty$. \label{proof-cor-foureq}
 \end{proofEnd}
 
 This suffices for us to formalise the log-accumulation process of
@@ -3451,11 +3451,9 @@ For every $I \in \mbbj$ and $J \in \mbbjpp$, we write $I \equiv J$ whenever $I
 \mbbt$ and $J(\novel )= 0$.) This notion reflects the fact that, for the
 purposes of the present model, such $I$ and $J$ are equivalent.
 \begin{definition}\label{def-{generalization}Q}
- 
-$\extb =\langle \extb_{J}: J \in \mbbjpp \rangle$ is a
-  \emph{{generalization}}, and in particular a $Y$-\emph{{generalization}}, of
-  $\preceqb _{\mbbj}$ if, and only if, for some nonempty
-  $Y \subseteq X$ both the following hold
+$\extb =\langle \extb_{J}: J \in \mbbjpp \rangle$ is a \emph{{generalization}}
+  or a $Y$-\emph{{generalization}} of $\preceqb _{\mbbj}$ if, and only if, for
+  some nonempty $Y \subseteq X$ both the following hold
 \begin{enumerate}
 
 \item for every $J\in \mbbjpp$, $\extb_{J}\in \relations(Y)$,
@@ -4109,24 +4107,23 @@ The following is a translation of \cref{obs-c2d}.
   \ext)$. Via \cref{lem-c2dQ}, there are three distinct hyperplanes
   $H_{\mdoubleplus}^{\{x,y\}}, H_{\mdoubleplus}^{\{y,z\}}$ and
   $H_{\mdoubleplus}^{\{x,z\}}$ in the associated arrangement $\mc
-  H_{\mdoubleplus}$. Then, as in \cref{eg-zaslavski}, $A^\emptyset =
-  \posreal^{\mbbt}$ is the unique element of $\mc L_{\mdoubleplus}$ that lies
-  below each member of $\mc H_{\mdoubleplus}$. Thus, via \cref{eq-mobius},
-  $\bmu(A^{\emptyset}) = 1$ and $\bmu(A) = - \bmu(A^{\emptyset})$ for all three
-  hyperplanes $A \in \mc H_{\mdoubleplus}$. Thus, Zaslavski's theorem implies
-  that $\countof \mc G_{\mdoubleplus}$ is bounded below by $4$.  Thus
-  $\total(\ext) \geq 4$, and since, for every $Y$-{generalization} $\aext$,
-  $\countof \total (\aext ) \geq \countof \total (\ext)$, \ref{p3dQ} holds.
+  H_{\mdoubleplus}$. Then, as in \cref{eg-zaslavski}, $A^\emptyset = S$ is the
+  unique element of $\mc L_{\mdoubleplus}$ that lies below each member of
+  $\mc{H}_{\mdoubleplus}$. Thus, via \cref{eq-mobius}, $\bmu(A^{\emptyset}) =
+  1$ and $\bmu(A) = - \bmu(A^{\emptyset})$ for all three hyperplanes $A \in \mc
+  H_{\mdoubleplus}$. Thus, Zaslavski's theorem implies that
+  $\countof{\mc{G}_{\mdoubleplus}}$ is bounded below by $4$.  Thus $\total(\ext)
+  \geq 4$, and since, for every $Y$-{generalization} $\aext$, $\countof \total
+  (\aext ) \geq \countof \total (\ext)$, \ref{p3dQ} holds.
 
   Conversely, suppose \ref{p3dQ} holds and, once again let $\ext$ denote the
-  improper $Y$-{generalization} of $\preceq_{\mbbj}$, so that
-  $\total(\ext) \geq \countof Y = 3$. Now \ref{p3dQ} implies \twodiv, so that,
-  via \cref{prop-insep}, there exists a $2$-diverse matrix representation with
+  improper $Y$-{generalization} of $\preceq_{\mbbj}$, so that $\total(\ext)
+  \geq \countof Y = 3$. Now \ref{p3dQ} implies \twodiv, so that, via
+  \cref{prop-insep}, there exists a $2$-diverse matrix representation with
   associated arrangement $\mc H_{\mdoubleplus}$. It is not the case that
-  $\lvert \mc H_{\mdoubleplus} \rvert = 1$, for this would imply that
-  $\countof \total(\ext) = 2$. \Wlog, suppose
-  $H_{\mdoubleplus}^{\{x,y\}} \neq H_{\mdoubleplus}^{\{y,z\}}$. Observe that
-  \ref{TQ} then implies
+  $\lvert \mc H_{\mdoubleplus} \rvert = 1$, for this would imply that $\countof
+  \total(\ext) = 2$. \Wlog, suppose $H_{\mdoubleplus}^{\{x,y\}} \neq
+  H_{\mdoubleplus}^{\{y,z\}}$. Observe that \ref{TQ} then implies
   $H_{\mdoubleplus}^{\{x,z\}} \neq H_{\mdoubleplus}^{\{x,y\}}$ and
   $H_{\mdoubleplus}^{\{x,z\}} \neq H_{\mdoubleplus}^{\{y,z\}}$. This implies
   that $v^{\xy}, v^{\yz}$ and $v^{\xz}$ are pairwise noncollinear. Finally, an
@@ -4585,41 +4582,40 @@ every $x\neq y$, $\langle \hat{v}^{\xy}, K \rangle$ has the right sign.
 Finally, for $x = y$, $\langle \hat{v}^{\xy}, K \rangle = 0$.
 \end{proof}
 
-As a consequence of \cref{lem-test-empty-fourdiv}, for the remainder of the
-proof of \cref{thm-foureq} we work under the assumption that the set of
-testworthy $Y$-{generalization}s that are novel is nonempty. 
+\paragraph{As a consequence of \cref{lem-test-empty-fourdiv},}\hskip-5pt for
+the remainder of the proof of \cref{thm-foureq} we work under the assumption
+that the set of testworthy $Y$-{generalization}s that are novel is nonempty. 
+%\paragraph{For the remainder of this section, redefine $\mbbt : =
+%\mbbt_{Y}$,}\hskip-7pt where recall $\mbbt_{Y}$ is defined in
+%\cref{step-infinite}.  Thus, in the present section, $\mbbt$ is the finite set
+%that indexes the translation to $\R^{n}$ of \cref{step-infinite}. Then $\mbbtp
+%= \mbbt \cup[\novel]$ as before and indeed all other notation remains the
+%same.
+%Whereas $\mbbt = \mbbt_{Y}$ is now finite, the set $\mbbc_{/\sim^{\ext}}$ of
+%equivalence classes of $\sim^{\ext}$ in $\mbbc$ may be infinite as we have
+%seen
+%in \cref{lem-test-empty-fourdiv}.
+Throughout the sequel, $\ext$ denotes an improper $Y$-generalization.  Since
+\ref{KQ}--\ref{c2dQ} hold, the pairwise representation $u^{\dd}: Y^{2}\times
+\mbbt \rightarrow \R$ of $\ext$ is conditionally $2$-diverse.  \Cref{lem-c2dQ}
+implies that $u^{\dd}$ has row rank $\mathbf r \geq 2$.
 
-\paragraph{For the remainder of this section, redefine $\mbbt : =
-\mbbt_{Y}$,}\hskip-7pt where recall $\mbbt_{Y}$ is defined in
-\cref{step-infinite}.  Thus, in the present section, $\mbbt$ is the finite set
-that indexes the translation to $\R^{n}$ of \cref{step-infinite}. Then $\mbbtp
-= \mbbt \cup[\novel]$ as before and indeed all other notation remains the same.
-Whereas $\mbbt = \mbbt_{Y}$ is now finite, the set $\mbbc_{/\sim^{\ext}}$ of
-equivalence classes of $\sim^{\ext}$ in $\mbbc$ may be infinite as we have seen
-in \cref{lem-test-empty-fourdiv}.
-
- Since \ref{KQ}--\ref{c2dQ} hold, the pairwise representation
- $u^{\dd}: Y^{2}\times \mbbt \rightarrow \R$ of $\ext$ is conditionally
- $2$-diverse.  \Cref{lem-c2dQ} implies that $u^{\dd}$ has row rank
- $\mathbf r \geq 2$.
-
-%  For any given $Y$-{generalization} $\aext$, $\acute{\mathbf r}$ will
+% For any given $Y$-{generalization} $\aext$, $\acute{\mathbf r}$ will
  % denote the row rank of a representation $\acute{u}^{\dd}$.
 % the For the case
-% $\lvert Y \rvert = 2$, there is nothing to prove: \ref{PQ} holds vacuously and
+% $\lvert Y \rvert = 2$, there is nothing to prove: \ref{PQ} holds vacuously
+% and
 % \fourjac\ holds as a direct consequence of \cref{lem-insep}. (In particular,
 % since $u^{\yx} = - u^{\xy}$, we have $u^{(x,x)} = u^{\xy}+ u^{\yx}=0$.)
 % Henceforth, take $Y$ to satisfy $3 \leq \lvert Y \rvert \leq 4$.
-
-Recall the definition of central arrangements. We now show that the set of
-testworthy {generalization}s with a central arrangement is always nonempty.
-The trouble is that such arrangements may be dogmatic (they suppress rankings).
+%We now show that the set of testworthy {generalization}s with a central
+%arrangement is always nonempty. The trouble is that such arrangements may be
+%dogmatic (they suppress rankings).
 \begin{lemma}\label{prop-central-testworthy}
-  For every $J \in \mbbj$ such that $\ext_{J}$ is total, there exists a proper
-  generalization $\aext$ such that $\aextb_{\novel} = \extb_{J}^{-1}$; its
-  arrangement $\acute{\mc H}_{\mdoubleplus}$ is central$;$ its representation
-  $\acute{u}^\dd$ has rank $\acute{\mathbf r} = \mathbf r \,;$ and \fourjac\
-  holds for $\aext$ if, and only if, it holds for $\ext$.
+  For every ranking $R \in \total(\ext)$, there exists a (testworthy)
+  generalization $\aext$ with $\aextb_\novel = R^{-1}$. Moreover, $\aext$ has a
+  central arrangement with rank $\acute{\mathbf{r}} = \mathbf{r}$.  Finally,
+  \fourjac\ holds for $\aext$ if, and only if, it holds for $\ext$.
 \end{lemma}
 \begin{proof} Let $J \in \mbbj$ such that $\ext_{J}$ is total.
   Since $Y$ is finite, so is the dimension of $S_{\mdoubleplus}$.  Take $L \in
@@ -4636,10 +4632,10 @@ The trouble is that such arrangements may be dogmatic (they suppress rankings).
   associated $Y$-{generalization}, so that by construction $\aextb_{\novel} =
   \aextb_{J}^{-1}$.  Since $\acute{J} \in \acute{H}^{\{x,y\}}_{\mdoubleplus}$
   for every distinct $x,y\in Y$, $\acute{\mc{H}}_{\mdoubleplus}$ is central.
-  This construction together with linearity of the inner product ensures that the
-  Jacobi equations \eqref{eq-xy}--\eqref{eq-xz} hold for $u^{\dd}$ if, and only
-  if, they hold for $\acute{\eta}^{\dd}$ and hence $\acute{u}^{\dd}$.  Indeed,
-  $\mathbf r = \acute{\mathbf r}$ holds for the same reasons.
+  This construction together with linearity of the inner product ensures that
+  the Jacobi equations \eqref{eq-xy}--\eqref{eq-xz} hold for $u^{\dd}$ if, and
+  only if, they hold for $\acute{\eta}^{\dd}$ and hence $\acute{u}^{\dd}$.
+  Indeed, $\mathbf r = \acute{\mathbf r}$ holds for the same reasons.
 \end{proof}
 
 \paragraph{The case where $Y$ has cardinality $3$,\hskip-10pt} follows from the
@@ -4760,108 +4756,46 @@ It remains for us to show that every member of $\acute{\mc G}$ is
   % \qedhere\end{step}\phantom{\qed}
 
 \begin{lemma}\label{lem-Y3-r3}
-  If $Y = \{x,y,z\}$ and  $\mathbf{r} = 3$, then neither \stability\ nor
+  If $Y = \{x,y,z\}$ and $\mathbf{r} = 3$, then neither \stability\ nor
   \fourjac\ hold.
 \end{lemma}
 \begin{proof}[Proof of \cref{lem-Y3-r3}]
   When $\mathbf r = 3$, $u^{\xy}, u^{\yz}$ and $u^{\xz}$ are linearly
-  independent, so that \threejac\ fails to hold.
-
-  We now confirm that \threepru\ also fails to hold.  Via
-  \cref{prop-central-testworthy}, $\acute{\mathbf r} = \mathbf r$.  The only
-  term in \cref{eq-zaslavski-3} that we adjust for the present lemma is
-  $\mathbf{r}=3$. Thus,
+  independent, so that \threejac\ fails to hold. We now confirm that \threepru\
+  also fails to hold.  Via \cref{prop-central-testworthy}, $\acute{\mathbf r} =
+  \mathbf r$. We now apply \cref{eq-zaslavski-3} with $\mathbf{r}=3$:
 \begin{linenomath*}
   \begin{align*}
-    \lvert \acute{\mc G}\rvert
-    = (-1)^{0}+3(-1)^{0}+ 3(-1)^{0}+(-1)^{0} = 8.
+    \lvert \acute{\mc G}\rvert = (-1)^{0}+3(-1)^{0}+ 3(-1)^{0}+(-1)^{0} = 8.
   \end{align*}
 \end{linenomath*}
-\addtocounter{linenumber}{-1}
+%\addtocounter{linenumber}{-1}
   Then there are $3!=6$ members of $\total (\aext)$, and the two additional
   regions of $\acute {\mc G}$ are associated with intransitive CAR rankings. It
-  remains for us to show that every $Y$-{generalization} $\hext$ with
-  $\countof \total (\hext) = 6$ is of this form. % This follows from the other
+  remains for us to show that every $Y$-{generalization} $\hext$ with $\countof
+  \total (\hext) = 6$ fails to satisfy \ref{TQ}.
+  % This follows from the other
   % version of Zaslavski's theorem in relation to which we present the relevant
   % Hasse diagram in \cref{fig-hasse-Y3-r3}.
-  
-  \begin{figure}
-    \begin{center}
-  \begin{tikzpicture}
-    \node (max) at (0,3) {$\{x,y,z\}$}; \node (a) at (-3,1.75)
-    {$\{x,y\},\{y,z\}$}; \node (b) at (0,1.75) {$\{x,y\},\{x,z\}$}; \node (c) at
-    (3,1.75) {$\{y,z\},\{x,z\}$}; \node (d) at (-2,0.25) {$\{x,y\}$}; \node (e)
-    at (0,0.25) {$\{y,z\}$}; \node (f) at (2,0.25) {$\{x,z\}$}; \node (min) at
-    (0,-1) {$\emptyset$}; \draw (min) -- (d) -- (a) -- (max) -- (b) -- (f) (e)
-    -- (min) -- (f) -- (c) -- (max) (d) -- (b); \draw[preaction={draw=white,
-      -,line width=6pt}] (a) -- (e) -- (c);
-\end{tikzpicture}
-\caption{\label{fig-hasse-Y3-r3} The intersection lattice of a central
-  arrangement for $\countof Y = 3$ and ${\mathbf r} =3$.}
-\end{center}
-\end{figure}
 
-In the intersection semilattice of \cref{fig-hasse-Y3-r3}, an increase in level
-  corresponds to a decrease in dimension: since $\acute{A}^{\{x,y,z\}}$ is
-  nonempty, it is of dimension at least zero.  Since $\acute{J}$ belongs to the
-  interior of $\posreal^{\mbbtp}$ and $\acute{A}^{\{x,y\}\{y,z\}}$ is at least
-  one-dimensional, $\acute{A}^{\{x,y\} \{y,z\}}_{\mdoubleplus}$ is
-  one-dimensional.  Since $\acute{A}^{\{x,y,z\}} \subset
-  \acute{A}^{\{x,y\}\{y,z\}}$, the latter set is nonempty whenever $\acute{\mc
-  H}_{\mdoubleplus}$ is central. The same, of course, applies to other members
-  at the same level. Conversely, if $\acute{A}^{\{x,y\}\{y,z\}}$ is empty, then
-  so is $\acute{A}^{\{x,y,z\}}$. We now use this to show that there is a unique
-  form of $Y$-{generalization} $\hext$ such that $\countof \hat{\mc
-  G}_{\mdoubleplus} = 6$ and, moreover, that any such $\hext$ fails to satisfy
-  \ref{TQ}.
+%  In \cref{eq-zaslavski-3}, the first term corresponds to the member of the
+%  intersection semilattice with the highest rank. That is the term with the
+%  lowest dimension (highest co-dimension) in $S_{\mdoubleplus}$. This is the
+%  center $H^{\{x, y, z\}}$ of the arrangement. There is just one such term. 
 
-Recall from \cref{eg-zaslavski} that $\bmu(A^{\emptyset}) = 1$ and
-  $\bmu(A^{\{i,j\}}) = -\bmu(A^{\emptyset})$. Then, since
-  $\hat{A}^{\{x,y\}\{y,z\}} \subset \hat{A}^{\{x,y\}} , \hat{A}^{\{y,z\}}$, we
-  have $\bmu(A^{\{x,y\}\{y,z\}}) = - \bmu(A^{\emptyset})(1 - 2) = 1$. Finally,
-  by the same argument, since $\hat{A}^{\{x,y,z\}}$ belongs to every member of
-  $\hat{\mc L}$, we have $\bmu(A^{\{x,y,z\}}) = - \bmu(A^{\emptyset})(1 - 3 +
-  3) = -1$.  Thus, when $\mathbf{r} = 3$, if $\countof \hat{\mc
-  G}_{\mdoubleplus} = 6$, then, in addition to
-  $\hat{A}^{\{x,y,z\}}_{\mdoubleplus}$, at most one of the intersections
-  $\hat{A}^{\{i,j\}\{k,l\}}_{\mdoubleplus}$ is empty. Then, \withoutlog,
-  suppose $\hat{A}^{\{x,y\}\{y,z\}}_{\mdoubleplus}$ is nonempty. We will show
-  that \ref{TQ} fails to hold. Take $L \in
-  \hat{A}^{\{x,y\}\{y,z\}}_{\mdoubleplus}$. If $L \in \mbbjp$, then since $x
-  \hnext_{L}y \hnext_{L} z$ and $\neg (x \hnext_{L} z)$, the proof is complete.
-  Otherwise, $L$ belongs to one $\hat{G}^{\xz}_{\mdoubleplus}$ or
-  $\hat{G}^{\zx}_{\mdoubleplus}$. \Wlog, suppose $L \in
-  \hat{G}^{\xz}_{\mdoubleplus}$. Then $\hat{H}^{\{x,y\}}$ and
-  $\hat{H}^{\{y,z\}}$ split $\hat{G}^{\xz}_{\mdoubleplus}$ into the four
-  (nonempty) open regions formed by expanding
-\begin{linenomath*}
-  \begin{equation*}\hat{G}^{\xz}_{\mdoubleplus}\bs \left(\hat{H}^{\{x,y\}} \cap
-      \hat{H}^{\{y,z\}}\right) = \hat{G}^{\xz}_{\mdoubleplus}\cap
-      \left(\hat{G}^{\xy}_{\mdoubleplus} \cup \hat{G}^{\yx}_{\mdoubleplus}
-      \right) \cap \left (\hat{G}^{\yz}_{\mdoubleplus} \cup
-      \hat{G}^{\zy}_{\mdoubleplus} \right). \end{equation*}
-\end{linenomath*}
-Take any $K$ in the final member $\hat{G}^{\xz}_{\mdoubleplus}\cap
-\hat{G}^{\yx}_{\mdoubleplus} \cap \hat{G}^{\zy}_{\mdoubleplus}$ of this
-expansion. Then, since $x \hsext_{K} z \hsext_{K} y \hsext_{K} x$, we observe
-that $\hext$ fails to satisfy \ref{TQ}. We conclude that only dogmatic
-perturbations of $\aext$ satisfy \ref{TQ}.
-  % In the present case, this
-  % argument is especially simple, since we may rely upon the arguments of
-  % \gsii. In particular, take $\hext$ maximal, so that it satisfies
-  % \threediv. \emph{Per absurdum}, suppose $\hext$ also satisfies \ref{TQ}. In
-  % this case, we have the conditions for theorem 2 of \gsii\ to hold for
-  % $\hext$.\footnote{To be precise, for theorem 2 of \gsii\ to apply, we would
-  % need to consider the restriction $\hext'$ of $\hext$ to the set $\mbbip$ of
-  % counting counting vectors.}  Thus, there exists a Jacobi representation
-  % $\v^{Y}$ of $\hext$. Since $\hext$ is a testworthy {generalization} of
-  % $\preceq_{\mbbj}$, for some $u^{Y}\subset \R^{\mbbt}$ and
-  % $\eta^{Y}\subset \R$, $\v^{Y}=\{u^{(i,j)}\times \eta^{(i,j)}: i<j\}$.  But,
-% by
-  % \cref{def-{generalization}Q}, $\dext$ and $\hext$ agree on $\mbbj\subset
-% \R^{\mbbt}$, so
-  % that we obtain the contradiction we sought: since $u^{Y}$ is a Jacobi
-  % representation of $\dext$, the latter satisfies \threejac.
+  Recall \cref{fig-rates-sempi}. If $\hext$ are the sentiments corresponding to
+  this arrangement, then $\lvert\hat{\mc{G}}\rvert = 7$. This value is achieved
+  by dropping the first term in \cref{eq-zaslavski-3}. That is, since
+  $\hat{A}^{\{x,y,z\}}$ is the only member of $\hat{\mc{L}} \bs
+  \hat{\mc{L}}_{\mdoubleplus}$. We may reduce $\lvert\hat{\mc{G}}\rvert$
+  further by excluding one of the intersections of two hyperplanes such as
+  $\hat{H}^{\{x,y\}}\cap\hat{H}^{\{y,z\}}$. That is
+  $\hat{A}^{\{x,y\},\{y,z\}}$. In terms of \cref{eq-zaslavski-3}, this amounts
+  to excluding one of the $\binom{3}{2} = 3$ central subarrangements. This
+  would reduce $\lvert\hat{\mc{G}}_{\mdoubleplus}\rvert$ to $6$. To obtain
+  $\hext$ satisfying \ref{TQ}, we would need to remove all $\binom{3}{2}$
+  central subarrangements of two hyperplanes. But this would reduce
+  $\lvert\hat{\mc{G}}_{\mdoubleplus}\rvert$ to $4$.
 \end{proof}
 \paragraph{The case where $Y$ has cardinality $4$.\hskip-4pt} Note that a
 failure of \threejac\ on $Z \subset Y$ such that $\lvert Z \rvert = 3$ implies
@@ -4895,86 +4829,52 @@ First some some useful results that exploit \threejac.
 \end{proof}
 
 \begin{proposition}\label{lem-arrangement-cardinality-rank}
-  If $X = \{x, y , z , w\}$, then $4 \leq \lvert \mc H \rvert \leq 6$ and
-  these bounds are tight. If, moreover, \threejac\ holds for $u^{\dd}$ and
-  $\lvert \mc H \rvert < 6$, then $\mathbf{r} = 2$.
+  If $Y = \{x, y, z, w\}$, then $4 \leq \lvert \mc H \rvert \leq 6$ and these
+  bounds are tight. If, moreover, \threejac\ holds for $u^{\dd}$ and $\lvert
+  \mc H \rvert < 6$, then $\mathbf{r} = 2$.
 \end{proposition}
 \begin{proof}[Proof of \cref{lem-arrangement-cardinality-rank}]
-  % The isomorphic relationship between $\mc H$ and $\mc H_{\mdoubleplus}$ and
-  % fact that the
-  % premises of present proposition only concerns the cardinality of these sets
-  % ensure that we may simply work with $\mc H$.  
-  The upper bound $\lvert \mc H \rvert \leq 6$ follows from the fact that there
-  are $\binom{4}{2} = 6$ ways to choose distinct pairs of elements from the
-  four-element set $X$.  Via \cref{lem-c2dQ} only the following equalities are
-  feasible: $H^{\{x,y\}} = H^{\{z,w\}}$, $H^{\{x,z\}} = H^{\{y,w\}}$ and
-  $H^{\{x,w\}} = H^{\{y,z\}}$.  Since all six hyperplanes partition
-  $S_{\mdoubleplus}$, \withoutlog,
-  take $G^{(x,y,z,w)}$ and $G^{(w,z,y,x)}$ to belong to $\mc G$. We consider a
-  convex path $\phi$ from (some member of) $G^{(x,y,z,w)}$ to $G^{(w,z,y,x)}$
-  such that $\countof \{G \in \mc G: (\image \phi) \cap G \neq \emptyset \}$ is
-  maximal. Via \ref{TQ}, one of $H^{\{x,y\}} , H^{\{y,z\}}$ and $H^{\{z,w\}}$
-  supports $G^{(x,y,z,w)}$.  If it is $H^{\{y,z\}}$, then so does $H^{\{x,w\}}$
-  and, and since $x$ and $w$ lie at opposite ends of the ordering $(x,y,z,w)$,
-  this would imply that $\lvert\mc H \rvert = 1$ in violation of
-  \cref{lem-c2dQ}. Since we are seeking a greatest lower bound on $\lvert \mc H
-  \rvert$, take $H_{1} = H^{\{x,y\}} = H^{\{z,w\}}$ to be the first hyperplane
-  to intersect $\image \phi$ and the adjacent chamber is $G^{(y,x,w,z)}$.  Via
-  \ref{TQ}, the second hyperplane to intersect $\image \phi$ is $H_{2} \defeq
-  H^{\{x,w\}}$. If $H^{\{x,w\}} = H^{\{y,z\}}$ then since $y$ and $z$ lie at
-  opposite ends of $(y,x,w,z)$, this would once again lead to a violation of
-  \cref{lem-c2dQ}. Then $G^{(y,w,x,z)}$ is next chamber to intersect $\image
-  \phi$. Since we are seeking a greatest lower bound, via \ref{TQ}, take $H_{3}
-  \defeq H^{\{y,w\}} = H^{\{x,z\}}$ to be the third hyperplane to intersect
-  $\image \phi$. Then $G^{(w,y,z,x)}$ is the next chamber to intersect $\image
-  \phi$. The final hyperplane to intersect $\image \phi$ is $H_{4} =
-  H^{\{y,z\}}$ which brings us to the destination chamber $G^{(w,z,y,x)}$.  We
-  conclude that at most two pairs of the six hyperplanes coincide, so that
-  $\lvert \mc H \rvert \geq 4$.
-  
+  The upper bound $\lvert \mc H \rvert \leq 6$ follows because there are
+  $\binom{4}{2} = 6$ ways to choose distinct pairs of elements from $Y$.  Via
+  \cref{lem-c2dQ} at most the following equalities are feasible: $H^{\{x,y\}} =
+  H^{\{z,w\}}$, $H^{\{x,z\}} = H^{\{y,w\}}$ and $H^{\{y,z\}} = H^{\{x,w\}}$.
+  \emph{Ad absurdum} suppose all three equalities hold, so that
+  $\lvert\mc{H}\rvert=3$. Via \twodiv, all six hyperplanes partition
+  $S_{\mdoubleplus}$, so \withoutlog\ suppose that $R=(x,y,z,w)$ and its inverse
+  $R^{-1}$ both feature in $\ext$.  Consider a convex path in
+  $S_{\mdoubleplus}$ from $G^{R}$ to $G^{R^{-1}}$.  Since $H^{\{x,y\}} =
+  H^{\{z,w\}}$, it follows that both support $G^{R}$.  Thus, for
+  $R'=(y,x,z,w)$, $G^{R'}$ is adjacent to $G^{R}$. Continuing along the convex
+  path we find that $H^{\{x,z\}}$ supports $G^{R'}$. But then
+  $H^{\{x,z\}}=H^{\{y,w\}}$ yields a contradiction of \ref{TQ}.
+
   We now prove that \threejac\ and $H^{\{x,y\}} = H^{\{z,w\}}$ together imply
   $\mathbf r = 2$. Consider equations \eqref{eq-xy}--\eqref{eq-xz} (so
-  \threejac\ holds, but \fourjac\ need not). Via \eqref{eq-xy}, $S = \{
-    u^{\xw}, u^{\wy}, u^{\xy}\}$ is 2-dimensional. Since $u^{\xy}$ and $u^{\zw
- }$ are collinear, $u^{\zw}$ belongs to $S$. Finally, equations \eqref{eq-yz}
-  and \eqref{eq-xz} yield $u^{yz} , u^{\xz} \in S$.
+  \threejac\ holds, but \fourjac\ need not). Via \eqref{eq-xy}, $S = \{u^{\xw},
+  u^{\wy}, u^{\xy}\}$ is 2-dimensional. Since $u^{\xy}$ and $u^{\zw }$ are
+  collinear, $u^{\zw}$ belongs to $S$. Finally, equations \eqref{eq-yz} and
+  \eqref{eq-xz} yield $u^{yz} , u^{\xz} \in S$.
 \end{proof}
 \begin{lemma}\label{lem-r3-Y4}
   If $Y = \{x,y,z,w\}$, $\mathbf{r} = 3$ and \threejac\ holds on $Y$, then
-  \stability\ and \fourjac\ both hold on $Y$
+  \stability\ and \fourjac\ both hold on $Y$.
 \end{lemma}
 \begin{proof}[Proof of \cref{lem-r3-Y4}]
   To see that \fourjac\ holds, appeal to the proof of lemma 3 of \gsii: if
   \threejac\ holds and \fourjac\ does not, then $\{u^{\xw}, u^{\yw}, u^{\zw}\}$
   is linearly dependent. This is in contradiction of $\mathbf{r} = 3$.
   
-  We now verify that \stability\ also holds. We show that, for every $J\in
-  \mbbj$ such that $\ext_{J}$ is total, the $Y$-{generalization} $\aext$ of
-  \cref{prop-central-testworthy} is maximal in the sense that $ \total (\aext)
-  = \lvert \acute{\mc G}_{\mdoubleplus} \rvert = 4!$. We then confirm that
-  $\aext$ satisfies \ref{TQ}.  Then, if $\cext$ is any novel, testworthy
-  {generalization} that satisfies $\cextb_{\novel}=\extb_{J}^{-1}$, then
-  $\aext$ is a {{diverse}} perturbation of $\cext$ that satisfies
-  \ref{TQ}-\ref{AQ}.
-
-  Since $\mathbf{r}=3$, the contrapositive of
-  \cref{lem-arrangement-cardinality-rank} implies that $\lvert\mc
-  H_{\mdoubleplus}\rvert = 6$.  The proof that now follows is a simple
-  {generalization} of \cref{lem-Y3-r2} to allow for the fact that $\lvert Y
-  \rvert=4$.  Fix any $J \in \mbbj$ such that $\ext_{J}$ is total and
-  \withoutlog\ take $J>0$.  Via \cref{prop-central-testworthy}, there exists a
-  testworthy $Y$-{generalization} $\aext$ such that $\aextb_{\novel}= \extb_{J
- }^{-1}$ is total and $L = (1- \lambda)J \times \lambda$ belongs to both
-  $\mbbjp$ and the center of $\acute{\mc H}_{\mdoubleplus}$ and
-  $\acute{v}^{\dd}$ satisfies \fourjac. Via \cref{rem-lattice}, since
-  $\acute{\mc H}$ is central, $\acute{\mc G}_{\mdoubleplus}$ and $\acute{\mc
-  G}$ are isomorphic, so we work with $\acute{\mc G}$.  Since $\mathbf r = 3$,
-  \cref{lem-arrangement-cardinality-rank} implies $\lvert \mc H \rvert = 6$, so
-  that the same is true of $\lvert \acute{\mc H} \rvert$.  The rank of
-  subarrangements with cardinality $4$ or more is $\acute{\mathbf r}$.  Let
+  We now verify that \stability\ also holds.  Since $\mathbf{r}=3$, the
+  contrapositive of \cref{lem-arrangement-cardinality-rank} implies that
+  $\lvert\mc H_{\mdoubleplus}\rvert = 6$.  Via \cref{prop-central-testworthy},
+  there exists a testworthy $Y$-{generalization} $\aext$ with an arrangement
+  $\acute{\mc{H}}_{\mdoubleplus}$ that is central and rank
+  $\acute{\mathbf{r}}=\mathbf{r}$. Since $\acute{\mc{L}}_{\mdoubleplus} =
+  \acute{\mc{L}}$, we drop reference to $\mdoubleplus$. The rank of
+  subarrangements with cardinality $4$ or more is $\acute{\mathbf{r}}$.  Let
   $\acute{\mathbf{\uptau}}$ denote the number of subarrangements $\mc A$ that
-  have cardinality $3$ and rank $2$. Each of the other $\binom{6}{3}-
-  \acute{\uptau}$ subarrangements with cardinality $3$ have rank
+  have cardinality $3$ and rank $2$.  Each of the other
+  $\binom{6}{3}-\acute{\uptau}$ subarrangements with cardinality $3$ have rank
   $\acute{\mathbf r}$. All other subarrangements have rank equal to their
   cardinality.
 \begin{linenomath*}
@@ -4990,16 +4890,14 @@ First some some useful results that exploit \threejac.
     \end{aligned}
   \end{equation}
 \end{linenomath*} 
-Via \cref{prop-central-testworthy}, $\acute{\mathbf r} = \mathbf r$, so that
-$\acute{\mathbf r} = 3$.  It remains for us to calculate the value of
-$\acute{\uptau}$. Each of the $\binom{4}{3} = 4$ subsets of $Y$ that have
-cardinality $3$ generates a subarrangement of cardinality $\binom{3}{2} = 3$.
-(For instance, $\mc A^{\{x,y,z\}} =
+We claim that $\acute{\uptau}=4$. Each of the $\binom{4}{3} = 4$ subsets of $Y$
+that have cardinality $3$ generates a subarrangement of cardinality
+$\binom{3}{2} = 3$.  (For instance, $\mc A^{\{x,y,z\}} =
 \left\{\acute{H}^{\{x,y\}},\acute{H}^{\{y,z\}},\acute{H}^{\{x,z\}}\right\}$.)
 For such subarrangements, \fourjac\ implies a rank of $2$. Arguments from the
 final step in the proof of \cref{lem-arrangement-cardinality-rank} confirm that
-every other subarrangement with cardinality $3$ has rank $3$.  Substituting
-into \cref{eq-zaslavski-4}, we obtain
+every other subarrangement with cardinality $3$ has rank $3$.
+\Cref{eq-zaslavski-4} then implies
 \begin{linenomath*}
   \begin{equation*}
     \begin{aligned}
@@ -5012,13 +4910,11 @@ into \cref{eq-zaslavski-4}, we obtain
    \end{aligned}
  \end{equation*}
 \end{linenomath*}
- The proof that every member of $\mc G$ is associated with a transitive
- ordering is as follows. Via \cref{prop-central-testworthy}, \fourjac\ holds
- for $\aext$ if, and only if, it holds for $\ext$. We have seen that \fourjac\
- holds. Then, via a straightforward application of the Jacobi identity and, for
- arbitary $K \in \mbbjp$, the definition of transitivity of $\aext_{K}$ yields
- \ref{TQ}. Thus, every member of $\acute{\mc G}$ is total.
-  \end{proof}
+The fact that $\aext$ satisfies \ref{TQ} is an immediate consequence of
+\fourjac. \stability\ then follows, for, if $\cext$ is any novel, testworthy
+{generalization} that satisfies $\cextb_{\novel}=\extb_{J}^{-1}$, then $\aext$
+is a {{diverse}} perturbation of $\cext$ that satisfies \ref{TQ}-\ref{AQ}.
+\end{proof}
 
   \paragraph{In the remaining case, where $Y = \{x,y,z,w\}$ and $\mathbf r =
   2$,\hskip-8pt} the proof is complicated by the fact that maximally-diverse
@@ -5589,9 +5485,10 @@ version of Zaslavski's theorem is
 \begin{example}[a comparison of $\mc L$ and $\mc
   L_{\mdoubleplus}$]\label{eg-zaslavski} Let $X = \{x , y , z \}$, $\mbbt =
   \{s,t\}$, and $u^{(x,y)} = 1 \times - 1$ and $u^{(y,z)} = 2 \times - 1$
-  denote vectors in $\R^{\mbbt}$. We now appeal to the Jacobi identity and take
-  $u^{(x,z)} = u^{(x,y)} + u^{(y,z)} = 3 \times - 2$ and extend to the
-  remaining pairs in $X^{2}$ using \cref{lem-insep}.  Since these vectors are
+  denote vectors in $\R^{\mbbt}$. Note that in this case $S = \spann\{u^{\xy},
+  u^{\yz}\}$ coincides with $\R^{\mbbt}$. We now apply the Jacobi identity
+  and take $u^{(x,z)} = u^{(x,y)} + u^{(y,z)} = 3 \times - 2$ and extend to the
+  remaining pairs in $X^{2}$ using \cref{prop-insep}.  Since these vectors are
   pairwise noncollinear and $\countof \mbbt = 2$, the associated arrangement
   $\mc H_{\mdoubleplus} = \left\{H_{\mdoubleplus}^{\{x,y\}},
   H_{\mdoubleplus}^{\{y,z\}}, H_{\mdoubleplus}^{\{x,z\}}\right\}$ consists of
@@ -5614,18 +5511,19 @@ version of Zaslavski's theorem is
 \end{center}
 \end{figure}
 
-In the present setting $A^{\emptyset}_{\mdoubleplus} = \posreal^{\mbbt}$ and,
+In the present setting, $A^{\emptyset}_{\mdoubleplus} = \posreal^{\mbbt}$, and,
   via \cref{eq-mobius}, $\bmu(A^{\emptyset}_{\mdoubleplus}) = 1$. Then, since
   $\posreal^{\mbbt}$ is the unique element in $\mc L_{\mdoubleplus}$ that
   (strictly) contains each hyperplane in $\mc H_{\mdoubleplus}$,
   \cref{eq-mobius} yields $\bmu(A) = -\bmu(A^{\emptyset}_{\mdoubleplus})$ for
-  each $A \in \mc H_{\mdoubleplus}$.  Now since the hyperplanes in $\mc
-  H_{\mdoubleplus}$ are disjoint, there are no further elements in $\mc
-  L_{\mdoubleplus}$ and we observe that
+  each $A \in \mc H_{\mdoubleplus}$.  Now since the hyperplanes in
+  $\mc{H}_{\mdoubleplus}$ are pairwise disjoint, there are no further elements
+  in $\mc{L}_{\mdoubleplus}$. Thus
   \begin{linenomath*}
-    \begin{equation*}\lvert \mc G_{\mdoubleplus} \rvert= \sum_{A \in \mc
-      L_{\mdoubleplus}} \lvert
-      \bmu(A) \rvert = 4.\end{equation*}
+    \begin{equation*}
+      \lvert \mc{G}_{\mdoubleplus} \rvert= \sum_{A \in \mc{L}_{\mdoubleplus}}
+      \lvert \bmu(A) \rvert = 4.
+    \end{equation*}
   \end{linenomath*}
 
   In contrast, although the structure of $\mc L$ is otherwise isomorphic to
@@ -5677,7 +5575,7 @@ In the present setting $A^{\emptyset}_{\mdoubleplus} = \posreal^{\mbbt}$ and,
 \end{remark}
 
   We now abstract a useful property from \cref{eg-zaslavski}.
-  \begin{theoremEnd}{proposition}[polar opposite
+  \begin{proposition}[polar opposite
     rankings]\label{prop-pairwise-extremal}
 
   If $\preceqb_{\mbbj}$ satisfies \ref{KQ}–\ref{AQ} and \twodiv, then, for
@@ -5685,8 +5583,8 @@ In the present setting $A^{\emptyset}_{\mdoubleplus} = \posreal^{\mbbt}$ and,
     $\extb$ is such that, for some $J,L \in\mbbj$, $\extb_{J} = \extb_{L}^{-1}
    $ belongs to $\total(\ext)$.
 
-\end{theoremEnd}
-\begin{proofEnd}%[Proof of \cref{prop-pairwise-extremal}]
+\end{proposition}
+\begin{proof}%[Proof of \cref{prop-pairwise-extremal}]
   Fix $\countof Y= 3$ or $4$, via \cref{prop-insep}, let $v^{\dd}$ denote the
   $2$-diverse matrix representation of the improper $Y$-{generalization} $\ext$. Let
   $\mc H_{\mdoubleplus}$ denote the associated arrangement of hyperplanes.  For
@@ -5701,7 +5599,7 @@ In the present setting $A^{\emptyset}_{\mdoubleplus} = \posreal^{\mbbt}$ and,
   complete and, via \ref{TQ}, total. Next, take $L \in G^{*}$, so that since $J$
   and $L$ are separated by every hyperplane in $\mc H_{\mdoubleplus}$,
   $\extb_{J}= \extb_{L}^{-1}$.
-\end{proofEnd}
+\end{proof}
 % We now show that \twodiv\ is too weak for the purposes of \cref{thm-mainQ}.
 \begin{example}[insufficiency of \twodiv]\label{eg-lexicographic}
   Let $X = [0,1]^{2}$ and let $\leq^{\textup{lex}}$ denote the lexicographic
@@ -5725,6 +5623,37 @@ hold. The fact that $\preceqb_{\mbbj}$ fails to satisfy part \ref{rep-mainQ} of
 \cref{thm-mainQ} follows from the fact that $\preceqb_{J}$ is lexicographic for
 every $J$ outside $H$.
 \end{example}
+We now present the canonical intersection semilattices for the variety of cases
+that we consider in the proofs of the main paper.
+  \begin{figure}
+    \begin{center}
+  \begin{tikzpicture}
+    \node (max) at (0,3) {$\{x,y,z\}$}; \node (a) at (-3,1.75)
+    {$\{x,y\},\{y,z\}$}; \node (b) at (0,1.75) {$\{x,y\},\{x,z\}$}; \node (c) at
+    (3,1.75) {$\{y,z\},\{x,z\}$}; \node (d) at (-2,0.25) {$\{x,y\}$}; \node (e)
+    at (0,0.25) {$\{y,z\}$}; \node (f) at (2,0.25) {$\{x,z\}$}; \node (min) at
+    (0,-1) {$\emptyset$}; \draw (min) -- (d) -- (a) -- (max) -- (b) -- (f) (e)
+    -- (min) -- (f) -- (c) -- (max) (d) -- (b); \draw[preaction={draw=white,
+      -,line width=6pt}] (a) -- (e) -- (c);
+\end{tikzpicture}
+\caption{\label{fig-hasse-Y3-r3} The intersection semilattice of a central
+      arrangement for $\countof{Y} = 3$ and ${\mathbf{r}} = 3$.}
+\end{center}
+\end{figure}
+
+In the intersection semilattice of \cref{fig-hasse-Y3-r3}, an increase in level
+  corresponds to a decrease in dimension: since $\acute{A}^{\{x,y,z\}}$ is
+  nonempty, it is of dimension at least zero.  Since $\acute{J}$ belongs to the
+  interior of $\posreal^{\mbbtp}$ and $\acute{A}^{\{x,y\}\{y,z\}}$ is at least
+  one-dimensional, $\acute{A}^{\{x,y\} \{y,z\}}_{\mdoubleplus}$ is
+  one-dimensional.  Since $\acute{A}^{\{x,y,z\}} \subset
+  \acute{A}^{\{x,y\}\{y,z\}}$, the latter set is nonempty whenever $\acute{\mc
+  H}_{\mdoubleplus}$ is central. The same, of course, applies to other members
+  at the same level. Conversely, if $\acute{A}^{\{x,y\}\{y,z\}}$ is empty, then
+  so is $\acute{A}^{\{x,y,z\}}$. We now use this to show that there is a unique
+  form of $Y$-{generalization} $\hext$ such that $\countof \hat{\mc
+  G}_{\mdoubleplus} = 6$ and, moreover, that any such $\hext$ fails to satisfy
+  \ref{TQ}.
 \end{appendices}
 
 
