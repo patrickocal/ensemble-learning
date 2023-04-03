@@ -4,7 +4,6 @@
    % \documentclass[12pt]{article}
 \listfiles
 \usepackage{./Paper_preamble}
-\usepackage{bm}
 \addbibresource{stable-learning-jabref.bib}
 %includeonly 
 %\includeonly{./introduction.tex}
@@ -23,7 +22,6 @@
 %\newwatermark[allpages,color=gray!50,angle=45,scale=3,xpos=0,ypos=0]{DRAFT}
 
 %\renewcommand\Affilfont{\itshape\small}
- \usepackage{sectsty}
 % \allsectionsfont{\mdseries\itshape}
  \paragraphfont{\mdseries\scshape}
  \makeatletter
@@ -115,12 +113,10 @@
 %\newcommand\mdoubleplus{\ensuremath{\mathbin{\bm{+}}}}
 %\newcommand\mdoubleplus{\ensuremath{\mathbin{\circ\mkern-12mu+}}}
 %\usepackage{cancel}
-\usepackage{accents}
 \newcommand*{\dt}[1]{%
   \accentset{\mbox{\bfseries .}}{#1}}
 %\newcommand*{\ddt}[1]{%
 % \accentset{\mbox{\large\bfseries .\hspace{-0.25ex}.}}{#1}}
-\usepackage{upgreek}
 
 %\renewcommand{\smallbot}{\text{\small$\bot$}}
 \newcommand{\smallbot}{\text{\small$\hat{0}$}}
@@ -269,7 +265,7 @@ CCM}
 
 \newcommand{\mbbj}{\mathds J}
 \newcommand{\mbbjp}{{\mathds {J}^{\novel}}}
-\newcommand{\mbbjpp}{\mathfrak I}
+\newcommand{\mbbjpp}{\mathfrak{I}}
 
 \newcommand{\mem}{A}
 
@@ -506,7 +502,8 @@ CCM}
 % \fancyhf[rh]{\itshape trans.\ by \theauthor}
 % \fancyhf[cf]{--- \thepage ---}
 %includeonly
-\usepackage{blindtext} \makeatletter \renewcommand\maketitle
+\makeatletter 
+\renewcommand\maketitle
   {\begin{center}\mdseries\large
     {\@title}%
     \par\medskip\medskip
@@ -520,7 +517,8 @@ CCM}
 \emph{University of Queensland}
 \end{small}
    \end{center}
- } \makeatother \usepackage{fancyhdr} \fancyhf{}
+ } \makeatother
+\fancyhf{}
   \fancyhead[LE,RO]{\small\thepage} \fancyhead[CO]{\small\scshape 
   Stable learning and no-arbitrage pricing based on sentiments}
 
@@ -3365,7 +3363,7 @@ $\lbc t : L ( t ) \neq 0 \rbc$ is finite and let $\mbbip$ denote the
 corresponding subset of $\nnint^{\mbbtp}$. Then let
 \begin{linenomath*}
 \begin{equation*}
-\mbbipp = \left\{
+  \text{$\mbbipp$} = \left\{
 \begin{array}{ll}
  \mbbi & \text{if, and only  if, $\mbbtpp= \mbbt$, and}\\
 \mbbip  &\text{otherwise.}
@@ -3433,24 +3431,25 @@ $Y$-{generalization} is either regular or novel, let $\Ext (Y,\cdot)$
 denote the set of all $Y$-{generalization}s. We now clarify
 what it means to be a {generalization} of $\preceqb_{\mbbj}$.
 
-For each $t \in \mbbtpp$, we take  $\delta_{t} : \mbbtpp \rightarrow \R$ to be
-the function satisfying $\delta_{t} ( s ) = 1$ if $s = t$ and $\delta_{t} ( s ) = 0$
-otherwise. (When $\mbbtpp$ is finite, these are simply the basis vectors for $\R^{\mbbtpp}$.)  When we wish to emphasise that the  vectors belong to in
+For each $t \in \mbbtpp$, we take $\delta_{t} : \mbbtpp \rightarrow \R$ to be
+the function satisfying $\delta_{t} ( s ) = 1$ if $s = t$ and $\delta_{t} ( s )
+= 0$ otherwise. (When $\mbbtpp$ is finite, these are simply the basis vectors
+for $\R^{\mbbtpp}$.)  When we wish to emphasise that the vectors belong to in
 $\R^{\mbbtp}$, then, for each $\mbbtp$, we will write $\delta_{t}^{\novel}$.
 Let
 \begin{linenomath*}
-\begin{equation*}
- \mbbjpp  = \left \{
-\begin{array}{ll}
-\mbbj & \text{if, and only if, $\mbbtpp = \mbbt$, and}    \\
- \mbbjp & \text{otherwise.}
-\end{array}\right.
-\end{equation*}
+  \begin{equation*}
+    \text{$\mbbjpp$} = \left \{
+    \begin{array}{ll}
+      \mbbj & \text{if, and only if, $\mbbtpp = \mbbt$, and} \\
+      \mbbjp & \text{otherwise.}
+    \end{array}\right.
+  \end{equation*}
 \end{linenomath*}
-For every $I \in \mbbj$ and $J \in \mbbjpp$, we write $I \equiv J$ whenever
-$I = J$ or $J = I\times 0$. (In the latter case, $J(t)= I(t)$ for every
-$t\in \mbbt$ and $J(\novel )= 0$.) This notion reflects the fact that, for the purposes
-of the present model, such $I$ and $J$ are equivalent.
+For every $I \in \mbbj$ and $J \in \mbbjpp$, we write $I \equiv J$ whenever $I
+= J$ or $J = I\times 0$. (In the latter case, $J(t)= I(t)$ for every $t\in
+\mbbt$ and $J(\novel )= 0$.) This notion reflects the fact that, for the
+purposes of the present model, such $I$ and $J$ are equivalent.
 \begin{definition}\label{def-{generalization}Q}
  
 $\extb =\langle \extb_{J}: J \in \mbbjpp \rangle$ is a
@@ -4035,58 +4034,10 @@ $2$-diverse (pairwise) matrix representation of $\ext$.
   % regular {generalization}s may fail to satisfy this property.  When
   % this property holds, we are able to appeal to Zaslavski's theorem, and thus
   % count the open and connected sets of an arrangement.  \end{remark}
-  % \end{comment}
-  We now abstract a useful property from \cref{eg-zaslavski}.
-  \begin{theoremEnd}{proposition}[polar opposite
-    rankings]\label{prop-pairwise-extremal}
-
-  If $\preceqb_{\mbbj}$ satisfies \ref{KQ}–\ref{AQ} and \twodiv, then, for
-    every $Y\subseteq X$ of cardinality $3$ or $4$, the improper $Y$-{generalization}
-    $\extb$ is such that, for some $J,L \in\mbbj$, $\extb_{J} = \extb_{L}^{-1}
-   $ belongs to $\total(\ext)$.
-
-\end{theoremEnd}
-\begin{proofEnd}%[Proof of \cref{prop-pairwise-extremal}]
-  Fix $\countof Y= 3$ or $4$, via \cref{prop-insep}, let $v^{\dd}$ denote the
-  $2$-diverse matrix representation of the improper $Y$-{generalization} $\ext$. Let
-  $\mc H_{\mdoubleplus}$ denote the associated arrangement of hyperplanes.  For
-  every distinct $x,y\in X$, \cref{prop-insep} implies that
-  $H^{\{x,y\}}_{\mdoubleplus}$ intersects $\posreal^{\mbbt}$. Then, similar to
-  \cref{eg-zaslavski}, the $1 \leq n \leq \binom{\countof Y}{2}$ distinct
-  hyperplanes of $\mc H_{\mdoubleplus}$ cut $\posreal^{\mbbt}$ into at least
-  $n+1$ regions.  At least one pair $G$ and $G^{*}$ in $\mc G_{\mdoubleplus}$
-  are therefore separated by all $n$ distinct members of $\mc
-  H_{\mdoubleplus}$. Take $J \in G$, so that, for every distinct $x,y \in Y$,
-  $\langle u^{\xy}, J \rangle \neq 0$.  Thus $\ext_{J}$ is antisymmetric,
-  complete and, via \ref{TQ}, total. Next, take $L \in G^{*}$, so that since $J$
-  and $L$ are separated by every hyperplane in $\mc H_{\mdoubleplus}$,
-  $\extb_{J}= \extb_{L}^{-1}$.
-\end{proofEnd}
-% We now show that \twodiv\ is too weak for the purposes of \cref{thm-mainQ}.
-\begin{example}[insufficiency of \twodiv]\label{eg-lexicographic}
-  Let $X = [0,1]^{2}$ and let $\leq^{\textup{lex}}$ denote the lexicographic
-  ordering on $X$.  Let $\mbbt = \{s,t\}$, and, for each $J \in \mbbj$, let
-\begin{linenomath*}
-\begin{equation*}
-\preceqb_{J} = \left\{
-  \begin{array}{ll}
-    X^{2} & \text{if  $J(s) = J( t )\,;$}\\
-    \leq^{\textup{lex}} & \text{if  $J(s) < J( t )\,;$}\\
-    (\leq^{\textup{lex}})^{-1} & \text{otherwise.}
-    \end{array}\right.
-\end{equation*}
-\end{linenomath*}
-Recall that if $\preceqb_{J} = X^{2}$, then $\preceqb_{J}$ is symmetric and
-hence equal to $\simeq_{J}$.  Thus, for every distinct $x,y\in X$,
-$H^{\{x,y\}}_{\mdoubleplus}= \{J \in \R^{\mbbt}_{\mdoubleplus} : J(s) =
-J(t)\}$. Via \cref{prop-insep}, $\preceqb_{\mbbj}$ has a two-diverse matrix
-representation $v^{\dd}$. But via \cref{lem-c2dQ}, below, \condtwodiv\ fails to
-hold. The fact that $\preceqb_{\mbbj}$ fails to satisfy part \ref{rep-mainQ} of
-\cref{thm-mainQ} follows from the fact that $\preceqb_{J}$ is lexicographic for
-every $J$ outside $H$.
-\end{example}
+  % \end{comment}https://aibe.uq.edu.au/article/2023/03/economics-of-green-hydrogen-in-australia-part-1
 \end{step}
-\begin{step}[for $\mbbt<\infty$, characterisations of \ref{c2dQ}]\label{step-condtwodiv}
+\begin{step}[for $\mbbt<\infty$, characterisations of
+  \ref{c2dQ}]\label{step-condtwodiv}
   A matrix $v^{\dd}$ that satisfies the conditions of the next lemma is a
   \emph{conditionally-$2$-diverse (pairwise) representation}.
 
@@ -4459,9 +4410,7 @@ and $w$ is a limit ordinal.
  that apply independently to each subset $Y$ of $X$ that has cardinality $3$ or
  $4$.  Throughout the present section, $Y\subseteq X$ has cardinality $3$ or
  $4$ and $\ext$ denotes the improper $Y$-{generalization} of $\preceq_{\mbbj}$.
- This will allow us to apply the translation of \cref{step-infinite} and work
- in a finite dimensional space. But first we need to rule out the following
- case.  \paragraph{Suppose there is no testworthy $Y$-{generalization} that is
+  \paragraph{Suppose there is no testworthy $Y$-{generalization} that is
  novel.}\hskip-7pt In this case, \stability\ holds vacuously on $Y$. The
  following lemma then confirms that \fourdiv\ holds and theorem 2 of \gsii\
  applies, so that \fourjac\ holds on $Y$.
@@ -4483,9 +4432,9 @@ and $w$ is a limit ordinal.
   case where $\lvert Y \rvert = 3$ is similar and omitted.)  Via
   \cref{prop-central-testworthy}, the set of testworthy $Y$-{generalization}s
   is nonempty. Let $\hext$ be a testworthy $Y$-{generalization}, so that there
-  exists $J$ in $\mbbj$ such that $\hext_{J\times 0}$ is total and equal to
-  the inverse of $\hextb_{\novel}$. Let $P \defeq \hsextb_{\novel}$. Thus $P$
-  is the asymmetric part of a total ordering of $Y$.  Via \cref{lem-insep}, let
+  exists $J$ in $\mbbj$ such that $\hext_{J\times 0}$ is total and equal to the
+  inverse of $\hextb_{\novel}$. Let $P \defeq \hsextb_{\novel}$ so that $P
+  \subsetneq Y^2$. Via \ref{TQ}--\ref{c2dQ}, \cref{prop-insep} applies, let
   $\hat{v}^{\dd}$ be the matrix representation of $\hext$ and let $\hat{v}^{P}$
   denote the restriction of $\hat{v}^{\dd}$ to $P \times \mbbtp$.
    % and
@@ -4533,7 +4482,7 @@ and $w$ is a limit ordinal.
     ordering, for every remaining $\xy$ in $Y^{2}$, $x = y$, so let
     $\acute{v}^{\xy} = 0$.  Observe that, by construction, for every $s$ in
     $\mbbt$, $\acute{v}^{\dd}(s) \neq \acute{v}^{\dd}(\novel)$. This allows us
-    to appeal to \cref{lem-insep} and take $\aextb$ to be the novel
+    to appeal to \cref{prop-insep} and take $\aextb$ to be the novel
     {generalization} that $\acute{v}^{\dd}$ generates.
   % and the definition of $M$, In particular, note that the product of
   % $\acute{v}^{p} ( \no\acute{v}el )$ and $\acute{v}^p ( s^p )$ is
@@ -4557,10 +4506,10 @@ and $w$ is a limit ordinal.
   % $-M$. That is, for some $t$ in $\mbbc_{/\sim^{\star}}$ we have
   % ${v}^{P}(t)=-M$. Then $-{v}^{P}= M$.
 
-This contradiction implies that, for every $\eta^{P} \in \posreal^{P}$,
-    there exists $s$ in $\mbbt$ such that $\hat{v}^{P}(s) = \eta^{P}$.
-    \emph{Mutatis mutandis}, a repetition of the preceding argument by
-    contradiction confirms that there exists $t$ in $\mbbt$ such that
+This contradiction implies that, for every $\eta^{P} \in \posreal^{P}$, there
+    exists $s$ in $\mbbt$ such that $\hat{v}^{P}(s) = \eta^{P}$.  \emph{Mutatis
+    mutandis}, a repetition of the preceding argument by contradiction confirms
+    that there exists $t$ in $\mbbt$ such that
 $\hat{v}^{P}(t) = - \eta^{P}$.% \footnote{In summary,
 % as before, by setting $\acute{v}^{P} (\novel) = \eta^{P}$ and, for every
 % $t$ in $\mbbc_{/\sim^{\star}}$, $\acute{v}^{P}(t) = v^{P}(t)$, we generate a
@@ -4582,9 +4531,9 @@ $\hat{v}^{P}(t) = - \eta^{P}$.% \footnote{In summary,
 $Y$-{generalization} is regular, the cardinality of $\mbbt$ is equal to the
 cardinality of $\R^{P}$.  We now show that \fourdiv\ holds on $Y$. Let ${R}$
 denote an arbitrary total ordering of $Y$.  We show that, for some $K$ in
-$\mbbj$, $\langle \hat{v}^{\xy}, K \rangle \geq 0$ if, and only if, $\xy$ in
-${R}$. \Cref{claim-test-empty} ensures that we can choose $s$ in $\mbbt$ such
-that, for some $0 < \epsilon <1$
+$\mbbj$, $\langle \hat{v}^{\xy}, K \rangle \geq 0$ if, and only if, $\xy$
+belongs to ${R}$. \Cref{claim-test-empty} ensures that we can choose $s$ in
+$\mbbt$ such that, for some $0 < \epsilon <1$
 \begin{linenomath*}
   \begin{equation*}
     \hat{v}^{\xy} ( s ) = \left \{
@@ -4604,9 +4553,9 @@ that, for some $0 < \epsilon <1$
   % $v^{p} ( s ) = - v^{p^{- 1}} ( s )$ (and, for every
   % $p$ such that $p = x \times x$, $v^{p} ( s ) = 0$).
   Via \cref{claim-test-empty}, take $t$ in $\mbbt$ such that, for every $\xy$
-  in $P$, $\hat{v}^{\xy} ( t ) = -1$.  Let $K : = \delta _{s} + \delta _{t
- }$ in $\mbbjp$, so that $\langle \hat{v}^{\xy}, K \rangle = \hat{v}^{\xy}(s)
-  + \hat{v}^{\xy}(t)$. By evaluating terms and observing that $\epsilon > 0$ we
+  in $P$, $\hat{v}^{\xy} ( t ) = -1$.  Let $K : = \delta _{s} + \delta _{t }$
+  in $\mbbjp$, so that $\langle \hat{v}^{\xy}, K \rangle = \hat{v}^{\xy}(s) +
+  \hat{v}^{\xy}(t)$. By evaluating terms and observing that $\epsilon > 0$ we
   obtain
 \begin{linenomath*} 
  \begin{equation*}
@@ -4959,7 +4908,8 @@ First some some useful results that exploit \threejac.
   are $\binom{4}{2} = 6$ ways to choose distinct pairs of elements from the
   four-element set $X$.  Via \cref{lem-c2dQ} only the following equalities are
   feasible: $H^{\{x,y\}} = H^{\{z,w\}}$, $H^{\{x,z\}} = H^{\{y,w\}}$ and
-  $H^{\{x,w\}} = H^{\{y,z\}}$.  Via \cref{prop-pairwise-extremal}, \withoutlog,
+  $H^{\{x,w\}} = H^{\{y,z\}}$.  Since all six hyperplanes partition
+  $S_{\mdoubleplus}$, \withoutlog,
   take $G^{(x,y,z,w)}$ and $G^{(w,z,y,x)}$ to belong to $\mc G$. We consider a
   convex path $\phi$ from (some member of) $G^{(x,y,z,w)}$ to $G^{(w,z,y,x)}$
   such that $\countof \{G \in \mc G: (\image \phi) \cap G \neq \emptyset \}$ is
@@ -5726,6 +5676,55 @@ In the present setting $A^{\emptyset}_{\mdoubleplus} = \posreal^{\mbbt}$ and,
   H}_{\mdoubleplus}$ is centered.
 \end{remark}
 
+  We now abstract a useful property from \cref{eg-zaslavski}.
+  \begin{theoremEnd}{proposition}[polar opposite
+    rankings]\label{prop-pairwise-extremal}
+
+  If $\preceqb_{\mbbj}$ satisfies \ref{KQ}–\ref{AQ} and \twodiv, then, for
+    every $Y\subseteq X$ of cardinality $3$ or $4$, the improper $Y$-{generalization}
+    $\extb$ is such that, for some $J,L \in\mbbj$, $\extb_{J} = \extb_{L}^{-1}
+   $ belongs to $\total(\ext)$.
+
+\end{theoremEnd}
+\begin{proofEnd}%[Proof of \cref{prop-pairwise-extremal}]
+  Fix $\countof Y= 3$ or $4$, via \cref{prop-insep}, let $v^{\dd}$ denote the
+  $2$-diverse matrix representation of the improper $Y$-{generalization} $\ext$. Let
+  $\mc H_{\mdoubleplus}$ denote the associated arrangement of hyperplanes.  For
+  every distinct $x,y\in X$, \cref{prop-insep} implies that
+  $H^{\{x,y\}}_{\mdoubleplus}$ intersects $\posreal^{\mbbt}$. Then, similar to
+  \cref{eg-zaslavski}, the $1 \leq n \leq \binom{\countof Y}{2}$ distinct
+  hyperplanes of $\mc H_{\mdoubleplus}$ cut $\posreal^{\mbbt}$ into at least
+  $n+1$ regions.  At least one pair $G$ and $G^{*}$ in $\mc G_{\mdoubleplus}$
+  are therefore separated by all $n$ distinct members of $\mc
+  H_{\mdoubleplus}$. Take $J \in G$, so that, for every distinct $x,y \in Y$,
+  $\langle u^{\xy}, J \rangle \neq 0$.  Thus $\ext_{J}$ is antisymmetric,
+  complete and, via \ref{TQ}, total. Next, take $L \in G^{*}$, so that since $J$
+  and $L$ are separated by every hyperplane in $\mc H_{\mdoubleplus}$,
+  $\extb_{J}= \extb_{L}^{-1}$.
+\end{proofEnd}
+% We now show that \twodiv\ is too weak for the purposes of \cref{thm-mainQ}.
+\begin{example}[insufficiency of \twodiv]\label{eg-lexicographic}
+  Let $X = [0,1]^{2}$ and let $\leq^{\textup{lex}}$ denote the lexicographic
+  ordering on $X$.  Let $\mbbt = \{s,t\}$, and, for each $J \in \mbbj$, let
+\begin{linenomath*}
+\begin{equation*}
+\preceqb_{J} = \left\{
+  \begin{array}{ll}
+    X^{2} & \text{if  $J(s) = J( t )\,;$}\\
+    \leq^{\textup{lex}} & \text{if  $J(s) < J( t )\,;$}\\
+    (\leq^{\textup{lex}})^{-1} & \text{otherwise.}
+    \end{array}\right.
+\end{equation*}
+\end{linenomath*}
+Recall that if $\preceqb_{J} = X^{2}$, then $\preceqb_{J}$ is symmetric and
+hence equal to $\simeq_{J}$.  Thus, for every distinct $x,y\in X$,
+$H^{\{x,y\}}_{\mdoubleplus}= \{J \in \R^{\mbbt}_{\mdoubleplus} : J(s) =
+J(t)\}$. Via \cref{prop-insep}, $\preceqb_{\mbbj}$ has a two-diverse matrix
+representation $v^{\dd}$. But via \cref{lem-c2dQ}, below, \condtwodiv\ fails to
+hold. The fact that $\preceqb_{\mbbj}$ fails to satisfy part \ref{rep-mainQ} of
+\cref{thm-mainQ} follows from the fact that $\preceqb_{J}$ is lexicographic for
+every $J$ outside $H$.
+\end{example}
 \end{appendices}
 
 
