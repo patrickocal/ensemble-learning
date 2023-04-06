@@ -1,0 +1,152 @@
+\begin{tikzpicture}[line join = round, line cap = round]
+  \def \congruent{1}
+  \def \muroot{674e-3}
+  \def \err{0}
+  \def \errp{0}
+  \def \errpp{0}
+  \def \xuv{50e-2+\errp}
+  \def \muv{\muroot-\errpp}
+  \def \muvinv{1-\muroot-\err}
+  \def \nuv{465e-3}
+  \def \nuvinv{562e-3}
+  \if\congruent1
+  \else
+  \def \err{0e-2}
+  \def \errp{5e-2}
+  \def \errpp{3/43}
+  \fi
+
+    
+%  \draw [help lines,step=.5cm] (-4,-3) grid (5,6.5);
+  \node[draw, thick, regular polygon,
+    regular polygon sides=3, minimum width = 6cm](ternary){};
+  \coordinate (t_1) at (ternary.corner 1);
+  \coordinate (t_2) at (ternary.corner 2);
+  \coordinate (t_3) at (ternary.corner 3);
+  \coordinate (t_4) at ($(t_3)!300e-2!(t_2)!123e-2!(t_1)$);
+  \coordinate (c_5) at ($(t_4)!1/6!(t_3)$);
+  \coordinate (P_1) at ($(t_1)!\muv!(t_3)$);
+  \coordinate (P_2) at ($(t_1)!\xuv!(t_3)$);
+  \coordinate (P_3) at ($(t_1)!\muvinv!(t_3)$);
+  \coordinate (P_4) at ($(t_2)!62e-2!(t_3)$);
+  \coordinate (P_5) at ($(t_2)!62e-2!(t_1)$);
+  \coordinate (P_6) at ($(t_4)!\nuvinv!(t_1)$);
+  \coordinate (P_7) at ($(t_3)!\nuv!(c_5)$);
+  \coordinate (P_8) at ($(t_2)!18/43!(t_4)$);
+  \coordinate (P_9) at ($(t_2)!61/172!(t_4)$);
+
+%  \begin{scope}[x={(t_1)}, y={(t_3)}, z={(t_4)}]
+%    \path (12/29,12/29,4/29) node[] (P_11){\small $\bullet$}; 
+%    \path (2/11, 4/11, 5/11) node[inner sep=1.5pt, label=above:$D_5$](D_9){};
+%    \path (4/11, 2/11, 5/11) node[inner sep=1.5pt, label=above:$D_6$](D_6){};
+%  \end{scope}
+%    \fill (t_4) circle (1pt);
+ 
+   % top face of tetrahedron
+   \draw[thin, opacity=0.2] (t_1) -- (t_4) -- (t_3) -- (t_1);
+%   \filldraw[bottom color=gray!50!black, top color=cyan!50]
+%     (t_1) -- (t_4) -- (t_3);
+   % mid vs high
+   \fill[fill=yellow!50!black, opacity=15e-2]
+     (P_1) -- (P_4) -- (P_6) -- (P_8) -- (P_1);
+   \fill[fill=yellow!50!black, opacity=15e-2]
+     (P_1) -- (P_6) -- (P_4) -- (P_8) -- (P_1);
+
+   % low vs high
+   \fill[fill=red!70, opacity=15e-2]
+     (P_2) -- (t_2) -- (c_5) -- (P_2);
+
+   % low vs mid
+   \fill[fill=cyan!70, opacity=15e-2]
+     (P_3) -- (P_5) -- (P_7) -- (P_9) -- (P_3);
+   \fill[fill=cyan!70, opacity=15e-2]
+     (P_3) -- (P_7) -- (P_5) -- (P_9) -- (P_3);
+
+    \draw[thin, gray!50, dotted] (t_2) -- (t_4);
+
+    \draw[very thin, blue!80, dotted] (t_2) -- (c_5);
+
+    \draw[very thin, blue!80, dotted] (P_4) -- (P_8);
+    \draw[very thin, blue!80, dotted] (P_8) -- (P_6);
+
+    \draw[very thin, blue!80, dotted] (P_5) -- (P_9);
+    \draw[very thin, blue!80, dotted] (P_7) -- (P_9);
+
+    \draw[blue, very thin] (c_5) -- (P_2);
+    \draw[blue, very thin] (P_1) -- (P_6);
+    \draw[blue, very thin] (P_7) -- (P_3);
+
+    % intersection(s)
+    \coordinate (H_1) at ($(t_2)!431e-3!(c_5)$);
+    \if\congruent1
+      \coordinate (H_2) at ($(P_2)!185e-3!(c_5)$);
+      \draw[blue, densely dashed] (H_1) -- (H_2);
+    \else
+      \coordinate (H_3) at ($(P_2)!120e-3!(c_5)$);
+      \coordinate (H_4) at ($(P_3)!484e-3!(P_7)$);
+      \coordinate (H_5) at ($(P_3)!378e-3!(P_7)$);
+      \draw[blue, densely dashed] (H_1) -- (H_3);
+      \draw[blue, densely dashed] (H_1) -- (H_4);
+      \draw[blue, densely dashed] (H_1) -- (H_5);
+      \fill[fill=brown, opacity=15e-2]
+        (H_1) -- (H_3) -- (H_4) -- (H_5);
+    \fi
+
+  %chamber labels
+%  \begin{scope}[clip, x={(t_1)}, y={(t_2)}, z={(t_3)}]
+%    \path (11/14, 2/14, 2/14) node[inner sep=.5pt](D_1){$D_1$};
+%    \path (2/14, 2/14, 11/14) node[inner sep=.11pt](D_4){$D_4$};
+%%    \path (12/29,8/29,6/29) node[] (P_10){\small $\bullet$}; 
+%%    \path (2/7, 4/7, 1/7) node[inner sep=.5pt](D_2){$D_2$};
+%%    \path (1/7, 4/7, 2/7) node[inner sep=.5pt](D_3){$D_3$};
+%%    \foreach \X in {1,2,3}
+%%      {\node at ($(ternary.corner \X)$) {\small $\bullet$};
+%%      }
+%  \end{scope}
+%    \coordinate (D_2) at ($(P_4)!5/7!(P_5)$);
+%    \node[below left] at (D_2) {$D_2$};
+%    \coordinate (D_3) at ($(P_4)!2/7!(P_5)$);
+%    \node[below left] at (D_3) {$D_3$};
+%    \coordinate (D_5) at ($(P_6)!19/26!(P_7)$);
+%    \node at (D_5) {$D_5$};
+%    \coordinate (D_6) at ($(P_6)!8/13!(c_5)$);
+%    \node at (D_6) {$D_6$};
+
+
+  % draw the regular polygon again
+  \node[draw, thick, regular polygon,
+    regular polygon sides=3, minimum width = 6cm](ternary){};
+  % hyperplanes on front face
+    \draw[blue,thick] (t_2) -- (P_2);
+    \draw[blue,thick] (P_1) -- (P_4);
+    \draw[blue,thick] (P_5) -- (P_3);
+
+  \foreach \point/\position in {t_1/above,t_2/below,t_3/below,t_4/above}
+    {
+        \fill (\point) circle (2pt);
+        \node[\position=3pt] at (\point) {$\point$};
+    }
+
+%    \fill (C_5) circle (1pt);
+
+%  \draw[smooth,color=black,solid,line width=1pt] (0,0) node[below] {$ (19,0,0)$}
+%    -- (6,0) node [below right] {$(0,19,0)$} -- (3,6) node[above] {$ (0,0,19)$}
+%    --(0,0); 
+
+
+
+%  \draw[smooth, color=black, solid, line width=1pt] (0, 0) -- (3, 4.5);
+
+
+%\node at (2.5 , 1.125) {\Large$\bullet$};
+%\node[above right] at (2.5 , 1.125) {\large $D^\star$};
+
+
+%\node at (4 , 2.675) {\Large$\bullet$};
+%\node[right] at (4.2 , 2.675) {$ I _ { \current } = ( 0 , 2 , 3 )$};
+
+%\draw[smooth,color=black,solid,line width=1.5pt] (0,0) node {\huge $\bullet$} -- (1,0) node  {\huge $\bullet$} -- (0,1) node {\huge $\bullet$} --(0,0);
+
+%\draw[smooth,color=black,solid,line width=1.5pt] (0,0)  -- (1,0)  -- (0,1)  --(0,0);
+
+\end{tikzpicture}%

@@ -1,0 +1,190 @@
+\begin{tikzpicture}[line join = round, line cap = round]
+  \def \muroot{1/3}
+  \def \err{0}
+  \def \errp{0}
+  \def \errpp{0}
+  \def \errppp{0}
+  \def \lamxyc{\muroot - 4e-2 -\err}
+  \def \lamxybc{1/2}
+  \def \lamyza{1 - \muroot-\errpp}
+  \def \lamyzab{1/2}
+  \def \lamxzac{1/2 + \errp}
+
+  \def \lamxycd{9/20}
+  \def \lamxzcd{9/10}
+  \def \lamyzad{9/17 - \errppp}
+
+  %diagram values
+  \def \lamxybd{18/47}
+  \def \lamyzbd{18/44}
+  %calculated
+%  \def \lamxybd{36/47}
+%  \def \lamyzbd{9/11}
+%  \if\congruent1
+%  \else
+%  \def \err{8e-2}
+%  \def \errp{0e-2}
+%  \def \errpp{3/43}
+%  \def \errppp{2/17}
+%  \fi
+
+%  \draw [help lines, step=.5cm] (-4,-3) grid (5,6.5);
+  \node[draw, thick, regular polygon,
+    regular polygon sides=3, minimum width = 6cm](ternary){};
+%-----------the corners
+  \coordinate (t3) at (ternary.corner 1);
+  \coordinate (t2) at (ternary.corner 2);
+  \coordinate (t1) at (ternary.corner 3);
+%    \coordinate [label=above:$t_1$] (t3) at (0, 4, 0);
+%    \coordinate [label=above:$t_2$] (t2) at (0, 0, 4);
+%    \coordinate [label=above:$t_3$] (t1) at (4, 0, 0);
+  \begin{scope}[x={(t3)}, y={(t2)}, z={(t1)}]
+%    \path (0,0,0) node[] (t4){\small $\bullet$}; 
+%    \path (2/11, 4/11, 5/11) node[inner sep=1.5pt, label=above:$D_5$](D_9){};
+%    \path (4/11, 2/11, 5/11) node[inner sep=1.5pt, label=above:$D_6$](D_6){};
+  \end{scope}
+%  \coordinate (t4) at (2.5, 3.8);
+%-----------key points on the edges of the current rankings map
+  \coordinate (Hxyc) at ($(t1)$);
+  \coordinate (Hxybc) at ($(t3)!\lamxybc!(t2)$);
+  \coordinate (Hyza) at ($(t3)$);
+  \coordinate (Hyzab) at ($(t2)!\lamyzab!(t1)$);
+  \coordinate (Hxzb) at ($(t2)$);
+  \coordinate (Hxzac) at ($(t3)!\lamxzac!(t1)$);
+%%-----------key points on the edge t1 -- t4 of the extension (rankings map)
+%  \coordinate (Hxycd) at ($(t1)!\lamxycd!(t4)$);
+%  \coordinate (Hxzcd) at ($(t1)!\lamxzcd!(t4)$);
+%%-----------key points on the edge t3 -- t4 of the extension (rankings map)
+%  \coordinate (Hyzad) at ($(t3)!\lamyzad!(t4)$);
+%%-----------key points on the edge t2 -- t4 of the extension (rankings map)
+%  \coordinate (Hxybd) at ($(t2)!\lamxybd!(t4)$);
+%  \coordinate (Hyzbd) at ($(t2)!\lamyzbd!(t4)$);
+%
+%%    \fill (t4) circle (1pt);
+% 
+%   % top face of tetrahedron
+%   \draw[thin, opacity=0.2] (t3) -- (t4) -- (t1) -- (t3);
+%%   \filldraw[bottom color=gray!50!black, top color=cyan!50]
+%%     (t3) -- (t4) -- (t1);
+%   % mid vs high
+%   \fill[fill=yellow!50!black, opacity=15e-2]
+%     (Hyzac) -- (Hyzab) -- (Hyzbd) -- (Hyzac);
+%   \fill[fill=yellow!50!black, opacity=15e-2]
+%     (Hyzac) -- (Hyzad) -- (Hyzbd) -- (Hyzac);
+%
+%   % low vs high
+%   \fill[fill=red!70, opacity=15e-2]
+%     (Hxzac) -- (Hxzb) -- (Hxzcd) -- (Hxzac);
+%
+%   % low vs mid
+%   \fill[fill=cyan!70, opacity=15e-2]
+%     (Hxyac) -- (Hxybc) -- (Hxybd) -- (Hxyac);
+%   \fill[fill=cyan!70, opacity=15e-2]
+%     (Hxyac) -- (Hxycd) -- (Hxybd) -- (Hxyac);
+%
+%    \draw[thin, gray!50, dotted] (t2) -- (t4);
+%
+%    \draw[very thin, blue!80, dotted] (Hxybc) -- (Hxybd);
+%    \draw[very thin, blue!80, dotted] (Hxycd) -- (Hxybd);
+%    \draw[very thin, blue!80, dotted] (Hyzab) -- (Hyzbd);
+%    \draw[very thin, blue!80, dotted] (Hyzbd) -- (Hyzad);
+%    \draw[very thin, blue!80, dotted] (Hxzb)  -- (Hxzcd);
+%
+%
+%
+%    \draw[blue, very thin] (Hxycd) -- (Hxyac);
+%    \draw[blue, very thin] (Hyzac) -- (Hyzad);
+%    \draw[blue, very thin] (Hxzcd) -- (Hxzac);
+%
+%    % intersection(s)
+%    \coordinate (H1) at ($(t2)!431e-3!(Hxzcd)$);
+%    \if\congruent1
+%      \coordinate (H2) at ($(Hxzac)!225e-3!(Hxzcd)$);
+%      \draw[blue, thin, densely dashed] (H1) -- (H2);
+%    \else
+%      \coordinate (H3) at ($(Hxzac)!110e-3!(Hxzcd)$);
+%      \coordinate (H4) at ($(Hxyac)!534e-3!(Hxycd)$);
+%      \coordinate (H5) at ($(Hxyac)!388e-3!(Hxycd)$);
+%      \draw[blue, thin, densely dashed] (H1) -- (H3);
+%      \draw[blue, thin, densely dashed] (H1) -- (H4);
+%      \draw[blue, thin, densely dashed] (H1) -- (H5);
+%      \fill[fill=brown, opacity=15e-2]
+%        (H1) -- (H3) -- (H4) -- (H5);
+%    \fi
+
+  %chamber labels
+%  \begin{scope}[clip, x={(t3)}, y={(t2)}, z={(t1)}]
+%    \path (11/14, 2/14, 2/14) node[inner sep=.5pt](D_1){$D_1$};
+%    \path (2/14, 2/14, 11/14) node[inner sep=.11pt](D_4){$D_4$};
+%%    \path (12/29,8/29,6/29) node[] (P_10){\small $\bullet$}; 
+%%    \path (2/7, 4/7, 1/7) node[inner sep=.5pt](D_2){$D_2$};
+%%    \path (1/7, 4/7, 2/7) node[inner sep=.5pt](D_3){$D_3$};
+%%    \foreach \X in {1,2,3}
+%%      {\node at ($(ternary.corner \X)$) {\small $\bullet$};
+%%      }
+%  \end{scope}
+  \def \alph{35e-1}
+    \coordinate (D_1) at ($(Hxybc)!22e-1/7!(Hxzac)$);
+    \fill (D_1) circle (2pt);
+    \node[above=3pt] at (D_1) {$D'$};
+    \coordinate (D_2) at ($(Hxybc)!5/7!(Hxzac)$);
+%    \fill (D_2) circle (2pt);
+%    \node[above] at (D_2) {$D'$};
+%    \coordinate (D_4) at ($(D_1)!\alph/7!(t1)$);
+%    \node[above] at (D_4) {$D_4$};
+    \coordinate (D_3) at ($(D_2)!\alph/7!(t2)$);
+%    \node[above] at (D_3) {$D_3$};
+    \coordinate (D_6) at ($(D_3)!\alph/7!(t1)$);
+    \fill (D_6) circle (2pt);
+    \node[above left] at (D_6) {$D$};
+%    \coordinate (D_5) at ($(D_4)!\alph/7!(t2)$);
+%    \node at (D_5) {$D_5$};
+%    \coordinate (D_5) at ($(Hyzad)!19/26!(Hxycd)$);
+%    \node at (D_5) {$D_5$};
+%    \coordinate (D_6) at ($(Hyzad)!8/13!(Hxzcd)$);
+%    \node at (D_6) {$D_6$};
+
+
+  % draw the regular polygon again
+  \node[draw, thick, regular polygon,
+    regular polygon sides=3, minimum width = 6cm](ternary){};
+  % hyperplanes on front face
+    \draw[blue,thick] (t2) -- (Hxzac);
+    \draw[blue,thick] (Hyza) -- (Hyzab);
+    \draw[blue,thick] (Hxyc) -- (Hxybc);
+  % the hyperplanes labels
+    \node[above left=3pt] at (Hxybc) {\color{blue} $H^{\{2,3\}}$};
+    \node[below=3pt] at (Hyzab) {\color{blue} $H^{\{1, 2\}}$};
+    \node[above right=3pt] at (Hxzac) {\color{blue} $H^{\{1,3\}}$};
+  % the corners and their labels
+  \foreach \point/\position in {1/below,2/below,3/above}
+    {
+%        \fill (t\point) circle (2pt);
+        \node[\position=3pt] at (t\point) {$t_\point$};
+    }
+%        \fill (t3) circle (2pt);
+%  \node[above=3pt] at (t3) {$t_1$};
+%    \fill (C_5) circle (1pt);
+
+%  \draw[smooth,color=black,solid,line width=1pt] (0,0) node[below] {$ (19,0,0)$}
+%    -- (6,0) node [below right] {$(0,19,0)$} -- (3,6) node[above] {$ (0,0,19)$}
+%    --(0,0); 
+
+
+
+%  \draw[smooth, color=black, solid, line width=1pt] (0, 0) -- (3, 4.5);
+
+
+%\node at (2.5 , 1.125) {\Large$\bullet$};
+%\node[above right] at (2.5 , 1.125) {\large $D^\star$};
+
+
+%\node at (4 , 2.675) {\Large$\bullet$};
+%\node[right] at (4.2 , 2.675) {$ I _ { \current } = ( 0 , 2 , 3 )$};
+
+%\draw[smooth,color=black,solid,line width=1.5pt] (0,0) node {\huge $\bullet$} -- (1,0) node  {\huge $\bullet$} -- (0,1) node {\huge $\bullet$} --(0,0);
+
+%\draw[smooth,color=black,solid,line width=1.5pt] (0,0)  -- (1,0)  -- (0,1)  --(0,0);
+
+\end{tikzpicture}%
+

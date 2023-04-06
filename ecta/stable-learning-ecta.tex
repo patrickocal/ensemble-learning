@@ -1623,12 +1623,13 @@ constant, \emph{past} cases and a set $[\novel]$ of copies of the variable,
   For $c \in [\novel]$, although $m$ is empty (assigned a ``garbage'' value),
   the allocation is itself valuable. Pairs $c, d\in [\novel]$ are
   indistinguishable in terms of content and are in this sense copies of
-  $\novel$. The learner is free to assign novel, imagined content to $\novel$.
-  %and before
-  %going on to explore the prediction problem with this content in mind.  As we
-  %will show, an observer (or more sophisticated learner) who observes past
-  %cases, but not the imagination, can nonetheless use $\novel$ to analyse the
-  %learners' behaviour.
+  $\novel$.
+
+  The learner is free to assign novel, imagined content to $\novel$ and before
+  going on to explore the prediction problem with this content in mind.  As we
+  will show, an observer (or more sophisticated learner) who observes past
+  cases, but not the imagination, can nonetheless use $\novel$ to analyse the
+  learners' behaviour.
 \end{remark*}
 %Our choice of $\current$ as primitive ensures the learner's model is
 %``pointed''. That is to say $\current$ is the current data. The learner is
@@ -1806,21 +1807,26 @@ with respect to $\ext$}, written $c \sim^{\extb} d$, if, for every $D \in
 \mbbd$ such that $c,d \notin D$, $\extb_{D \cup \{c\}} = \extb_{D \cup \{d\}}$.
 This notion allows us to partition the set of proper {generalization}s as
 follows.
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
  %novel vs regular
+
 \begin{definition*}\label{def-novel}
   A proper {generalization} $\ext$ is either \emph{regular} or \emph{novel}. 
   It is novel whenever $[\novel]$ is a distinct equivalence class of
   $\sim^{\supext}$, so that, for every $c \in \mbbc$, $c \nsim^\supext \novel$.
 \end{definition*}
+
 % In the present model, the only novel {generalization}s that we need will involve $Y
 % \subseteq X$ of cardinality $3$ or $4$.  Let $\textup{Nov} ( Y , \preceqb
 % _ \mbbd )$ denote the subset of novel $Y$-{generalization}s and let its
 % complement $\textup{Reg} ( Y , \preceqb _ \mbbd )$ in $\Ext ( Y ,
 % \preceqb _ \mbbd )$ denote the set of regular {generalization}s.
+
 % Spanning {generalization}s are the richest (in terms of the rankings they feature)
 %feasible {generalization}s of the learner's current forecast $\preceqb _ \mbbd
 %$ and as such they are the natural candidates for testing for inconsistencies.
+
 %In the terminology of \citet{HR-Knowledge_of_unawareness}, $\novel$ is
 %aplaceholder for experience that the learner cannot currently describe.
 For any given novel {generalization} $\ext$, $[\novel]$ is the unique novel

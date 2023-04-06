@@ -16,26 +16,24 @@
 \usetikzlibrary{calc,shapes.geometric}
 \usepackage{pgf}
 \usepackage{pgfplots,pgfplotstable}
-\pgfplotsset{compat=1.8}
-\usepackage{mathabx} 
+\pgfplotsset{compat=1.18}
+%\usepackage{mathabx} 
 %\usepackage{yhmath}
-
-\usepackage{accents} %for underbar etc
 
 \usepackage{xr}
 
 \usepackage{stmaryrd}
 %\usepackage{wasysym}
-\usepackage{appendix}
+%\usepackage{appendix}
 %\usepackage[obeyDraft]{todonotes}
-\usepackage{hyperref}
-\hypersetup{
-  frenchlinks = true, %small caps
-  colorlinks   = true, %Colours links instead of ugly boxes
-  urlcolor     = gray!75!black, %Colour for external hyperlinks
-  linkcolor    = {gray!75!black}, %Colour of internal links
-  citecolor   = {gray!75!black} %Colour of citations
-}
+%\usepackage{hyperref}
+%\hypersetup{
+%  frenchlinks = true, %small caps
+%  colorlinks   = true, %Colours links instead of ugly boxes
+%  urlcolor     = gray!75!black, %Colour for external hyperlinks
+%  linkcolor    = {gray!75!black}, %Colour of internal links
+%  citecolor   = {gray!75!black} %Colour of citations
+%}
 \usepackage{etex,etoolbox}
 \usepackage{thmtools}
 \usepackage{environ}
@@ -45,26 +43,27 @@
 \usepackage{caption}
 \usepackage{subcaption}
 %----------------bibliography packages!!!-----------------
-\usepackage[
-    backend=biber,
-	style=apa,%draft,
-%    sortlocale=en_US,
-    natbib=true,
-%    url=false,
-%    doi=false,
-%    isbn=false,
-%    giveninits=true,
-%    abbreviate=false,
-%    maxbibnames=99,
-%    eprint=false
-]{biblatex}%\usepackage{url}
+\usepackage{natbib}
+%\bibliographystyle{unsrtnat}
+%\usepackage[
+%    backend=biber,
+%	style=apa,%draft,
+%%    sortlocale=en_US,
+%    natbib=true,
+%%    url=false,
+%%    doi=false,
+%%    isbn=false,
+%%    giveninits=true,
+%%    abbreviate=false,
+%%    maxbibnames=99,
+%%    eprint=false
+%]{biblatex}%\usepackage{url}
 \usepackage{authblk}
 \usepackage{filecontents}%for inputting files inside a file eg. bbl file
 \usepackage{docmute}
 %\usepackage{enumerate,mdwlist}
 \usepackage[shortlabels]{enumitem}
 \usepackage{nicefrac}
-\usepackage{upgreek}
 %\labelformat{chapter}{chapter~#1}
 %\labelformat{section}{section~#1}
 %\labelformat{subsection}{subsection~#1}
@@ -111,7 +110,7 @@
 %             left=0in,right=0in,top=1.25in,bottom=1.25in,%
 %             % footskip=.25in
 %             ]{geometry}
-            \usepackage{extsizes}
+\usepackage[14pt]{extsizes}
 %            \setspace{1.5}
 
 %\usepackage{pdfsync}
@@ -131,7 +130,7 @@
 %    no link to proof
 %one big link={The proof is on page~\pageref*{proof:prAtEnd\pratendcountercurrent}.}
 }}
-\usepackage{sectsty}
+%\usepackage{sectsty}
 \usepackage{accents}
 \usepackage{upgreek}
 \usepackage{blindtext}
@@ -300,78 +299,78 @@
 \newcommand{\id}{\mathbf{id}}
 \newcommand{\ccirc}{\kern0.5ex\vcenter{\hbox{$
 \scriptstyle\circ$}}\kern0.5ex}
-\newcommand{\overbar}{\widebar}
+%\newcommand{\overbar}{\widebar}
 \newcommand\defeq{\mathrel{\overset{\makebox[0pt]{\mbox{\normalfont\tiny def}}}{=}}}%\sffamily
-\let\oldbar\bar % this is not necessary in the real application
+%\let\oldbar\bar % this is not necessary in the real application
 %%% Define a new math font
 \DeclareSymbolFont{boldoperators}{OT1}{cmr}{bx}{n}
 \SetSymbolFont{boldoperators}{bold}{OT1}{cmr}{bx}{n}
-\edef\bar{\unexpanded{\protect\mathaccentV{bar}}\number\symboldoperators16}
+%\edef\bar{\unexpanded{\protect\mathaccentV{bar}}\number\symboldoperators16}
 
-\newcommand\barbelow[1]{\centering\stackunder[1.1pt]{$#1$}{\rule{1.3ex}{.1ex}}}
-%\newcommand\ubar[1]{\stackunder[1.0pt]{$#1$}{\rule{.6ex}{.1ex}}}
-%\newcommand{\ubar}[1]{\underaccent{\bar}{#1}}
-\newcommand\ubar[1]{\text{\b{$#1$}}} 
-
-\newcommand\uvbar[1]{\centering\stackunder[1.1pt]{\hskip.8pt$#1$}{\rule{.6ex}{.1ex}}}
-\newcommand\ugbar[1]{\centering\stackunder[1.1pt]{\hskip.8pt$#1$}{\rule{.8ex}{.1ex}}}
-\newcommand\uhbar[1]{\centering\stackunder[1.1pt]{\hskip2pt$#1$}{\rule{.8ex}{.1ex}}}
-\newcommand\urbar[1]{\centering\stackunder[1.1pt]{$#1$}{\rule{1ex}{.1ex}}}
-%\newcommand\uvbar[1]{\text{\b{\hskip2pt$#1$}}} 
-
-\newcommand\barabove[1]{\stackon[1.2pt]{$#1$}{\rule{1ex}{.1ex}}}
-
-%----------begin--ThisStyle---for-overstar
-\makeatletter
-\def\SavedSubStyle{\csname @mstyle\s@switch\endcsname}
-\renewcommand\ThisStyle[1]{%
-\ifmmode%
-\def\@mmode{T}\mathchoice%
-{\edef\m@switch{D}\edef\s@switch{S}\LMex=1ex\relax\LMpt=1pt\relax#1}%
-{\edef\m@switch{T}\edef\s@switch{S}\LMex=1ex\relax\LMpt=1pt\relax#1}%
-{\edef\m@switch{S}\edef\s@switch{s}\LMex=\scriptstyleScaleFactor ex\relax%
-\LMpt=\scriptstyleScaleFactor pt\relax#1}%
-{\edef\m@switch{s}\edef\s@switch{s}\LMex=\scriptscriptstyleScaleFactor ex\relax%
-\LMpt=\scriptscriptstyleScaleFactor pt\relax#1}%
-\else%
-\def\@mmode{F}%
-\edef\m@switch{T}\edef\s@switch{S}\LMex=1ex\relax\LMpt=1pt\relax#1%
-\fi%
-}
-%----------begin-overstar
-\makeatother
-\newcommand\overstarbf[1]{\ThisStyle{\ensurestackMath{%
-  \stackengine{0pt}{\SavedStyle\mathbf{#1}}{\smash{\SavedSubStyle\star}}{O}{c}{F}{T}{S}}}}
-\newcommand\overstar[1]{\ThisStyle{\ensurestackMath{%
-  \setbox0=\hbox{$\SavedStyle#1$}%
-  \stackengine{0pt}{\copy0}{\kern.2\ht0\smash{\SavedSubStyle\star}}{O}{c}{F}{T}{S}}}}
-%-------------end--overstar---
-
-%-------------begin-overast
-\makeatother
-\newcommand\overfrownbf[1]{\ThisStyle{\ensurestackMath{%
-  \stackengine{0pt}{\SavedStyle\mathbf{#1}}{\smash{\SavedSubStyle\checkmark}}{O}{c}{F}{T}{S}}}}
-\newcommand\overfrown[1]{\ThisStyle{\ensurestackMath{%
-  \setbox0=\hbox{$\SavedStyle#1$}%
-  \stackengine{0pt}{\copy0}{\kern.2\ht0\smash{\SavedSubStyle\checkmark}}{O}{c}{F}{T}{S}}}}
-%-------------end--overast---
-%-------------begin-overast
-\makeatother
-\newcommand\overpropbf[1]{\ThisStyle{\ensurestackMath{%
-  \stackengine{0pt}{\SavedStyle\mathbf{#1}}{\smash{\SavedSubStyle\propto}}{O}{c}{F}{T}{S}}}}
-\newcommand\overprop[1]{\ThisStyle{\ensurestackMath{%
-  \setbox0=\hbox{$\SavedStyle#1$}%
-  \stackengine{0pt}{\copy0}{\kern.2\ht0\smash{\SavedSubStyle\propto}}{O}{c}{F}{T}{S}}}}
-%-------------end--overast---
-
-%-------------begin-overast
-\makeatother
-\newcommand\overhatbf[1]{\ThisStyle{\ensurestackMath{%
-  \stackengine{0pt}{\SavedStyle\mathbf{#1}}{\smash{\SavedSubStyle\arrownot}}{O}{c}{F}{T}{S}}}}
-\newcommand\overhat[1]{\ThisStyle{\ensurestackMath{%
-  \setbox0=\hbox{$\SavedStyle#1$}%
-  \stackengine{0pt}{\copy0}{\kern.2\ht0\smash{\SavedSubStyle\arrownot}}{O}{c}{F}{T}{S}}}}
-%-------------end--overast---
+%\newcommand\barbelow[1]{\centering\stackunder[1.1pt]{$#1$}{\rule{1.3ex}{.1ex}}}
+%%\newcommand\ubar[1]{\stackunder[1.0pt]{$#1$}{\rule{.6ex}{.1ex}}}
+%%\newcommand{\ubar}[1]{\underaccent{\bar}{#1}}
+%\newcommand\ubar[1]{\text{\b{$#1$}}} 
+%
+%\newcommand\uvbar[1]{\centering\stackunder[1.1pt]{\hskip.8pt$#1$}{\rule{.6ex}{.1ex}}}
+%\newcommand\ugbar[1]{\centering\stackunder[1.1pt]{\hskip.8pt$#1$}{\rule{.8ex}{.1ex}}}
+%\newcommand\uhbar[1]{\centering\stackunder[1.1pt]{\hskip2pt$#1$}{\rule{.8ex}{.1ex}}}
+%\newcommand\urbar[1]{\centering\stackunder[1.1pt]{$#1$}{\rule{1ex}{.1ex}}}
+%%\newcommand\uvbar[1]{\text{\b{\hskip2pt$#1$}}} 
+%
+%\newcommand\barabove[1]{\stackon[1.2pt]{$#1$}{\rule{1ex}{.1ex}}}
+%
+%%----------begin--ThisStyle---for-overstar
+%\makeatletter
+%\def\SavedSubStyle{\csname @mstyle\s@switch\endcsname}
+%\renewcommand\ThisStyle[1]{%
+%\ifmmode%
+%\def\@mmode{T}\mathchoice%
+%{\edef\m@switch{D}\edef\s@switch{S}\LMex=1ex\relax\LMpt=1pt\relax#1}%
+%{\edef\m@switch{T}\edef\s@switch{S}\LMex=1ex\relax\LMpt=1pt\relax#1}%
+%{\edef\m@switch{S}\edef\s@switch{s}\LMex=\scriptstyleScaleFactor ex\relax%
+%\LMpt=\scriptstyleScaleFactor pt\relax#1}%
+%{\edef\m@switch{s}\edef\s@switch{s}\LMex=\scriptscriptstyleScaleFactor ex\relax%
+%\LMpt=\scriptscriptstyleScaleFactor pt\relax#1}%
+%\else%
+%\def\@mmode{F}%
+%\edef\m@switch{T}\edef\s@switch{S}\LMex=1ex\relax\LMpt=1pt\relax#1%
+%\fi%
+%}
+%%----------begin-overstar
+%\makeatother
+%\newcommand\overstarbf[1]{\ThisStyle{\ensurestackMath{%
+%  \stackengine{0pt}{\SavedStyle\mathbf{#1}}{\smash{\SavedSubStyle\star}}{O}{c}{F}{T}{S}}}}
+%\newcommand\overstar[1]{\ThisStyle{\ensurestackMath{%
+%  \setbox0=\hbox{$\SavedStyle#1$}%
+%  \stackengine{0pt}{\copy0}{\kern.2\ht0\smash{\SavedSubStyle\star}}{O}{c}{F}{T}{S}}}}
+%%-------------end--overstar---
+%
+%%-------------begin-overast
+%\makeatother
+%\newcommand\overfrownbf[1]{\ThisStyle{\ensurestackMath{%
+%  \stackengine{0pt}{\SavedStyle\mathbf{#1}}{\smash{\SavedSubStyle\checkmark}}{O}{c}{F}{T}{S}}}}
+%\newcommand\overfrown[1]{\ThisStyle{\ensurestackMath{%
+%  \setbox0=\hbox{$\SavedStyle#1$}%
+%  \stackengine{0pt}{\copy0}{\kern.2\ht0\smash{\SavedSubStyle\checkmark}}{O}{c}{F}{T}{S}}}}
+%%-------------end--overast---
+%%-------------begin-overast
+%\makeatother
+%\newcommand\overpropbf[1]{\ThisStyle{\ensurestackMath{%
+%  \stackengine{0pt}{\SavedStyle\mathbf{#1}}{\smash{\SavedSubStyle\propto}}{O}{c}{F}{T}{S}}}}
+%\newcommand\overprop[1]{\ThisStyle{\ensurestackMath{%
+%  \setbox0=\hbox{$\SavedStyle#1$}%
+%  \stackengine{0pt}{\copy0}{\kern.2\ht0\smash{\SavedSubStyle\propto}}{O}{c}{F}{T}{S}}}}
+%%-------------end--overast---
+%
+%%-------------begin-overast
+%\makeatother
+%\newcommand\overhatbf[1]{\ThisStyle{\ensurestackMath{%
+%  \stackengine{0pt}{\SavedStyle\mathbf{#1}}{\smash{\SavedSubStyle\arrownot}}{O}{c}{F}{T}{S}}}}
+%\newcommand\overhat[1]{\ThisStyle{\ensurestackMath{%
+%  \setbox0=\hbox{$\SavedStyle#1$}%
+%  \stackengine{0pt}{\copy0}{\kern.2\ht0\smash{\SavedSubStyle\arrownot}}{O}{c}{F}{T}{S}}}}
+%%-------------end--overast---
 %----------------------------------------end math shorthand-------------------------
 %----------------------------------------begin math operators-------------------------
 \DeclareMathOperator{\supp}{supp}
