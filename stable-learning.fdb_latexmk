@@ -1,18 +1,19 @@
 # Fdb version 3
-["bibtex stable-learning"] 1681359171 "stable-learning.aux" "stable-learning.bbl" "stable-learning" 1681359171
+["bibtex stable-learning"] 1681372136 "stable-learning.aux" "stable-learning.bbl" "stable-learning" 1681372362
   "./ecta-fullname.bst" 1680717313 30218 32be8ddcae1d2abca9f548d2014d42dc ""
-  "stable-learning-jabref.bib" 1681359013 14355 b63fae5932252a76c596f1e03424f213 ""
-  "stable-learning.aux" 1681359171 58598 d09a574db891fbb4e120cda2faa6e6f0 "pdflatex"
+  "stable-learning-jabref.bib" 1681361971 15610 4c9e6b7333eda32003d851883c13342a ""
+  "stable-learning.aux" 1681372361 59365 878fcf155f018be6e68e8c3ea9f96761 "pdflatex"
   (generated)
   "stable-learning.bbl"
   "stable-learning.blg"
-["pdflatex"] 1681359168 "stable-learning.tex" "stable-learning.pdf" "stable-learning" 1681359168
+["pdflatex"] 1681372359 "stable-learning.tex" "stable-learning.pdf" "stable-learning" 1681372362
   "/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/base/8r.enc" 1165713224 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/usr/local/texlive/2022/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2022/texmf-dist/fonts/tfm/adobe/courier/pcrr8r.tfm" 1136768653 1292 bd42be2f344128bff6d35d98474adfe3 ""
   "/usr/local/texlive/2022/texmf-dist/fonts/tfm/adobe/courier/pcrr8t.tfm" 1136768653 1384 4632f5e54900a7dadbb83f555bc61e56 ""
   "/usr/local/texlive/2022/texmf-dist/fonts/tfm/adobe/times/ptmb8r.tfm" 1136768653 4524 6bce29db5bc272ba5f332261583fee9c ""
   "/usr/local/texlive/2022/texmf-dist/fonts/tfm/adobe/times/ptmb8t.tfm" 1136768653 6880 f19b8995b61c334d78fc734065f6b4d4 ""
+  "/usr/local/texlive/2022/texmf-dist/fonts/tfm/adobe/times/ptmr8c.tfm" 1136768653 1352 fa28a7e6d323c65ce7d13d5342ff6be2 ""
   "/usr/local/texlive/2022/texmf-dist/fonts/tfm/adobe/times/ptmr8r.tfm" 1136768653 4408 25b74d011a4c66b7f212c0cc3c90061b ""
   "/usr/local/texlive/2022/texmf-dist/fonts/tfm/adobe/times/ptmr8t.tfm" 1136768653 6672 e3ab9e37e925f3045c9005e6d1473d56 ""
   "/usr/local/texlive/2022/texmf-dist/fonts/tfm/adobe/times/ptmrc8t.tfm" 1136768653 16648 7e91c60ebf91b9c60e16ef52b3070f9c ""
@@ -117,6 +118,7 @@
   "/usr/local/texlive/2022/texmf-dist/fonts/type1/urw/times/utmri8a.pfb" 1136849748 45458 a3faba884469519614ca56ba5f6b1de1 ""
   "/usr/local/texlive/2022/texmf-dist/fonts/vf/adobe/courier/pcrr8t.vf" 1136768653 2184 8475af1b9cfa983db5f46f5ed4b8f9f7 ""
   "/usr/local/texlive/2022/texmf-dist/fonts/vf/adobe/times/ptmb8t.vf" 1136768653 2340 df9c920cc5688ebbf16a93f45ce7bdd3 ""
+  "/usr/local/texlive/2022/texmf-dist/fonts/vf/adobe/times/ptmr8c.vf" 1136768653 3556 8a9a6dcbcd146ef985683f677f4758a6 ""
   "/usr/local/texlive/2022/texmf-dist/fonts/vf/adobe/times/ptmr8t.vf" 1136768653 2348 91706c542228501c410c266421fbe30c ""
   "/usr/local/texlive/2022/texmf-dist/fonts/vf/adobe/times/ptmrc8t.vf" 1136768653 3608 78e4c999d9e69f03f448158d01821741 ""
   "/usr/local/texlive/2022/texmf-dist/fonts/vf/adobe/times/ptmri8t.vf" 1136768653 2328 6cd7df782b09b29cfc4d93e55b6b9a59 ""
@@ -320,6 +322,7 @@
   "/usr/local/texlive/2022/texmf-dist/tex/latex/psnfss/t1pcr.fd" 1137110629 798 d5895e9edc628f2be019beb2c0ec66df ""
   "/usr/local/texlive/2022/texmf-dist/tex/latex/psnfss/t1ptm.fd" 1137110629 774 61d7da1e9f9e74989b196d147e623736 ""
   "/usr/local/texlive/2022/texmf-dist/tex/latex/psnfss/times.sty" 1586716065 856 8e0e5c8cca7b18e0400f97f5a2b90a99 ""
+  "/usr/local/texlive/2022/texmf-dist/tex/latex/psnfss/ts1ptm.fd" 1137110629 619 96f56dc5d1ef1fe1121f1cfeec70ee0c ""
   "/usr/local/texlive/2022/texmf-dist/tex/latex/refcount/refcount.sty" 1576624809 9878 9e94e8fa600d95f9c7731bb21dfb67a4 ""
   "/usr/local/texlive/2022/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty" 1575674187 9715 b051d5b493d9fe5f4bc251462d039e5f ""
   "/usr/local/texlive/2022/texmf-dist/tex/latex/textcase/textcase.sty" 1568497026 2156 a092fd3ecd0a13fd597725ee6894b032 ""
@@ -349,12 +352,12 @@
   "econsocart.cls" 1680717313 89242 0aa55625bad85648552ba8bb4453b218 ""
   "figures/fig-rates.tex" 1677636881 6230 2d01bcbe1e123001afc131b57487825d ""
   "figures/fig-tali.tex" 1677636881 6869 fb08b5228d24df0f1612a55593d3239b ""
-  "stable-learning-pratenddefaultcategory.tex" 1681359170 20836 74ce207a30b6120f0b309dc151bd9c74 "pdflatex"
-  "stable-learning.aux" 1681359099 58598 dda2560e36ca6b748757a6eef4fb15f9 "pdflatex"
-  "stable-learning.bbl" 1681359100 7887 724ef1109df39a6b8bd5f9be187e2808 "bibtex stable-learning"
-  "stable-learning.brf" 1681359099 2585 e5b68e4c0477cb6c7686c7daab374003 "pdflatex"
-  "stable-learning.out" 1681359099 2858 092825fd7fd53f07016d1f78bb6845f6 "pdflatex"
-  "stable-learning.tex" 1681359167 292622 3bfe523fa9dcfa169f97c14ce1dcbcb1 ""
+  "stable-learning-pratenddefaultcategory.tex" 1681372361 20836 74ce207a30b6120f0b309dc151bd9c74 "pdflatex"
+  "stable-learning.aux" 1681372361 59365 878fcf155f018be6e68e8c3ea9f96761 "pdflatex"
+  "stable-learning.bbl" 1681372136 9023 91ef1a568e087386ae57881ee2356d86 "bibtex stable-learning"
+  "stable-learning.brf" 1681372361 2818 bf1fda762a017d0e6ec21222b7ba598e "pdflatex"
+  "stable-learning.out" 1681372361 2858 092825fd7fd53f07016d1f78bb6845f6 "pdflatex"
+  "stable-learning.tex" 1681372357 294445 962bc5d0e5f7176c5c53239f895af1c8 ""
   (generated)
   "stable-learning-pratenddefaultcategory.tex"
   "stable-learning.aux"

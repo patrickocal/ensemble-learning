@@ -419,7 +419,7 @@
   year      = {1932},
 }
 
-@Book{bartlett1932remembering,
+@Book{bartlett1933remembering,
   author  = {Frederic C. Bartlett},
   title   = {Remembering: A study in experimental and social psychology},
   year    = {1933},
@@ -448,6 +448,45 @@
   year      = {2001},
   month     = {jul},
   doi       = {10.1017/cbo9780511493539},
+}
+
+@Article{billot2005probabilities,
+  author    = {Antoine Billot and Itzhak Gilboa and Dov Samet and David Schmeidler},
+  journal   = {Econometrica},
+  title     = {Probabilities as Similarity-Weighted Frequencies},
+  year      = {2005},
+  month     = {jul},
+  number    = {4},
+  pages     = {1125--1136},
+  volume    = {73},
+  doi       = {10.1111/j.1468-0262.2005.00611.x},
+  publisher = {The Econometric Society},
+}
+
+@Article{bradbury1974transitivity,
+  author    = {Hinton Bradbury and T. M. Nelson},
+  journal   = {Developmental Psychology},
+  title     = {Transitivity and the patterns of children{\textquotesingle}s preferences.},
+  year      = {1974},
+  month     = {jan},
+  number    = {1},
+  pages     = {55--64},
+  volume    = {10},
+  doi       = {10.1037/h0035538},
+  publisher = {American Psychological Association ({APA})},
+}
+
+@Article{weinstein1968transitivity,
+  author    = {Arnold A. Weinstein},
+  journal   = {Journal of Political Economy},
+  title     = {Transitivity of Preference: A Comparison Among Age Groups},
+  year      = {1968},
+  month     = {mar},
+  number    = {2},
+  pages     = {307--311},
+  volume    = {76},
+  doi       = {10.1086/259402},
+  publisher = {University of Chicago Press},
 }
 
 @Comment{jabref-meta: databaseType:bibtex;}

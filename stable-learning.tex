@@ -561,45 +561,70 @@ prudently, lest it spoil future action.}{\emph{Titian:  Allegory of Prudence}}
 %-----------------------------------------------------------------------------%
 \section{Introduction} \label{sec-introduction}
 %-----------------------------------------------------------------------------%
-\textsc{Prediction requires imagination}: the capacity to explore the world
-beyond the data when the data is insufficient. To paraphrase \citep[pages 9 and
-10]{hume1896treatise}: \emph{the memory is tied down, by original impressions,
-  without any power of variation; in contrast, the imagination is free to
-transpose and change its ideas.} Well-established neuroscientific evidence
-points to an important role for the imagination and the degrees of freedom or
-flexibility that it provides in improving prediction and thus the chances of
-survival
-\citep{bartlett1932remembering,suddendorf2007evolution,mullally2013memory}.  In
-machine learning, where learners (prediction models) are artificial, the
-practice of splitting the data into a training set and a test set is a standard
-\citep{hastie2009elements}. Cases (observations) in the training set resemble
-memories whereas cases in the test set resemble instances of the imagination in
-the sense that they allow the learner to explore unseen and potentially novel
-data.
+%\textsc{Prediction is based rich data or a fertile imagination}. 
+\textsc{Memory and the imagination are complements in
+prediction}. Either the learner (prediction model) has access to a sufficiently
+diverse set of past cases, or it has the capacity to explore the world beyond
+the data when the data is insufficient.
+%The memory and the imagination go hand in hand: they complements in prediction.
+To paraphrase \citep[pages 9 and 10]{hume1896treatise}: \emph{the memory is
+  tied down, by original impressions, without any power of variation; in
+contrast, the imagination is free to transpose and change its ideas.}
+Well-established neuroscientific evidence points to an important role for the
+imagination and the degrees of freedom or flexibility that it provides in
+improving on the scarcity of quality data and thus the chances of survival
+\citep{bartlett1932remembering,suddendorf2007evolution,mullally2013memory}. In
+machine learning, the i.i.d. assumption and the practice of
+splitting the data into a training set and a test set are standard
+\citep{hastie2009elements}. Cases in the training set resemble memories whereas
+cases in the test set resemble instances of the imagination in the sense that
+they allow the learner to explore unseen and potentially novel data.
 
-The goal of external validation is generalization: the ability to adapt
-appropriately to previously unseen data.  The key to generalization is
-stability \citep{bousquet2002stability,poggio2004general,mukherjee2006learning}
-Loosely speaking, a learner is stable if small changes in the data yield small
-changes in its predictions: continuity of the learning map from training sets
-to weighting functions (kernels).  \cite{mccloskey1989catastrophic} provides
+The key to both inductive inference and good predictions is generalization: the
+ability to grow the model to previously unseen data and objects of interest. In
+turn, the key to generalization is stability
+\citep{bousquet2002stability,poggio2004general,mukherjee2006learning}. Loosely
+speaking, a learner is stable if small changes in the data yield small changes
+in its predictions: continuity of the learning map from training sets to
+weighting functions (kernels).  \cite{mccloskey1989catastrophic} provides
 famous examples of unstable learning where training on new cases causes current
 kernels to unravel in what is called catastrophic interference.
+
+As in \citet[henceforth, \gsii]{gilboa2003inductive},
+\citet{billot2005probabilities,gilboa2006empirical,argenziano2019second}, the
+learner's kernel is a subjective assessment of how similar past cases are to
+the current prediction problem.  We derive the learner's kernel on basis of
+\emph{sentiments}: a mapping from samples of past cases to rankings of
+underlying objects of interest.  To account for all kinds of intelligence, we
+provide a framework that captures the behaviour of learners with the ability to
+externally validate their model. The axioms we provide are agnostic in relation
+to the method of external validation. The goal is instead to allow an observer
+to determine whether or not the learner is able to generalise to richer
+training sets of past cases in a consistent manner. Our framework adopts a
+within-sample perspective \citep[page 7, experiment
+1]{chervonenkis2015recollections} and considers the potential for generalizing
+to richer samples of unseen cases.
+
+Our derivation of the learner's kernel introduces two new axioms: \parthreediv\
+and \stability. \parthreediv\ requires that for every subset of $k \leq 3$
+eventualities, at least $k$ distinct total orderings feature in {sentiments}.
+This is a substantial weakening of the \fourdiv\ axiom of \gsii: for
+every subset of $k \leq 4$ eventualities, at least $k!$ distinct total
+orderings feature in sentiments.
 
 Stability is the key axiom in the present derivation of a learner's kernel
 (weighting function) on the basis of sentiments: qualitative rankings, given
 any finite resampling of past cases.
 %\footnote{Here a \emph{kernel} is simply a real-valued weighting
 %function of two variables.} 
-As in
-\citet{gilboa2003inductive,billot2005probabilities,gilboa2006empirical,argenziano2019second},
-learner's kernel is a subjective assessment
-of how similar past cases are to the current prediction problem.  Stable
-learners generalize to novel case types without needing to: re-evaluate past
-rankings; generate intransitive rankings; or suppress novel (transitive)
+Stable learners generalize to new data (novel case types) without: re-evaluate
+past rankings; generate intransitive rankings; or suppress novel (transitive)
 rankings. In essence, a stable learner's kernel is not only stable in a literal
 sense, it also allows for meaningful, unbiased generalisations.
  
+%Whereas in classical learning theory, the goal is to minimize the empirical error as
+%measured on the training set, the present framework allows for more abstract
+%goals.
   %What sort of prediction problem might force an unstable learner to modify
   %its kernel?  generalizes to novel case types without revealing intransitive
   %rankings.  Informally, a kernel is stable whenever there is no reason to
@@ -624,19 +649,27 @@ sense, it also allows for meaningful, unbiased generalisations.
 Stable learners stand in contrast to those that learn by doing. Children are
 encouraged to learn by making (noncatastrophic) mistakes. They are free to
 modify their beliefs and behaviour after the event: the intransitive rankings
-that novel case types may reveal \citep{weinstein} are of little consequence.
-But what of a market maker that exposes their pricing kernel either directly or
-indirectly (by buying and selling securities) on a financial market? We show
-that a market maker fails to be stable if, and only if, the returns on
-investment that they offer provide a free lunch to other agents today (\ie\
-before any novel case types arrive and before they have a chance to
-re-evaluate).  This equivalence between stability (when novel data arrives
-tomorrow) and no-arbitrage (today) is at the heart of the present paper and it
-has a number of interesting implications.\footnote{In general, the learner is
-  stable if, and only if, its kernel forms a groupoid over eventualities. This
-  concept corresponds to the Jacobi equations in \gsii.}
+that novel case types may reveal are of little consequence
+\citep{bradbury1990effects}. (See
+\citep{weinstein1968transitivity,bradbury1974transitivity} for more evidence of
+intransitive behaviour in children.) But what of a market maker that exposes
+their pricing kernel either directly or indirectly (by buying and selling
+securities) on a financial market? We show that a market maker fails to be
+stable if, and only if, the returns on investment that they offer provide a
+free lunch to other agents today (\ie\ before any novel case types arrive and
+before they have a chance to re-evaluate).\footnote{In
+  more general settings, the learner is stable if, and only if, its kernel
+  forms a groupoid over eventualities. This concept corresponds to the Jacobi
+equations in \gsii.}
 
-First, at the individual level, unstable learners are unlikely to survive.
+
+
+The equivalence between stability
+(when novel data arrives tomorrow) and no-arbitrage (today) is at the heart of
+the present paper and it has a number of interesting implications.
+
+First, at the individual level, unstable learners are unlikely to survive in
+markets.
 
 Second, we can express stable pricing kernels as an empirical (geometric) mean.
 This means that, in stable markets (\ie\ those with only stable learners),
@@ -698,8 +731,10 @@ eventualities, all $k!$ total orderings (of those $k$ eventualities) feature in
 {sentiments}.  The \fourdiv\ axiom is sufficient but not necessary for a kernel
 that, for every single eventuality, gives rise to a linear function on samples
 of past cases. The stability axiom allows us to substantially weaken \fourdiv\
-to \parthreediv: for every subset of $k \leq 3$ eventualities, at least $k$
-total orderings feature in {sentiments}. Our main theorem then leads to the
+to \parthreediv:
+for every subset of $k \leq 3$ eventualities, at least $k$
+total orderings feature in {sentiments}.
+Our main theorem then leads to the
 following hypothesis: we expect unstable learning to arise in settings where
 \fourdiv\ fails to hold and where prudence is required to achieve stability:
 \ie\ where the learners are inexperienced (short of relevant data) and where

@@ -1,4 +1,4 @@
-\begin{thebibliography}{29}
+\begin{thebibliography}{33}
 \newcommand{\enquote}[1]{``#1''}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 
@@ -34,6 +34,18 @@
   and generalization,} \emph{The Journal of Machine Learning Research}, 2,
   499--526.
 
+\bibitem[\protect\citeauthoryear{Bradbury and Nelson}{Bradbury and
+  Nelson}{1974}]{bradbury1974transitivity}
+\textsc{Bradbury, Hinton and T.~M. Nelson} (1974): \enquote{Transitivity and
+  the patterns of children{\textquotesingle}s preferences.} \emph{Developmental
+  Psychology}, 10 (1), 55--64.
+
+\bibitem[\protect\citeauthoryear{Bradbury and Ross}{Bradbury and
+  Ross}{1990}]{bradbury1990effects}
+\textsc{Bradbury, Hinton and Karen Ross} (1990): \enquote{The effects of
+  novelty and choice materials on the intransitivity of preferences of children
+  and adults,} \emph{Annals of Operations Research}, 23 (1), 141--159.
+
 \bibitem[\protect\citeauthoryear{Brealey, Brealey, Brealey, Brealey, Richard,
   Brealey, Myers, Allen, BREALEY, Mohanty, and Brealey}{Brealey
   et~al.}{2020}]{brealey2020principles}
@@ -41,6 +53,10 @@
   Brealey Richard, Richard~A. Brealey, Stewart~C. Myers, Franklin Allen,
   BREALEY, Pitabas Mohanty, and Richard Brealey} (2020): \emph{Principles of
   Corporate Finance 13th Edition}, McGraw Hill.
+
+\bibitem[\protect\citeauthoryear{Chervonenkis}{Chervonenkis}{2015}]{chervonenkis2015recollections}
+\textsc{Chervonenkis, Alexey} (2015): \enquote{Chervonenkis's Recollections,}
+  in \emph{Measures of Complexity}, Springer International Publishing, 3--8.
 
 \bibitem[\protect\citeauthoryear{Dimca}{Dimca}{2017}]{dimca2017hyperplane}
 \textsc{Dimca, Alexandru} (2017): \emph{Hyperplane Arrangements}, Springer
@@ -150,6 +166,11 @@
 \textsc{Suddendorf, Thomas and Michael~C. Corballis} (2007): \enquote{The
   evolution of foresight: What is mental time travel, and is it unique to
   humans?} \emph{Behavioral and Brain Sciences}, 30 (3), 299--313.
+
+\bibitem[\protect\citeauthoryear{Weinstein}{Weinstein}{1968}]{weinstein1968transitivity}
+\textsc{Weinstein, Arnold~A.} (1968): \enquote{Transitivity of Preference: A
+  Comparison Among Age Groups,} \emph{Journal of Political Economy}, 76 (2),
+  307--311.
 
 \bibitem[\protect\citeauthoryear{White}{White}{2000}]{white2000reality}
 \textsc{White, Halbert} (2000): \enquote{A Reality Check for Data Snooping,}
