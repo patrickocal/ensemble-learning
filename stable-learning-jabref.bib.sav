@@ -315,7 +315,7 @@
 }
 
 @Article{long1983real,
-  author    = {John B. Long, and Charles I. Plosser},
+  author    = {John B. Long and Charles I. Plosser},
   journal   = {Journal of Political Economy},
   title     = {Real Business Cycles},
   year      = {1983},

@@ -1,4 +1,4 @@
-\begin{thebibliography}{27}
+\begin{thebibliography}{29}
 \newcommand{\enquote}[1]{``#1''}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 
@@ -21,6 +21,12 @@
 \bibitem[\protect\citeauthoryear{Bartlett}{Bartlett}{1932}]{bartlett1932remembering}
 \textsc{Bartlett, Frederic~C.} (1932): \emph{Remembering: A study in
   experimental and social psychology}, Cambridge University Press.
+
+\bibitem[\protect\citeauthoryear{Billot, Gilboa, Samet, and Schmeidler}{Billot
+  et~al.}{2005}]{billot2005probabilities}
+\textsc{Billot, Antoine, Itzhak Gilboa, Dov Samet, and David Schmeidler}
+  (2005): \enquote{Probabilities as Similarity-Weighted Frequencies,}
+  \emph{Econometrica}, 73 (4), 1125--1136.
 
 \bibitem[\protect\citeauthoryear{Bousquet and Elisseeff}{Bousquet and
   Elisseeff}{2002}]{bousquet2002stability}
@@ -48,6 +54,12 @@
   French}{2015}]{fama2015five}
 \textsc{Fama, Eugene~F. and Kenneth~R. French} (2015): \enquote{A five-factor
   asset pricing model,} \emph{Journal of Financial Economics}, 116 (1), 1--22.
+
+\bibitem[\protect\citeauthoryear{Gilboa, Lieberman, and Schmeidler}{Gilboa
+  et~al.}{2006}]{gilboa2006empirical}
+\textsc{Gilboa, Itzhak, Offer Lieberman, and David Schmeidler} (2006):
+  \enquote{Empirical Similarity,} \emph{Review of Economics and Statistics}, 88
+  (3), 433--444.
 
 \bibitem[\protect\citeauthoryear{Gilboa and Schmeidler}{Gilboa and
   Schmeidler}{2003}]{gilboa2003inductive}
