@@ -644,6 +644,15 @@ framework adopts a within-sample perspective \citep[page 7, experiment
 1]{chervonenkis2015recollections} and considers the potential for generalizing
 to richer samples of unseen cases.
 
+Via three of the four basic axioms of \gsii\ (completeness, combination and
+archimeanity), all learners (stable or not) are characterised by a kernel that,
+\emph{for every pair of eventualities}, gives rise to a linear function on
+samples of past cases. This restriction to linearity is not severe since one
+can appeal to the ``kernel trick'' (of machine learning) and embed sentiments
+and the kernel in a higher-dimensional vector space where the model is linear.
+Indeed, the key feature of \gsii\ is the endogeneity of the dimension (number
+of case types) of the model. The fourth basic axiom is of course transitivity.
+
 Our derivation of the learner's kernel introduces two new axioms:
 partial-3-diversity and stability. Partial-3-diversity requires that, for every
 subset of $k \leq 3$ eventualities, at least $k$ distinct total orderings
@@ -652,65 +661,60 @@ feature in {sentiments}. This is a substantial weakening of the diversity axiom
 eventualities, at least $k!$ distinct total orderings feature in sentiments.
 %\footnote{Here a \emph{kernel} is simply a real-valued weighting
 %function of two variables.} 
-Stablility requires that learners generalize to new data (novel case types)
-without: (i) re-evaluating past rankings; (ii) generating intransitive
-rankings; or (iii) suppressing novel (transitive) rankings. A stable learner's
-kernel is literally stable whilst also allowing for meaningful, unbiased
-generalisations.
+Stablility encompasses the basic axioms and strengthens transitivity
+by requiring that learners generalize to new data (novel case types) without:
+(i) re-evaluating past rankings; (ii) generating intransitive rankings; or
+(iii) suppressing novel (transitive) rankings. A stable learner's kernel is
+literally stable whilst also allowing for meaningful, unbiased generalisations.
+
+By strengthening the basic axioms, we allow for data that is less than
+4-diverse. We justify our extension by testing partial-3-diversity and
+4-diversity on daily US nominal yield curve data for the period 1961-2023. To
+conduct the test, we count the number of days until we are certain a diversity
+axiom holds: under the null hypothesis of linear a pricing kernel. We find
+that, if one restricts the model to maturities of 1-8 years that trade since
+1961, partial-3-diversity holds after the initial 1229 trading days (8\% of
+days). For this restricted domain of maturities, 4-diversity holds after 20\%
+of days. For the full set of 30 maturities that trade since 1985, the picture
+is rather different. Partial-3-diversity holds after the initial 785 trading
+days (8\% of days). For 3-diversity (\emph{a fortiori} 4-diversity) we still
+cannot prove it holds after 9292 days (100\% of days). Moreover, the failure is
+substantial: there is an insufficient variety of rankings  for over 20\% of
+subsets of maturities with cardinality four.
+ 
+We choose the market for zero-coupon bonds because of relatively mature and
+stable nature. It is a standard setting for exploring arbitrage conditions
+\citep{barillas2019speculation}. The relationship between stability and
+arbitrage is fundamental to our model.
+\footnote{The learner is stable if, and
+  only if, the above pairwise kernel forms a groupoid over eventualities. In
+  market settings, the groupoid property translates to (no-)arbitrage
+conditions.}
 
 %Whereas the connection between stability in the present context and in machine
 %learning is obvious, the same cannot be said for diversity conditions.
 %In machine learning, the working assumption is that there exists a probability 
 %measure on the sample space and the training set is already sufficiently large
 %to be representative of the population.
-The diversity condition is a testable condition regarding the extent to which
-we have explored the sample space with the data we have observed so far. It is
-natural to expect a trade-off between diversity and the need for external
-validation in order to guarantee stable learning and hence generalization to
-new training sets. When 4-diversity holds, generalization is guaranteed via the
-main theorem of \gsii: the data is sufficiently rich.\footnote{The present
-  framework makes no measure theoretic or topological assumptions. Akin to
-  exchangeability, we require that the cases themselves carry the
-  necessary information determine the kernel, not their order of arrival. Past
-  cases can then be resampled to form new training sets and new rankings of
-eventualities. (See \cref{sec-applications}.)}
+Diversity conditions measure the extent to which our current data is
+representative of the potential sample space. It is natural to expect a
+trade-off between diversity and the need for external validation in order to
+guarantee stable learning and hence generalization to new training sets. When
+4-diversity holds, generalization is guaranteed via the main theorem of \gsii:
+the data is sufficiently rich.\footnote{The present framework makes no measure
+  theoretic or topological assumptions. Akin to exchangeability, we require
+  that the cases themselves carry the necessary information determine the
+  kernel, not their order of arrival. Past cases can then be resampled to form
+  new training sets and new rankings of eventualities. (See
+\cref{sec-applications}.)} The threshold or emergent effects, where large
+language models suddenly acquire abilities that smaller models do not, is
+conceivably be due to 4-diversity conditions being satisfied, since this
+requires less ``imagination''.
 
-Via the basic axioms of \gsii\ (this excludes diversity), all learners (stable
-or not) are characterised by a kernel that, \emph{for every pair of
-eventualities}, gives rise to a linear function on samples of past cases. (This
-restriction to linearity is not severe since one can appeal to the ``kernel
-trick'' (of machine learning) and embed sentiments and the kernel in a
-higher-dimensional vector space where the model is linear. Indeed, the key
-feature of \gsii\ is the endogeneity of the dimension (number of case types) of
-the model.)
-
-We formally extend \gsii\ to allow for data that is less than 4-diverse. We
-justify our extension by testing partial-3-diversity and 4-diversity on daily
-US nominal yield curve data for the period 1961-2023.
-%We test these conditions
-%under the null hypothesis of linear pricing kernels: allowing us to fill gaps 
-%(implicit rankings) in the data. 
-To conduct the test, we count the number of days until we are certain a
-diversity axiom holds: under the null hypothesis of linear a pricing kernel. We
-find that, if one restricts the model to maturities of 1-8 years that trade
-since 1961, partial-3-diversity holds after the initial 1229 trading days (8\%
-of days). For this restricted domain of maturities, 4-diversity holds after
-20\% of days. For the full set of 30 maturities that trade since 1985, the
-picture is rather different. Partial-3-diversity holds after the initial 785
-trading days (8\% of days). For  3-diversity (\emph{a fortiori}
-4-diversity) we still cannot prove it holds after 9292 days (100\% of days).
-Moreover, the failure is substantial: there is an insufficient variety of
-rankings  for over 20\% of subsets of maturities with cardinality four.
- 
-We chose the market for zero-coupon bonds because of  relatively mature and
-stable nature. It is a standard setting for exploring arbitrage
-conditions \citep{barillas2019speculation}. The relationship between stability
-and arbitrage is fundamental to our model. 
-
-Stable learners stand in contrast to those that learn by doing.
-Children are encouraged to learn by making (noncatastrophic) mistakes. They are
-free to modify their beliefs and behaviour after the event: the intransitive
-rankings that novel case types may reveal are of little consequence
+Stable learners stand in contrast to those that learn by doing. Children are
+encouraged to learn by making (noncatastrophic) mistakes. They are free to
+modify their beliefs and behaviour after the event: the intransitive rankings
+that novel case types may reveal are of little consequence
 \citep{bradbury1990effects}. (See
 \citep{weinstein1968transitivity,bradbury1974transitivity} for more evidence of
 intransitive behaviour in children.) But what of a market maker that exposes
@@ -718,32 +722,7 @@ their pricing kernel either directly or indirectly (by buying and selling
 securities) on a financial market? We show that a market maker is unstable if,
 and only if, the returns on investment that they offer provide a free lunch to
 other agents today (\ie\ before any novel case types arrive and before they
-have a chance to re-evaluate).\footnote{In more general settings, the learner
-  is stable if, and only if, its kernel forms a groupoid over eventualities.
-This concept corresponds to the Jacobi equations in \gsii.}
-%Whereas in classical learning theory, the goal is to minimize the empirical error as
-%measured on the training set, the present framework allows for more abstract
-%goals.
-%What sort of prediction problem might force an unstable learner to modify
-%its kernel?  generalizes to novel case types without revealing intransitive
-%rankings.  Informally, a kernel is stable whenever there is no reason to
-%modify it.
-%More formally, a kernel is stable provided that, as a function of past
-%cases,
-%it forms a groupoid over eventualities (in \citet[henceforth \gsii
-%]{gilboa2003inductive} kernels with this property satisfy the Jacobi
-%equations).
-%%In all settings, novel types may reveal intransitivities in
-%%unstable kernels thus providing a reason to modify or re-evaluate past
-%%cases.
-%%In market settings, arbitrage may provide another.  It turns out that our
-%%notion of stability implies the canonical one. 
-%We refer to the subset of stable learners that are actually using their
-%imagination to explore novel cases (either literally or in the sense of
-%external validation) as prudent. 
-% %One reason why the learner might be forced into modifying their
-% %kernel is that it provides others with a free lunch at the learner's
-% %expense.
+have a chance to re-evaluate).
 
 The equivalence between stability (when novel data arrives tomorrow) and
 no-arbitrage (today) has a number of interesting implications. First, at the
@@ -762,17 +741,6 @@ do? Thus, in market settings, there is another form of external validation, one
 that does not rely on sentiments, but direct manipulation of numbers. In some
 market settings, we might expect such behaviour, in others, we might not.
 
-%But then how then
-%should an observer distinguish the stable learners that are prudent (\ie\ ones
-%that actually use their imagination or cross-validates their model)?  This
-%observational ambivolence carries over to the aggregate level.  The market
-%pricing kernel might be stable even if none of the individual agents in the
-%market are prudent.  This is a Deus-ex-machina or invisible-hand property: the
-%market process provides benefits independently of the wisdom of its agents. 
-%All other things being equal, markets where arbitrage is easier to exploit
-%should have more stable market pricing kernels.
-% 
- 
 The second implication speaks directly to the timeless topic of market
 efficiency \citet{fama1970efficient,malkiel2003efficient}.  Stable pricing
 kernels provide an explanation for why we might expect a passive (\ie\
@@ -790,136 +758,13 @@ virtue of the fact that unstable market pricing kernels cannot be expressed as
 an empirical mean: price movements are likely to be larger; passive strategies
 are less attractive; active strategies may indeed be less volatile.
 
-%The third implication provides further motivation for the present
-%generalization of \gsii.
-%%\citet[henceforth \gsii]{gilboa2003inductive}.  
-%%When is prudence required to achieve stability? It turns out that, when the
-%%data is suitably rich, a learner is guaranteed to be stable.
-%%Of course what is rich
-%%data for one learner might be poor for another and this is why we choose
-%%\gsii\
-%%as our starting point. The main contribution of \gsii\ is to introduce an
-%%endogenous notion of case types.
-%With sufficiently rich data, prudence (or the threat of arbitrage) is
-%superfluous. Who needs an imagination when raw memory will do? To be more
-%precise, a translation of the main result of \gsii\ to the present context
-%tells us that a learner is guaranteed to be stable whenever resampling of past
-%cases generates a \fourdiv\ of rankings: for every subset of $k \leq 4$
-%eventualities, all $k!$ total orderings (of those $k$ eventualities) feature in
-%{sentiments}.  The \fourdiv\ axiom is sufficient but not necessary for a kernel
-%that, for every single eventuality, gives rise to a linear function on samples
-%of past cases. The stability axiom allows us to substantially weaken \fourdiv\
-%to \parthreediv: for every subset of $k \leq 3$ eventualities, at least $k$
-%total orderings feature in {sentiments}. Our main theorem then leads to the
-%following hypothesis: we expect unstable learning to arise in settings where
-%\fourdiv\ fails to hold and where prudence is required to achieve stability:
-%\ie\ where the learners are inexperienced (short of relevant data) and where
-%arbitrage opportunities are difficult to exploit.
-%
-%\gsii\ provide a foundation
-%for nonparametric kernel-based inductive inference in the same way that
-%\citet{Savage-Foundations_of_statistics} does for ``small-world'' Bayesian
-%decision problems.  In both \gsii\ and the present framework, learners are
-%endowed with qualitative rankings over observable eventualities such as future
-%events, outcomes or causal effects.
-%%(Statements of willingness to buy one
-%%security instead of another would suffice to generate a ranking.)  
-%
-%\gsii\ makes no distinction between the memory and the imagination.  Given
-%that
-%neuroscience tells us of a common mechanism for the memory, imagination and
-%prediction \citep[for a recent review]{mullally2013memory}, one
-%could argue that a single notion of ``conceivable'' cases is all we need.  But
-%whereas past cases are often observable, the imagination is not.
-%%Hume paraphrase was here
-%Moreover, in terms of external validation, the
-%same questions arise. For what is outside of the current sample is, by
-%construction, unobservable to the learner. One form of external validation is
-%leave-one-out cross-validation which \citep{argenziano2019second}
-%interpret as a form of second-order induction. Leave-one-out is a special case
-%of $k$-fold cross-validation with $k$ equal to the sample size.  It also gives
-%rise to a notion of stability in learning theory (also known as
-%pointwise-hypothesis stability).  The learner is trained on all the data
-%except
-%one case and a prediction is made for that case.  In contrast with $k$-fold
-%cross validation, our axiomatic framework leaves past cases in tact and
-%considers the impact of a novel case type.
-
-%Our
-%derivation of the market pricing kernel as the empirical mean over past cases
-%is what distinguishes the present approach from the forward-looking, states-of
-%the-world approach that is most common in microeconomics. There, frequencies
-%play less of a role since the likelihood is subsumed into the posterior
-%together with the prior.  Our formal starting point is the axiomatic framework
-%of \citet[henceforth \gsii]{gilboa2003inductive}.
-% 
-%  
-%
-% Consider the arrival of the next case. When the market pricing kernel is
-% stable, a learner with an active strategy can only benefit if one of the
-% following two occur:
-% \begin{itemize}
-% \item the next case is of some past type (\ie\ resembles some past case)
-% and the learner correctly anticipates the type.
-% \item the case type is novel and the learner correctly anticipates the
-% impact.
-% \end{itemize}
-% If we assume that most cases are of past type
-
-  
-% ***
-% Since external
-% validation is costly, we would like to know the answer to the question: under
-% what conditions is it worthwhile?  Or, how does the imagination add value to
-% memory?
-
-% Inductive inference, together with the tools that enable it, is the standard
-% in empirical finance
-% \citep{cowles1944stock,fama1970efficient,malkiel2003efficient,white2000reality,fama2015five,harvey2021lucky,gu2020empirical}.
-% A market maker adopts an active trading strategy provided it performs well
-% out of sample relative to a passive (\ie\ buy-and-hold) strategy. On the
-% other side of this coin, the theory of efficient markets dictates that, at
-% any point in time, market prices should ``fully reflect'' available
-% information.  The empirical implementation of this theory expresses the
-% market equilibrium conditions in terms of expected returns.  
-% % The canonical theoretical
-% % framework for modelling expected returns is of course Bayesian. (With
-% % expectations defined in terms of probability distributions over the future
-% % states of the world.)  Since the future states of the world are
-% % unobservable,
-% Whereas in theory expected returns are defined in terms of future states of
-% the world, empirical finance works with samples of observations (\ie\ past
-% cases).  Just like the market maker, we run a horse race between any strategy
-% that seeks to exploit patterns in past cases against a passive strategy.  By
-% running this race repeatedly at different points in time, we conclude that
-% markets are efficient if passive beats every active strategy sufficiently
-% often, out-of-sample \citep{martin2022market,guo2006out}.  
-% 
-%
-% The point of \gsii\ is to explain how priors are formed, rather
-% than take them as given: resampling of past cases determines beliefs over
-% eventualities.
-%The basic ingredients of beliefs are past cases (\ie\
-%observations or experiences) and not future states of the world.
- 
-% By refining
-% their notion of cases to capture the role of the imagination and
-% forward-looking behavior, we extend their model and apply it to the setting
-% of empirical asset pricing.
-%We provide: a robust test of forward-looking behavior; a 
-%perspective on survival in financial markets without Bayesian agents; and an
-%axiomatic approach to empirical no-arbitrage asset pricing.
-
-%\footnote{In the sequel, we will see that
-%{Pru} need not be as ``rational'' as a Bayesian in the sense of modelling all
-%future states of the world.} 
 The rest of the paper is organised as follows. In the following subsection, we
 present some examples one of which we shall develop empirically later in the
 paper. In \cref{sec-model} we present the model and key definitions. In
 \cref{sec-main} we present the axioms and main representation theorem. In
 \cref{sec-applications} we develop example \cref{eg-zeros} by deriving a
-representation result for a bond-market setting. In \cref{sec-applications} we also
-discuss the implications for market efficiency identification of pricing
+representation result for a bond-market setting. In \cref{sec-applications} we
+also discuss the implications for market efficiency identification of pricing
 kernels in more detail. In \cref{sec-discussion} we provide a more detailed
 comparison of our main theorem with that of \gsii\ as well as matters such as
 second-order induction \citep{argenziano2019second}.
@@ -954,16 +799,15 @@ second-order induction \citep{argenziano2019second}.
   %$\mbbd$.
 \end{example}
 
-We will typically adopt the notation of \gsii\ and let $X$ denote the set of
-eventualities and consider $Y, Z$ as subsets of $X$.
-Each of the following examples
-feature two kinds of learner: one who only looks back at past cases
-(within-sample, Inny), and another who also considers the potential impact of
-novel types of case (the prudent, Pru).
+The following examples feature two kinds of learner: one who only looks
+back at past cases (within-sample, Inny), and another who also considers the
+potential impact of novel types of case (the prudent, Pru). Here, and in most
+of sequel, we adopt the notation of \gsii\ and let $X$ denote the nonempty set
+of \emph{eventualities} with elements $x, y, z, \dots$.
 
 \begin{example}[A setting where \fourdiv\ holds]\label{eg-tali}
   A die with unknown number of sides is ``rolled'' over and
-  over again. So far, it has produced only ones and twos. By resampling 
+  over again. So far, it has produced only ones, twos and threes. By resampling 
   (with replacement), we obtain the empirical distribution conditional on
   potential samples of past cases. This conditional empirical distribution
   induces a single ranking of the set $X=\{1, 2, 3\}$ of eventualities
@@ -999,13 +843,14 @@ novel types of case (the prudent, Pru).
   points.  Inny and {Pru} have observed the same past announcements.  Current
   circumstances are such that they both find that past cases generate just
   three distinct case types $t_1$, $t_2$ and $t_3$ where the indices capture
-  the (increasing) degree to which the fed is ``behind the curve''.  At
-  (samples containing only cases of type) $t_3$, Inny and {Pru} agree with the
-  plausibility ranking $\left({0}, {25}, {50}\right)$, so that larger rate
-  rises are more likely.  At $t_1$, the opposite ranking holds: both find that
-  smaller rate rises are more likely. At $t_2$, they agree ranking is
-  $\left(\{{0}, {50}\}, {25}\right)$, so that a ${25}$ rise is most likely, and
-  the others are equally plausible. 
+  the (increasing) degree to which the fed is ``behind the curve''.
+  %At
+  %(samples containing only cases of type) $t_3$, Inny and {Pru} agree with the
+  %plausibility ranking $\left({0}, {25}, {50}\right)$, so that larger rate
+  %rises are more likely.  At $t_1$, the opposite ranking holds: both find that
+  %smaller rate rises are more likely. At $t_2$, they agree ranking is
+  %$\left(\{{0}, {50}\}, {25}\right)$, so that a ${25}$ rise is most likely, and
+  %the others are equally plausible. 
  
   \Cref{fig-rates} shows some subtle differences between their current (bold)
   rankings maps.  These subtle differences turn out to be substantial once we
@@ -1056,9 +901,11 @@ novel types of case (the prudent, Pru).
     \end{equation*}
   \end{linenomath*}
   where $r^{\{x,y\}}$ is the yield to maturity on a forward contract that
-  accrues interest between dates $x$ and $y$. If $x$ is later than $y$, then
-  the contract is to sell, and the market maker pays this yield, so that
-  $r^{\{y,x\}} = r^{\{x,y\}}$.  Let $X \subseteq \R_{\mplus}$ index a suitable
+  accrues interest between dates $x$ and $y$.
+ % If $x$ is later than $y$, then
+ % the contract is to sell, and the market maker pays this yield, so that
+ % $r^{\{y,x\}} = r^{\{x,y\}}$. 
+  Let $X \subseteq \R_{\mplus}$ index a suitable
   sequence of trading dates with $0 \in X$ being the spot date.  The
   log-accumulation process has no arbitrages provided
   \begin{linenomath*}
@@ -1077,17 +924,16 @@ novel types of case (the prudent, Pru).
   those that separate regions in ranking maps such as \cref{fig-tali} or
   \cref{fig-rates}.  When the data is rich enough to generate the full
   diversity rankings (as in \cref{eg-tali}), both Inny and {Pru} set prices
-  that are currently arbitrage-free.  Otherwise, only {Pru} satisfies this
-  property. This is true even though they both observe the same collection of
-  past cases.  Equivalently, only {Pru} sets prices with the canonical form of
-  an empirical (geometric) mean
+  that are currently arbitrage-free.  Otherwise, generically, only {Pru}
+  satisfies this property. Only {Pru} sets prices according to the empirical
+  (geometric) mean
   \begin{linenomath*}
     \begin{equation} B(x, D) = \prod_{c\, \in
       D}\left( 1 + r^{\{0,x\}}_{c} \right)^{-{x}/{n}}
     \end{equation}
   \end{linenomath*}
   for every date $x$ and finite sample $D$ that we can generate by resampling
-  (with replacement) from past cases.
+  past cases.
 \end{example}
 
 \begin{example}[A multi-sectoral investment setting]\label{eg-multi-sector}
@@ -1096,40 +942,41 @@ novel types of case (the prudent, Pru).
   %(See
   %\citet{gilboa2006empirical} for a related axiomatic derivation for
   %representative agents.)
-  Instead of maturity dates, as in \cref{eg-zeros}, $X$ is a variety of sectors
-  with $x_0$ being the household (\ie\ consumption sector).  The following
-  no-arbitrage equations may be derived from first-order conditions of the
-  social planner's constrained optimisation problem provided we specify an
-  explicit functional form for the instantaneous flow of utility. But here we
-  take a nonparametric approach: we avoid the specification of a utility
-  function and proceed from past cases to beliefs and decisions.
+  $X$ is a variety of sectors with $x_0$ being the household (\ie\ consumption
+  sector).  The following no-arbitrage equations may be derived from
+  first-order conditions of the social planner's constrained optimisation
+  problem provided we specify an explicit functional form for the instantaneous
+  flow of utility. Here we take a nonparametric approach: we avoid the
+  specification of a utility function and proceed from past cases to beliefs
+  and decisions.
 
   For every pair of sectors $x$ and $y$ and nonempty set $D$ of past cases, let
   $S^{\xy}_{D}$ denote a suitably normalised quantity of sector $x$ inputs that
-  the social planner invests in order to produce sector $y$ outputs,
-  conditional on $D$$;$ then, for every sector $z$, the corresponding
-  no-arbitrage equations are 
+  the social planner invests in order to produce good $y$, conditional on $D$.
+  For every sector $z$, the no-arbitrage equations are now
   \begin{equation}
     \log S^{\xy}_{D} = \log S^{\xz}_{D} + \log S^{\zy}_{D}\,.\footnote{We can
       confirm that, for rather general model specifications, these equations hold
     in our traditional simulations with explicit utility functions.}
   \end{equation}
-  Just as in \cref{eg-zeros}, when the data is sufficiently rich to generate a
-  sufficient diversity of rankings, Inny and {Pru} are indistinguishable.
-  Otherwise, only the prudent social planner, {Pru}, has a rankings map that
-  satisfies the above no-arbitrage conditions; only {Pru} sets the required
-  rate of return on investment (with the gross return $R(x_0, \cdot)$ to
-  consumption normalised to one) according to the canonical form of an
-  empirical mean
-  \begin{linenomath*}
-    \begin{equation}
-      R(x, D) = \prod_{c \,\in D}\left(1 + r^{\{x_0,x\}}_{c}\right)^{1 / \lvert
-      D \rvert}
-    \end{equation}
-  \end{linenomath*} for every sector $x$ and finite sample $D$ that we can
-  generate by resampling (with replacement) from past cases; finally, only
-  {Pru} satisfies the inter-sectoral (and inter-temporal) consumption Euler
-  equations
+  Such models may be used to model regional (subnational) economic transition.
+  In such settings, the data is infamously poor: the modeller typically needs
+  to regionalise national accounts. If 4-diversity fails on bond-market data,
+  it will surely fail here too. 
+  %planner, {Pru}, has a rankings map that satisfies the above no-arbitrage
+  %conditions; only {Pru} sets the required rate of return on investment (with
+  %the gross return $R(x_0, \cdot)$ to consumption normalised to one) according
+  %to the canonical form of an empirical mean
+  %\begin{linenomath*}
+  %  \begin{equation}
+  %    R(x, D) = \prod_{c \,\in D}\left(1 + r^{\{x_0,x\}}_{c}\right)^{1 / \lvert
+  %    D \rvert}
+  %  \end{equation}
+  %\end{linenomath*} for every sector $x$ and finite sample $D$ that we can
+  %generate by resampling (with replacement) from past cases; 
+  For sectors $x$ and samples $D$, let $R(x, D)$ denote the required return on
+  investment (with $R(x_0, \cdot)$ normalized to one). Only {Pru} satisfies
+  the inter-sectoral (and inter-temporal) Euler equations
   \begin{equation}
     \log S^{\xy}_{D} = \log{R(y, D)} - \log {R(x, D)}.
   \end{equation}
@@ -1729,13 +1576,12 @@ novel types of case (the prudent, Pru).
 %-----------------------------------------------------------------------------%
 \section{Model}\label{sec-model}
 %-----------------------------------------------------------------------------%
-\emph{The primitives of our model} consist of the nonempty sets
-$X$ and $\mbbcp$.  For the current prediction problem, we interpret members of
-$X$ as \emph{eventualities} and members of $\mbbcp$ as \emph{current} cases.
-Our first departure from \gsii\ is to allow for two forms of current case. That
-is we take $\mbbcp $ to be the union $\mbbc \cup [\novel]$ of a set $\mbbc$ of
-constant, \emph{past} cases and a set $[\novel]$ of copies of the variable,
-\emph{free} case $\novel$.
+\emph{The primitives} consist of the nonempty sets $X$ and
+$\mbbcp$.  For the current prediction problem, we interpret members of $X$ as
+\emph{eventualities} and members of $\mbbcp$ as \emph{current} cases. We depart
+from \gsii\ by allowing for two forms of current case: $\mbbcp$ denotes the
+union $\mbbc \cup [\novel]$ of a set $\mbbc$ of constant, \emph{past} cases and
+a set $[\novel]$ of copies of the variable, \emph{free} case $\novel$.
 \begin{remark*}
   %Recalling Hume's distinction (second paragraph of our introduction), past
   %cases are indeed ``tied down, original impressions''. Moreover, the
@@ -1748,7 +1594,7 @@ constant, \emph{past} cases and a set $[\novel]$ of copies of the variable,
   For $c \in [\novel]$, although $m$ is empty (assigned a ``garbage'' value),
   the allocation is itself valuable. Pairs $c, d\in [\novel]$ are
   indistinguishable in terms of content and are in this sense copies of
-  $\novel$. The learner is free to assign novel, imagined content to $\novel$.
+  $\novel$. One is free to assign novel, imagined content to $\novel$.
   %and before
   %going on to explore the prediction problem with this content in mind.  As we
   %will show, an observer (or more sophisticated learner) who observes past
@@ -1767,9 +1613,8 @@ With case \emph{resampling} from the literature on bootstrapping in mind, let
 \begin{equation*}
   \mbbd\defeq \lbc D\subseteq \mbbc: \countof D < \infty \rbc
 \end{equation*} denote the set of (finite) \emph{determinate or constant
-databases} or memories and let $\mbbdp$ denote the corresponding set of all
-finite subsets of $\mbbcp$. Finally, throughout the sequel, we take $\cpp$ to
-denote a member of $\{\mbbc, \mbbcp\}$ without reference to the latter set.
+databases} or memories and let $\mbbdp$ denote the set of all
+finite subsets of $\mbbcp$. $\cpp$ will denote a member of $\{\mbbc, \mbbcp\}$.
 Similarly, 
 \begin{linenomath*} \begin{equation*} \text{$\dpp$} = \left\{\begin{array}{ll}
     \mbbd & \text{if, and only if, $\cpp = \mbbc$, and}\\ \mbbdp &
@@ -1777,8 +1622,8 @@ Similarly,
 \end{linenomath*}
 
 \emph{Sentiments.} We now take a first step towards formalising the ranking
-maps of \cref{fig-tali,fig-rates}.  (For the translation from databases to
-rational vectors, see \cref{sec-proof-main}.) For each $D$ in $\mbbd$, the
+maps of \cref{fig-tali,fig-rates}.  (The translation from databases to
+rational vectors appears in \cref{sec-proof-main}.) For each $D$ in $\mbbd$, the
 learner is endowed with a well-defined plausibility ranking $\preceqb_D$ in the
 set $\relations(X)$ of binary relations on $X$.  Denote the symmetric and
 asymmetric parts of $\preceqb_D$ by $\simeq _D$ and $\precb_D$ respectively. 
@@ -1976,7 +1821,7 @@ follows.
 
 \begin{axioms*}
   Let $\ext$ be an arbitrary $Y$-generalization of $\preceq_{\mbbd}$.
-  \begin{enumerate}[label=\textup{B\arabic*}] \setcounter{enumi}{-1}
+  \begin{enumerate}[label=\textup{A\arabic*}] \setcounter{enumi}{-1}
     \item\label{T} \textsc{--- Transitivity axiom for $\ext$ ---} for every $D
       \in \dpp$, $\ext_{D}$ is transitive.
     \item\label{K} \textsc{--- Completeness axiom for $\ext$ ---} for every $D
@@ -2273,6 +2118,9 @@ kernel.
 %-----------------------------------------------------------------------------%
 \emph{Application to no-arbitrage asset pricing.} %\label{sec-applications}
 %-----------------------------------------------------------------------------%
+%We test these conditions
+%under the null hypothesis of linear pricing kernels: allowing us to fill gaps 
+%(implicit rankings) in the data. 
 Fixed income securities (henceforth \emph{bonds}) are commonly traded over the
 counter with certain parties (typically investment banks) acting as market
 makers. Similar to bookmakers in betting markets, market makers profit from the
