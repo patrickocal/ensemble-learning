@@ -1,12 +1,12 @@
 # Fdb version 3
-["bibtex stable-learning"] 1681372136 "stable-learning.aux" "stable-learning.bbl" "stable-learning" 1681372362
+["bibtex stable-learning"] 1681969018 "stable-learning.aux" "stable-learning.bbl" "stable-learning" 1681969021
   "./ecta-fullname.bst" 1680717313 30218 32be8ddcae1d2abca9f548d2014d42dc ""
-  "stable-learning-jabref.bib" 1681361971 15610 4c9e6b7333eda32003d851883c13342a ""
-  "stable-learning.aux" 1681372361 59365 878fcf155f018be6e68e8c3ea9f96761 "pdflatex"
+  "stable-learning-jabref.bib" 1681871833 16024 e8aa03942f4a16e6b59e35688a4d2493 ""
+  "stable-learning.aux" 1681969020 56200 318e73ac4d2fe6f52fe5263c511a407c "pdflatex"
   (generated)
   "stable-learning.bbl"
   "stable-learning.blg"
-["pdflatex"] 1681372359 "stable-learning.tex" "stable-learning.pdf" "stable-learning" 1681372362
+["pdflatex"] 1681969018 "stable-learning.tex" "stable-learning.pdf" "stable-learning" 1681969021
   "/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/base/8r.enc" 1165713224 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/usr/local/texlive/2022/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2022/texmf-dist/fonts/tfm/adobe/courier/pcrr8r.tfm" 1136768653 1292 bd42be2f344128bff6d35d98474adfe3 ""
@@ -352,12 +352,12 @@
   "econsocart.cls" 1680717313 89242 0aa55625bad85648552ba8bb4453b218 ""
   "figures/fig-rates.tex" 1677636881 6230 2d01bcbe1e123001afc131b57487825d ""
   "figures/fig-tali.tex" 1677636881 6869 fb08b5228d24df0f1612a55593d3239b ""
-  "stable-learning-pratenddefaultcategory.tex" 1681372361 20836 74ce207a30b6120f0b309dc151bd9c74 "pdflatex"
-  "stable-learning.aux" 1681372361 59365 878fcf155f018be6e68e8c3ea9f96761 "pdflatex"
-  "stable-learning.bbl" 1681372136 9023 91ef1a568e087386ae57881ee2356d86 "bibtex stable-learning"
-  "stable-learning.brf" 1681372361 2818 bf1fda762a017d0e6ec21222b7ba598e "pdflatex"
-  "stable-learning.out" 1681372361 2858 092825fd7fd53f07016d1f78bb6845f6 "pdflatex"
-  "stable-learning.tex" 1681372357 294445 962bc5d0e5f7176c5c53239f895af1c8 ""
+  "stable-learning-pratenddefaultcategory.tex" 1681969020 20262 1af6e2efc73984601ee0f96f4c2595d5 "pdflatex"
+  "stable-learning.aux" 1681969020 56200 318e73ac4d2fe6f52fe5263c511a407c "pdflatex"
+  "stable-learning.bbl" 1681969018 9023 91ef1a568e087386ae57881ee2356d86 "bibtex stable-learning"
+  "stable-learning.brf" 1681969020 2875 8700197a92af0a96d107912af1793378 "pdflatex"
+  "stable-learning.out" 1681969020 2701 2c8c7dc16a8592df06cd699aa1ce6e5e "pdflatex"
+  "stable-learning.tex" 1681969012 299639 b9e8c8473adfab0408b62ae1e023847e ""
   (generated)
   "stable-learning-pratenddefaultcategory.tex"
   "stable-learning.aux"

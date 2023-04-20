@@ -335,7 +335,7 @@ s = "data/" + str(mat) + "choose" + str(sub)
 #=============================================================================#
 #-----------path to SVENY data
 pathtosveny = "data/FED-SVENY-20230224"
-#-----------uncomment to generate rankings and sveny df with ascending dates
+#-----------UNCOMMENT to generate rankings and sveny df with ascending dates
 #genascendingdfs(s, pathtosveny)
 #-----------load the div_pts dict for testing
 if order == "asc":
@@ -352,7 +352,7 @@ numdays = len(rankings)
 #=============================================================================#
 #-----------path diversity points file
 pathtodivpts = s + "diversity_pts_" + order + ".pkl"
-#-----------uncomment to generate div_pts (may take a while) saves to path
+#-----------UNCOMMENT to generate div_pts (may take a while) saves to path
 #get_diversity_pts(scomb, rankings, numdays, pathtodivpts)
 #-----------load the div_pts dict for testing
 with open (pathtodivpts, "rb") as f:
@@ -376,7 +376,7 @@ keydict = {"obr": 0, "d": 1, "ak": 2, "dd": 3}
 pathtoresults = {k: s + order + "-diversity_threshold_" + str(k)
              + "-test_results.pkl" for k in testls}
 #-----------------------------------------------------------------------------#
-#-----------KEY STEP: uncomment on first run to generate the test results
+#-----------KEY STEP: UNCOMMENT on first run to generate the test results
 #genresults(div_pts, scomb, numdays, pathtoresults, testls)
 #-----------------------------------------------------------------------------#
 fig = plt.figure()
