@@ -1634,13 +1634,6 @@ INPUT /usr/local/texlive/2022/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam7
 INPUT /usr/local/texlive/2022/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm7.tfm
 INPUT /usr/local/texlive/2022/texmf-dist/fonts/tfm/public/cm/cmbx6.tfm
 INPUT /usr/local/texlive/2022/texmf-dist/fonts/tfm/public/amsfonts/euler/eurm7.tfm
-INPUT /usr/local/texlive/2022/texmf-dist/tex/latex/doublestroke/Udsrom.fd
-INPUT /usr/local/texlive/2022/texmf-dist/tex/latex/doublestroke/Udsrom.fd
-INPUT /usr/local/texlive/2022/texmf-dist/tex/latex/doublestroke/Udsrom.fd
-INPUT /usr/local/texlive/2022/texmf-dist/tex/latex/doublestroke/Udsrom.fd
-INPUT /usr/local/texlive/2022/texmf-dist/fonts/tfm/public/doublestroke/dsrom12.tfm
-INPUT /usr/local/texlive/2022/texmf-dist/fonts/tfm/public/doublestroke/dsrom8.tfm
-INPUT /usr/local/texlive/2022/texmf-dist/fonts/tfm/public/doublestroke/dsrom8.tfm
 INPUT /usr/local/texlive/2022/texmf-dist/tex/latex/amsfonts/ueuf.fd
 INPUT /usr/local/texlive/2022/texmf-dist/tex/latex/amsfonts/ueuf.fd
 INPUT /usr/local/texlive/2022/texmf-dist/tex/latex/amsfonts/ueuf.fd
@@ -1649,6 +1642,13 @@ INPUT /usr/local/texlive/2022/texmf-dist/fonts/tfm/public/amsfonts/euler/eufm10.
 INPUT /usr/local/texlive/2022/texmf-dist/fonts/tfm/public/amsfonts/euler/eufm10.tfm
 INPUT /usr/local/texlive/2022/texmf-dist/fonts/tfm/public/amsfonts/euler/eufm7.tfm
 INPUT /usr/local/texlive/2022/texmf-dist/fonts/tfm/adobe/times/ptmr8t.tfm
+INPUT /usr/local/texlive/2022/texmf-dist/tex/latex/doublestroke/Udsrom.fd
+INPUT /usr/local/texlive/2022/texmf-dist/tex/latex/doublestroke/Udsrom.fd
+INPUT /usr/local/texlive/2022/texmf-dist/tex/latex/doublestroke/Udsrom.fd
+INPUT /usr/local/texlive/2022/texmf-dist/tex/latex/doublestroke/Udsrom.fd
+INPUT /usr/local/texlive/2022/texmf-dist/fonts/tfm/public/doublestroke/dsrom12.tfm
+INPUT /usr/local/texlive/2022/texmf-dist/fonts/tfm/public/doublestroke/dsrom8.tfm
+INPUT /usr/local/texlive/2022/texmf-dist/fonts/tfm/public/doublestroke/dsrom8.tfm
 INPUT /usr/local/texlive/2022/texmf-dist/fonts/tfm/public/amsfonts/euler/eufm7.tfm
 INPUT /usr/local/texlive/2022/texmf-dist/fonts/tfm/public/amsfonts/euler/eufm7.tfm
 INPUT /usr/local/texlive/2022/texmf-dist/fonts/tfm/public/doublestroke/dsrom8.tfm
