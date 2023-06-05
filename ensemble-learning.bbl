@@ -1,4 +1,4 @@
-\begin{thebibliography}{33}
+\begin{thebibliography}{34}
 \newcommand{\enquote}[1]{``#1''}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 
@@ -133,6 +133,10 @@
 \textsc{Mullally, Sin{\'{e}}ad~L. and Eleanor~A. Maguire} (2013):
   \enquote{Memory, Imagination, and Predicting the Future,} \emph{The
   Neuroscientist}, 20 (3), 220--234.
+
+\bibitem[\protect\citeauthoryear{Murphy}{Murphy}{2022}]{murphy2022probabilistic}
+\textsc{Murphy, Kevin~P.} (2022): \emph{Probabilistic Machine Learning: An
+  introduction}, MIT Press.
 
 \bibitem[\protect\citeauthoryear{Orlik and Terao}{Orlik and
   Terao}{1992}]{orlik1992arrangements}

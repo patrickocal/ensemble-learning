@@ -57,7 +57,7 @@
 \newcommand{\nov}{\operatorname{nov}}
 \newcommand{\test}{\operatorname{test}}
 \newcommand{\proj}{\operatorname{Proj}}
-\newcommand{\Ext}{\operatorname{ext}}
+\newcommand{\Ext}{\operatorname{gen}}
 \newcommand{\countof}{\mathbin{\#}\hskip1pt}
 \newcommand*{\medcap}{\mathbin{\scalebox{.85}{\ensuremath{\bigcap}}}}%
 \newcommand*\mcap{\mathbin{\mathpalette\mcapinn\relax}}
@@ -538,62 +538,29 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Please put your definitions here:        %%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begingroup
+\lccode`\~=`\ %
+\lowercase{%
+  \gdef\countabstract{\setcounter{word}{0}%
+    \catcode`~=\active
+    \def~{\space\stepcounter{word}}}}%
+\endgroup
+\newcounter{word}
+\def\endcountabstract{\stepcounter{word}%
+  \marginpar{\arabic{word} words}}
 
 \endlocaldefs
 
 %=============================================================================%
 \begin{document}
 %-----------------------------------------------------------------------------%
+
+%-----------------------------------------------------------------------------%
+%-----------front matter
+\input{./front-matter.tex}
+%-----------------------------------------------------------------------------%
+
  
-\begin{frontmatter}
-
-%-----------------------------------------------------------------------------%
-\title{Stable learning and no-arbitrage pricing\\ based on sentiments}
-\runtitle{Stable learning}
-%-----------------------------------------------------------------------------%
-
-\begin{aug}
-% use \particle for den|der|de|van|von (only lc!)
-% [id=?,addressref=?,corref]{\fnms{}~\snm{}\ead[label=e?]{}\thanksref{}}
-%
-%% e-mail is mandatory for each author
-%
-%%% initials in fnms (if any) with spaces
-%
-\author[id=au1,addressref={add1}]
-  {\fnms{Patrick}~\snm{O'Callaghan}\ead[label=e1]{p.ocallaghan@uq.edu.au}}
-%-----------------------------------------------------------------------------%
-% Addresses %
-%-----------------------------------------------------------------------------%
-\address[id=add1]{%
-\orgdiv{Australian Institute for Business and Economics},
-  \orgname{University of Queensland}}
-\end{aug}
-
-%% Put support info here.  Reminder: do not thank the handling coeditor anonymously or by name
-\support{ I thank Itzhak Gilboa for engaging in helpful discussions and
-  suggestions along the way; Khoa Hoang for helpful discussions and pointers to
-  the data; and Flavio Menezes for helpful suggestions in the latter stages.
-  This version has time stamp \currenttime~(AEST), \today. Other versions can
-  be found at \url{https://arxiv.org/abs/1904.02934} and
-\url{https://github.com/patrickocal/stable-learner}.  }
-%
-%-----------------------------------------------------------------------------%
-\begin{abstract} \input{abstract/abstract-for-circ.tex} \end{abstract}
-%-----------------------------------------------------------------------------%
-%
-%-----------------------------------------------------------------------------%
-\begin{keyword} \kwd{case-based decision theory} \kwd{machine learning}
-  \kwd{prediction} \kwd{stability} \kwd{kernel functions} \kwd{no-arbitrage}
-\kwd{yield curves} \end{keyword}
-%-----------------------------------------------------------------------------%
-%
-%-----------------------------------------------------------------------------%
-\setlength{\epigraphwidth}{11.5cm} \epigraph{From the past, the present acts
-prudently, lest it spoil future action.}{\emph{Titian:  Allegory of Prudence}}
-%-----------------------------------------------------------------------------%
-%
-\end{frontmatter}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%% Main text entry area:
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -601,42 +568,42 @@ prudently, lest it spoil future action.}{\emph{Titian:  Allegory of Prudence}}
 \section{Introduction} \label{sec-introduction}
 %-----------------------------------------------------------------------------%
 %\textsc{Prediction is based rich data or a fertile imagination}. 
-\textsc{Memory and the imagination are complements in prediction}. Either the
-learner (prediction model) has access to a sufficiently diverse set of past
-cases, or it has the capacity to explore the world beyond the data when the
-data is insufficient.
-%The memory and the imagination go hand in hand: they complements in prediction.
-To paraphrase \citep[pages 9 and 10]{hume1896treatise}: \emph{the memory is
-  tied down, by original impressions, without any power of variation; in
-contrast, the imagination is free to transpose and change its ideas.}
-Well-established neuroscientific evidence points to an important role for the
-imagination and the degrees of freedom or flexibility that it provides in
-improving on the data when quality is scarce (\eg\ due to failures of memory)
-\citep{bartlett1932remembering,suddendorf2007evolution,mullally2013memory}. In
-machine learning, the practice of splitting the data into a training set and a
-test set is standard \citep{hastie2009elements}. Cases in the training set
-resemble memories and cases in the test set resemble instances of the
-imagination, for they allow the learner to explore unseen and potentially novel
-data.
+\textsc{Memory and the imagination are complements in prediction}.
+Either the learner (prediction model) has access to a sufficiently diverse set of past examples, or it has the capacity to augment the data.
+%The memory and the imagination go hand in hand: they complements in
+%prediction.
+To paraphrase \citep[pages 9 and 10]{hume1896treatise}: \emph{the memory is tied down, by original impressions, without any power of variation; in contrast, the imagination is free to transpose and change its ideas.}
+Well-established neuroscientific evidence points to an important role for the imagination and the degrees of freedom or flexibility that allows us to improve on the past data.
+\citep{bartlett1932remembering,suddendorf2007evolution,mullally2013memory}.
+In machine learning \citep{hastie2009elements,murphy2022probabilistic}, practices such as splitting the data into a training set and a test set, transfering learning from one domain to another, or augmenting the data are standard.
+Indeed, data augmentation by rotating or inverting the color of images are explicitly intended to increase the diversity of the data.
+Increasing diversity is one way to reduce over-fitting.
+Whereas examples in the training set resemble memories, augmented examples and
+test examples resemble instances of the imagination: they allow the learner to
+explore unseen and potentially novel data.
 
-The key to inductive inference and good predictions is generalization: the
+The goal of inductive inference and good predictions is generalization: the
 ability to grow the model to previously unseen data and objects of interest.
-The key to generalization is stability
-\citep{bousquet2002stability,poggio2004general,mukherjee2006learning}. Loosely
-speaking, a learner is stable if small changes in the data yield small changes
-in predictions: continuity of the learning map from training sets to
-weighting functions (kernels).  \cite{mccloskey1989catastrophic} provides
-famous examples of unstable learning where training on new cases causes current
-kernels to unravel in what is called catastrophic interference.
+Traditionally, the assumption is that new data is drawn from the same (unknown)
+probability space.
+But many modern applications go well beyond this assumption.
+For instance, in transfer learning, the goal is to generalize the learner to
+new domains and distributions without retraining the model from scratch:
+Generative Pre-trained Transformers (such as ChatGPT) are a case in point.
+The key to generalization is stability \citep{bousquet2002stability,poggio2004general,mukherjee2006learning}.
+Loosely speaking, a learner is stable if small changes in the data yield small changes in predictions: continuity of the learning map from training sets to weighting functions (kernels).
+\cite{mccloskey1989catastrophic} provides famous examples of unstable learning where training on new cases causes current kernels to unravel in what is called catastrophic interference.
 
 As in \citet[henceforth, \gsii]{gilboa2003inductive},
 \citet{billot2005probabilities,gilboa2006empirical,argenziano2019second}, the
 learner's kernel is a subjective assessment of how similar past cases are to
 the current prediction problem.  We derive the learner's kernel on basis of
 \emph{sentiments}: a mapping from samples of past cases to rankings of
-eventualities (objects of interest).  To account for all kinds of
+eventualities (objects of interest).
+To account for all kinds of
 intelligence, we provide a framework that captures the behaviour of learners
-with the ability to externally validate their model. The axioms we provide are
+with the ability to externally validate their model.
+The axioms we provide are
 agnostic in relation to the method of external validation. The goal is instead
 to allow an observer to determine whether or not the learner is able to
 generalise to richer training sets of past cases in a consistent manner. Our
@@ -1786,8 +1753,9 @@ For any given novel generalization $\ext$, $[\novel]$ is the unique novel
 case type that $\sim^{\extb}$ generates.  We impose this restriction, not
 because we think the imagination of learners is constrained in this way, or
 because the model would not work that way, but rather because one degree of
-freedom is sufficient for our purposes: {Pru} represents a minimal deviation
-from Inny.
+freedom is sufficient for our purposes: moreover, it may be that the dev set
+only has a single novel example/feature.
+%{Pru} represents a minimal deviation from Inny.
 
 %For novel generalizations, $\novel$ mimmicks the potential arrival of new
 %information. Yet novel generalizations need not feature qualitatively new rankings
@@ -3186,7 +3154,7 @@ of information in past cases.
 %\bibliography{stable-learning-jabref.bib}
 % if your bibliography is in bibtex format, uncomment commands:
 \bibliographystyle{ecta-fullname} % Style BST file
-\bibliography{stable-learning-jabref.bib} % Bibliography file (usually '*.bib')
+\bibliography{ensemble-learning-jabref.bib} % Bibliography file (usually '*.bib')
 
 \makeatletter
 \def\@seccntformat#1{Appendix\,\csname the#1\endcsname.\quad}
@@ -3215,18 +3183,23 @@ of information in past cases.
   \cref{sec-proof-mainQ}.
 
 
-  \emph{Case types as dimensions.} From our definition
-  of case types in  \cref{sec-model}, $\mbbt = \mbbc_{/\sim^{\star}}$ and
-  $\mbbt^\novel \defeq \mbbt\cup [ \novel ]$. Let $\mbbtpp$ be a free variable
-  in $\{\mbbt , \mbbtp \}$.  When no possible confusion should arise, we use
-  $\novel$ as shorthand for $[ \novel ]$.  It is straightforward to show that
-  the following construction would work if instead we were to work with any
-  partition $\textup T$ of $\mbbc$ that is at least as fine as $\mbbt$.
-  The present construction is the one with the lowest feasible number
-  $\countof \mbbt$ of dimensions.
+  \emph{Case types as dimensions.} From our definition of case types in 
+  \cref{sec-model}, $\mbbt_\star = \mbbc_{/\sim^{\star}}$ and
+  $\mbbt_\star^\novel \defeq \mbbt_\star\cup [ \novel ]$. Let $\mbbtpp_\star$
+  be a free variable in $\{\mbbt_\star, \mbbtp_\star\}$.  For each $\ext$, the
+  corresponding sets are $\mbbt_{\ext}, \mbbt_{\ext}^{\novel}$ and
+  $\mbbtpp_{\ext}$. When no possible confusion should arise, we use $\novel$ as
+  shorthand for $[\novel]$ and, suppressing reference to subscripts, let
+  $\mbbt, \mbbtp$ and $\mbbtpp$ denote the sets associated with an arbitrary
+  generalization $\ext$.
+ % It is straightforward to show that the following
+ % construction would work if instead we were to work with any partition
+ % $\textup T$ of $\mbbc$ that is at least as fine as $\mbbt$. The present
+ % construction is the one with the lowest feasible number $\countof \mbbt$ of
+ % dimensions.
 
-  % Let $\mbbip\upiota( \mbbt )$  and $\mbbi  ' _{\bullet}$  be the corresponding
-  %subsets of $\nnint^\types$.
+  % Let $\mbbip\upiota( \mbbt )$  and $\mbbi  ' _{\bullethe
+  % sets associated witan arbitrary generalization $\ext$t^\types$.
   %\Cref{obs-Regular} implies that the same is true of $\mbbd _{/\sim^
   %\supext}$ for every $\ext  \in \reg ( X , \preceqb _ \mbbd )$.
   %rankings counting vectors
@@ -3246,19 +3219,22 @@ of information in past cases.
       \end{array}\right.
     \end{equation*}
   \end{linenomath*}
-  Modulo notation, the following construction is identical to \gsii.  For every
-  $D\in \mbbd$, let $L_{D}: \mbbt \rightarrow \nnint$ denote the function $t
-  \mapsto L_{D}(t) = \countof (D \cap t )$.  For each $D \in \mbbd$, let
-  $\preceqb_{L_{D}} \defeq \preceqb_{D}$.  We need to establish that $\preceqb
-  _{\mbbi} \defeq \langle \preceqb _{L} : L \in \mbbi \rangle$ is well-defined.
+  Modulo notation, the following construction is identical to \gsii. Fix an
+  arbitrary generalization $\ext$.
+For every $D\in \mbbd$, let $L_{D}: \mbbtpp_{\extb} \rightarrow \nnint$ denote the function $t \mapsto L_{D}(t) = \countof (D \cap t )$.
+  For each $D \in \mbbd$, let $\aextb_{L_{D}} \defeq \extb_{D}$.
+  We need to establish that $\aextb_{\mbbi} \defeq \langle \aextb_{L} : L \in \mbbi \rangle$ is well-defined.
   For every $L\in \mbbi$, the richness assumption (on $\mbbtp$) guarantees the
-  existence of $D\in \mbbd$ such that $L_{D}= L$. By definition, $\sim^{\star}$
-  is such that, for every $C,D \in \mbbd$, $C\sim^{\star}D$ if, and only if,
-  $L_{C}= L_{D}$. Straightforward mathematical induction on the cardinality of
-  $C$ shows that $C\sim^{\star} D$ implies $\preceqb_{C} = \preceqb_{D}$.  This
-  construction of $\preceqb_{\mbbi}$ ensures that the same notion of
-  equivalence that we introduced in \cref{obs-reg-eq} also applies here. Thus,
-  $\preceqb_{\mbbi} \equiv \preceqb _{\mbbd}$.
+  existence of $D\in \mbbd$ such that $L_{D} = L$. By definition, $\sim^{\ext}$
+  is such that, for every $C,D \in \mbbd$, $C\sim^{\extb}D$ if, and only if,
+  $L_{C} = L_{D}$. Straightforward mathematical induction on an enumeration of 
+  $C$ shows that $C \sim^{\extb} D$ implies $\extb_{C} = \extb_{D}$.
+ 
+  \emph{Construction of generalizations of $\preceqb_{\mbbj}$.}
+  As usual, $2^{X}$ denotes the collection of nonempty subsets $Y \subseteq X$.
+  For each $Y \in 2^{X}$, we denote the set of regular, novel and testworthy $Y$-generalizations (of $\preceqb_{\mbbd}$ or $\preceqb_{\mbbj}$) by $\reg(Y, \cdot)$, $\nov(Y, \cdot)$ and $\test(Y, \cdot)$ respectively.
+  Recalling that every $Y$-generalization is either regular or novel, let $\Ext (Y,\cdot)$ denote the set of all $Y$-generalizations.
+  We now clarify what it means to be a generalization of $\preceqb_{\mbbj}$.
 
   %rational vectors
   \emph{Translation to rational vectors.} Similarly, let $\nnrat$ denote
@@ -3280,15 +3256,11 @@ of information in past cases.
   = \preceqb_{D}$.  The reverse embedding follows by virtue of the fact that
   $\mbbi\subset \mbbj$. Thus, $\preceqb_{\mbbj}\equiv \preceqb_{\mbbd}$.
 
-  \emph{Construction of generalizations of $\preceqb_{\mbbj}$.} We
-  follow common practice by letting $2^{X}$ denote the collection of nonempty
-  subsets $Y \subseteq X$. For each $Y \in 2^{X}$, we will denote the set of
-  regular, novel and testworthy $Y$-generalizations (of $\preceqb_{\mbbd}$ or
-  $\preceqb_{\mbbj}$) by $\reg ( Y , \cdot )$, $\nov ( Y , \cdot)$ and $\test (
-  Y , \cdot)$ respectively. Recalling that every $Y$-generalization is either
-  regular or novel, let $\Ext (Y,\cdot)$ denote the set of all
-  $Y$-generalizations. We now clarify what it means to be a generalization
-  of $\preceqb_{\mbbj}$.
+  \emph{Construction of generalizations of $\preceqb_{\mbbj}$.}
+  As usual, $2^{X}$ denotes the collection of nonempty subsets $Y \subseteq X$.
+  For each $Y \in 2^{X}$, we denote the set of regular, novel and testworthy $Y$-generalizations (of $\preceqb_{\mbbd}$ or $\preceqb_{\mbbj}$) by $\reg(Y, \cdot)$, $\nov(Y, \cdot)$ and $\test(Y, \cdot)$ respectively.
+  Recalling that every $Y$-generalization is either regular or novel, let $\Ext (Y,\cdot)$ denote the set of all $Y$-generalizations.
+  We now clarify what it means to be a generalization of $\preceqb_{\mbbj}$.
 
   For each $t \in \mbbtpp$, we take $\delta_{t} : \mbbtpp \rightarrow \R$ to be
   the function satisfying $\delta_{t} ( s ) = 1$ if $s = t$ and $\delta_{t} (s)
@@ -3430,11 +3402,10 @@ of information in past cases.
 
    % lemma relating axiomsZ to axiomsQ
   The following result corresponds to claim 2 of \gsii. Its proof is a
-  consequence of mathematical induction and the combination axiom.
-  \vskip-15pt
-  \begin{lemma}\label{lem-coneQ} If $\ext _ \mbbjpp$ and $\hext _ \mbbipp$ are
-    equivalent and the latter satisfies \ref{C}, then for every $J \in \mbbjpp$
-    and every rational number $q >0$, we have $\extb _{q J}  =  \extb _{J}$.
+  consequence of mathematical induction and the combination axiom. \vskip-15pt
+  \begin{lemma}\label{lem-coneQ} If $\ext _ \mbbjpp$  satisfies \ref{C}, then
+    for every $J \in \mbbjpp$ and every rational number $q >0$, we have $\extb
+    _{q J}  =  \extb _{J}$.
   \end{lemma}
 
   The fact that $\preceqb_{\mbbj}\equiv \preceqb_{\mbbd}$ immediately implies
@@ -3468,13 +3439,13 @@ of information in past cases.
     y$ for some $J \in \mbbj$ and take any $J ' \in \mbbjpp$.  Then, by the
     construction of $\extb _ \mbbjpp$, there exists $L, L ' \in \mbbi$ such
     that $j J = L$ and $j ' J ' = L '$ for some $j , j ' \in \posint$.  By
-    \cref{lem-coneQ}, $\extb_{L} = \extb_{J}$ and $\extb _ {L '} = \extb _ {J
-    '}$.  Moreover, by construction, for some $D$ and $D'$ such that $L_{D}=L$
-    and $I_{D'}= L'$, $\hextb_{D} = \extb _ J$ and $\hextb _ {D'} = \extb _ {J
-    '}$.  We therefore conclude that $x \hsext _{D} y$, so that \ref{A} implies
-    the existence of $\kappa \in \posint$ and $\{D_{l}: D_{l}\sim^{\hextb}
-      D\}_{1}^{\kappa}$ such that $x \hsext _ {D_{1}\cup\cdots \cup D_{\kappa}
-      \cup D '} y$. Then, by the construction of $\extb_{\mbbjpp}$, $x
+    \cref{lem-coneQ}, $\extb_{L} = \extb_{J}$ and $\extb_{L'} = \extb_{J'}$. 
+    Moreover, by construction, for some $D$ and $D'$ such that $L_{D}=L$ and
+    $I_{D'}= L'$, $\hextb_{D} = \extb_J$ and $\hextb_{D'} = \extb_{J'}$.  We
+    therefore conclude that $x \hsext_{D} y$, so that \ref{A} implies the
+    existence of $\kappa \in \posint$ and $\{D_{l}: D_{l} \sim^{\hextb}
+      D\}_{1}^{\kappa}$ such that $x \hsext_{D_{1} \cup \cdots \cup D_{\kappa}
+      \cup D'} y$. Then, by the construction of $\extb_{\mbbjpp}$, $x
       \sext_{\kappa L_{D} + L_{D'}} y$. Let $\nu \defeq \frac {1} {\kappa j +
       j'}$ and take $\lambda = \nu j'$, so that $0 < \lambda < 0$ and
       $1-\lambda = \nu \kappa j$. By virtue of the fact that $\lambda
@@ -3487,7 +3458,7 @@ of information in past cases.
       $\mu = \xi\lambda$ and, moreover, $\xi$ is rational.  The definition of
       $K$ implies $\xi (K - J) = \xi\lambda ( J ' - J)$. Adding $J$ to each
       side of the latter and applying the definition of $\mu$ yields
-          $(1 - \xi ) J +  \xi K =  ( 1 - \mu ) J + \mu  J'$.
+      $(1 - \xi ) J +  \xi K =  ( 1 - \mu ) J + \mu  J'$.
       Then, since $x \sext _ J y$ and $x \sext _ K y$, \ref{CQ} implies $x
       \sext _ {( 1 - \mu ) J + \mu J '} y$, as required for \ref{AQ}.
 
@@ -3510,7 +3481,7 @@ of information in past cases.
     required.
   \end{proofEnd}
 
-  The matrix $\mathbf{v}: X \times \mbbt \rightarrow R$ is a
+  The matrix $\mathbf{v}: X \times \mbbt \rightarrow \R$ is a
   \emph{representation of $\preceq _{\mbbj}$} whenever it satisfies
   \begin{linenomath*}
     \begin{equation}\tag{$\flat$}\label{eq-rep-mainQ}
