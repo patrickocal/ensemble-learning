@@ -3183,23 +3183,18 @@ of information in past cases.
   \cref{sec-proof-mainQ}.
 
 
-  \emph{Case types as dimensions.} From our definition of case types in 
-  \cref{sec-model}, $\mbbt_\star = \mbbc_{/\sim^{\star}}$ and
-  $\mbbt_\star^\novel \defeq \mbbt_\star\cup [ \novel ]$. Let $\mbbtpp_\star$
-  be a free variable in $\{\mbbt_\star, \mbbtp_\star\}$.  For each $\ext$, the
-  corresponding sets are $\mbbt_{\ext}, \mbbt_{\ext}^{\novel}$ and
-  $\mbbtpp_{\ext}$. When no possible confusion should arise, we use $\novel$ as
-  shorthand for $[\novel]$ and, suppressing reference to subscripts, let
-  $\mbbt, \mbbtp$ and $\mbbtpp$ denote the sets associated with an arbitrary
-  generalization $\ext$.
- % It is straightforward to show that the following
- % construction would work if instead we were to work with any partition
- % $\textup T$ of $\mbbc$ that is at least as fine as $\mbbt$. The present
- % construction is the one with the lowest feasible number $\countof \mbbt$ of
- % dimensions.
+  \emph{Case types as dimensions.} From our definition
+  of case types in  \cref{sec-model}, $\mbbt = \mbbc_{/\sim^{\star}}$ and
+  $\mbbt^\novel \defeq \mbbt\cup [ \novel ]$. Let $\mbbtpp$ be a free variable
+  in $\{\mbbt , \mbbtp \}$.  When no possible confusion should arise, we use
+  $\novel$ as shorthand for $[ \novel ]$.  It is straightforward to show that
+  the following construction would work if instead we were to work with any
+  partition $\textup T$ of $\mbbc$ that is at least as fine as $\mbbt$.
+  The present construction is the one with the lowest feasible number
+  $\countof \mbbt$ of dimensions.
 
-  % Let $\mbbip\upiota( \mbbt )$  and $\mbbi  ' _{\bullethe
-  % sets associated witan arbitrary generalization $\ext$t^\types$.
+  % Let $\mbbip\upiota( \mbbt )$  and $\mbbi  ' _{\bullet}$  be the corresponding
+  %subsets of $\nnint^\types$.
   %\Cref{obs-Regular} implies that the same is true of $\mbbd _{/\sim^
   %\supext}$ for every $\ext  \in \reg ( X , \preceqb _ \mbbd )$.
   %rankings counting vectors
@@ -3219,22 +3214,19 @@ of information in past cases.
       \end{array}\right.
     \end{equation*}
   \end{linenomath*}
-  Modulo notation, the following construction is identical to \gsii. Fix an
-  arbitrary generalization $\ext$.
-For every $D\in \mbbd$, let $L_{D}: \mbbtpp_{\extb} \rightarrow \nnint$ denote the function $t \mapsto L_{D}(t) = \countof (D \cap t )$.
-  For each $D \in \mbbd$, let $\aextb_{L_{D}} \defeq \extb_{D}$.
-  We need to establish that $\aextb_{\mbbi} \defeq \langle \aextb_{L} : L \in \mbbi \rangle$ is well-defined.
+  Modulo notation, the following construction is identical to \gsii.  For every
+  $D\in \mbbd$, let $L_{D}: \mbbt \rightarrow \nnint$ denote the function $t
+  \mapsto L_{D}(t) = \countof (D \cap t )$.  For each $D \in \mbbd$, let
+  $\preceqb_{L_{D}} \defeq \preceqb_{D}$.  We need to establish that $\preceqb
+  _{\mbbi} \defeq \langle \preceqb _{L} : L \in \mbbi \rangle$ is well-defined.
   For every $L\in \mbbi$, the richness assumption (on $\mbbtp$) guarantees the
-  existence of $D\in \mbbd$ such that $L_{D} = L$. By definition, $\sim^{\ext}$
-  is such that, for every $C,D \in \mbbd$, $C\sim^{\extb}D$ if, and only if,
-  $L_{C} = L_{D}$. Straightforward mathematical induction on an enumeration of 
-  $C$ shows that $C \sim^{\extb} D$ implies $\extb_{C} = \extb_{D}$.
- 
-  \emph{Construction of generalizations of $\preceqb_{\mbbj}$.}
-  As usual, $2^{X}$ denotes the collection of nonempty subsets $Y \subseteq X$.
-  For each $Y \in 2^{X}$, we denote the set of regular, novel and testworthy $Y$-generalizations (of $\preceqb_{\mbbd}$ or $\preceqb_{\mbbj}$) by $\reg(Y, \cdot)$, $\nov(Y, \cdot)$ and $\test(Y, \cdot)$ respectively.
-  Recalling that every $Y$-generalization is either regular or novel, let $\Ext (Y,\cdot)$ denote the set of all $Y$-generalizations.
-  We now clarify what it means to be a generalization of $\preceqb_{\mbbj}$.
+  existence of $D\in \mbbd$ such that $L_{D}= L$. By definition, $\sim^{\star}$
+  is such that, for every $C,D \in \mbbd$, $C\sim^{\star}D$ if, and only if,
+  $L_{C}= L_{D}$. Straightforward mathematical induction on the cardinality of
+  $C$ shows that $C\sim^{\star} D$ implies $\preceqb_{C} = \preceqb_{D}$.  This
+  construction of $\preceqb_{\mbbi}$ ensures that the same notion of
+  equivalence that we introduced in \cref{obs-reg-eq} also applies here. Thus,
+  $\preceqb_{\mbbi} \equiv \preceqb _{\mbbd}$.
 
   %rational vectors
   \emph{Translation to rational vectors.} Similarly, let $\nnrat$ denote
@@ -3256,11 +3248,15 @@ For every $D\in \mbbd$, let $L_{D}: \mbbtpp_{\extb} \rightarrow \nnint$ denote t
   = \preceqb_{D}$.  The reverse embedding follows by virtue of the fact that
   $\mbbi\subset \mbbj$. Thus, $\preceqb_{\mbbj}\equiv \preceqb_{\mbbd}$.
 
-  \emph{Construction of generalizations of $\preceqb_{\mbbj}$.}
-  As usual, $2^{X}$ denotes the collection of nonempty subsets $Y \subseteq X$.
-  For each $Y \in 2^{X}$, we denote the set of regular, novel and testworthy $Y$-generalizations (of $\preceqb_{\mbbd}$ or $\preceqb_{\mbbj}$) by $\reg(Y, \cdot)$, $\nov(Y, \cdot)$ and $\test(Y, \cdot)$ respectively.
-  Recalling that every $Y$-generalization is either regular or novel, let $\Ext (Y,\cdot)$ denote the set of all $Y$-generalizations.
-  We now clarify what it means to be a generalization of $\preceqb_{\mbbj}$.
+  \emph{Construction of generalizations of $\preceqb_{\mbbj}$.} We
+  follow common practice by letting $2^{X}$ denote the collection of nonempty
+  subsets $Y \subseteq X$. For each $Y \in 2^{X}$, we will denote the set of
+  regular, novel and testworthy $Y$-generalizations (of $\preceqb_{\mbbd}$ or
+  $\preceqb_{\mbbj}$) by $\reg ( Y , \cdot )$, $\nov ( Y , \cdot)$ and $\test (
+  Y , \cdot)$ respectively. Recalling that every $Y$-generalization is either
+  regular or novel, let $\Ext (Y,\cdot)$ denote the set of all
+  $Y$-generalizations. We now clarify what it means to be a generalization
+  of $\preceqb_{\mbbj}$.
 
   For each $t \in \mbbtpp$, we take $\delta_{t} : \mbbtpp \rightarrow \R$ to be
   the function satisfying $\delta_{t} ( s ) = 1$ if $s = t$ and $\delta_{t} (s)
