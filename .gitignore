@@ -18,3 +18,18 @@ data/RQ1.xlsx
 **.pkl
 **.csv
 **.xlsx
+**/*.mp4
+# tex-related:
+**/*.swp
+**/*.log
+**/*.aux
+**/*.toc
+**/*.fls
+**/*.out
+**/*.fdb_latexmk
+**/*.synctex.gz
+# apple related
+**/*.DS_Store
+# python related
+**/__pycache__
+

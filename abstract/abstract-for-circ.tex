@@ -4,17 +4,16 @@
 %\title{Ensemble learning: \\ an axiomatic approach with applications to
 %finance}
 \begin{countabstract}
-Both classical and deep ensemble learning succeed by combining weak learners to form strong ones.
-We take sentiments (an ensemble of binary relations) as primitive and provide minimal requirements for the existence of a stable kernel representation.
-A kernel is stable if it generalizes to novel (out-of-distribution) examples without the need to re-evaluate current weights.
-In a multi-asset market, a pricing kernel is stable if, and only if, it is
-everywhere arbitrage-free, so that a groupoid condition holds across assets for
-every resampling.
-Stable pricing kernels preserve information and support the efficient markets hypothesis in the sense that proportional price increments are submodular in the data.
-US Treasury bond market data for 1961-2023 justifies our extension of the axiomatic framework of \citet{gilboa2003inductive} to the case of a partially diverse ensemble.
-In general, partial diversity allows more data to be allocated for testing.
-Our results shed light on the trade off between diversity and the extent to
-which the ensemble generalises to novel settings.
+  The success of ensemble learning method relies on combining weak learners to form strong ones via resampling.
+  We take an ensemble of binary relations as primitive and provide minimal axioms for the existence of a stable kernel representation.
+  \citet{gilboa2003inductive} provide a framework for endogenously modelling of features in multiclass classification or regression problems.
+  We extend this framework to accommodate a minimal hold-out set (that is inaccessible to the learner) and a training set that is partially diverse.
+  Requiring only partial diversity allows more data to be allocated for testing/validation.
+  US Treasury bond market data for 1961-2023 justifies our extension, and we show how to exploit the axioms when data is missing, so that only a subset of resamples are available.
+  In a multi-asset market, a pricing kernel is stable if, and only if, it is everywhere arbitrage-free (a groupoid condition holds).
+%  Stable kernels preserve information and support the efficient markets hypothesis in the sense that proportional price increments are submodular in the data.
+  %Our results shed light on the trade off between diversity and the extent to
+  %which the ensemble generalises to novel settings.
 \end{countabstract}
 %data in the classical case and models in the deep case.
 
